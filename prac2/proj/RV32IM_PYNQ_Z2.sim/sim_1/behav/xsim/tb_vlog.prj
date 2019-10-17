@@ -1,0 +1,36 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  --include "../../../../../src/ip/video_clock_gen" --include "../../../../../src/ip/cpu_clock_gen" --include "../../../../../src/inc" \
+"../../../../../src/ip/rv32im_rm_0/rv32im_rm_0_sim_netlist.v" \
+"../../../../../src/ip/video_clock_gen/video_clock_gen_clk_wiz.v" \
+"../../../../../src/ip/video_clock_gen/video_clock_gen.v" \
+"../../../../../src/ip/cpu_clock_gen/cpu_clock_gen_clk_wiz.v" \
+"../../../../../src/ip/cpu_clock_gen/cpu_clock_gen.v" \
+"../../../../../src/hdl/alu.v" \
+"../../../../../src/hdl/branch_cache.v" \
+"../../../../../src/hdl/branch_predictor.v" \
+"../../../../../src/hdl/bypass_or_stall.v" \
+"../../../../../src/hdl/cpu.v" \
+"../../../../../src/hdl/csr_unit.v" \
+"../../../../../src/hdl/dccm_ram.v" \
+"../../../../../src/hdl/decoder.v" \
+"../../../../../src/hdl/divider.v" \
+"../../../../../src/hdl/dvi_display.v" \
+"../../../../../src/hdl/exec_unit.v" \
+"../../../../../src/hdl/fetch_unit.v" \
+"../../../../../src/hdl/frame_buffer.v" \
+"../../../../../src/hdl/msec_timer.v" \
+"../../../../../src/hdl/predictor_state.v" \
+"../../../../../src/hdl/ras.v" \
+"../../../../../src/hdl/regfile.v" \
+"../../../../../src/hdl/resync.v" \
+"../../../../../src/hdl/ssd_driver.v" \
+"../../../../../src/hdl/store_queue.v" \
+"../../../../../src/hdl/top.v" \
+"../../../../../src/hdl/vga_control.v" \
+"../../../../../src/sim/tb.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

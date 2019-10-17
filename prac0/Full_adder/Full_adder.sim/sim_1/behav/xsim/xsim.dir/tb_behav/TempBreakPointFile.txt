@@ -1,0 +1,2 @@
+Breakpoint File Version 1.0
+38 true /afs/inf.ed.ac.uk/user/s17/s1740055/CArD/prac0/Full_adder/Full_adder.srcs/sim_1/new/tb.v

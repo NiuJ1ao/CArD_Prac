@@ -1,0 +1,187 @@
+
+deps_test.out:     file format elf32-littleriscv
+
+Contents of section .text:
+ 0000 37310000 13010100 1301c1ff ef008000  71..............
+ 0010 73001000 130181fd 93070100 1307f038  s..............8
+ 0020 23a0e700 9305a000 13030000 1304204d  #............. M
+ 0030 93044022 37190000 13091991 9309403b  ..@"7.........@;
+ 0040 130a6030 930a001b 33842403 b3043903  ..`0....3.$...9.
+ 0050 33894903 b3095a03 338a6a03 b30a8b02  3.I...Z.3.j.....
+ 0060 33049400 33098940 b3c98900 330a8a00  3...3..@....3...
+ 0070 b38a8a40 33049400 33092441 b3493401  ...@3...3.$A.I4.
+ 0080 330a4401 b30a5441 03a40700 33098940  3.D...TA....3..@
+ 0090 b3c98900 330a8a00 b38a8a40 03a40700  ....3......@....
+ 00a0 33092441 b3493401 330a4401 b30a5441  3.$A.I4.3.D...TA
+ 00b0 33049400 33042441 b3493401 330b9400  3...3.$A.I4.3...
+ 00c0 330b2b41 b3c96901 33049400 33042441  3.+A..i.3...3.$A
+ 00d0 33044401 b3493401 33049400 33042441  3.D..I4.3...3.$A
+ 00e0 33044401 b3c98900 03aa0700 b3844401  3.D...........D.
+ 00f0 33094941 b3c94901 03aa0700 b3049a00  3.IA..I.........
+ 0100 33092a41 b3493a01 83aa0700 93020000  3.*A.I:.........
+ 0110 b3845401 33095941 b3c95901 83aa0700  ..T.3.YA..Y.....
+ 0120 93020000 b3849a00 33892a41 b3c93a01  ........3.*A..:.
+ 0130 13031300 e31ab3f0 13018102 67800000  ............g...
+Contents of section .riscv.attributes:
+ 0000 411e0000 00726973 63760001 14000000  A....riscv......
+ 0010 05727633 32693270 305f6d32 703000    .rv32i2p0_m2p0. 
+Contents of section .comment:
+ 0000 4743433a 2028474e 55292037 2e322e30  GCC: (GNU) 7.2.0
+ 0010 00                                   .               
+
+Disassembly of section .text:
+
+00000000 <_start>:
+   0:	00003137          	lui	sp,0x3
+   4:	00010113          	mv	sp,sp
+   8:	ffc10113          	addi	sp,sp,-4 # 2ffc <_stack_end+0x3fc>
+   c:	008000ef          	jal	ra,14 <main>
+  10:	00100073          	ebreak
+
+00000014 <main>:
+  14:	fd810113          	addi	sp,sp,-40
+  18:	00010793          	mv	a5,sp
+  1c:	38f00713          	li	a4,911
+  20:	00e7a023          	sw	a4,0(a5)
+  24:	00a00593          	li	a1,10
+  28:	00000313          	li	t1,0
+
+0000002c <init_test>:
+  2c:	4d200413          	li	s0,1234
+  30:	22400493          	li	s1,548
+  34:	00001937          	lui	s2,0x1
+  38:	91190913          	addi	s2,s2,-1775 # 911 <stack_size+0x511>
+  3c:	3b400993          	li	s3,948
+  40:	30600a13          	li	s4,774
+  44:	1b000a93          	li	s5,432
+
+00000048 <test_loop>:
+  48:	03248433          	mul	s0,s1,s2
+  4c:	033904b3          	mul	s1,s2,s3
+  50:	03498933          	mul	s2,s3,s4
+  54:	035a09b3          	mul	s3,s4,s5
+  58:	036a8a33          	mul	s4,s5,s6
+  5c:	028b0ab3          	mul	s5,s6,s0
+
+00000060 <test1>:
+  60:	00940433          	add	s0,s0,s1
+  64:	40890933          	sub	s2,s2,s0
+  68:	0089c9b3          	xor	s3,s3,s0
+  6c:	008a0a33          	add	s4,s4,s0
+  70:	408a8ab3          	sub	s5,s5,s0
+
+00000074 <test2>:
+  74:	00940433          	add	s0,s0,s1
+  78:	41240933          	sub	s2,s0,s2
+  7c:	013449b3          	xor	s3,s0,s3
+  80:	01440a33          	add	s4,s0,s4
+  84:	41540ab3          	sub	s5,s0,s5
+
+00000088 <test3>:
+  88:	0007a403          	lw	s0,0(a5)
+  8c:	40890933          	sub	s2,s2,s0
+  90:	0089c9b3          	xor	s3,s3,s0
+  94:	008a0a33          	add	s4,s4,s0
+  98:	408a8ab3          	sub	s5,s5,s0
+
+0000009c <test4>:
+  9c:	0007a403          	lw	s0,0(a5)
+  a0:	41240933          	sub	s2,s0,s2
+  a4:	013449b3          	xor	s3,s0,s3
+  a8:	01440a33          	add	s4,s0,s4
+  ac:	41540ab3          	sub	s5,s0,s5
+
+000000b0 <test5>:
+  b0:	00940433          	add	s0,s0,s1
+  b4:	41240433          	sub	s0,s0,s2
+  b8:	013449b3          	xor	s3,s0,s3
+
+000000bc <test6>:
+  bc:	00940b33          	add	s6,s0,s1
+  c0:	412b0b33          	sub	s6,s6,s2
+  c4:	0169c9b3          	xor	s3,s3,s6
+
+000000c8 <test7>:
+  c8:	00940433          	add	s0,s0,s1
+  cc:	41240433          	sub	s0,s0,s2
+  d0:	01440433          	add	s0,s0,s4
+  d4:	013449b3          	xor	s3,s0,s3
+
+000000d8 <test8>:
+  d8:	00940433          	add	s0,s0,s1
+  dc:	41240433          	sub	s0,s0,s2
+  e0:	01440433          	add	s0,s0,s4
+  e4:	0089c9b3          	xor	s3,s3,s0
+
+000000e8 <test9>:
+  e8:	0007aa03          	lw	s4,0(a5)
+  ec:	014484b3          	add	s1,s1,s4
+  f0:	41490933          	sub	s2,s2,s4
+  f4:	0149c9b3          	xor	s3,s3,s4
+
+000000f8 <test10>:
+  f8:	0007aa03          	lw	s4,0(a5)
+  fc:	009a04b3          	add	s1,s4,s1
+ 100:	412a0933          	sub	s2,s4,s2
+ 104:	013a49b3          	xor	s3,s4,s3
+
+00000108 <test11>:
+ 108:	0007aa83          	lw	s5,0(a5)
+ 10c:	00000293          	li	t0,0
+ 110:	015484b3          	add	s1,s1,s5
+ 114:	41590933          	sub	s2,s2,s5
+ 118:	0159c9b3          	xor	s3,s3,s5
+
+0000011c <test12>:
+ 11c:	0007aa83          	lw	s5,0(a5)
+ 120:	00000293          	li	t0,0
+ 124:	009a84b3          	add	s1,s5,s1
+ 128:	412a8933          	sub	s2,s5,s2
+ 12c:	013ac9b3          	xor	s3,s5,s3
+
+00000130 <loop_test>:
+ 130:	00130313          	addi	t1,t1,1
+ 134:	f0b31ae3          	bne	t1,a1,48 <test_loop>
+ 138:	02810113          	addi	sp,sp,40
+ 13c:	00008067          	ret
+
+Disassembly of section .bss:
+
+00002000 <x>:
+    2000:	0000                	unimp
+	...
+
+Disassembly of section .heap:
+
+00002004 <_heap_start>:
+	...
+
+Disassembly of section .riscv.attributes:
+
+00000000 <.riscv.attributes>:
+   0:	1e41                	addi	t3,t3,-16
+   2:	0000                	unimp
+   4:	7200                	flw	fs0,32(a2)
+   6:	7369                	lui	t1,0xffffa
+   8:	01007663          	bgeu	zero,a6,14 <main>
+   c:	0014                	0x14
+   e:	0000                	unimp
+  10:	7205                	lui	tp,0xfffe1
+  12:	3376                	fld	ft6,376(sp)
+  14:	6932                	flw	fs2,12(sp)
+  16:	7032                	flw	ft0,44(sp)
+  18:	5f30                	lw	a2,120(a4)
+  1a:	326d                	jal	fffff9c4 <_stack_start+0xffffc9c4>
+  1c:	3070                	fld	fa2,224(s0)
+	...
+
+Disassembly of section .comment:
+
+00000000 <.comment>:
+   0:	3a434347          	fmsub.d	ft6,ft6,ft4,ft7,rmm
+   4:	2820                	fld	fs0,80(s0)
+   6:	29554e47          	fmsub.s	ft8,fa0,fs5,ft5,rmm
+   a:	3720                	fld	fs0,104(a4)
+   c:	322e                	fld	ft4,232(sp)
+   e:	302e                	fld	ft0,232(sp)
+	...

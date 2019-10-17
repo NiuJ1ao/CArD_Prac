@@ -1,0 +1,13 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  \
+"../../../../RV32IM_PYNQ_Z2.ip_user_files/ipstatic/src/ClockGen.vhd" \
+"../../../../RV32IM_PYNQ_Z2.ip_user_files/ipstatic/src/SyncAsync.vhd" \
+"../../../../RV32IM_PYNQ_Z2.ip_user_files/ipstatic/src/SyncAsyncReset.vhd" \
+"../../../../RV32IM_PYNQ_Z2.ip_user_files/ipstatic/src/DVI_Constants.vhd" \
+"../../../../RV32IM_PYNQ_Z2.ip_user_files/ipstatic/src/OutputSERDES.vhd" \
+"../../../../RV32IM_PYNQ_Z2.ip_user_files/ipstatic/src/TMDS_Encoder.vhd" \
+"../../../../RV32IM_PYNQ_Z2.ip_user_files/ipstatic/src/rgb2dvi.vhd" \
+"../../../../../src/ip/rgb2dvi_0/sim/rgb2dvi_0.vhd" \
+
+# Do not sort compile order
+nosort

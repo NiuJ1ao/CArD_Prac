@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Webtalk v2018.3 (64-bit)
+# SW Build 2405991 on Thu Dec  6 23:36:41 MST 2018
+# IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Start of session at: Sun Oct  6 16:51:38 2019
+# Process ID: 30037
+# Current directory: /afs/inf.ed.ac.uk/user/s17/s1740055/CArD/prac0/Full_adder/Full_adder.sim/sim_1/behav/xsim
+# Command line: wbtcv -mode batch -source /afs/inf.ed.ac.uk/user/s17/s1740055/CArD/prac0/Full_adder/Full_adder.sim/sim_1/behav/xsim/xsim.dir/tb_behav/webtalk/xsim_webtalk.tcl -notrace
+# Log file: /afs/inf.ed.ac.uk/user/s17/s1740055/CArD/prac0/Full_adder/Full_adder.sim/sim_1/behav/xsim/webtalk.log
+# Journal file: /afs/inf.ed.ac.uk/user/s17/s1740055/CArD/prac0/Full_adder/Full_adder.sim/sim_1/behav/xsim/webtalk.jou
+#-----------------------------------------------------------
+source /afs/inf.ed.ac.uk/user/s17/s1740055/CArD/prac0/Full_adder/Full_adder.sim/sim_1/behav/xsim/xsim.dir/tb_behav/webtalk/xsim_webtalk.tcl -notrace

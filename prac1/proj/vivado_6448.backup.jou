@@ -1,0 +1,26 @@
+#-----------------------------------------------------------
+# Vivado v2018.3 (64-bit)
+# SW Build 2405991 on Thu Dec  6 23:36:41 MST 2018
+# IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Start of session at: Tue Oct 15 13:48:31 2019
+# Process ID: 6448
+# Current directory: /afs/inf.ed.ac.uk/user/s17/s1740055/CArD/prac1/proj
+# Command line: vivado
+# Log file: /afs/inf.ed.ac.uk/user/s17/s1740055/CArD/prac1/proj/vivado.log
+# Journal file: /afs/inf.ed.ac.uk/user/s17/s1740055/CArD/prac1/proj/vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project /afs/inf.ed.ac.uk/user/s17/s1740055/CArD/prac0/practical_1/practical_1.xpr
+update_compile_order -fileset sources_1
+close_project
+open_project /afs/inf.ed.ac.uk/user/s17/s1740055/CArD/prac1/proj/CARD_P1.xpr
+update_compile_order -fileset sources_1
+launch_simulation
+open_wave_config /afs/inf.ed.ac.uk/user/s17/s1740055/CArD/prac1/src/sim/tb_behav.wcfg
+source tb.tcl
+launch_runs synth_1 -jobs 2
+wait_on_run synth_1
+open_run synth_1 -name synth_1
+close_design
+close_sim
+close_project

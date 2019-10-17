@@ -1,0 +1,457 @@
+#-----------------------------------------------------------
+# Vivado v2018.3 (64-bit)
+# SW Build 2405991 on Thu Dec  6 23:36:41 MST 2018
+# IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Start of session at: Tue Oct 15 14:38:49 2019
+# Process ID: 27754
+# Current directory: /afs/inf.ed.ac.uk/user/s17/s1740055/CArD/prac1/proj
+# Command line: vivado
+# Log file: /afs/inf.ed.ac.uk/user/s17/s1740055/CArD/prac1/proj/vivado.log
+# Journal file: /afs/inf.ed.ac.uk/user/s17/s1740055/CArD/prac1/proj/vivado.jou
+#-----------------------------------------------------------
+start_gui
+source create_project.tcl
+# set proj_name "CARD_P1"
+# if {[info exists ::create_path]} {
+# 	set dest_dir $::create_path
+# } else {
+# 	set dest_dir [file normalize [file dirname [info script]]]
+# }
+# puts "INFO: Creating new project in $dest_dir"
+INFO: Creating new project in /afs/inf.ed.ac.uk/user/s17/s1740055/CArD/prac1/proj
+# cd $dest_dir
+# set part "xc7z020clg400-1"
+# set brd_part "tul.com.tw:pynq-z2:part0:1.0"
+# set origin_dir ".."
+# set orig_proj_dir "[file normalize "$origin_dir/proj"]"
+# set src_dir $origin_dir/src
+# set repo_dir $origin_dir/repo
+# set_param board.repoPaths "[file normalize "$repo_dir/board_files"]"
+# create_project -force $proj_name $dest_dir
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/disk/scratch/Xilinx/Vivado/2018.3/data/ip'.
+create_project: Time (s): cpu = 00:00:15 ; elapsed = 00:00:12 . Memory (MB): peak = 6559.656 ; gain = 155.168 ; free physical = 8478 ; free virtual = 21324
+# set proj_dir [get_property directory [current_project]]
+# set obj [get_projects $proj_name]
+# set_property "default_lib" "xil_defaultlib" $obj
+# set_property "part" $part $obj
+# set_property "board_part" "tul.com.tw:pynq-z2:part0:1.0" $obj
+# set_property "simulator_language" "Mixed" $obj
+# set_property "target_language" "Verilog" $obj
+# if {[string equal [get_filesets -quiet sources_1] ""]} {
+#   create_fileset -srcset sources_1
+# }
+# if {[string equal [get_filesets -quiet constrs_1] ""]} {
+#   create_fileset -constrset constrs_1
+# }
+# if {[string equal [get_filesets -quiet sim_1] ""]} {
+#   create_fileset -srcset sim_1
+# }
+# set obj [get_filesets sources_1]
+# add_files -quiet $src_dir/inc
+# set_property "FILE_TYPE" "Verilog Header" [get_files -of_objects $obj]
+# update_ip_catalog -rebuild
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+# add_files -quiet $src_dir/hdl
+# add_files -quiet [glob -nocomplain ../src/ip/*.xci]
+# add_files -quiet [glob -nocomplain ../src/ip/*.xcix]
+# add_files -quiet [glob -nocomplain ../src/ip/*/*.xci]
+# add_files -quiet [glob -nocomplain ../src/ip/*/*.xcix]
+# add_files -fileset constrs_1 -quiet $src_dir/constraints
+# add_files -fileset sim_1 -quiet $src_dir/sim
+# if {[string equal [get_runs -quiet synth_1] ""]} {
+#   create_run -name synth_1 -part $part -flow {Vivado Synthesis 2018} -strategy "Vivado Synthesis Defaults" -constrset constrs_1
+# } else {
+#   set_property strategy "Vivado Synthesis Defaults" [get_runs synth_1]
+#   set_property flow "Vivado Synthesis 2018" [get_runs synth_1]
+# }
+# set obj [get_runs synth_1]
+# set_property "part" $part $obj
+# set_property "steps.synth_design.args.flatten_hierarchy" "none" $obj
+# set_property "steps.synth_design.args.directive" "RuntimeOptimized" $obj
+# set_property "steps.synth_design.args.fsm_extraction" "off" $obj
+# current_run -synthesis [get_runs synth_1]
+# if {[string equal [get_runs -quiet impl_1] ""]} {
+#   create_run -name impl_1 -part $part -flow {Vivado Implementation 2018} -strategy "Vivado Implementation Defaults" -constrset constrs_1 -parent_run synth_1
+# } else {
+#   set_property strategy "Vivado Implementation Defaults" [get_runs impl_1]
+#   set_property flow "Vivado Implementation 2018" [get_runs impl_1]
+# }
+# set obj [get_runs impl_1]
+# set_property "part" $part $obj
+# set_property "steps.opt_design.args.directive"   "RuntimeOptimized" $obj
+# set_property "steps.place_design.args.directive" "RuntimeOptimized" $obj
+# set_property "steps.route_design.args.directive" "RuntimeOptimized" $obj
+# current_run -implementation [get_runs impl_1]
+# set_property -name {xsim.simulate.runtime} -value {100us} -objects [get_filesets sim_1]
+# puts "INFO: Project created:$proj_name"
+INFO: Project created:CARD_P1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sim_1
+update_compile_order -fileset sources_1
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/afs/inf.ed.ac.uk/user/s17/s1740055/CArD/prac1/proj/CARD_P1.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File '/afs/inf.ed.ac.uk/group/teaching/cd/VivadoData/Vivado/2018.3/data/xsim/xsim.ini' copied to run dir:'/afs/inf.ed.ac.uk/user/s17/s1740055/CArD/prac1/proj/CARD_P1.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/afs/inf.ed.ac.uk/user/s17/s1740055/CArD/prac1/proj/CARD_P1.sim/sim_1/behav/xsim'
+xvlog --incr --relax -prj tb_vlog.prj
+INFO: [VRFC 10-2263] Analyzing Verilog file "/afs/inf.ed.ac.uk/user/s17/s1740055/CArD/prac1/src/ip/rv32im_alu_0/rv32im_alu_0_sim_netlist.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module rv32im_alu_0
+INFO: [VRFC 10-311] analyzing module rv32im_alu_0_alu
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [VRFC 10-2263] Analyzing Verilog file "/afs/inf.ed.ac.uk/user/s17/s1740055/CArD/prac1/src/hdl/alu.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module alu
+INFO: [VRFC 10-2263] Analyzing Verilog file "/afs/inf.ed.ac.uk/user/s17/s1740055/CArD/prac1/src/sim/tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb
+INFO: [VRFC 10-2263] Analyzing Verilog file "/afs/inf.ed.ac.uk/user/s17/s1740055/CArD/prac1/proj/CARD_P1.sim/sim_1/behav/xsim/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl
+WARNING: [VRFC 10-3609] overwriting previous definition of module 'glbl' [/afs/inf.ed.ac.uk/user/s17/s1740055/CArD/prac1/proj/CARD_P1.sim/sim_1/behav/xsim/glbl.v:6]
+INFO: [USF-XSim-69] 'compile' step finished in '3' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/afs/inf.ed.ac.uk/user/s17/s1740055/CArD/prac1/proj/CARD_P1.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.3
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: /disk/scratch/Xilinx/Vivado/2018.3/bin/unwrapped/lnx64.o/xelab -wto 8cf48bbcbd0a43a6a6ee414f58701068 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_behav xil_defaultlib.tb xil_defaultlib.glbl -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.alu
+Compiling module unisims_ver.OBUF
+Compiling module unisims_ver.LUT6
+Compiling module unisims_ver.CARRY4
+Compiling module unisims_ver.LUT5
+Compiling module unisims_ver.LUT4
+Compiling module unisims_ver.x_lut3_mux8
+Compiling module unisims_ver.LUT3
+Compiling module unisims_ver.x_lut2_mux4
+Compiling module unisims_ver.LUT2
+Compiling module unisims_ver.IBUF
+Compiling module xil_defaultlib.rv32im_alu_0_alu
+Compiling module xil_defaultlib.rv32im_alu_0
+Compiling module xil_defaultlib.tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_behav
+
+****** Webtalk v2018.3 (64-bit)
+  **** SW Build 2405991 on Thu Dec  6 23:36:41 MST 2018
+  **** IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+source /afs/inf.ed.ac.uk/user/s17/s1740055/CArD/prac1/proj/CARD_P1.sim/sim_1/behav/xsim/xsim.dir/tb_behav/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-186] '/afs/inf.ed.ac.uk/user/s17/s1740055/CArD/prac1/proj/CARD_P1.sim/sim_1/behav/xsim/xsim.dir/tb_behav/webtalk/usage_statistics_ext_xsim.xml' has been successfully sent to Xilinx on Tue Oct 15 14:42:03 2019. For additional details about this file, please refer to the WebTalk help file at /disk/scratch/Xilinx/Vivado/2018.3/doc/webtalk_introduction.html.
+INFO: [Common 17-206] Exiting Webtalk at Tue Oct 15 14:42:03 2019...
+run_program: Time (s): cpu = 00:00:05 ; elapsed = 00:00:12 . Memory (MB): peak = 6654.430 ; gain = 0.000 ; free physical = 8201 ; free virtual = 21306
+INFO: [USF-XSim-69] 'elaborate' step finished in '12' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in '/afs/inf.ed.ac.uk/user/s17/s1740055/CArD/prac1/proj/CARD_P1.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tb_behav -key {Behavioral:sim_1:Functional:tb} -tclbatch {tb.tcl} -view {/afs/inf.ed.ac.uk/user/s17/s1740055/CArD/prac1/src/sim/tb_behav.wcfg} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2018.3
+Time resolution is 1 ps
+open_wave_config /afs/inf.ed.ac.uk/user/s17/s1740055/CArD/prac1/src/sim/tb_behav.wcfg
+source tb.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 100us
+xsim: Time (s): cpu = 00:00:06 ; elapsed = 00:00:05 . Memory (MB): peak = 6723.047 ; gain = 64.605 ; free physical = 8118 ; free virtual = 21252
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 100us
+launch_simulation: Time (s): cpu = 00:00:13 ; elapsed = 00:00:22 . Memory (MB): peak = 6723.047 ; gain = 68.617 ; free physical = 8118 ; free virtual = 21252
+run all
+Your ALU passed 10000 random tests, including:
+  s) AND, OR, XOR
+  b) ADD, SUB
+  c) SLT, SLTU
+  d) SLL, SRL, SRA
+Congratulations, your ALU is verified for all functions!
+$finish called at time : 100015 ns : File "/afs/inf.ed.ac.uk/user/s17/s1740055/CArD/prac1/src/sim/tb.v" Line 218
+launch_runs synth_1 -jobs 2
+[Tue Oct 15 14:42:20 2019] Launched synth_1...
+Run output will be captured here: /afs/inf.ed.ac.uk/user/s17/s1740055/CArD/prac1/proj/CARD_P1.runs/synth_1/runme.log
+open_run synth_1 -name synth_1
+Design is defaulting to impl run constrset: constrs_1
+Design is defaulting to synth run part: xc7z020clg400-1
+INFO: [Netlist 29-17] Analyzing 24 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2018.3
+INFO: [Device 21-403] Loading part xc7z020clg400-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Parsing XDC File [/afs/inf.ed.ac.uk/user/s17/s1740055/CArD/prac1/src/constraints/timing.xdc]
+INFO: [Constraints 18-483] create_clock: no pin(s)/port(s)/net(s) specified as objects, only virtual clock 'clk' will be created. If you don't want this, please specify pin(s)/ports(s)/net(s) as objects to the command. [/afs/inf.ed.ac.uk/user/s17/s1740055/CArD/prac1/src/constraints/timing.xdc:3]
+INFO: [Timing 38-35] Done setting XDC timing constraints. [/afs/inf.ed.ac.uk/user/s17/s1740055/CArD/prac1/src/constraints/timing.xdc:4]
+all_clocks: Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 7511.379 ; gain = 503.578 ; free physical = 7299 ; free virtual = 20584
+Finished Parsing XDC File [/afs/inf.ed.ac.uk/user/s17/s1740055/CArD/prac1/src/constraints/timing.xdc]
+Parsing XDC File [/afs/inf.ed.ac.uk/user/s17/s1740055/CArD/prac1/src/constraints/pynq-z2_v1.0.xdc]
+Finished Parsing XDC File [/afs/inf.ed.ac.uk/user/s17/s1740055/CArD/prac1/src/constraints/pynq-z2_v1.0.xdc]
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 7511.379 ; gain = 0.000 ; free physical = 7316 ; free virtual = 20601
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+open_run: Time (s): cpu = 00:00:17 ; elapsed = 00:00:15 . Memory (MB): peak = 7563.836 ; gain = 797.000 ; free physical = 7199 ; free virtual = 20488
+report_timing_summary -delay_type min_max -report_unconstrained -check_timing_verbose -max_paths 10 -input_pins -routable_nets -name timing_1
+INFO: [Constraints 18-483] create_clock: no pin(s)/port(s)/net(s) specified as objects, only virtual clock 'clk' will be created. If you don't want this, please specify pin(s)/ports(s)/net(s) as objects to the command. [/afs/inf.ed.ac.uk/user/s17/s1740055/CArD/prac1/src/constraints/timing.xdc:3]
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+CRITICAL WARNING: [Timing 38-195] User-specified setup uncertainty 0 for r on clk to r on clk is less than the automatically computed uncertainty of 2.5e-11. Timing analysis will be inaccurate!
+Resolution: Check that the user-specified clock uncertainty is accurate and reflects the designer's intent
+CRITICAL WARNING: [Timing 38-195] User-specified setup uncertainty 0 for r on clk to f on clk is less than the automatically computed uncertainty of 2.5e-11. Timing analysis will be inaccurate!
+Resolution: Check that the user-specified clock uncertainty is accurate and reflects the designer's intent
+CRITICAL WARNING: [Timing 38-195] User-specified setup uncertainty 0 for f on clk to r on clk is less than the automatically computed uncertainty of 2.5e-11. Timing analysis will be inaccurate!
+Resolution: Check that the user-specified clock uncertainty is accurate and reflects the designer's intent
+CRITICAL WARNING: [Timing 38-195] User-specified setup uncertainty 0 for f on clk to f on clk is less than the automatically computed uncertainty of 2.5e-11. Timing analysis will be inaccurate!
+Resolution: Check that the user-specified clock uncertainty is accurate and reflects the designer's intent
+CRITICAL WARNING: [Timing 38-195] User-specified hold uncertainty 0 for r on clk to r on clk is less than the automatically computed uncertainty of 2.5e-11. Timing analysis will be inaccurate!
+Resolution: Check that the user-specified clock uncertainty is accurate and reflects the designer's intent
+CRITICAL WARNING: [Timing 38-195] User-specified hold uncertainty 0 for r on clk to f on clk is less than the automatically computed uncertainty of 2.5e-11. Timing analysis will be inaccurate!
+Resolution: Check that the user-specified clock uncertainty is accurate and reflects the designer's intent
+CRITICAL WARNING: [Timing 38-195] User-specified hold uncertainty 0 for f on clk to r on clk is less than the automatically computed uncertainty of 2.5e-11. Timing analysis will be inaccurate!
+Resolution: Check that the user-specified clock uncertainty is accurate and reflects the designer's intent
+CRITICAL WARNING: [Timing 38-195] User-specified hold uncertainty 0 for f on clk to f on clk is less than the automatically computed uncertainty of 2.5e-11. Timing analysis will be inaccurate!
+Resolution: Check that the user-specified clock uncertainty is accurate and reflects the designer's intent
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -1, Delay Type: min_max.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 4 CPUs
+report_utilization -name utilization_1
+reset_run synth_1
+launch_runs synth_1 -jobs 2
+[Tue Oct 15 14:58:19 2019] Launched synth_1...
+Run output will be captured here: /afs/inf.ed.ac.uk/user/s17/s1740055/CArD/prac1/proj/CARD_P1.runs/synth_1/runme.log
+close_design
+open_run synth_1 -name synth_1
+Design is defaulting to impl run constrset: constrs_1
+Design is defaulting to synth run part: xc7z020clg400-1
+INFO: [Netlist 29-17] Analyzing 24 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2018.3
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Parsing XDC File [/afs/inf.ed.ac.uk/user/s17/s1740055/CArD/prac1/src/constraints/timing.xdc]
+INFO: [Constraints 18-483] create_clock: no pin(s)/port(s)/net(s) specified as objects, only virtual clock 'clk' will be created. If you don't want this, please specify pin(s)/ports(s)/net(s) as objects to the command. [/afs/inf.ed.ac.uk/user/s17/s1740055/CArD/prac1/src/constraints/timing.xdc:3]
+INFO: [Timing 38-35] Done setting XDC timing constraints. [/afs/inf.ed.ac.uk/user/s17/s1740055/CArD/prac1/src/constraints/timing.xdc:4]
+Finished Parsing XDC File [/afs/inf.ed.ac.uk/user/s17/s1740055/CArD/prac1/src/constraints/timing.xdc]
+Parsing XDC File [/afs/inf.ed.ac.uk/user/s17/s1740055/CArD/prac1/src/constraints/pynq-z2_v1.0.xdc]
+Finished Parsing XDC File [/afs/inf.ed.ac.uk/user/s17/s1740055/CArD/prac1/src/constraints/pynq-z2_v1.0.xdc]
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 7656.906 ; gain = 0.000 ; free physical = 6555 ; free virtual = 20141
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+report_timing_summary -delay_type min_max -report_unconstrained -check_timing_verbose -max_paths 10 -input_pins -routable_nets -name timing_1
+INFO: [Constraints 18-483] create_clock: no pin(s)/port(s)/net(s) specified as objects, only virtual clock 'clk' will be created. If you don't want this, please specify pin(s)/ports(s)/net(s) as objects to the command. [/afs/inf.ed.ac.uk/user/s17/s1740055/CArD/prac1/src/constraints/timing.xdc:3]
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+CRITICAL WARNING: [Timing 38-195] User-specified setup uncertainty 0 for r on clk to r on clk is less than the automatically computed uncertainty of 2.5e-11. Timing analysis will be inaccurate!
+Resolution: Check that the user-specified clock uncertainty is accurate and reflects the designer's intent
+CRITICAL WARNING: [Timing 38-195] User-specified setup uncertainty 0 for r on clk to f on clk is less than the automatically computed uncertainty of 2.5e-11. Timing analysis will be inaccurate!
+Resolution: Check that the user-specified clock uncertainty is accurate and reflects the designer's intent
+CRITICAL WARNING: [Timing 38-195] User-specified setup uncertainty 0 for f on clk to r on clk is less than the automatically computed uncertainty of 2.5e-11. Timing analysis will be inaccurate!
+Resolution: Check that the user-specified clock uncertainty is accurate and reflects the designer's intent
+CRITICAL WARNING: [Timing 38-195] User-specified setup uncertainty 0 for f on clk to f on clk is less than the automatically computed uncertainty of 2.5e-11. Timing analysis will be inaccurate!
+Resolution: Check that the user-specified clock uncertainty is accurate and reflects the designer's intent
+CRITICAL WARNING: [Timing 38-195] User-specified hold uncertainty 0 for r on clk to r on clk is less than the automatically computed uncertainty of 2.5e-11. Timing analysis will be inaccurate!
+Resolution: Check that the user-specified clock uncertainty is accurate and reflects the designer's intent
+CRITICAL WARNING: [Timing 38-195] User-specified hold uncertainty 0 for r on clk to f on clk is less than the automatically computed uncertainty of 2.5e-11. Timing analysis will be inaccurate!
+Resolution: Check that the user-specified clock uncertainty is accurate and reflects the designer's intent
+CRITICAL WARNING: [Timing 38-195] User-specified hold uncertainty 0 for f on clk to r on clk is less than the automatically computed uncertainty of 2.5e-11. Timing analysis will be inaccurate!
+Resolution: Check that the user-specified clock uncertainty is accurate and reflects the designer's intent
+CRITICAL WARNING: [Timing 38-195] User-specified hold uncertainty 0 for f on clk to f on clk is less than the automatically computed uncertainty of 2.5e-11. Timing analysis will be inaccurate!
+Resolution: Check that the user-specified clock uncertainty is accurate and reflects the designer's intent
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -1, Delay Type: min_max.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 4 CPUs
+report_utilization -name utilization_1
+reset_run synth_1
+launch_runs synth_1 -jobs 2
+[Tue Oct 15 15:04:05 2019] Launched synth_1...
+Run output will be captured here: /afs/inf.ed.ac.uk/user/s17/s1740055/CArD/prac1/proj/CARD_P1.runs/synth_1/runme.log
+close_design
+open_run synth_1 -name synth_1
+Design is defaulting to impl run constrset: constrs_1
+Design is defaulting to synth run part: xc7z020clg400-1
+INFO: [Netlist 29-17] Analyzing 24 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2018.3
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Parsing XDC File [/afs/inf.ed.ac.uk/user/s17/s1740055/CArD/prac1/src/constraints/timing.xdc]
+INFO: [Constraints 18-483] create_clock: no pin(s)/port(s)/net(s) specified as objects, only virtual clock 'clk' will be created. If you don't want this, please specify pin(s)/ports(s)/net(s) as objects to the command. [/afs/inf.ed.ac.uk/user/s17/s1740055/CArD/prac1/src/constraints/timing.xdc:3]
+INFO: [Timing 38-35] Done setting XDC timing constraints. [/afs/inf.ed.ac.uk/user/s17/s1740055/CArD/prac1/src/constraints/timing.xdc:4]
+Finished Parsing XDC File [/afs/inf.ed.ac.uk/user/s17/s1740055/CArD/prac1/src/constraints/timing.xdc]
+Parsing XDC File [/afs/inf.ed.ac.uk/user/s17/s1740055/CArD/prac1/src/constraints/pynq-z2_v1.0.xdc]
+Finished Parsing XDC File [/afs/inf.ed.ac.uk/user/s17/s1740055/CArD/prac1/src/constraints/pynq-z2_v1.0.xdc]
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 7669.918 ; gain = 0.000 ; free physical = 6456 ; free virtual = 20093
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+report_timing_summary -delay_type min_max -report_unconstrained -check_timing_verbose -max_paths 10 -input_pins -routable_nets -name timing_1
+INFO: [Constraints 18-483] create_clock: no pin(s)/port(s)/net(s) specified as objects, only virtual clock 'clk' will be created. If you don't want this, please specify pin(s)/ports(s)/net(s) as objects to the command. [/afs/inf.ed.ac.uk/user/s17/s1740055/CArD/prac1/src/constraints/timing.xdc:3]
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+CRITICAL WARNING: [Timing 38-195] User-specified setup uncertainty 0 for r on clk to r on clk is less than the automatically computed uncertainty of 2.5e-11. Timing analysis will be inaccurate!
+Resolution: Check that the user-specified clock uncertainty is accurate and reflects the designer's intent
+CRITICAL WARNING: [Timing 38-195] User-specified setup uncertainty 0 for r on clk to f on clk is less than the automatically computed uncertainty of 2.5e-11. Timing analysis will be inaccurate!
+Resolution: Check that the user-specified clock uncertainty is accurate and reflects the designer's intent
+CRITICAL WARNING: [Timing 38-195] User-specified setup uncertainty 0 for f on clk to r on clk is less than the automatically computed uncertainty of 2.5e-11. Timing analysis will be inaccurate!
+Resolution: Check that the user-specified clock uncertainty is accurate and reflects the designer's intent
+CRITICAL WARNING: [Timing 38-195] User-specified setup uncertainty 0 for f on clk to f on clk is less than the automatically computed uncertainty of 2.5e-11. Timing analysis will be inaccurate!
+Resolution: Check that the user-specified clock uncertainty is accurate and reflects the designer's intent
+CRITICAL WARNING: [Timing 38-195] User-specified hold uncertainty 0 for r on clk to r on clk is less than the automatically computed uncertainty of 2.5e-11. Timing analysis will be inaccurate!
+Resolution: Check that the user-specified clock uncertainty is accurate and reflects the designer's intent
+CRITICAL WARNING: [Timing 38-195] User-specified hold uncertainty 0 for r on clk to f on clk is less than the automatically computed uncertainty of 2.5e-11. Timing analysis will be inaccurate!
+Resolution: Check that the user-specified clock uncertainty is accurate and reflects the designer's intent
+CRITICAL WARNING: [Timing 38-195] User-specified hold uncertainty 0 for f on clk to r on clk is less than the automatically computed uncertainty of 2.5e-11. Timing analysis will be inaccurate!
+Resolution: Check that the user-specified clock uncertainty is accurate and reflects the designer's intent
+CRITICAL WARNING: [Timing 38-195] User-specified hold uncertainty 0 for f on clk to f on clk is less than the automatically computed uncertainty of 2.5e-11. Timing analysis will be inaccurate!
+Resolution: Check that the user-specified clock uncertainty is accurate and reflects the designer's intent
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -1, Delay Type: min_max.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 4 CPUs
+report_utilization -name utilization_1
+refresh_design
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Parsing XDC File [/afs/inf.ed.ac.uk/user/s17/s1740055/CArD/prac1/src/constraints/timing.xdc]
+INFO: [Constraints 18-483] create_clock: no pin(s)/port(s)/net(s) specified as objects, only virtual clock 'clk' will be created. If you don't want this, please specify pin(s)/ports(s)/net(s) as objects to the command. [/afs/inf.ed.ac.uk/user/s17/s1740055/CArD/prac1/src/constraints/timing.xdc:3]
+INFO: [Timing 38-35] Done setting XDC timing constraints. [/afs/inf.ed.ac.uk/user/s17/s1740055/CArD/prac1/src/constraints/timing.xdc:4]
+Finished Parsing XDC File [/afs/inf.ed.ac.uk/user/s17/s1740055/CArD/prac1/src/constraints/timing.xdc]
+Parsing XDC File [/afs/inf.ed.ac.uk/user/s17/s1740055/CArD/prac1/src/constraints/pynq-z2_v1.0.xdc]
+Finished Parsing XDC File [/afs/inf.ed.ac.uk/user/s17/s1740055/CArD/prac1/src/constraints/pynq-z2_v1.0.xdc]
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+reset_run synth_1
+launch_runs synth_1 -jobs 2
+[Tue Oct 15 15:07:42 2019] Launched synth_1...
+Run output will be captured here: /afs/inf.ed.ac.uk/user/s17/s1740055/CArD/prac1/proj/CARD_P1.runs/synth_1/runme.log
+close_design
+open_run synth_1 -name synth_1
+Design is defaulting to impl run constrset: constrs_1
+Design is defaulting to synth run part: xc7z020clg400-1
+INFO: [Netlist 29-17] Analyzing 24 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2018.3
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Parsing XDC File [/afs/inf.ed.ac.uk/user/s17/s1740055/CArD/prac1/src/constraints/timing.xdc]
+INFO: [Constraints 18-483] create_clock: no pin(s)/port(s)/net(s) specified as objects, only virtual clock 'clk' will be created. If you don't want this, please specify pin(s)/ports(s)/net(s) as objects to the command. [/afs/inf.ed.ac.uk/user/s17/s1740055/CArD/prac1/src/constraints/timing.xdc:3]
+INFO: [Timing 38-35] Done setting XDC timing constraints. [/afs/inf.ed.ac.uk/user/s17/s1740055/CArD/prac1/src/constraints/timing.xdc:4]
+Finished Parsing XDC File [/afs/inf.ed.ac.uk/user/s17/s1740055/CArD/prac1/src/constraints/timing.xdc]
+Parsing XDC File [/afs/inf.ed.ac.uk/user/s17/s1740055/CArD/prac1/src/constraints/pynq-z2_v1.0.xdc]
+Finished Parsing XDC File [/afs/inf.ed.ac.uk/user/s17/s1740055/CArD/prac1/src/constraints/pynq-z2_v1.0.xdc]
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 7669.918 ; gain = 0.000 ; free physical = 6442 ; free virtual = 20064
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+report_timing_summary -delay_type min_max -report_unconstrained -check_timing_verbose -max_paths 10 -input_pins -routable_nets -name timing_1
+INFO: [Constraints 18-483] create_clock: no pin(s)/port(s)/net(s) specified as objects, only virtual clock 'clk' will be created. If you don't want this, please specify pin(s)/ports(s)/net(s) as objects to the command. [/afs/inf.ed.ac.uk/user/s17/s1740055/CArD/prac1/src/constraints/timing.xdc:3]
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+CRITICAL WARNING: [Timing 38-195] User-specified setup uncertainty 0 for r on clk to r on clk is less than the automatically computed uncertainty of 2.5e-11. Timing analysis will be inaccurate!
+Resolution: Check that the user-specified clock uncertainty is accurate and reflects the designer's intent
+CRITICAL WARNING: [Timing 38-195] User-specified setup uncertainty 0 for r on clk to f on clk is less than the automatically computed uncertainty of 2.5e-11. Timing analysis will be inaccurate!
+Resolution: Check that the user-specified clock uncertainty is accurate and reflects the designer's intent
+CRITICAL WARNING: [Timing 38-195] User-specified setup uncertainty 0 for f on clk to r on clk is less than the automatically computed uncertainty of 2.5e-11. Timing analysis will be inaccurate!
+Resolution: Check that the user-specified clock uncertainty is accurate and reflects the designer's intent
+CRITICAL WARNING: [Timing 38-195] User-specified setup uncertainty 0 for f on clk to f on clk is less than the automatically computed uncertainty of 2.5e-11. Timing analysis will be inaccurate!
+Resolution: Check that the user-specified clock uncertainty is accurate and reflects the designer's intent
+CRITICAL WARNING: [Timing 38-195] User-specified hold uncertainty 0 for r on clk to r on clk is less than the automatically computed uncertainty of 2.5e-11. Timing analysis will be inaccurate!
+Resolution: Check that the user-specified clock uncertainty is accurate and reflects the designer's intent
+CRITICAL WARNING: [Timing 38-195] User-specified hold uncertainty 0 for r on clk to f on clk is less than the automatically computed uncertainty of 2.5e-11. Timing analysis will be inaccurate!
+Resolution: Check that the user-specified clock uncertainty is accurate and reflects the designer's intent
+CRITICAL WARNING: [Timing 38-195] User-specified hold uncertainty 0 for f on clk to r on clk is less than the automatically computed uncertainty of 2.5e-11. Timing analysis will be inaccurate!
+Resolution: Check that the user-specified clock uncertainty is accurate and reflects the designer's intent
+CRITICAL WARNING: [Timing 38-195] User-specified hold uncertainty 0 for f on clk to f on clk is less than the automatically computed uncertainty of 2.5e-11. Timing analysis will be inaccurate!
+Resolution: Check that the user-specified clock uncertainty is accurate and reflects the designer's intent
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -1, Delay Type: min_max.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 4 CPUs
+report_utilization -name utilization_1
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/afs/inf.ed.ac.uk/user/s17/s1740055/CArD/prac1/proj/CARD_P1.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File '/afs/inf.ed.ac.uk/group/teaching/cd/VivadoData/Vivado/2018.3/data/xsim/xsim.ini' copied to run dir:'/afs/inf.ed.ac.uk/user/s17/s1740055/CArD/prac1/proj/CARD_P1.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/afs/inf.ed.ac.uk/user/s17/s1740055/CArD/prac1/proj/CARD_P1.sim/sim_1/behav/xsim'
+xvlog --incr --relax -prj tb_vlog.prj
+INFO: [VRFC 10-2263] Analyzing Verilog file "/afs/inf.ed.ac.uk/user/s17/s1740055/CArD/prac1/src/ip/rv32im_alu_0/rv32im_alu_0_sim_netlist.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module rv32im_alu_0
+INFO: [VRFC 10-311] analyzing module rv32im_alu_0_alu
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [VRFC 10-2263] Analyzing Verilog file "/afs/inf.ed.ac.uk/user/s17/s1740055/CArD/prac1/src/hdl/alu.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module alu
+INFO: [VRFC 10-2263] Analyzing Verilog file "/afs/inf.ed.ac.uk/user/s17/s1740055/CArD/prac1/src/sim/tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/afs/inf.ed.ac.uk/user/s17/s1740055/CArD/prac1/proj/CARD_P1.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.3
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: /disk/scratch/Xilinx/Vivado/2018.3/bin/unwrapped/lnx64.o/xelab -wto 8cf48bbcbd0a43a6a6ee414f58701068 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_behav xil_defaultlib.tb xil_defaultlib.glbl -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.alu
+Compiling module unisims_ver.OBUF
+Compiling module unisims_ver.LUT6
+Compiling module unisims_ver.CARRY4
+Compiling module unisims_ver.LUT5
+Compiling module unisims_ver.LUT4
+Compiling module unisims_ver.x_lut3_mux8
+Compiling module unisims_ver.LUT3
+Compiling module unisims_ver.x_lut2_mux4
+Compiling module unisims_ver.LUT2
+Compiling module unisims_ver.IBUF
+Compiling module xil_defaultlib.rv32im_alu_0_alu
+Compiling module xil_defaultlib.rv32im_alu_0
+Compiling module xil_defaultlib.tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in '/afs/inf.ed.ac.uk/user/s17/s1740055/CArD/prac1/proj/CARD_P1.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tb_behav -key {Behavioral:sim_1:Functional:tb} -tclbatch {tb.tcl} -view {/afs/inf.ed.ac.uk/user/s17/s1740055/CArD/prac1/src/sim/tb_behav.wcfg} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2018.3
+Time resolution is 1 ps
+open_wave_config /afs/inf.ed.ac.uk/user/s17/s1740055/CArD/prac1/src/sim/tb_behav.wcfg
+source tb.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 100us
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 100us
+launch_simulation: Time (s): cpu = 00:00:05 ; elapsed = 00:00:08 . Memory (MB): peak = 7690.270 ; gain = 0.000 ; free physical = 6372 ; free virtual = 19998
+report_timing_summary -delay_type min_max -report_unconstrained -check_timing_verbose -max_paths 10 -input_pins -routable_nets -name timing_2
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -1, Delay Type: min_max.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 4 CPUs
+report_utilization -name utilization_2
+close_design
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+close_project
+exit
+INFO: [Common 17-206] Exiting Vivado at Tue Oct 15 15:14:43 2019...

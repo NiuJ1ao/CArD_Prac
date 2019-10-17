@@ -1,0 +1,62 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "/afs/inf.ed.ac.uk/user/s17/s1740055/CArD/prac2/src/ip/rv32im_rm_0/rv32im_rm_0_sim_netlist.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module rv32im_rm_0
+INFO: [VRFC 10-311] analyzing module rv32im_rm_0_control_unit
+INFO: [VRFC 10-311] analyzing module rv32im_rm_0_rv32im_ref
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [VRFC 10-2263] Analyzing Verilog file "/afs/inf.ed.ac.uk/user/s17/s1740055/CArD/prac2/src/ip/video_clock_gen/video_clock_gen_clk_wiz.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module video_clock_gen_clk_wiz
+INFO: [VRFC 10-2263] Analyzing Verilog file "/afs/inf.ed.ac.uk/user/s17/s1740055/CArD/prac2/src/ip/video_clock_gen/video_clock_gen.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module video_clock_gen
+INFO: [VRFC 10-2263] Analyzing Verilog file "/afs/inf.ed.ac.uk/user/s17/s1740055/CArD/prac2/src/ip/cpu_clock_gen/cpu_clock_gen_clk_wiz.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module cpu_clock_gen_clk_wiz
+INFO: [VRFC 10-2263] Analyzing Verilog file "/afs/inf.ed.ac.uk/user/s17/s1740055/CArD/prac2/src/ip/cpu_clock_gen/cpu_clock_gen.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module cpu_clock_gen
+INFO: [VRFC 10-2263] Analyzing Verilog file "/afs/inf.ed.ac.uk/user/s17/s1740055/CArD/prac2/src/hdl/alu.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module alu
+INFO: [VRFC 10-2263] Analyzing Verilog file "/afs/inf.ed.ac.uk/user/s17/s1740055/CArD/prac2/src/hdl/branch_cache.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module branch_cache
+INFO: [VRFC 10-2263] Analyzing Verilog file "/afs/inf.ed.ac.uk/user/s17/s1740055/CArD/prac2/src/hdl/branch_predictor.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module branch_predictor
+INFO: [VRFC 10-2263] Analyzing Verilog file "/afs/inf.ed.ac.uk/user/s17/s1740055/CArD/prac2/src/hdl/bypass_or_stall.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module bypass_or_stall
+INFO: [VRFC 10-2263] Analyzing Verilog file "/afs/inf.ed.ac.uk/user/s17/s1740055/CArD/prac2/src/hdl/cpu.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module cpu
+INFO: [VRFC 10-2263] Analyzing Verilog file "/afs/inf.ed.ac.uk/user/s17/s1740055/CArD/prac2/src/hdl/csr_unit.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module control_unit
+INFO: [VRFC 10-2263] Analyzing Verilog file "/afs/inf.ed.ac.uk/user/s17/s1740055/CArD/prac2/src/hdl/dccm_ram.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module dccm_ram
+INFO: [VRFC 10-2263] Analyzing Verilog file "/afs/inf.ed.ac.uk/user/s17/s1740055/CArD/prac2/src/hdl/decoder.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module decoder
+INFO: [VRFC 10-2263] Analyzing Verilog file "/afs/inf.ed.ac.uk/user/s17/s1740055/CArD/prac2/src/hdl/divider.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module divider
+INFO: [VRFC 10-2263] Analyzing Verilog file "/afs/inf.ed.ac.uk/user/s17/s1740055/CArD/prac2/src/hdl/dvi_display.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module dvi_display
+INFO: [VRFC 10-2263] Analyzing Verilog file "/afs/inf.ed.ac.uk/user/s17/s1740055/CArD/prac2/src/hdl/exec_unit.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module exec_unit
+INFO: [VRFC 10-2263] Analyzing Verilog file "/afs/inf.ed.ac.uk/user/s17/s1740055/CArD/prac2/src/hdl/fetch_unit.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module fetch_unit
+INFO: [VRFC 10-2263] Analyzing Verilog file "/afs/inf.ed.ac.uk/user/s17/s1740055/CArD/prac2/src/hdl/frame_buffer.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module frame_buffer
+INFO: [VRFC 10-2263] Analyzing Verilog file "/afs/inf.ed.ac.uk/user/s17/s1740055/CArD/prac2/src/hdl/msec_timer.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module msec_timer
+INFO: [VRFC 10-2263] Analyzing Verilog file "/afs/inf.ed.ac.uk/user/s17/s1740055/CArD/prac2/src/hdl/predictor_state.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module predictor_state
+INFO: [VRFC 10-2263] Analyzing Verilog file "/afs/inf.ed.ac.uk/user/s17/s1740055/CArD/prac2/src/hdl/ras.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ras
+INFO: [VRFC 10-2263] Analyzing Verilog file "/afs/inf.ed.ac.uk/user/s17/s1740055/CArD/prac2/src/hdl/regfile.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module regfile
+INFO: [VRFC 10-2263] Analyzing Verilog file "/afs/inf.ed.ac.uk/user/s17/s1740055/CArD/prac2/src/hdl/resync.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module resync
+INFO: [VRFC 10-2263] Analyzing Verilog file "/afs/inf.ed.ac.uk/user/s17/s1740055/CArD/prac2/src/hdl/ssd_driver.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ssd_driver
+INFO: [VRFC 10-2263] Analyzing Verilog file "/afs/inf.ed.ac.uk/user/s17/s1740055/CArD/prac2/src/hdl/store_queue.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module store_queue
+INFO: [VRFC 10-2263] Analyzing Verilog file "/afs/inf.ed.ac.uk/user/s17/s1740055/CArD/prac2/src/hdl/top.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module top
+INFO: [VRFC 10-2263] Analyzing Verilog file "/afs/inf.ed.ac.uk/user/s17/s1740055/CArD/prac2/src/hdl/vga_control.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module vga_control
+INFO: [VRFC 10-2263] Analyzing Verilog file "/afs/inf.ed.ac.uk/user/s17/s1740055/CArD/prac2/src/sim/tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb
+INFO: [VRFC 10-2263] Analyzing Verilog file "/afs/inf.ed.ac.uk/user/s17/s1740055/CArD/prac2/proj/RV32IM_PYNQ_Z2.sim/sim_1/behav/xsim/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl
+WARNING: [VRFC 10-3609] overwriting previous definition of module 'glbl' [/afs/inf.ed.ac.uk/user/s17/s1740055/CArD/prac2/proj/RV32IM_PYNQ_Z2.sim/sim_1/behav/xsim/glbl.v:6]
