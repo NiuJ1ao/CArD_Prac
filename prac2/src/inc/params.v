@@ -19,12 +19,14 @@
 // Set the ALU_MODULE macro to the name of your ALU top-level module (e.g. alu)
 // from Practical assignment 1, if you want to use your own module
 //
+//`define           ALU_MODULE         rv32im_alu_0
 `define           ALU_MODULE         alu
 
 // Set the HEX_FILE localparam to the name of the hex file containing the test
 // program (deps_test.hex) or the Mandlebrot benchmark program (mbrot.hex)
 //
 localparam        HEX_FILE         = "deps_test.hex";
+// localparam        HEX_FILE         = "mbrot.hex";
 
 
 // ============== Do not edit any definitions below this line ==================

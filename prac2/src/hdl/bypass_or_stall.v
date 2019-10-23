@@ -66,9 +66,11 @@ always @*
 //  dec_load_use    = 1'b0 & wrb_rd_wenb; // this is just to assign a value
 //  dec_csr_use     = 1'b0 & wrb_rd_wenb; // this is just to assign a value
 
-  dec_stall = (((exe_rd_wenb && (exe_rd == dec_rs1)) || (mem_rd_wenb && (mem_rd == dec_rs1)) || (wrb_rd_wenb && (wrb_rd == dec_rs1))) && dec_rs1_renb)
-               || (((exe_rd_wenb && (exe_rd == dec_rs2)) || (mem_rd_wenb && (mem_rd == dec_rs2)) || (wrb_rd_wenb && (wrb_rd == dec_rs2))) && dec_rs2_renb);
-               
+//  dec_stall = (((exe_rd_wenb && (exe_rd == dec_rs1)) || (mem_rd_wenb && (mem_rd == dec_rs1)) || (wrb_rd_wenb && (wrb_rd == dec_rs1))) && dec_rs1_renb)
+//               || (((exe_rd_wenb && (exe_rd == dec_rs2)) || (mem_rd_wenb && (mem_rd == dec_rs2)) || (wrb_rd_wenb && (wrb_rd == dec_rs2))) && dec_rs2_renb);
+  
+  dec_stall = (((exe_rd_wenb && (exe_rd == dec_rs1)) || (mem_rd_wenb && (mem_rd == dec_rs1)) || (wrb_rd_wenb && (wrb_rd == dec_rs1))) && dec_rs1_renb && dec_rs1_data == dec_rdata1)
+               || (((exe_rd_wenb && (exe_rd == dec_rs2)) || (mem_rd_wenb && (mem_rd == dec_rs2)) || (wrb_rd_wenb && (wrb_rd == dec_rs2))) && dec_rs2_renb && dec_rs2_data == dec_rdata2);
   dec_load_use = (exe_rd == dec_rs1 || exe_rd == dec_rs2) && exe_load;
   dec_csr_use = (exe_rd == dec_rs1 || exe_rd == dec_rs2) && exe_csr;
 
@@ -78,7 +80,23 @@ always @*
   //
   dec_rs1_data    = dec_rdata1;
   dec_rs2_data    = dec_rdata2;
- 
+
+  // TODO: Handle collision for dec_rs1 and dec_rs2 are both dependent for same stage value;
+  if (exe_rd_wenb && (exe_rd == dec_rs1))
+      dec_rs1_data = exe_result;
+  else if (mem_rd_wenb && (mem_rd == dec_rs1))
+      dec_rs1_data = mem_result;
+  else if (wrb_rd_wenb && (wrb_rd == dec_rs1))
+      dec_rs1_data = wrb_result;
+  else if (exe_rd_wenb && (exe_rd == dec_rs2))
+      dec_rs2_data = exe_result;
+  else if (mem_rd_wenb && (mem_rd == dec_rs2))
+      dec_rs2_data = mem_result;
+  else if (wrb_rd_wenb && (wrb_rd == dec_rs2))
+      dec_rs2_data = wrb_result;
+
+    
+  
   end // bypass_stall_PROC
 
 endmodule
