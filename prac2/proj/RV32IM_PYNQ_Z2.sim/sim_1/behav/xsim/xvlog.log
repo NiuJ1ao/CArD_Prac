@@ -3,6 +3,9 @@ INFO: [VRFC 10-311] analyzing module rv32im_rm_0
 INFO: [VRFC 10-311] analyzing module rv32im_rm_0_control_unit
 INFO: [VRFC 10-311] analyzing module rv32im_rm_0_rv32im_ref
 INFO: [VRFC 10-311] analyzing module glbl
+INFO: [VRFC 10-2263] Analyzing Verilog file "/afs/inf.ed.ac.uk/user/s17/s1740055/CArD/prac2/src/ip/rv32im_alu_0/rv32im_alu_0_sim_netlist.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module rv32im_alu_0
+INFO: [VRFC 10-311] analyzing module rv32im_alu_0_alu
 INFO: [VRFC 10-2263] Analyzing Verilog file "/afs/inf.ed.ac.uk/user/s17/s1740055/CArD/prac2/src/ip/video_clock_gen/video_clock_gen_clk_wiz.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module video_clock_gen_clk_wiz
 INFO: [VRFC 10-2263] Analyzing Verilog file "/afs/inf.ed.ac.uk/user/s17/s1740055/CArD/prac2/src/ip/video_clock_gen/video_clock_gen.v" into library xil_defaultlib
@@ -11,8 +14,6 @@ INFO: [VRFC 10-2263] Analyzing Verilog file "/afs/inf.ed.ac.uk/user/s17/s1740055
 INFO: [VRFC 10-311] analyzing module cpu_clock_gen_clk_wiz
 INFO: [VRFC 10-2263] Analyzing Verilog file "/afs/inf.ed.ac.uk/user/s17/s1740055/CArD/prac2/src/ip/cpu_clock_gen/cpu_clock_gen.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module cpu_clock_gen
-INFO: [VRFC 10-2263] Analyzing Verilog file "/afs/inf.ed.ac.uk/user/s17/s1740055/CArD/prac2/src/hdl/alu.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module alu
 INFO: [VRFC 10-2263] Analyzing Verilog file "/afs/inf.ed.ac.uk/user/s17/s1740055/CArD/prac2/src/hdl/branch_cache.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module branch_cache
 INFO: [VRFC 10-2263] Analyzing Verilog file "/afs/inf.ed.ac.uk/user/s17/s1740055/CArD/prac2/src/hdl/branch_predictor.v" into library xil_defaultlib
@@ -57,6 +58,3 @@ INFO: [VRFC 10-2263] Analyzing Verilog file "/afs/inf.ed.ac.uk/user/s17/s1740055
 INFO: [VRFC 10-311] analyzing module vga_control
 INFO: [VRFC 10-2263] Analyzing Verilog file "/afs/inf.ed.ac.uk/user/s17/s1740055/CArD/prac2/src/sim/tb.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module tb
-INFO: [VRFC 10-2263] Analyzing Verilog file "/afs/inf.ed.ac.uk/user/s17/s1740055/CArD/prac2/proj/RV32IM_PYNQ_Z2.sim/sim_1/behav/xsim/glbl.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module glbl
-WARNING: [VRFC 10-3609] overwriting previous definition of module 'glbl' [/afs/inf.ed.ac.uk/user/s17/s1740055/CArD/prac2/proj/RV32IM_PYNQ_Z2.sim/sim_1/behav/xsim/glbl.v:6]

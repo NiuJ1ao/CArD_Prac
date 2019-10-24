@@ -6,48 +6,6 @@ Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
 Time: 4 ns  Iteration: 2  Process: /tb/dut/u_dvi_display/u_rgb2dvi/U0/\DataEncoders(1)\/DataEncoder/line__154  File: /afs/inf.ed.ac.uk/user/s17/s1740055/CArD/prac2/proj/RV32IM_PYNQ_Z2.ip_user_files/ipstatic/src/TMDS_Encoder.vhd
 Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
 Time: 4 ns  Iteration: 2  Process: /tb/dut/u_dvi_display/u_rgb2dvi/U0/\DataEncoders(2)\/DataEncoder/line__154  File: /afs/inf.ed.ac.uk/user/s17/s1740055/CArD/prac2/proj/RV32IM_PYNQ_Z2.ip_user_files/ipstatic/src/TMDS_Encoder.vhd
-Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-Time: 3758662 ps  Iteration: 2  Process: /tb/dut/u_dvi_display/u_rgb2dvi/U0/\DataEncoders(0)\/DataEncoder/line__154  File: /afs/inf.ed.ac.uk/user/s17/s1740055/CArD/prac2/proj/RV32IM_PYNQ_Z2.ip_user_files/ipstatic/src/TMDS_Encoder.vhd
-Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-Time: 3758662 ps  Iteration: 2  Process: /tb/dut/u_dvi_display/u_rgb2dvi/U0/\DataEncoders(1)\/DataEncoder/line__154  File: /afs/inf.ed.ac.uk/user/s17/s1740055/CArD/prac2/proj/RV32IM_PYNQ_Z2.ip_user_files/ipstatic/src/TMDS_Encoder.vhd
-Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-Time: 3758662 ps  Iteration: 2  Process: /tb/dut/u_dvi_display/u_rgb2dvi/U0/\DataEncoders(2)\/DataEncoder/line__154  File: /afs/inf.ed.ac.uk/user/s17/s1740055/CArD/prac2/proj/RV32IM_PYNQ_Z2.ip_user_files/ipstatic/src/TMDS_Encoder.vhd
-     199 x.x 0x00000000             sp <= 00003000
-     201 10.0 0x00000004             sp <= 00003000
-     202  5.5 0x00000008             sp <= 00002ffc
-     203  4.0 0x0000000c             ra <= 00000010
-     208  4.5 0x00000014             sp <= 00002fd4
-     209  3.8 0x00000018             a5 <= 00002fd4
-     210  3.3 0x0000001c             a4 <= 0000038f
-     213  3.2 0x00000020               mem[00000fd4] <= 0000038f
-     214  3.0 0x00000024             a1 <= 0000000a
-     215  2.7 0x00000028             t1 <= 00000000
-     216  2.6 0x0000002c             fp <= 000004d2
-     217  2.4 0x00000030             s1 <= 00000224
-     218  2.3 0x00000034             s2 <= 00001000
-     219  2.2 0x00000038             s2 <= 00000911
-     220  2.1 0x0000003c             s3 <= 000003b4
-     221  2.0 0x00000040             s4 <= 00000306
-     222  2.0 0x00000044             s5 <= 000001b0
-     223  1.8 0x00000048             fp <= 00136864
-     224  1.8 0x0000004c             s1 <= 002192f4
-     225  1.8 0x00000050             s2 <= 000b3238
-     226  1.7 0x00000054             s3 <= 00051a20
-     227  1.7 0x00000058             s4 <= 00000000
-     228  1.6 0x0000005c             s5 <= 00000000
-     229  1.6 0x00000060             fp <= 0034fb58
-     230  1.6 0x00000064             s2 <= ffd636e0
-     231  1.6 0x00000068             s3 <= 0031e178
-     232  1.5 0x0000006c             s4 <= 0034fb58
-     233  1.5 0x00000070             s5 <= ffcb04a8
-     234  1.5 0x00000074             fp <= 00568e4c
-     235  1.5 0x00000078             s2 <= 0080576c
-     236  1.5 0x0000007c             s3 <= 00676f34
-     237  1.5 0x00000080             s4 <= 008b89a4
-     238  1.4 0x00000084             s5 <= 008b89a4
-     239  1.4 0x00000088             fp <= 0000038f
-     240  1.4 0x0000008c             s2 <= 00802798
-[        240] Error: wrong result written. Expected to write 0x008053dd, but wrote 0x00802798
-Testbench detected faulty CPU behaviour, terminating simulation early
-
-$finish called at time : 5866999 ps : File "/afs/inf.ed.ac.uk/user/s17/s1740055/CArD/prac2/src/sim/tb.v" Line 630
+[          4] Error: stall signal at DEC stage, dec_freeze, is undefined
+Testbench detected illegal undefined values, terminating simulation
+$finish called at time : 1933665 ps : File "/afs/inf.ed.ac.uk/user/s17/s1740055/CArD/prac2/src/sim/tb.v" Line 584
