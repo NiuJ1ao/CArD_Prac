@@ -1,11 +1,11 @@
 # compile verilog/system verilog design source files
-verilog xil_defaultlib  --include "../../../../../src/ip/video_clock_gen" --include "../../../../../src/ip/cpu_clock_gen" --include "../../../../../src/inc" \
+verilog xil_defaultlib  --include "../../../../../src/ip/video_clock_gen" --include "../../../../../src/inc" --include "../../../../../src/ip/cpu_clock_gen" \
 "../../../../../src/ip/rv32im_rm_0/rv32im_rm_0_sim_netlist.v" \
-"../../../../../src/ip/rv32im_alu_0/rv32im_alu_0_sim_netlist.v" \
 "../../../../../src/ip/video_clock_gen/video_clock_gen_clk_wiz.v" \
 "../../../../../src/ip/video_clock_gen/video_clock_gen.v" \
 "../../../../../src/ip/cpu_clock_gen/cpu_clock_gen_clk_wiz.v" \
 "../../../../../src/ip/cpu_clock_gen/cpu_clock_gen.v" \
+"../../../../../src/hdl/alu.v" \
 "../../../../../src/hdl/branch_cache.v" \
 "../../../../../src/hdl/branch_predictor.v" \
 "../../../../../src/hdl/bypass_or_stall.v" \

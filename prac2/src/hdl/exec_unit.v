@@ -493,8 +493,9 @@ always @*
   //    instruction is an 'M' extension, or from alu_result in all
   //    other cases.
   //
-  mem_result_nxt  = exe_m32_op_r ? m32_result : alu_result;
-
+  //mem_result_nxt  = exe_m32_op_r ? m32_result : alu_result;
+  mem_result_nxt  = alu_result;  
+  
   // 2. Select the mem_data_nxt value from exe_reg2_r when the EXE
   //    instruction is a 'store' operation, or from the next PC
   //    value (i.e. PC+4) in all other cases (JALR is assumed).
@@ -995,6 +996,7 @@ bypass_or_stall u_bypass_or_stall(
   .exe_result       (mem_result_nxt ), // result at EXE stage, destined for R[rd]
   .exe_load         (exe_load_r     ), // EXE instruction is a Load operation
   .exe_csr          (exe_csr_r      ), // EXE instruction is a CSRRs operation
+  .exe_m32          (exe_m32_op_r   ),
 
   //==== MEM-stage instruction information  ====================================
   //

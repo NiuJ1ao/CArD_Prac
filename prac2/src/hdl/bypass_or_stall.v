@@ -34,6 +34,7 @@ module bypass_or_stall(
   input      [31:0] exe_result,     // result at EXE stage, destined for R[rd]
   input             exe_load,       // EXE instruction is a Load operation
   input             exe_csr,        // EXE instruction is a CSRRx operation
+  input             exe_m32,
 
   //==== MEM-stage instruction information  ====================================
   //
@@ -69,12 +70,12 @@ always @*
 //  dec_stall = ((exe_rd_wenb && (exe_rd == dec_rs1) || mem_rd_wenb && (mem_rd == dec_rs1) || wrb_rd_wenb && (wrb_rd == dec_rs1)) && dec_rs1_renb)
 //               || ((exe_rd_wenb && (exe_rd == dec_rs2) || mem_rd_wenb && (mem_rd == dec_rs2) || wrb_rd_wenb && (wrb_rd == dec_rs2)) && dec_rs2_renb);
 
- dec_stall =!((exe_rd_wenb && (exe_rd == dec_rs1) && !dec_load_use && !dec_csr_use || mem_rd_wenb && (mem_rd == dec_rs1))
-             && (exe_rd_wenb && (exe_rd == dec_rs2) && !dec_load_use && !dec_csr_use || mem_rd_wenb && (mem_rd == dec_rs2)))
+ dec_stall =!((exe_rd_wenb && (exe_rd == dec_rs1) && !dec_load_use && !dec_csr_use || mem_rd_wenb && (mem_rd == dec_rs1) || wrb_rd_wenb && (wrb_rd == dec_rs1))
+             || (exe_rd_wenb && (exe_rd == dec_rs2) && !dec_load_use && !dec_csr_use || mem_rd_wenb && (mem_rd == dec_rs2) || wrb_rd_wenb && (wrb_rd == dec_rs2)))
              && ((dec_rs1_renb && ((exe_rd == dec_rs1) && exe_rd_wenb && (dec_load_use || dec_csr_use) || (mem_rd == dec_rs1) && mem_rd_wenb))
              || (dec_rs2_renb && ((exe_rd == dec_rs2) && exe_rd_wenb && (dec_load_use || dec_csr_use) || (mem_rd == dec_rs2) && mem_rd_wenb)));
 
-  dec_load_use = (exe_rd == dec_rs1 || exe_rd == dec_rs2) && exe_load;
+  dec_load_use = (exe_rd == dec_rs1 || exe_rd == dec_rs2) && (exe_load || exe_m32) ;
   dec_csr_use = (exe_rd == dec_rs1 || exe_rd == dec_rs2) && exe_csr;
 
   //===========================================================================
