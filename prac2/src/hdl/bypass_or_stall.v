@@ -68,16 +68,17 @@ always @*
 //  dec_csr_use     = 1'b0 & wrb_rd_wenb; // this is just to assign a value
 
 //  dec_stall = ((exe_rd_wenb && (exe_rd == dec_rs1) || mem_rd_wenb && (mem_rd == dec_rs1) || wrb_rd_wenb && (wrb_rd == dec_rs1)) && dec_rs1_renb)
-//               || ((exe_rd_wenb && (exe_rd == dec_rs2) || mem_rd_wenb && (mem_rd == dec_rs2) || wrb_rd_wenb && (wrb_rd == dec_rs2)) && dec_rs2_renb);
+//             || ((exe_rd_wenb && (exe_rd == dec_rs2) || mem_rd_wenb && (mem_rd == dec_rs2) || wrb_rd_wenb && (wrb_rd == dec_rs2)) && dec_rs2_renb);
 
- dec_stall =!((exe_rd_wenb && (exe_rd == dec_rs1) && !dec_load_use && !dec_csr_use || mem_rd_wenb && (mem_rd == dec_rs1) || wrb_rd_wenb && (wrb_rd == dec_rs1))
+  dec_stall =!((exe_rd_wenb && (exe_rd == dec_rs1) && !dec_load_use && !dec_csr_use || mem_rd_wenb && (mem_rd == dec_rs1) || wrb_rd_wenb && (wrb_rd == dec_rs1))
              || (exe_rd_wenb && (exe_rd == dec_rs2) && !dec_load_use && !dec_csr_use || mem_rd_wenb && (mem_rd == dec_rs2) || wrb_rd_wenb && (wrb_rd == dec_rs2)))
              && ((dec_rs1_renb && ((exe_rd == dec_rs1) && exe_rd_wenb && (dec_load_use || dec_csr_use) || (mem_rd == dec_rs1) && mem_rd_wenb))
              || (dec_rs2_renb && ((exe_rd == dec_rs2) && exe_rd_wenb && (dec_load_use || dec_csr_use) || (mem_rd == dec_rs2) && mem_rd_wenb)));
-
-  dec_load_use = (exe_rd == dec_rs1 || exe_rd == dec_rs2) && (exe_load || exe_m32) ;
+             
+//  dec_load_use = (exe_rd == dec_rs1 || exe_rd == dec_rs2) && exe_load;
+  dec_load_use = (exe_rd == dec_rs1 || exe_rd == dec_rs2) && (exe_load || exe_m32);
   dec_csr_use = (exe_rd == dec_rs1 || exe_rd == dec_rs2) && exe_csr;
-
+    
   //===========================================================================
   // Leave these next two lines intact for Part (a), but for Part (b)
   // the logic for dec_rs1_data and dec_rs2_data will need to be modified.

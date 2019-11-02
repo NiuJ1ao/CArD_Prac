@@ -2,8 +2,8 @@
 # Vivado v2018.3 (64-bit)
 # SW Build 2405991 on Thu Dec  6 23:36:41 MST 2018
 # IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
-# Start of session at: Sat Nov  2 15:23:57 2019
-# Process ID: 12848
+# Start of session at: Sat Nov  2 15:51:45 2019
+# Process ID: 8828
 # Current directory: /afs/inf.ed.ac.uk/user/s17/s1740055/CArD/prac2/proj
 # Command line: vivado
 # Log file: /afs/inf.ed.ac.uk/user/s17/s1740055/CArD/prac2/proj/vivado.log
@@ -31,7 +31,7 @@ INFO: Creating new project in /afs/inf.ed.ac.uk/user/s17/s1740055/CArD/prac2/pro
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1704] No user IP repositories specified
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/disk/scratch/Xilinx/Vivado/2018.3/data/ip'.
-create_project: Time (s): cpu = 00:00:12 ; elapsed = 00:00:06 . Memory (MB): peak = 6545.172 ; gain = 170.031 ; free physical = 3803 ; free virtual = 20908
+create_project: Time (s): cpu = 00:00:15 ; elapsed = 00:00:12 . Memory (MB): peak = 6681.691 ; gain = 152.160 ; free physical = 9292 ; free virtual = 20546
 # set proj_dir [get_property directory [current_project]]
 # set obj [get_projects $proj_name]
 # set_property "default_lib" "xil_defaultlib" $obj
@@ -131,20 +131,8 @@ INFO: Project created:RV32IM_PYNQ_Z2
 update_compile_order -fileset sources_1
 update_compile_order -fileset sim_1
 update_compile_order -fileset sources_1
-set_property -dict [list CONFIG.CLKOUT1_REQUESTED_OUT_FREQ {82.000} CONFIG.MMCM_DIVCLK_DIVIDE {4} CONFIG.MMCM_CLKFBOUT_MULT_F {38.375} CONFIG.MMCM_CLKOUT0_DIVIDE_F {14.625} CONFIG.MMCM_CLKOUT1_DIVIDE {16} CONFIG.CLKOUT1_JITTER {166.534} CONFIG.CLKOUT1_PHASE_ERROR {182.328} CONFIG.CLKOUT2_JITTER {168.851} CONFIG.CLKOUT2_PHASE_ERROR {182.328}] [get_ips cpu_clock_gen]
-generate_target all [get_files  /afs/inf.ed.ac.uk/user/s17/s1740055/CArD/prac2/src/ip/cpu_clock_gen/cpu_clock_gen.xci]
-INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'cpu_clock_gen'...
-INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'cpu_clock_gen'...
-INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'cpu_clock_gen'...
-INFO: [IP_Flow 19-1686] Generating 'Implementation' target for IP 'cpu_clock_gen'...
-INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'cpu_clock_gen'...
-catch { config_ip_cache -export [get_ips -all cpu_clock_gen] }
-export_ip_user_files -of_objects [get_files /afs/inf.ed.ac.uk/user/s17/s1740055/CArD/prac2/src/ip/cpu_clock_gen/cpu_clock_gen.xci] -no_script -sync -force -quiet
-create_ip_run [get_files -of_objects [get_fileset sources_1] /afs/inf.ed.ac.uk/user/s17/s1740055/CArD/prac2/src/ip/cpu_clock_gen/cpu_clock_gen.xci]
-launch_runs -jobs 2 cpu_clock_gen_synth_1
-[Sat Nov  2 15:25:15 2019] Launched cpu_clock_gen_synth_1...
-Run output will be captured here: /afs/inf.ed.ac.uk/user/s17/s1740055/CArD/prac2/proj/RV32IM_PYNQ_Z2.runs/cpu_clock_gen_synth_1/runme.log
-export_simulation -of_objects [get_files /afs/inf.ed.ac.uk/user/s17/s1740055/CArD/prac2/src/ip/cpu_clock_gen/cpu_clock_gen.xci] -directory /afs/inf.ed.ac.uk/user/s17/s1740055/CArD/prac2/proj/RV32IM_PYNQ_Z2.ip_user_files/sim_scripts -ip_user_files_dir /afs/inf.ed.ac.uk/user/s17/s1740055/CArD/prac2/proj/RV32IM_PYNQ_Z2.ip_user_files -ipstatic_source_dir /afs/inf.ed.ac.uk/user/s17/s1740055/CArD/prac2/proj/RV32IM_PYNQ_Z2.ip_user_files/ipstatic -lib_map_path [list {modelsim=/afs/inf.ed.ac.uk/user/s17/s1740055/CArD/prac2/proj/RV32IM_PYNQ_Z2.cache/compile_simlib/modelsim} {questa=/afs/inf.ed.ac.uk/user/s17/s1740055/CArD/prac2/proj/RV32IM_PYNQ_Z2.cache/compile_simlib/questa} {ies=/afs/inf.ed.ac.uk/user/s17/s1740055/CArD/prac2/proj/RV32IM_PYNQ_Z2.cache/compile_simlib/ies} {xcelium=/afs/inf.ed.ac.uk/user/s17/s1740055/CArD/prac2/proj/RV32IM_PYNQ_Z2.cache/compile_simlib/xcelium} {vcs=/afs/inf.ed.ac.uk/user/s17/s1740055/CArD/prac2/proj/RV32IM_PYNQ_Z2.cache/compile_simlib/vcs} {riviera=/afs/inf.ed.ac.uk/user/s17/s1740055/CArD/prac2/proj/RV32IM_PYNQ_Z2.cache/compile_simlib/riviera}] -use_ip_compiled_libs -force -quiet
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
 launch_simulation
 INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
 INFO: [Vivado 12-5682] Launching behavioral simulation in '/afs/inf.ed.ac.uk/user/s17/s1740055/CArD/prac2/proj/RV32IM_PYNQ_Z2.sim/sim_1/behav/xsim'
@@ -165,6 +153,9 @@ INFO: [VRFC 10-311] analyzing module rv32im_rm_0
 INFO: [VRFC 10-311] analyzing module rv32im_rm_0_control_unit
 INFO: [VRFC 10-311] analyzing module rv32im_rm_0_rv32im_ref
 INFO: [VRFC 10-311] analyzing module glbl
+INFO: [VRFC 10-2263] Analyzing Verilog file "/afs/inf.ed.ac.uk/user/s17/s1740055/CArD/prac2/src/ip/rv32im_alu_0/rv32im_alu_0_sim_netlist.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module rv32im_alu_0
+INFO: [VRFC 10-311] analyzing module rv32im_alu_0_alu
 INFO: [VRFC 10-2263] Analyzing Verilog file "/afs/inf.ed.ac.uk/user/s17/s1740055/CArD/prac2/src/ip/video_clock_gen/video_clock_gen_clk_wiz.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module video_clock_gen_clk_wiz
 INFO: [VRFC 10-2263] Analyzing Verilog file "/afs/inf.ed.ac.uk/user/s17/s1740055/CArD/prac2/src/ip/video_clock_gen/video_clock_gen.v" into library xil_defaultlib
@@ -173,8 +164,6 @@ INFO: [VRFC 10-2263] Analyzing Verilog file "/afs/inf.ed.ac.uk/user/s17/s1740055
 INFO: [VRFC 10-311] analyzing module cpu_clock_gen_clk_wiz
 INFO: [VRFC 10-2263] Analyzing Verilog file "/afs/inf.ed.ac.uk/user/s17/s1740055/CArD/prac2/src/ip/cpu_clock_gen/cpu_clock_gen.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module cpu_clock_gen
-INFO: [VRFC 10-2263] Analyzing Verilog file "/afs/inf.ed.ac.uk/user/s17/s1740055/CArD/prac2/src/hdl/alu.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module alu
 INFO: [VRFC 10-2263] Analyzing Verilog file "/afs/inf.ed.ac.uk/user/s17/s1740055/CArD/prac2/src/hdl/branch_cache.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module branch_cache
 INFO: [VRFC 10-2263] Analyzing Verilog file "/afs/inf.ed.ac.uk/user/s17/s1740055/CArD/prac2/src/hdl/branch_predictor.v" into library xil_defaultlib
@@ -238,12 +227,13 @@ INFO: [VRFC 10-163] Analyzing VHDL file "/afs/inf.ed.ac.uk/user/s17/s1740055/CAr
 INFO: [VRFC 10-3107] analyzing entity 'rgb2dvi'
 INFO: [VRFC 10-163] Analyzing VHDL file "/afs/inf.ed.ac.uk/user/s17/s1740055/CArD/prac2/src/ip/rgb2dvi_0/sim/rgb2dvi_0.vhd" into library xil_defaultlib
 INFO: [VRFC 10-3107] analyzing entity 'rgb2dvi_0'
-INFO: [USF-XSim-69] 'compile' step finished in '3' seconds
+run_program: Time (s): cpu = 00:00:03 ; elapsed = 00:00:08 . Memory (MB): peak = 6997.004 ; gain = 0.000 ; free physical = 8362 ; free virtual = 20141
+INFO: [USF-XSim-69] 'compile' step finished in '8' seconds
 INFO: [USF-XSim-3] XSim::Elaborate design
 INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/afs/inf.ed.ac.uk/user/s17/s1740055/CArD/prac2/proj/RV32IM_PYNQ_Z2.sim/sim_1/behav/xsim'
 Vivado Simulator 2018.3
 Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
-Running: /disk/scratch/Xilinx/Vivado/2018.3/bin/unwrapped/lnx64.o/xelab -wto 4ad58ba7a2d14a2087030b8179f96922 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_behav xil_defaultlib.tb xil_defaultlib.glbl -log elaborate.log 
+Running: /disk/scratch/Xilinx/Vivado/2018.3/bin/unwrapped/lnx64.o/xelab -wto 911a8cafdddd4b408040830d4b642778 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_behav xil_defaultlib.tb xil_defaultlib.glbl -log elaborate.log 
 Using 8 slave threads.
 Starting static elaboration
 Completed static elaboration
@@ -277,7 +267,17 @@ Compiling module xil_defaultlib.branch_predictor_default
 Compiling module xil_defaultlib.fetch_unit
 Compiling module xil_defaultlib.decoder
 Compiling module xil_defaultlib.regfile
-Compiling module xil_defaultlib.alu
+Compiling module unisims_ver.OBUF
+Compiling module unisims_ver.LUT6
+Compiling module unisims_ver.CARRY4
+Compiling module unisims_ver.LUT5
+Compiling module unisims_ver.LUT4
+Compiling module unisims_ver.x_lut3_mux8
+Compiling module unisims_ver.LUT3
+Compiling module unisims_ver.x_lut2_mux4
+Compiling module unisims_ver.LUT2
+Compiling module xil_defaultlib.rv32im_alu_0_alu
+Compiling module xil_defaultlib.rv32im_alu_0
 Compiling module xil_defaultlib.divider
 Compiling module xil_defaultlib.bypass_or_stall
 Compiling module xil_defaultlib.store_queue
@@ -301,17 +301,8 @@ Compiling module xil_defaultlib.msec_timer
 Compiling module xil_defaultlib.dvi_display
 Compiling module xil_defaultlib.top
 Compiling module unisims_ver.OBUFT
-Compiling module unisims_ver.OBUF
-Compiling module unisims_ver.x_lut3_mux8
-Compiling module unisims_ver.LUT3
-Compiling module unisims_ver.CARRY4
-Compiling module unisims_ver.x_lut2_mux4
-Compiling module unisims_ver.LUT2
-Compiling module unisims_ver.LUT6
 Compiling module unisims_ver.x_lut1_mux2
 Compiling module unisims_ver.LUT1
-Compiling module unisims_ver.LUT4
-Compiling module unisims_ver.LUT5
 Compiling module unisims_ver.MUXF7
 Compiling module unisims_ver.FDCE_default
 Compiling module unisims_ver.DSP48E1(ACASCREG=0,ALUMODEREG=0,...
@@ -329,10 +320,10 @@ Built simulation snapshot tb_behav
     ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 
 source /afs/inf.ed.ac.uk/user/s17/s1740055/CArD/prac2/proj/RV32IM_PYNQ_Z2.sim/sim_1/behav/xsim/xsim.dir/tb_behav/webtalk/xsim_webtalk.tcl -notrace
-INFO: [Common 17-186] '/afs/inf.ed.ac.uk/user/s17/s1740055/CArD/prac2/proj/RV32IM_PYNQ_Z2.sim/sim_1/behav/xsim/xsim.dir/tb_behav/webtalk/usage_statistics_ext_xsim.xml' has been successfully sent to Xilinx on Sat Nov  2 15:25:59 2019. For additional details about this file, please refer to the WebTalk help file at /disk/scratch/Xilinx/Vivado/2018.3/doc/webtalk_introduction.html.
-INFO: [Common 17-206] Exiting Webtalk at Sat Nov  2 15:25:59 2019...
-run_program: Time (s): cpu = 00:00:53 ; elapsed = 00:00:18 . Memory (MB): peak = 6924.469 ; gain = 0.000 ; free physical = 3360 ; free virtual = 20646
-INFO: [USF-XSim-69] 'elaborate' step finished in '18' seconds
+INFO: [Common 17-186] '/afs/inf.ed.ac.uk/user/s17/s1740055/CArD/prac2/proj/RV32IM_PYNQ_Z2.sim/sim_1/behav/xsim/xsim.dir/tb_behav/webtalk/usage_statistics_ext_xsim.xml' has been successfully sent to Xilinx on Sat Nov  2 16:45:24 2019. For additional details about this file, please refer to the WebTalk help file at /disk/scratch/Xilinx/Vivado/2018.3/doc/webtalk_introduction.html.
+INFO: [Common 17-206] Exiting Webtalk at Sat Nov  2 16:45:24 2019...
+run_program: Time (s): cpu = 00:00:24 ; elapsed = 00:00:26 . Memory (MB): peak = 6997.004 ; gain = 0.000 ; free physical = 8094 ; free virtual = 20132
+INFO: [USF-XSim-69] 'elaborate' step finished in '26' seconds
 INFO: [USF-XSim-4] XSim::Simulate design
 INFO: [USF-XSim-61] Executing 'SIMULATE' step in '/afs/inf.ed.ac.uk/user/s17/s1740055/CArD/prac2/proj/RV32IM_PYNQ_Z2.sim/sim_1/behav/xsim'
 INFO: [USF-XSim-98] *** Running xsim
@@ -365,32 +356,721 @@ Time: 4639882 ps  Iteration: 2  Process: /tb/dut/u_dvi_display/u_rgb2dvi/U0/\Dat
 Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
 Time: 4639882 ps  Iteration: 2  Process: /tb/dut/u_dvi_display/u_rgb2dvi/U0/\DataEncoders(2)\/DataEncoder/line__154  File: /afs/inf.ed.ac.uk/user/s17/s1740055/CArD/prac2/proj/RV32IM_PYNQ_Z2.ip_user_files/ipstatic/src/TMDS_Encoder.vhd
      196 x.x 0x00000000             sp <= 00003000
-     197  8.0 0x00000004             sp <= 00003000
-     198  3.3 0x00000008             sp <= 00002ffc
-     199  2.7 0x0000000c             ra <= 00000010
-     204  3.2 0x00000014             sp <= 00002fd4
-     205  2.5 0x00000018             a5 <= 00002fd4
-     206  2.3 0x0000001c             a4 <= 0000038f
-     207  2.2 0x00000020               mem[00000fd4] <= 0000038f
-     208  2.1 0x00000024             a1 <= 0000000a
-     209  2.0 0x00000028             t1 <= 00000000
-     210  1.9 0x0000002c             fp <= 000004d2
-     211  1.8 0x00000030             s1 <= 00000224
-     212  1.7 0x00000034             s2 <= 00001000
-     213  1.7 0x00000038             s2 <= 00000911
-     214  1.6 0x0000003c             s3 <= 000003b4
-     215  1.6 0x00000040             s4 <= 00000306
-     216  1.6 0x00000044             s5 <= 000001b0
-     217  1.5 0x00000048             fp <= 00000b35
-[        217] Error: wrong result written. Expected to write 0x00136864, but wrote 0x00000b35
-Testbench detected faulty CPU behaviour, terminating simulation early
-
-$finish called at time : 5400064 ps : File "/afs/inf.ed.ac.uk/user/s17/s1740055/CArD/prac2/src/sim/tb.v" Line 630
+     200 12.0 0x00000004             sp <= 00003000
+     204  8.0 0x00000008             sp <= 00002ffc
+     205  4.5 0x0000000c             ra <= 00000010
+     210  4.6 0x00000014             sp <= 00002fd4
+     214  4.5 0x00000018             a5 <= 00002fd4
+     215  4.0 0x0000001c             a4 <= 0000038f
+     219  4.0 0x00000020               mem[00000fd4] <= 0000038f
+     220  3.4 0x00000024             a1 <= 0000000a
+     221  3.1 0x00000028             t1 <= 00000000
+     222  3.0 0x0000002c             fp <= 000004d2
+     223  2.8 0x00000030             s1 <= 00000224
+     224  2.7 0x00000034             s2 <= 00001000
+     228  2.8 0x00000038             s2 <= 00000911
+     229  2.6 0x0000003c             s3 <= 000003b4
+     230  2.5 0x00000040             s4 <= 00000306
+     231  2.5 0x00000044             s5 <= 000001b0
+     232  2.4 0x00000048             fp <= 00136864
+     233  2.3 0x0000004c             s1 <= 002192f4
+     234  2.2 0x00000050             s2 <= 000b3238
+     235  2.2 0x00000054             s3 <= 00051a20
+     236  2.1 0x00000058             s4 <= 00000000
+     237  2.1 0x0000005c             s5 <= 00000000
+     238  2.0 0x00000060             fp <= 0034fb58
+     242  2.1 0x00000064             s2 <= ffd636e0
+     243  2.1 0x00000068             s3 <= 0031e178
+     244  2.0 0x0000006c             s4 <= 0034fb58
+     245  2.0 0x00000070             s5 <= ffcb04a8
+     246  2.0 0x00000074             fp <= 00568e4c
+     250  2.0 0x00000078             s2 <= 0080576c
+     251  2.0 0x0000007c             s3 <= 00676f34
+     252  1.9 0x00000080             s4 <= 008b89a4
+     253  1.9 0x00000084             s5 <= 008b89a4
+     254  1.9 0x00000088             fp <= 0000038f
+     258  1.9 0x0000008c             s2 <= 008053dd
+     259  1.9 0x00000090             s3 <= 00676cbb
+     260  1.9 0x00000094             s4 <= 008b8d33
+     261  1.9 0x00000098             s5 <= 008b8615
+     262  1.8 0x0000009c             fp <= 0000038f
+     266  1.9 0x000000a0             s2 <= ff7fafb2
+     267  1.9 0x000000a4             s3 <= 00676f34
+     268  1.8 0x000000a8             s4 <= 008b90c2
+     269  1.8 0x000000ac             s5 <= ff747d7a
+     270  1.8 0x000000b0             fp <= 00219683
+     274  1.8 0x000000b4             fp <= 00a1e6d1
+     278  1.9 0x000000b8             s3 <= 00c689e5
+     279  1.9 0x000000bc             s6 <= 00c379c5
+     283  1.9 0x000000c0             s6 <= 0143ca13
+     287  2.0 0x000000c4             s3 <= 018543f6
+     288  1.9 0x000000c8             fp <= 00c379c5
+     292  2.0 0x000000cc             fp <= 0143ca13
+     296  2.0 0x000000d0             fp <= 01cf5ad5
+     300  2.0 0x000000d4             s3 <= 004a1923
+     301  2.0 0x000000d8             fp <= 01f0edc9
+     305  2.1 0x000000dc             fp <= 02713e17
+     309  2.1 0x000000e0             fp <= 02fcced9
+     313  2.1 0x000000e4             s3 <= 02b6d7fa
+     314  2.1 0x000000e8             s4 <= 0000038f
+     318  2.1 0x000000ec             s1 <= 00219683
+     319  2.1 0x000000f0             s2 <= ff7fac23
+     320  2.1 0x000000f4             s3 <= 02b6d475
+     321  2.1 0x000000f8             s4 <= 0000038f
+     325  2.1 0x000000fc             s1 <= 00219a12
+     326  2.1 0x00000100             s2 <= 0080576c
+     327  2.1 0x00000104             s3 <= 02b6d7fa
+     328  2.0 0x00000108             s5 <= 0000038f
+     329  2.0 0x0000010c             t0 <= 00000000
+     332  2.0 0x00000110             s1 <= 00219da1
+     333  2.0 0x00000114             s2 <= 008053dd
+     334  2.0 0x00000118             s3 <= 02b6d475
+     335  2.0 0x0000011c             s5 <= 0000038f
+     336  2.0 0x00000120             t0 <= 00000000
+     339  2.0 0x00000124             s1 <= 0021a130
+     340  2.0 0x00000128             s2 <= ff7fafb2
+     341  2.0 0x0000012c             s3 <= 02b6d7fa
+     342  2.0 0x00000130             t1 <= 00000001
+     346  2.0 0x00000134               
+     351  2.0 0x00000048             fp <= db61e360
+     352  2.0 0x0000004c             s1 <= 0bcc11d4
+     353  2.0 0x00000050             s2 <= a8aa92a6
+     354  2.0 0x00000054             s3 <= 000ca9e1
+     355  2.0 0x00000058             s4 <= 803c199d
+     356  2.0 0x0000005c             s5 <= 67cda020
+     357  1.9 0x00000060             fp <= e72df534
+     361  2.0 0x00000064             s2 <= c17c9d72
+     362  2.0 0x00000068             s3 <= e7215cd5
+     363  1.9 0x0000006c             s4 <= 676a0ed1
+     364  1.9 0x00000070             s5 <= 809faaec
+     365  1.9 0x00000074             fp <= f2fa0708
+     369  1.9 0x00000078             s2 <= 317d6996
+     370  1.9 0x0000007c             s3 <= 15db5bdd
+     371  1.9 0x00000080             s4 <= 5a6415d9
+     372  1.9 0x00000084             s5 <= 725a5c1c
+     373  1.9 0x00000088             fp <= 0000038f
+     377  1.9 0x0000008c             s2 <= 317d6607
+     378  1.9 0x00000090             s3 <= 15db5852
+     379  1.9 0x00000094             s4 <= 5a641968
+     380  1.9 0x00000098             s5 <= 725a588d
+     381  1.9 0x0000009c             fp <= 0000038f
+     385  1.9 0x000000a0             s2 <= ce829d88
+     386  1.9 0x000000a4             s3 <= 15db5bdd
+     387  1.9 0x000000a8             s4 <= 5a641cf7
+     388  1.9 0x000000ac             s5 <= 8da5ab02
+     389  1.9 0x000000b0             fp <= 0bcc1563
+     393  1.9 0x000000b4             fp <= 3d4977db
+     397  1.9 0x000000b8             s3 <= 28922c06
+     398  1.9 0x000000bc             s6 <= 491589af
+     402  1.9 0x000000c0             s6 <= 7a92ec27
+     406  1.9 0x000000c4             s3 <= 5200c021
+     407  1.9 0x000000c8             fp <= 491589af
+     411  1.9 0x000000cc             fp <= 7a92ec27
+     415  2.0 0x000000d0             fp <= d4f7091e
+     419  2.0 0x000000d4             s3 <= 86f7c93f
+     420  2.0 0x000000d8             fp <= e0c31af2
+     424  2.0 0x000000dc             fp <= 12407d6a
+     428  2.0 0x000000e0             fp <= 6ca49a61
+     432  2.0 0x000000e4             s3 <= ea53535e
+     433  2.0 0x000000e8             s4 <= 0000038f
+     437  2.0 0x000000ec             s1 <= 0bcc1563
+     438  2.0 0x000000f0             s2 <= ce8299f9
+     439  2.0 0x000000f4             s3 <= ea5350d1
+     440  2.0 0x000000f8             s4 <= 0000038f
+     444  2.0 0x000000fc             s1 <= 0bcc18f2
+     445  2.0 0x00000100             s2 <= 317d6996
+     446  2.0 0x00000104             s3 <= ea53535e
+     447  2.0 0x00000108             s5 <= 0000038f
+     448  2.0 0x0000010c             t0 <= 00000000
+     451  2.0 0x00000110             s1 <= 0bcc1c81
+     452  2.0 0x00000114             s2 <= 317d6607
+     453  2.0 0x00000118             s3 <= ea5350d1
+     454  2.0 0x0000011c             s5 <= 0000038f
+     455  2.0 0x00000120             t0 <= 00000000
+     458  2.0 0x00000124             s1 <= 0bcc2010
+     459  2.0 0x00000128             s2 <= ce829d88
+     460  1.9 0x0000012c             s3 <= ea53535e
+     461  1.9 0x00000130             t1 <= 00000002
+     465  2.0 0x00000134               
+     466  1.9 0x00000048             fp <= 9c3ad880
+     467  1.9 0x0000004c             s1 <= 9020eff0
+     468  1.9 0x00000050             s2 <= de85ab82
+     469  1.9 0x00000054             s3 <= 000ca9e1
+     470  1.9 0x00000058             s4 <= 30d65ec9
+     471  1.9 0x0000005c             s5 <= 858cfb80
+     472  1.9 0x00000060             fp <= 2c5bc870
+     476  1.9 0x00000064             s2 <= b229e312
+     477  1.9 0x00000068             s3 <= 2c576191
+     478  1.9 0x0000006c             s4 <= 5d322739
+     479  1.9 0x00000070             s5 <= 59313310
+     480  1.9 0x00000074             fp <= bc7cb860
+     484  1.9 0x00000078             s2 <= 0a52d54e
+     485  1.9 0x0000007c             s3 <= 902bd9f1
+     486  1.9 0x00000080             s4 <= 19aedf99
+     487  1.9 0x00000084             s5 <= 634b8550
+     488  1.9 0x00000088             fp <= 0000038f
+     492  1.9 0x0000008c             s2 <= 0a52d1bf
+     493  1.9 0x00000090             s3 <= 902bda7e
+     494  1.9 0x00000094             s4 <= 19aee328
+     495  1.9 0x00000098             s5 <= 634b81c1
+     496  1.9 0x0000009c             fp <= 0000038f
+     500  1.9 0x000000a0             s2 <= f5ad31d0
+     501  1.9 0x000000a4             s3 <= 902bd9f1
+     502  1.9 0x000000a8             s4 <= 19aee6b7
+     503  1.9 0x000000ac             s5 <= 9cb481ce
+     504  1.9 0x000000b0             fp <= 9020f37f
+     508  1.9 0x000000b4             fp <= 9a73c1af
+     512  1.9 0x000000b8             s3 <= 0a58185e
+     513  1.9 0x000000bc             s6 <= 2a94b19f
+     517  1.9 0x000000c0             s6 <= 34e77fcf
+     521  1.9 0x000000c4             s3 <= 3ebf6791
+     522  1.9 0x000000c8             fp <= 2a94b19f
+     526  1.9 0x000000cc             fp <= 34e77fcf
+     530  1.9 0x000000d0             fp <= 4e966686
+     534  1.9 0x000000d4             s3 <= 70290117
+     535  1.9 0x000000d8             fp <= deb75676
+     539  1.9 0x000000dc             fp <= e90a24a6
+     543  2.0 0x000000e0             fp <= 02b90b5d
+     547  2.0 0x000000e4             s3 <= 72900a4a
+     548  2.0 0x000000e8             s4 <= 0000038f
+     552  2.0 0x000000ec             s1 <= 9020f37f
+     553  2.0 0x000000f0             s2 <= f5ad2e41
+     554  2.0 0x000000f4             s3 <= 729009c5
+     555  2.0 0x000000f8             s4 <= 0000038f
+     559  2.0 0x000000fc             s1 <= 9020f70e
+     560  2.0 0x00000100             s2 <= 0a52d54e
+     561  2.0 0x00000104             s3 <= 72900a4a
+     562  1.9 0x00000108             s5 <= 0000038f
+     563  1.9 0x0000010c             t0 <= 00000000
+     566  1.9 0x00000110             s1 <= 9020fa9d
+     567  1.9 0x00000114             s2 <= 0a52d1bf
+     568  1.9 0x00000118             s3 <= 729009c5
+     569  1.9 0x0000011c             s5 <= 0000038f
+     570  1.9 0x00000120             t0 <= 00000000
+     573  1.9 0x00000124             s1 <= 9020fe2c
+     574  1.9 0x00000128             s2 <= f5ad31d0
+     575  1.9 0x0000012c             s3 <= 72900a4a
+     576  1.9 0x00000130             t1 <= 00000003
+     580  1.9 0x00000134               
+     581  1.9 0x00000048             fp <= 4b30efc0
+     582  1.9 0x0000004c             s1 <= 6d028620
+     583  1.9 0x00000050             s2 <= ae949d56
+     584  1.9 0x00000054             s3 <= 000ca9e1
+     585  1.9 0x00000058             s4 <= 43cfd1a1
+     586  1.9 0x0000005c             s5 <= 69c21c40
+     587  1.9 0x00000060             fp <= b83375e0
+     591  1.9 0x00000064             s2 <= f6612776
+     592  1.9 0x00000068             s3 <= b83fdc01
+     593  1.9 0x0000006c             s4 <= fc034781
+     594  1.9 0x00000070             s5 <= b18ea660
+     595  1.9 0x00000074             fp <= 2535fc00
+     599  1.9 0x00000078             s2 <= 2ed4d48a
+     600  1.9 0x0000007c             s3 <= 9d0a2001
+     601  1.9 0x00000080             s4 <= 21394381
+     602  1.9 0x00000084             s5 <= 73a755a0
+     603  1.9 0x00000088             fp <= 0000038f
+     607  1.9 0x0000008c             s2 <= 2ed4d0fb
+     608  1.9 0x00000090             s3 <= 9d0a238e
+     609  1.9 0x00000094             s4 <= 21394710
+     610  1.9 0x00000098             s5 <= 73a75211
+     611  1.9 0x0000009c             fp <= 0000038f
+     615  1.9 0x000000a0             s2 <= d12b3294
+     616  1.9 0x000000a4             s3 <= 9d0a2001
+     617  1.9 0x000000a8             s4 <= 21394a9f
+     618  1.9 0x000000ac             s5 <= 8c58b17e
+     619  1.9 0x000000b0             fp <= 6d0289af
+     623  1.9 0x000000b4             fp <= 9bd7571b
+     627  1.9 0x000000b8             s3 <= 06dd771a
+     628  1.9 0x000000bc             s6 <= 08d9dd3b
+     632  1.9 0x000000c0             s6 <= 37aeaaa7
+     636  1.9 0x000000c4             s3 <= 3173ddbd
+     637  1.9 0x000000c8             fp <= 08d9dd3b
+     641  1.9 0x000000cc             fp <= 37aeaaa7
+     645  1.9 0x000000d0             fp <= 58e7f546
+     649  1.9 0x000000d4             s3 <= 699428fb
+     650  1.9 0x000000d8             fp <= c5ea7b66
+     654  1.9 0x000000dc             fp <= f4bf48d2
+     658  1.9 0x000000e0             fp <= 15f89371
+     662  1.9 0x000000e4             s3 <= 7c6cbb8a
+     663  1.9 0x000000e8             s4 <= 0000038f
+     667  1.9 0x000000ec             s1 <= 6d0289af
+     668  1.9 0x000000f0             s2 <= d12b2f05
+     669  1.9 0x000000f4             s3 <= 7c6cb805
+     670  1.9 0x000000f8             s4 <= 0000038f
+     674  1.9 0x000000fc             s1 <= 6d028d3e
+     675  1.9 0x00000100             s2 <= 2ed4d48a
+     676  1.9 0x00000104             s3 <= 7c6cbb8a
+     677  1.9 0x00000108             s5 <= 0000038f
+     678  1.9 0x0000010c             t0 <= 00000000
+     681  1.9 0x00000110             s1 <= 6d0290cd
+     682  1.9 0x00000114             s2 <= 2ed4d0fb
+     683  1.9 0x00000118             s3 <= 7c6cb805
+     684  1.9 0x0000011c             s5 <= 0000038f
+     685  1.9 0x00000120             t0 <= 00000000
+     688  1.9 0x00000124             s1 <= 6d02945c
+     689  1.9 0x00000128             s2 <= d12b3294
+     690  1.9 0x0000012c             s3 <= 7c6cbb8a
+     691  1.9 0x00000130             t1 <= 00000004
+     695  1.9 0x00000134               
+     696  1.9 0x00000048             fp <= 8debbd30
+     697  1.9 0x0000004c             s1 <= 55ab5fc8
+     698  1.9 0x00000050             s2 <= c6ef6016
+     699  1.9 0x00000054             s3 <= 000ca9e1
+     700  1.9 0x00000058             s4 <= 26914849
+     701  1.9 0x0000005c             s5 <= 070a4a50
+     702  1.9 0x00000060             fp <= e3971cf8
+     706  1.9 0x00000064             s2 <= e358431e
+     707  1.9 0x00000068             s3 <= e39bb519
+     708  1.9 0x0000006c             s4 <= 0a286541
+     709  1.9 0x00000070             s5 <= 23732d58
+     710  1.9 0x00000074             fp <= 39427cc0
+     714  1.9 0x00000078             s2 <= 55ea39a2
+     715  1.9 0x0000007c             s3 <= dad9c9d9
+     716  1.9 0x00000080             s4 <= 436ae201
+     717  1.9 0x00000084             s5 <= 15cf4f68
+     718  1.9 0x00000088             fp <= 0000038f
+     722  1.9 0x0000008c             s2 <= 55ea3613
+     723  1.9 0x00000090             s3 <= dad9ca56
+     724  1.9 0x00000094             s4 <= 436ae590
+     725  1.9 0x00000098             s5 <= 15cf4bd9
+     726  1.9 0x0000009c             fp <= 0000038f
+     730  1.9 0x000000a0             s2 <= aa15cd7c
+     731  1.9 0x000000a4             s3 <= dad9c9d9
+     732  1.9 0x000000a8             s4 <= 436ae91f
+     733  1.9 0x000000ac             s5 <= ea30b7b6
+     734  1.9 0x000000b0             fp <= 55ab6357
+     738  1.9 0x000000b4             fp <= ab9595db
+     742  1.9 0x000000b8             s3 <= 714c5c02
+     743  1.9 0x000000bc             s6 <= 0140f5a3
+     747  1.9 0x000000c0             s6 <= 572b2827
+     751  1.9 0x000000c4             s3 <= 26677425
+     752  1.9 0x000000c8             fp <= 0140f5a3
+     756  1.9 0x000000cc             fp <= 572b2827
+     760  1.9 0x000000d0             fp <= 9a961146
+     764  1.9 0x000000d4             s3 <= bcf16563
+     765  1.9 0x000000d8             fp <= f041710e
+     769  1.9 0x000000dc             fp <= 462ba392
+     773  1.9 0x000000e0             fp <= 89968cb1
+     777  1.9 0x000000e4             s3 <= 3567e9d2
+     778  1.9 0x000000e8             s4 <= 0000038f
+     782  1.9 0x000000ec             s1 <= 55ab6357
+     783  1.9 0x000000f0             s2 <= aa15c9ed
+     784  1.9 0x000000f4             s3 <= 3567ea5d
+     785  1.9 0x000000f8             s4 <= 0000038f
+     789  1.9 0x000000fc             s1 <= 55ab66e6
+     790  1.9 0x00000100             s2 <= 55ea39a2
+     791  1.9 0x00000104             s3 <= 3567e9d2
+     792  1.9 0x00000108             s5 <= 0000038f
+     793  1.9 0x0000010c             t0 <= 00000000
+     796  1.9 0x00000110             s1 <= 55ab6a75
+     797  1.9 0x00000114             s2 <= 55ea3613
+     798  1.9 0x00000118             s3 <= 3567ea5d
+     799  1.9 0x0000011c             s5 <= 0000038f
+     800  1.9 0x00000120             t0 <= 00000000
+     803  1.9 0x00000124             s1 <= 55ab6e04
+     804  1.9 0x00000128             s2 <= aa15cd7c
+     805  1.9 0x0000012c             s3 <= 3567e9d2
+     806  1.9 0x00000130             t1 <= 00000005
+     810  1.9 0x00000134               
+     811  1.9 0x00000048             fp <= 74767df0
+     812  1.9 0x0000004c             s1 <= b6cc6bb8
+     813  1.9 0x00000050             s2 <= 0cc9124e
+     814  1.9 0x00000054             s3 <= 000ca9e1
+     815  1.9 0x00000058             s4 <= 3293e2c9
+     816  1.9 0x0000005c             s5 <= f90aaf90
+     817  1.9 0x00000060             fp <= 2b42e9a8
+     821  1.9 0x00000064             s2 <= e18628a6
+     822  1.9 0x00000068             s3 <= 2b4e4049
+     823  1.9 0x0000006c             s4 <= 5dd6cc71
+     824  1.9 0x00000070             s5 <= cdc7c5e8
+     825  1.9 0x00000074             fp <= e20f5560
+     829  1.9 0x00000078             s2 <= 00892cba
+     830  1.9 0x0000007c             s3 <= c9411529
+     831  1.9 0x00000080             s4 <= 3fe621d1
+     832  1.9 0x00000084             s5 <= 14478f78
+     833  1.9 0x00000088             fp <= 0000038f
+     837  1.9 0x0000008c             s2 <= 0089292b
+     838  1.9 0x00000090             s3 <= c94116a6
+     839  1.9 0x00000094             s4 <= 3fe62560
+     840  1.9 0x00000098             s5 <= 14478be9
+     841  1.9 0x0000009c             fp <= 0000038f
+     845  1.9 0x000000a0             s2 <= ff76da64
+     846  1.9 0x000000a4             s3 <= c9411529
+     847  1.9 0x000000a8             s4 <= 3fe628ef
+     848  1.9 0x000000ac             s5 <= ebb877a6
+     849  1.9 0x000000b0             fp <= b6cc6f47
+     853  1.9 0x000000b4             fp <= b75594e3
+     857  1.9 0x000000b8             s3 <= 7e1481ca
+     858  1.9 0x000000bc             s6 <= 6e22009b
+     862  1.9 0x000000c0             s6 <= 6eab2637
+     866  1.9 0x000000c4             s3 <= 10bfa7fd
+     867  1.9 0x000000c8             fp <= 6e22009b
+     871  1.9 0x000000cc             fp <= 6eab2637
+     875  1.9 0x000000d0             fp <= ae914f26
+     879  1.9 0x000000d4             s3 <= be2ee8db
+     880  1.9 0x000000d8             fp <= 655dbade
+     884  1.9 0x000000dc             fp <= 65e6e07a
+     888  1.9 0x000000e0             fp <= a5cd0969
+     892  1.9 0x000000e4             s3 <= 1be3e1b2
+     893  1.9 0x000000e8             s4 <= 0000038f
+     897  1.9 0x000000ec             s1 <= b6cc6f47
+     898  1.9 0x000000f0             s2 <= ff76d6d5
+     899  1.9 0x000000f4             s3 <= 1be3e23d
+     900  1.9 0x000000f8             s4 <= 0000038f
+     904  1.9 0x000000fc             s1 <= b6cc72d6
+     905  1.9 0x00000100             s2 <= 00892cba
+     906  1.9 0x00000104             s3 <= 1be3e1b2
+     907  1.9 0x00000108             s5 <= 0000038f
+     908  1.9 0x0000010c             t0 <= 00000000
+     911  1.9 0x00000110             s1 <= b6cc7665
+     912  1.9 0x00000114             s2 <= 0089292b
+     913  1.9 0x00000118             s3 <= 1be3e23d
+     914  1.9 0x0000011c             s5 <= 0000038f
+     915  1.9 0x00000120             t0 <= 00000000
+     918  1.9 0x00000124             s1 <= b6cc79f4
+     919  1.9 0x00000128             s2 <= ff76da64
+     920  1.9 0x0000012c             s3 <= 1be3e1b2
+     921  1.9 0x00000130             t1 <= 00000006
+     925  1.9 0x00000134               
+     926  1.9 0x00000048             fp <= ca316b50
+     927  1.9 0x0000004c             s1 <= 4941bd88
+     928  1.9 0x00000050             s2 <= 3ff0286e
+     929  1.9 0x00000054             s3 <= 000ca9e1
+     930  1.9 0x00000058             s4 <= d30cfdb9
+     931  1.9 0x0000005c             s5 <= d4fbee30
+     932  1.9 0x00000060             fp <= 137328d8
+     936  1.9 0x00000064             s2 <= 2c7cff96
+     937  1.9 0x00000068             s3 <= 137f8139
+     938  1.9 0x0000006c             s4 <= e6802691
+     939  1.9 0x00000070             s5 <= c188c558
+     940  1.9 0x00000074             fp <= 5cb4e660
+     944  1.9 0x00000078             s2 <= 3037e6ca
+     945  1.9 0x0000007c             s3 <= 4fcb6759
+     946  1.9 0x00000080             s4 <= 43350cf1
+     947  1.9 0x00000084             s5 <= 9b2c2108
+     948  1.9 0x00000088             fp <= 0000038f
+     952  1.9 0x0000008c             s2 <= 3037e33b
+     953  1.9 0x00000090             s3 <= 4fcb64d6
+     954  1.9 0x00000094             s4 <= 43351080
+     955  1.9 0x00000098             s5 <= 9b2c1d79
+     956  1.9 0x0000009c             fp <= 0000038f
+     960  1.9 0x000000a0             s2 <= cfc82054
+     961  1.9 0x000000a4             s3 <= 4fcb6759
+     962  1.9 0x000000a8             s4 <= 4335140f
+     963  1.9 0x000000ac             s5 <= 64d3e616
+     964  1.9 0x000000b0             fp <= 4941c117
+     968  1.9 0x000000b4             fp <= 7979a0c3
+     972  1.9 0x000000b8             s3 <= 36b2c79a
+     973  1.9 0x000000bc             s6 <= c2bb5e4b
+     977  1.9 0x000000c0             s6 <= f2f33df7
+     981  1.9 0x000000c4             s3 <= c441fa6d
+     982  1.9 0x000000c8             fp <= c2bb5e4b
+     986  1.9 0x000000cc             fp <= f2f33df7
+     990  1.9 0x000000d0             fp <= 36285206
+     994  1.9 0x000000d4             s3 <= f269a86b
+     995  1.9 0x000000d8             fp <= 7f6a0f8e
+     999  1.9 0x000000dc             fp <= afa1ef3a
+    1003  1.9 0x000000e0             fp <= f2d70349
+    1007  1.9 0x000000e4             s3 <= 00beab22
+    1008  1.9 0x000000e8             s4 <= 0000038f
+    1012  1.9 0x000000ec             s1 <= 4941c117
+    1013  1.9 0x000000f0             s2 <= cfc81cc5
+    1014  1.9 0x000000f4             s3 <= 00bea8ad
+    1015  1.9 0x000000f8             s4 <= 0000038f
+    1019  1.9 0x000000fc             s1 <= 4941c4a6
+    1020  1.9 0x00000100             s2 <= 3037e6ca
+    1021  1.9 0x00000104             s3 <= 00beab22
+    1022  1.9 0x00000108             s5 <= 0000038f
+    1023  1.9 0x0000010c             t0 <= 00000000
+    1026  1.9 0x00000110             s1 <= 4941c835
+    1027  1.9 0x00000114             s2 <= 3037e33b
+    1028  1.9 0x00000118             s3 <= 00bea8ad
+    1029  1.9 0x0000011c             s5 <= 0000038f
+    1030  1.9 0x00000120             t0 <= 00000000
+    1033  1.9 0x00000124             s1 <= 4941cbc4
+    1034  1.9 0x00000128             s2 <= cfc82054
+    1035  1.9 0x0000012c             s3 <= 00beab22
+    1036  1.9 0x00000130             t1 <= 00000007
+    1040  1.9 0x00000134               
+    1041  1.9 0x00000048             fp <= f02f5c50
+    1042  1.9 0x0000004c             s1 <= 44846728
+    1043  1.9 0x00000050             s2 <= a682fdfe
+    1044  1.9 0x00000054             s3 <= 000ca9e1
+    1045  1.9 0x00000058             s4 <= 8f9981f9
+    1046  1.9 0x0000005c             s5 <= 46a12130
+    1047  1.9 0x00000060             fp <= 34b3c378
+    1051  1.9 0x00000064             s2 <= 71cf3a86
+    1052  1.9 0x00000068             s3 <= 34bf6a99
+    1053  1.9 0x0000006c             s4 <= c44d4571
+    1054  1.9 0x00000070             s5 <= 11ed5db8
+    1055  1.9 0x00000074             fp <= 79382aa0
+    1059  1.9 0x00000078             s2 <= 0768f01a
+    1060  1.9 0x0000007c             s3 <= 4d874039
+    1061  1.9 0x00000080             s4 <= 3d857011
+    1062  1.9 0x00000084             s5 <= 674acce8
+    1063  1.9 0x00000088             fp <= 0000038f
+    1067  1.9 0x0000008c             s2 <= 0768ec8b
+    1068  1.9 0x00000090             s3 <= 4d8743b6
+    1069  1.9 0x00000094             s4 <= 3d8573a0
+    1070  1.9 0x00000098             s5 <= 674ac959
+    1071  1.9 0x0000009c             fp <= 0000038f
+    1075  1.9 0x000000a0             s2 <= f8971704
+    1076  1.9 0x000000a4             s3 <= 4d874039
+    1077  1.9 0x000000a8             s4 <= 3d85772f
+    1078  1.9 0x000000ac             s5 <= 98b53a36
+    1079  1.9 0x000000b0             fp <= 44846ab7
+    1083  1.9 0x000000b4             fp <= 4bed53b3
+    1087  1.9 0x000000b8             s3 <= 066a138a
+    1088  1.9 0x000000bc             s6 <= 9071badb
+    1092  1.9 0x000000c0             s6 <= 97daa3d7
+    1096  1.9 0x000000c4             s3 <= 91b0b05d
+    1097  1.9 0x000000c8             fp <= 9071badb
+    1101  1.9 0x000000cc             fp <= 97daa3d7
+    1105  1.9 0x000000d0             fp <= d5601b06
+    1109  1.9 0x000000d4             s3 <= 44d0ab5b
+    1110  1.9 0x000000d8             fp <= 19e4822e
+    1114  1.9 0x000000dc             fp <= 214d6b2a
+    1118  1.9 0x000000e0             fp <= 5ed2e259
+    1122  1.9 0x000000e4             s3 <= 1a024902
+    1123  1.9 0x000000e8             s4 <= 0000038f
+    1127  1.9 0x000000ec             s1 <= 44846ab7
+    1128  1.9 0x000000f0             s2 <= f8971375
+    1129  1.9 0x000000f4             s3 <= 1a024a8d
+    1130  1.9 0x000000f8             s4 <= 0000038f
+    1134  1.9 0x000000fc             s1 <= 44846e46
+    1135  1.9 0x00000100             s2 <= 0768f01a
+    1136  1.9 0x00000104             s3 <= 1a024902
+    1137  1.9 0x00000108             s5 <= 0000038f
+    1138  1.9 0x0000010c             t0 <= 00000000
+    1141  1.9 0x00000110             s1 <= 448471d5
+    1142  1.9 0x00000114             s2 <= 0768ec8b
+    1143  1.9 0x00000118             s3 <= 1a024a8d
+    1144  1.9 0x0000011c             s5 <= 0000038f
+    1145  1.9 0x00000120             t0 <= 00000000
+    1148  1.9 0x00000124             s1 <= 44847564
+    1149  1.9 0x00000128             s2 <= f8971704
+    1150  1.9 0x0000012c             s3 <= 1a024902
+    1151  1.9 0x00000130             t1 <= 00000008
+    1155  1.9 0x00000134               
+    1156  1.9 0x00000048             fp <= 1699d190
+    1157  1.9 0x0000004c             s1 <= 9cc65208
+    1158  1.9 0x00000050             s2 <= 8e21ce1e
+    1159  1.9 0x00000054             s3 <= 000ca9e1
+    1160  1.9 0x00000058             s4 <= 630d0a19
+    1161  1.9 0x0000005c             s5 <= 503daff0
+    1162  1.9 0x00000060             fp <= b3602398
+    1166  1.9 0x00000064             s2 <= dac1aa86
+    1167  1.9 0x00000068             s3 <= b36c8a79
+    1168  1.9 0x0000006c             s4 <= 166d2db1
+    1169  1.9 0x00000070             s5 <= 9cdd8c58
+    1170  1.9 0x00000074             fp <= 502675a0
+    1174  1.9 0x00000078             s2 <= 7564cb1a
+    1175  1.9 0x0000007c             s3 <= e34affd9
+    1176  1.9 0x00000080             s4 <= 6693a351
+    1177  1.9 0x00000084             s5 <= b348e948
+    1178  1.9 0x00000088             fp <= 0000038f
+    1182  1.9 0x0000008c             s2 <= 7564c78b
+    1183  1.9 0x00000090             s3 <= e34afc56
+    1184  1.9 0x00000094             s4 <= 6693a6e0
+    1185  1.9 0x00000098             s5 <= b348e5b9
+    1186  1.9 0x0000009c             fp <= 0000038f
+    1190  1.9 0x000000a0             s2 <= 8a9b3c04
+    1191  1.9 0x000000a4             s3 <= e34affd9
+    1192  1.9 0x000000a8             s4 <= 6693aa6f
+    1193  1.9 0x000000ac             s5 <= 4cb71dd6
+    1194  1.9 0x000000b0             fp <= 9cc65597
+    1198  1.9 0x000000b4             fp <= 122b1993
+    1202  1.9 0x000000b8             s3 <= f161e64a
+    1203  1.9 0x000000bc             s6 <= aef16b9b
+    1207  1.9 0x000000c0             s6 <= 24562f97
+    1211  1.9 0x000000c4             s3 <= d537c9dd
+    1212  1.9 0x000000c8             fp <= aef16b9b
+    1216  1.9 0x000000cc             fp <= 24562f97
+    1220  1.9 0x000000d0             fp <= 8ae9da06
+    1224  1.9 0x000000d4             s3 <= 5fde13db
+    1225  1.9 0x000000d8             fp <= 27b02c0e
+    1229  1.9 0x000000dc             fp <= 9d14f00a
+    1233  1.9 0x000000e0             fp <= 03a89a79
+    1237  1.9 0x000000e4             s3 <= 5c7689a2
+    1238  1.9 0x000000e8             s4 <= 0000038f
+    1242  1.9 0x000000ec             s1 <= 9cc65597
+    1243  1.9 0x000000f0             s2 <= 8a9b3875
+    1244  1.9 0x000000f4             s3 <= 5c768a2d
+    1245  1.9 0x000000f8             s4 <= 0000038f
+    1249  1.9 0x000000fc             s1 <= 9cc65926
+    1250  1.9 0x00000100             s2 <= 7564cb1a
+    1251  1.9 0x00000104             s3 <= 5c7689a2
+    1252  1.9 0x00000108             s5 <= 0000038f
+    1253  1.9 0x0000010c             t0 <= 00000000
+    1256  1.9 0x00000110             s1 <= 9cc65cb5
+    1257  1.9 0x00000114             s2 <= 7564c78b
+    1258  1.9 0x00000118             s3 <= 5c768a2d
+    1259  1.9 0x0000011c             s5 <= 0000038f
+    1260  1.9 0x00000120             t0 <= 00000000
+    1263  1.9 0x00000124             s1 <= 9cc66044
+    1264  1.9 0x00000128             s2 <= 8a9b3c04
+    1265  1.9 0x0000012c             s3 <= 5c7689a2
+    1266  1.9 0x00000130             t1 <= 00000009
+    1270  1.9 0x00000134               
+    1271  1.9 0x00000048             fp <= e2d57110
+    1272  1.9 0x0000004c             s1 <= e3321e88
+    1273  1.9 0x00000050             s2 <= 09d3c77e
+    1274  1.9 0x00000054             s3 <= 000ca9e1
+    1275  1.9 0x00000058             s4 <= 4eb35a59
+    1276  1.9 0x0000005c             s5 <= 3707a070
+    1277  1.9 0x00000060             fp <= c6078f98
+    1281  1.9 0x00000064             s2 <= 43cc37e6
+    1282  1.9 0x00000068             s3 <= c60b2679
+    1283  1.9 0x0000006c             s4 <= 14bae9f1
+    1284  1.9 0x00000070             s5 <= 710010d8
+    1285  1.9 0x00000074             fp <= a939ae20
+    1289  1.9 0x00000078             s2 <= 656d763a
+    1290  1.9 0x0000007c             s3 <= 6f328859
+    1291  1.9 0x00000080             s4 <= bdf49811
+    1292  1.9 0x00000084             s5 <= 38399d48
+    1293  1.9 0x00000088             fp <= 0000038f
+    1297  1.9 0x0000008c             s2 <= 656d72ab
+    1298  1.9 0x00000090             s3 <= 6f328bd6
+    1299  1.9 0x00000094             s4 <= bdf49ba0
+    1300  1.9 0x00000098             s5 <= 383999b9
+    1301  1.9 0x0000009c             fp <= 0000038f
+    1305  1.9 0x000000a0             s2 <= 9a9290e4
+    1306  1.9 0x000000a4             s3 <= 6f328859
+    1307  1.9 0x000000a8             s4 <= bdf49f2f
+    1308  1.9 0x000000ac             s5 <= c7c669d6
+    1309  1.9 0x000000b0             fp <= e3322217
+    1313  1.9 0x000000b4             fp <= 489f9133
+    1317  1.9 0x000000b8             s3 <= 27ad196a
+    1318  1.9 0x000000bc             s6 <= 2bd1afbb
+    1322  1.9 0x000000c0             s6 <= 913f1ed7
+    1326  1.9 0x000000c4             s3 <= b69207bd
+    1327  1.9 0x000000c8             fp <= 2bd1afbb
+    1331  1.9 0x000000cc             fp <= 913f1ed7
+    1335  1.9 0x000000d0             fp <= 4f33be06
+    1339  1.9 0x000000d4             s3 <= f9a1b9bb
+    1340  1.9 0x000000d8             fp <= 3265dc8e
+    1344  1.9 0x000000dc             fp <= 97d34baa
+    1348  1.9 0x000000e0             fp <= 55c7ead9
+    1352  1.9 0x000000e4             s3 <= ac665362
+    1353  1.9 0x000000e8             s4 <= 0000038f
+    1357  1.9 0x000000ec             s1 <= e3322217
+    1358  1.9 0x000000f0             s2 <= 9a928d55
+    1359  1.9 0x000000f4             s3 <= ac6650ed
+    1360  1.9 0x000000f8             s4 <= 0000038f
+    1364  1.9 0x000000fc             s1 <= e33225a6
+    1365  1.9 0x00000100             s2 <= 656d763a
+    1366  1.9 0x00000104             s3 <= ac665362
+    1367  1.9 0x00000108             s5 <= 0000038f
+    1368  1.9 0x0000010c             t0 <= 00000000
+    1371  1.9 0x00000110             s1 <= e3322935
+    1372  1.9 0x00000114             s2 <= 656d72ab
+    1373  1.9 0x00000118             s3 <= ac6650ed
+    1374  1.9 0x0000011c             s5 <= 0000038f
+    1375  1.9 0x00000120             t0 <= 00000000
+    1378  1.9 0x00000124             s1 <= e3322cc4
+    1379  1.9 0x00000128             s2 <= 9a9290e4
+    1380  1.9 0x0000012c             s3 <= ac665362
+    1381  1.9 0x00000130             t1 <= 0000000a
+    1385  1.9 0x00000134               
+    1390  1.9 0x00000138             sp <= 00002ffc
+    1391  1.9 0x0000013c               
+    1396  1.9 0x00000010               
+$finish called at time : 20979791 ps : File "/afs/inf.ed.ac.uk/user/s17/s1740055/CArD/prac2/src/sim/tb.v" Line 326
+run: Time (s): cpu = 00:00:04 ; elapsed = 00:00:24 . Memory (MB): peak = 7053.977 ; gain = 29.133 ; free physical = 7951 ; free virtual = 20022
+xsim: Time (s): cpu = 00:00:08 ; elapsed = 00:00:26 . Memory (MB): peak = 7053.977 ; gain = 56.973 ; free physical = 7950 ; free virtual = 20021
 INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_behav' loaded.
 INFO: [USF-XSim-97] XSim simulation ran for 100us
-launch_simulation: Time (s): cpu = 00:01:05 ; elapsed = 00:00:26 . Memory (MB): peak = 6950.195 ; gain = 25.727 ; free physical = 3249 ; free virtual = 20554
+launch_simulation: Time (s): cpu = 00:00:37 ; elapsed = 00:01:02 . Memory (MB): peak = 7053.977 ; gain = 56.973 ; free physical = 7950 ; free virtual = 20021
+launch_runs impl_1 -jobs 2
+INFO: [Vivado 12-4149] The synthesis checkpoint for IP '/afs/inf.ed.ac.uk/user/s17/s1740055/CArD/prac2/src/ip/rgb2dvi_0/rgb2dvi_0.xci' is already up-to-date
+INFO: [Vivado 12-4149] The synthesis checkpoint for IP '/afs/inf.ed.ac.uk/user/s17/s1740055/CArD/prac2/src/ip/rv32im_alu_0/rv32im_alu_0.xci' is already up-to-date
+INFO: [Vivado 12-4149] The synthesis checkpoint for IP '/afs/inf.ed.ac.uk/user/s17/s1740055/CArD/prac2/src/ip/video_clock_gen/video_clock_gen.xci' is already up-to-date
+INFO: [Vivado 12-4149] The synthesis checkpoint for IP '/afs/inf.ed.ac.uk/user/s17/s1740055/CArD/prac2/src/ip/cpu_clock_gen/cpu_clock_gen.xci' is already up-to-date
+[Sat Nov  2 16:48:46 2019] Launched synth_1...
+Run output will be captured here: /afs/inf.ed.ac.uk/user/s17/s1740055/CArD/prac2/proj/RV32IM_PYNQ_Z2.runs/synth_1/runme.log
+[Sat Nov  2 16:48:46 2019] Launched impl_1...
+Run output will be captured here: /afs/inf.ed.ac.uk/user/s17/s1740055/CArD/prac2/proj/RV32IM_PYNQ_Z2.runs/impl_1/runme.log
+open_run impl_1
+INFO: [Netlist 29-17] Analyzing 876 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2018.3
+INFO: [Device 21-403] Loading part xc7z020clg400-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+WARNING: [Constraints 18-550] Could not create 'IBUF_LOW_PWR' constraint because net 'u_video_clock_gen/clk_in1' is not directly connected to top level port. Synthesis is ignored for IBUF_LOW_PWR but preserved for implementation.
+INFO: [Timing 38-478] Restoring timing data from binary archive.
+INFO: [Timing 38-479] Binary timing data restore complete.
+INFO: [Project 1-856] Restoring constraints from binary archive.
+INFO: [Project 1-853] Binary constraint restore complete.
+Reading XDEF placement.
+Reading placer database...
+Reading XDEF routing.
+Read XDEF File: Time (s): cpu = 00:00:00.41 ; elapsed = 00:00:00.40 . Memory (MB): peak = 7836.641 ; gain = 8.000 ; free physical = 6957 ; free virtual = 19195
+Restored from archive | CPU: 0.410000 secs | Memory: 9.193764 MB |
+Finished XDEF File Restore: Time (s): cpu = 00:00:00.42 ; elapsed = 00:00:00.40 . Memory (MB): peak = 7836.641 ; gain = 8.000 ; free physical = 6957 ; free virtual = 19195
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 7836.641 ; gain = 0.000 ; free physical = 6957 ; free virtual = 19196
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+open_run: Time (s): cpu = 00:00:20 ; elapsed = 00:00:18 . Memory (MB): peak = 8031.129 ; gain = 878.336 ; free physical = 6842 ; free virtual = 19084
+report_utilization -name utilization_1
+report_timing_summary -delay_type min_max -report_unconstrained -check_timing_verbose -max_paths 10 -input_pins -routable_nets -name timing_1
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -1, Delay Type: min_max.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 4 CPUs
+WARNING: [Timing 38-436] There are set_bus_skew constraint(s) in this design. Please run report_bus_skew to ensure that bus skew requirements are met.
+set_property -dict [list CONFIG.CLKOUT1_REQUESTED_OUT_FREQ {60.000} CONFIG.MMCM_DIVCLK_DIVIDE {5} CONFIG.MMCM_CLKFBOUT_MULT_F {39.000} CONFIG.MMCM_CLKOUT0_DIVIDE_F {16.250} CONFIG.MMCM_CLKOUT1_DIVIDE {13} CONFIG.CLKOUT1_JITTER {240.770} CONFIG.CLKOUT1_PHASE_ERROR {240.486} CONFIG.CLKOUT2_JITTER {231.022} CONFIG.CLKOUT2_PHASE_ERROR {240.486}] [get_ips cpu_clock_gen]
+generate_target all [get_files  /afs/inf.ed.ac.uk/user/s17/s1740055/CArD/prac2/src/ip/cpu_clock_gen/cpu_clock_gen.xci]
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'cpu_clock_gen'...
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'cpu_clock_gen'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'cpu_clock_gen'...
+INFO: [IP_Flow 19-1686] Generating 'Implementation' target for IP 'cpu_clock_gen'...
+INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'cpu_clock_gen'...
+catch { config_ip_cache -export [get_ips -all cpu_clock_gen] }
+export_ip_user_files -of_objects [get_files /afs/inf.ed.ac.uk/user/s17/s1740055/CArD/prac2/src/ip/cpu_clock_gen/cpu_clock_gen.xci] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] /afs/inf.ed.ac.uk/user/s17/s1740055/CArD/prac2/src/ip/cpu_clock_gen/cpu_clock_gen.xci]
+launch_runs -jobs 2 cpu_clock_gen_synth_1
+[Sat Nov  2 17:11:00 2019] Launched cpu_clock_gen_synth_1...
+Run output will be captured here: /afs/inf.ed.ac.uk/user/s17/s1740055/CArD/prac2/proj/RV32IM_PYNQ_Z2.runs/cpu_clock_gen_synth_1/runme.log
+export_simulation -of_objects [get_files /afs/inf.ed.ac.uk/user/s17/s1740055/CArD/prac2/src/ip/cpu_clock_gen/cpu_clock_gen.xci] -directory /afs/inf.ed.ac.uk/user/s17/s1740055/CArD/prac2/proj/RV32IM_PYNQ_Z2.ip_user_files/sim_scripts -ip_user_files_dir /afs/inf.ed.ac.uk/user/s17/s1740055/CArD/prac2/proj/RV32IM_PYNQ_Z2.ip_user_files -ipstatic_source_dir /afs/inf.ed.ac.uk/user/s17/s1740055/CArD/prac2/proj/RV32IM_PYNQ_Z2.ip_user_files/ipstatic -lib_map_path [list {modelsim=/afs/inf.ed.ac.uk/user/s17/s1740055/CArD/prac2/proj/RV32IM_PYNQ_Z2.cache/compile_simlib/modelsim} {questa=/afs/inf.ed.ac.uk/user/s17/s1740055/CArD/prac2/proj/RV32IM_PYNQ_Z2.cache/compile_simlib/questa} {ies=/afs/inf.ed.ac.uk/user/s17/s1740055/CArD/prac2/proj/RV32IM_PYNQ_Z2.cache/compile_simlib/ies} {xcelium=/afs/inf.ed.ac.uk/user/s17/s1740055/CArD/prac2/proj/RV32IM_PYNQ_Z2.cache/compile_simlib/xcelium} {vcs=/afs/inf.ed.ac.uk/user/s17/s1740055/CArD/prac2/proj/RV32IM_PYNQ_Z2.cache/compile_simlib/vcs} {riviera=/afs/inf.ed.ac.uk/user/s17/s1740055/CArD/prac2/proj/RV32IM_PYNQ_Z2.cache/compile_simlib/riviera}] -use_ip_compiled_libs -force -quiet
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory /afs/inf.ed.ac.uk/user/s17/s1740055/CArD/prac2/proj/RV32IM_PYNQ_Z2.runs/synth_1
+
+launch_runs impl_1 -jobs 2
+INFO: [Vivado 12-4149] The synthesis checkpoint for IP '/afs/inf.ed.ac.uk/user/s17/s1740055/CArD/prac2/src/ip/rgb2dvi_0/rgb2dvi_0.xci' is already up-to-date
+INFO: [Vivado 12-4149] The synthesis checkpoint for IP '/afs/inf.ed.ac.uk/user/s17/s1740055/CArD/prac2/src/ip/rv32im_alu_0/rv32im_alu_0.xci' is already up-to-date
+INFO: [Vivado 12-4149] The synthesis checkpoint for IP '/afs/inf.ed.ac.uk/user/s17/s1740055/CArD/prac2/src/ip/video_clock_gen/video_clock_gen.xci' is already up-to-date
+[Sat Nov  2 17:11:12 2019] Launched cpu_clock_gen_synth_1, synth_1...
+Run output will be captured here:
+cpu_clock_gen_synth_1: /afs/inf.ed.ac.uk/user/s17/s1740055/CArD/prac2/proj/RV32IM_PYNQ_Z2.runs/cpu_clock_gen_synth_1/runme.log
+synth_1: /afs/inf.ed.ac.uk/user/s17/s1740055/CArD/prac2/proj/RV32IM_PYNQ_Z2.runs/synth_1/runme.log
+[Sat Nov  2 17:11:12 2019] Launched impl_1...
+Run output will be captured here: /afs/inf.ed.ac.uk/user/s17/s1740055/CArD/prac2/proj/RV32IM_PYNQ_Z2.runs/impl_1/runme.log
+refresh_design
+INFO: [Netlist 29-17] Analyzing 876 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2018.3
+INFO: [Project 1-570] Preparing netlist for logic optimization
+WARNING: [Constraints 18-550] Could not create 'IBUF_LOW_PWR' constraint because net 'u_video_clock_gen/clk_in1' is not directly connected to top level port. Synthesis is ignored for IBUF_LOW_PWR but preserved for implementation.
+INFO: [Timing 38-478] Restoring timing data from binary archive.
+INFO: [Timing 38-479] Binary timing data restore complete.
+INFO: [Project 1-856] Restoring constraints from binary archive.
+INFO: [Project 1-853] Binary constraint restore complete.
+Reading XDEF placement.
+Reading placer database...
+Reading XDEF routing.
+Read XDEF File: Time (s): cpu = 00:00:00.42 ; elapsed = 00:00:00.39 . Memory (MB): peak = 8168.965 ; gain = 0.000 ; free physical = 5346 ; free virtual = 18120
+Restored from archive | CPU: 0.420000 secs | Memory: 8.712807 MB |
+Finished XDEF File Restore: Time (s): cpu = 00:00:00.42 ; elapsed = 00:00:00.39 . Memory (MB): peak = 8168.965 ; gain = 0.000 ; free physical = 5346 ; free virtual = 18120
+refresh_design: Time (s): cpu = 00:00:11 ; elapsed = 00:00:07 . Memory (MB): peak = 8168.965 ; gain = 0.000 ; free physical = 5116 ; free virtual = 17891
+report_timing_summary -delay_type min_max -report_unconstrained -check_timing_verbose -max_paths 10 -input_pins -routable_nets -name timing_1
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -1, Delay Type: min_max.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 4 CPUs
+WARNING: [Timing 38-436] There are set_bus_skew constraint(s) in this design. Please run report_bus_skew to ensure that bus skew requirements are met.
+report_utilization -name utilization_1
+close_design
 close_sim
 INFO: [Simtcl 6-16] Simulation closed
+close_sim: Time (s): cpu = 00:00:27 ; elapsed = 00:00:05 . Memory (MB): peak = 8169.141 ; gain = 0.000 ; free physical = 5053 ; free virtual = 17917
 launch_simulation
 INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
 INFO: [Vivado 12-5682] Launching behavioral simulation in '/afs/inf.ed.ac.uk/user/s17/s1740055/CArD/prac2/proj/RV32IM_PYNQ_Z2.sim/sim_1/behav/xsim'
@@ -411,6 +1091,9 @@ INFO: [VRFC 10-311] analyzing module rv32im_rm_0
 INFO: [VRFC 10-311] analyzing module rv32im_rm_0_control_unit
 INFO: [VRFC 10-311] analyzing module rv32im_rm_0_rv32im_ref
 INFO: [VRFC 10-311] analyzing module glbl
+INFO: [VRFC 10-2263] Analyzing Verilog file "/afs/inf.ed.ac.uk/user/s17/s1740055/CArD/prac2/src/ip/rv32im_alu_0/rv32im_alu_0_sim_netlist.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module rv32im_alu_0
+INFO: [VRFC 10-311] analyzing module rv32im_alu_0_alu
 INFO: [VRFC 10-2263] Analyzing Verilog file "/afs/inf.ed.ac.uk/user/s17/s1740055/CArD/prac2/src/ip/video_clock_gen/video_clock_gen_clk_wiz.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module video_clock_gen_clk_wiz
 INFO: [VRFC 10-2263] Analyzing Verilog file "/afs/inf.ed.ac.uk/user/s17/s1740055/CArD/prac2/src/ip/video_clock_gen/video_clock_gen.v" into library xil_defaultlib
@@ -419,8 +1102,6 @@ INFO: [VRFC 10-2263] Analyzing Verilog file "/afs/inf.ed.ac.uk/user/s17/s1740055
 INFO: [VRFC 10-311] analyzing module cpu_clock_gen_clk_wiz
 INFO: [VRFC 10-2263] Analyzing Verilog file "/afs/inf.ed.ac.uk/user/s17/s1740055/CArD/prac2/src/ip/cpu_clock_gen/cpu_clock_gen.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module cpu_clock_gen
-INFO: [VRFC 10-2263] Analyzing Verilog file "/afs/inf.ed.ac.uk/user/s17/s1740055/CArD/prac2/src/hdl/alu.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module alu
 INFO: [VRFC 10-2263] Analyzing Verilog file "/afs/inf.ed.ac.uk/user/s17/s1740055/CArD/prac2/src/hdl/branch_cache.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module branch_cache
 INFO: [VRFC 10-2263] Analyzing Verilog file "/afs/inf.ed.ac.uk/user/s17/s1740055/CArD/prac2/src/hdl/branch_predictor.v" into library xil_defaultlib
@@ -466,12 +1147,12 @@ INFO: [VRFC 10-311] analyzing module vga_control
 INFO: [VRFC 10-2263] Analyzing Verilog file "/afs/inf.ed.ac.uk/user/s17/s1740055/CArD/prac2/src/sim/tb.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module tb
 xvhdl --incr --relax -prj tb_vhdl.prj
-INFO: [USF-XSim-69] 'compile' step finished in '3' seconds
+INFO: [USF-XSim-69] 'compile' step finished in '4' seconds
 INFO: [USF-XSim-3] XSim::Elaborate design
 INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/afs/inf.ed.ac.uk/user/s17/s1740055/CArD/prac2/proj/RV32IM_PYNQ_Z2.sim/sim_1/behav/xsim'
 Vivado Simulator 2018.3
 Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
-Running: /disk/scratch/Xilinx/Vivado/2018.3/bin/unwrapped/lnx64.o/xelab -wto 4ad58ba7a2d14a2087030b8179f96922 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_behav xil_defaultlib.tb xil_defaultlib.glbl -log elaborate.log 
+Running: /disk/scratch/Xilinx/Vivado/2018.3/bin/unwrapped/lnx64.o/xelab -wto 911a8cafdddd4b408040830d4b642778 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_behav xil_defaultlib.tb xil_defaultlib.glbl -log elaborate.log 
 Using 8 slave threads.
 Starting static elaboration
 Completed static elaboration
@@ -491,7 +1172,7 @@ Compiling package xil_defaultlib.dvi_constants
 Compiling module xil_defaultlib.ssd_driver
 Compiling module xil_defaultlib.resync
 Compiling module unisims_ver.IBUF
-Compiling module unisims_ver.MMCME2_ADV(CLKFBOUT_MULT_F=38.37...
+Compiling module unisims_ver.MMCME2_ADV(CLKFBOUT_MULT_F=39.0,...
 Compiling module unisims_ver.BUFG
 Compiling module xil_defaultlib.cpu_clock_gen_clk_wiz
 Compiling module xil_defaultlib.cpu_clock_gen
@@ -505,7 +1186,17 @@ Compiling module xil_defaultlib.branch_predictor_default
 Compiling module xil_defaultlib.fetch_unit
 Compiling module xil_defaultlib.decoder
 Compiling module xil_defaultlib.regfile
-Compiling module xil_defaultlib.alu
+Compiling module unisims_ver.OBUF
+Compiling module unisims_ver.LUT6
+Compiling module unisims_ver.CARRY4
+Compiling module unisims_ver.LUT5
+Compiling module unisims_ver.LUT4
+Compiling module unisims_ver.x_lut3_mux8
+Compiling module unisims_ver.LUT3
+Compiling module unisims_ver.x_lut2_mux4
+Compiling module unisims_ver.LUT2
+Compiling module xil_defaultlib.rv32im_alu_0_alu
+Compiling module xil_defaultlib.rv32im_alu_0
 Compiling module xil_defaultlib.divider
 Compiling module xil_defaultlib.bypass_or_stall
 Compiling module xil_defaultlib.store_queue
@@ -529,17 +1220,8 @@ Compiling module xil_defaultlib.msec_timer
 Compiling module xil_defaultlib.dvi_display
 Compiling module xil_defaultlib.top
 Compiling module unisims_ver.OBUFT
-Compiling module unisims_ver.OBUF
-Compiling module unisims_ver.x_lut3_mux8
-Compiling module unisims_ver.LUT3
-Compiling module unisims_ver.CARRY4
-Compiling module unisims_ver.x_lut2_mux4
-Compiling module unisims_ver.LUT2
-Compiling module unisims_ver.LUT6
 Compiling module unisims_ver.x_lut1_mux2
 Compiling module unisims_ver.LUT1
-Compiling module unisims_ver.LUT4
-Compiling module unisims_ver.LUT5
 Compiling module unisims_ver.MUXF7
 Compiling module unisims_ver.FDCE_default
 Compiling module unisims_ver.DSP48E1(ACASCREG=0,ALUMODEREG=0,...
@@ -550,8 +1232,8 @@ Compiling module xil_defaultlib.rv32im_rm_0
 Compiling module xil_defaultlib.tb
 Compiling module xil_defaultlib.glbl
 Built simulation snapshot tb_behav
-run_program: Time (s): cpu = 00:00:21 ; elapsed = 00:00:12 . Memory (MB): peak = 7172.348 ; gain = 0.000 ; free physical = 3276 ; free virtual = 20585
-INFO: [USF-XSim-69] 'elaborate' step finished in '12' seconds
+run_program: Time (s): cpu = 00:00:22 ; elapsed = 00:00:16 . Memory (MB): peak = 8169.141 ; gain = 0.000 ; free physical = 5037 ; free virtual = 17910
+INFO: [USF-XSim-69] 'elaborate' step finished in '16' seconds
 INFO: [USF-XSim-4] XSim::Simulate design
 INFO: [USF-XSim-61] Executing 'SIMULATE' step in '/afs/inf.ed.ac.uk/user/s17/s1740055/CArD/prac2/proj/RV32IM_PYNQ_Z2.sim/sim_1/behav/xsim'
 INFO: [USF-XSim-98] *** Running xsim
@@ -578,651 +1260,653 @@ Time: 4 ns  Iteration: 2  Process: /tb/dut/u_dvi_display/u_rgb2dvi/U0/\DataEncod
 Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
 Time: 4 ns  Iteration: 2  Process: /tb/dut/u_dvi_display/u_rgb2dvi/U0/\DataEncoders(2)\/DataEncoder/line__154  File: /afs/inf.ed.ac.uk/user/s17/s1740055/CArD/prac2/proj/RV32IM_PYNQ_Z2.ip_user_files/ipstatic/src/TMDS_Encoder.vhd
 Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-Time: 4639882 ps  Iteration: 2  Process: /tb/dut/u_dvi_display/u_rgb2dvi/U0/\DataEncoders(0)\/DataEncoder/line__154  File: /afs/inf.ed.ac.uk/user/s17/s1740055/CArD/prac2/proj/RV32IM_PYNQ_Z2.ip_user_files/ipstatic/src/TMDS_Encoder.vhd
+Time: 3758662 ps  Iteration: 2  Process: /tb/dut/u_dvi_display/u_rgb2dvi/U0/\DataEncoders(0)\/DataEncoder/line__154  File: /afs/inf.ed.ac.uk/user/s17/s1740055/CArD/prac2/proj/RV32IM_PYNQ_Z2.ip_user_files/ipstatic/src/TMDS_Encoder.vhd
 Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-Time: 4639882 ps  Iteration: 2  Process: /tb/dut/u_dvi_display/u_rgb2dvi/U0/\DataEncoders(1)\/DataEncoder/line__154  File: /afs/inf.ed.ac.uk/user/s17/s1740055/CArD/prac2/proj/RV32IM_PYNQ_Z2.ip_user_files/ipstatic/src/TMDS_Encoder.vhd
+Time: 3758662 ps  Iteration: 2  Process: /tb/dut/u_dvi_display/u_rgb2dvi/U0/\DataEncoders(1)\/DataEncoder/line__154  File: /afs/inf.ed.ac.uk/user/s17/s1740055/CArD/prac2/proj/RV32IM_PYNQ_Z2.ip_user_files/ipstatic/src/TMDS_Encoder.vhd
 Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-Time: 4639882 ps  Iteration: 2  Process: /tb/dut/u_dvi_display/u_rgb2dvi/U0/\DataEncoders(2)\/DataEncoder/line__154  File: /afs/inf.ed.ac.uk/user/s17/s1740055/CArD/prac2/proj/RV32IM_PYNQ_Z2.ip_user_files/ipstatic/src/TMDS_Encoder.vhd
-     196 x.x 0x00000000             sp <= 00003000
-     197  8.0 0x00000004             sp <= 00003000
-     198  3.3 0x00000008             sp <= 00002ffc
-     199  2.7 0x0000000c             ra <= 00000010
-     204  3.2 0x00000014             sp <= 00002fd4
-     205  2.5 0x00000018             a5 <= 00002fd4
-     206  2.3 0x0000001c             a4 <= 0000038f
-     207  2.2 0x00000020               mem[00000fd4] <= 0000038f
-     208  2.1 0x00000024             a1 <= 0000000a
-     209  2.0 0x00000028             t1 <= 00000000
-     210  1.9 0x0000002c             fp <= 000004d2
-     211  1.8 0x00000030             s1 <= 00000224
-     212  1.7 0x00000034             s2 <= 00001000
-     213  1.7 0x00000038             s2 <= 00000911
-     214  1.6 0x0000003c             s3 <= 000003b4
-     215  1.6 0x00000040             s4 <= 00000306
-     216  1.6 0x00000044             s5 <= 000001b0
-     217  1.5 0x00000048             fp <= 00136864
-     218  1.5 0x0000004c             s1 <= 002192f4
-     219  1.5 0x00000050             s2 <= 000b3238
-     220  1.4 0x00000054             s3 <= 00051a20
-     221  1.4 0x00000058             s4 <= 00000000
-     222  1.4 0x0000005c             s5 <= 00000000
-     223  1.4 0x00000060             fp <= 0034fb58
-     224  1.4 0x00000064             s2 <= ffd636e0
-     225  1.3 0x00000068             s3 <= 0031e178
-     226  1.3 0x0000006c             s4 <= 0034fb58
-     227  1.3 0x00000070             s5 <= ffcb04a8
-     228  1.3 0x00000074             fp <= 00568e4c
-     229  1.3 0x00000078             s2 <= 0080576c
-     230  1.3 0x0000007c             s3 <= 00676f34
-     231  1.3 0x00000080             s4 <= 008b89a4
-     232  1.3 0x00000084             s5 <= 008b89a4
-     233  1.3 0x00000088             fp <= 0000038f
-     235  1.3 0x0000008c             s2 <= 008053dd
-     236  1.3 0x00000090             s3 <= 00676cbb
-     237  1.3 0x00000094             s4 <= 008b8d33
-     238  1.3 0x00000098             s5 <= 008b8615
-     239  1.2 0x0000009c             fp <= 0000038f
-     241  1.3 0x000000a0             s2 <= ff7fafb2
-     242  1.3 0x000000a4             s3 <= 00676f34
-     243  1.2 0x000000a8             s4 <= 008b90c2
-     244  1.2 0x000000ac             s5 <= ff747d7a
-     245  1.2 0x000000b0             fp <= 00219683
-     246  1.2 0x000000b4             fp <= 00a1e6d1
-     247  1.2 0x000000b8             s3 <= 00c689e5
-     248  1.2 0x000000bc             s6 <= 00c379c5
-     249  1.2 0x000000c0             s6 <= 0143ca13
-     250  1.2 0x000000c4             s3 <= 018543f6
-     251  1.2 0x000000c8             fp <= 00c379c5
-     252  1.2 0x000000cc             fp <= 0143ca13
-     253  1.2 0x000000d0             fp <= 01cf5ad5
-     254  1.2 0x000000d4             s3 <= 004a1923
-     255  1.2 0x000000d8             fp <= 01f0edc9
-     256  1.2 0x000000dc             fp <= 02713e17
-     257  1.2 0x000000e0             fp <= 02fcced9
-     258  1.2 0x000000e4             s3 <= 02b6d7fa
-     259  1.2 0x000000e8             s4 <= 0000038f
-     261  1.2 0x000000ec             s1 <= 00219683
-     262  1.2 0x000000f0             s2 <= ff7fac23
-     263  1.2 0x000000f4             s3 <= 02b6d475
-     264  1.2 0x000000f8             s4 <= 0000038f
-     266  1.2 0x000000fc             s1 <= 00219a12
-     267  1.2 0x00000100             s2 <= 0080576c
-     268  1.2 0x00000104             s3 <= 02b6d7fa
-     269  1.2 0x00000108             s5 <= 0000038f
-     270  1.2 0x0000010c             t0 <= 00000000
-     271  1.2 0x00000110             s1 <= 00219da1
-     272  1.2 0x00000114             s2 <= 008053dd
-     273  1.2 0x00000118             s3 <= 02b6d475
-     274  1.2 0x0000011c             s5 <= 0000038f
-     275  1.2 0x00000120             t0 <= 00000000
-     276  1.1 0x00000124             s1 <= 0021a130
-     277  1.1 0x00000128             s2 <= ff7fafb2
-     278  1.1 0x0000012c             s3 <= 02b6d7fa
-     279  1.1 0x00000130             t1 <= 00000001
-     280  1.1 0x00000134               
-     285  1.2 0x00000048             fp <= db61e360
-     286  1.2 0x0000004c             s1 <= 0bcc11d4
-     287  1.2 0x00000050             s2 <= a8aa92a6
-     288  1.2 0x00000054             s3 <= 000ca9e1
-     289  1.2 0x00000058             s4 <= 803c199d
-     290  1.2 0x0000005c             s5 <= 67cda020
-     291  1.2 0x00000060             fp <= e72df534
-     292  1.2 0x00000064             s2 <= c17c9d72
-     293  1.2 0x00000068             s3 <= e7215cd5
-     294  1.2 0x0000006c             s4 <= 676a0ed1
-     295  1.2 0x00000070             s5 <= 809faaec
-     296  1.2 0x00000074             fp <= f2fa0708
-     297  1.2 0x00000078             s2 <= 317d6996
-     298  1.2 0x0000007c             s3 <= 15db5bdd
-     299  1.2 0x00000080             s4 <= 5a6415d9
-     300  1.1 0x00000084             s5 <= 725a5c1c
-     301  1.1 0x00000088             fp <= 0000038f
-     303  1.2 0x0000008c             s2 <= 317d6607
-     304  1.2 0x00000090             s3 <= 15db5852
-     305  1.2 0x00000094             s4 <= 5a641968
-     306  1.1 0x00000098             s5 <= 725a588d
-     307  1.1 0x0000009c             fp <= 0000038f
-     309  1.2 0x000000a0             s2 <= ce829d88
-     310  1.2 0x000000a4             s3 <= 15db5bdd
-     311  1.2 0x000000a8             s4 <= 5a641cf7
-     312  1.1 0x000000ac             s5 <= 8da5ab02
-     313  1.1 0x000000b0             fp <= 0bcc1563
-     314  1.1 0x000000b4             fp <= 3d4977db
-     315  1.1 0x000000b8             s3 <= 28922c06
-     316  1.1 0x000000bc             s6 <= 491589af
-     317  1.1 0x000000c0             s6 <= 7a92ec27
-     318  1.1 0x000000c4             s3 <= 5200c021
-     319  1.1 0x000000c8             fp <= 491589af
-     320  1.1 0x000000cc             fp <= 7a92ec27
-     321  1.1 0x000000d0             fp <= d4f7091e
-     322  1.1 0x000000d4             s3 <= 86f7c93f
-     323  1.1 0x000000d8             fp <= e0c31af2
-     324  1.1 0x000000dc             fp <= 12407d6a
-     325  1.1 0x000000e0             fp <= 6ca49a61
-     326  1.1 0x000000e4             s3 <= ea53535e
-     327  1.1 0x000000e8             s4 <= 0000038f
-     329  1.1 0x000000ec             s1 <= 0bcc1563
-     330  1.1 0x000000f0             s2 <= ce8299f9
-     331  1.1 0x000000f4             s3 <= ea5350d1
-     332  1.1 0x000000f8             s4 <= 0000038f
-     334  1.1 0x000000fc             s1 <= 0bcc18f2
-     335  1.1 0x00000100             s2 <= 317d6996
-     336  1.1 0x00000104             s3 <= ea53535e
-     337  1.1 0x00000108             s5 <= 0000038f
-     338  1.1 0x0000010c             t0 <= 00000000
-     339  1.1 0x00000110             s1 <= 0bcc1c81
-     340  1.1 0x00000114             s2 <= 317d6607
-     341  1.1 0x00000118             s3 <= ea5350d1
-     342  1.1 0x0000011c             s5 <= 0000038f
-     343  1.1 0x00000120             t0 <= 00000000
-     344  1.1 0x00000124             s1 <= 0bcc2010
-     345  1.1 0x00000128             s2 <= ce829d88
-     346  1.1 0x0000012c             s3 <= ea53535e
-     347  1.1 0x00000130             t1 <= 00000002
-     348  1.1 0x00000134               
-     349  1.1 0x00000048             fp <= 9c3ad880
-     350  1.1 0x0000004c             s1 <= 9020eff0
-     351  1.1 0x00000050             s2 <= de85ab82
-     352  1.1 0x00000054             s3 <= 000ca9e1
-     353  1.1 0x00000058             s4 <= 30d65ec9
-     354  1.1 0x0000005c             s5 <= 858cfb80
-     355  1.1 0x00000060             fp <= 2c5bc870
-     356  1.1 0x00000064             s2 <= b229e312
-     357  1.1 0x00000068             s3 <= 2c576191
-     358  1.1 0x0000006c             s4 <= 5d322739
-     359  1.1 0x00000070             s5 <= 59313310
-     360  1.1 0x00000074             fp <= bc7cb860
-     361  1.1 0x00000078             s2 <= 0a52d54e
-     362  1.1 0x0000007c             s3 <= 902bd9f1
-     363  1.1 0x00000080             s4 <= 19aedf99
-     364  1.1 0x00000084             s5 <= 634b8550
-     365  1.1 0x00000088             fp <= 0000038f
-     367  1.1 0x0000008c             s2 <= 0a52d1bf
-     368  1.1 0x00000090             s3 <= 902bda7e
-     369  1.1 0x00000094             s4 <= 19aee328
-     370  1.1 0x00000098             s5 <= 634b81c1
-     371  1.1 0x0000009c             fp <= 0000038f
-     373  1.1 0x000000a0             s2 <= f5ad31d0
-     374  1.1 0x000000a4             s3 <= 902bd9f1
-     375  1.1 0x000000a8             s4 <= 19aee6b7
-     376  1.1 0x000000ac             s5 <= 9cb481ce
-     377  1.1 0x000000b0             fp <= 9020f37f
-     378  1.1 0x000000b4             fp <= 9a73c1af
-     379  1.1 0x000000b8             s3 <= 0a58185e
-     380  1.1 0x000000bc             s6 <= 2a94b19f
-     381  1.1 0x000000c0             s6 <= 34e77fcf
-     382  1.1 0x000000c4             s3 <= 3ebf6791
-     383  1.1 0x000000c8             fp <= 2a94b19f
-     384  1.1 0x000000cc             fp <= 34e77fcf
-     385  1.1 0x000000d0             fp <= 4e966686
-     386  1.1 0x000000d4             s3 <= 70290117
-     387  1.1 0x000000d8             fp <= deb75676
-     388  1.1 0x000000dc             fp <= e90a24a6
-     389  1.1 0x000000e0             fp <= 02b90b5d
-     390  1.1 0x000000e4             s3 <= 72900a4a
-     391  1.1 0x000000e8             s4 <= 0000038f
-     393  1.1 0x000000ec             s1 <= 9020f37f
-     394  1.1 0x000000f0             s2 <= f5ad2e41
-     395  1.1 0x000000f4             s3 <= 729009c5
-     396  1.1 0x000000f8             s4 <= 0000038f
-     398  1.1 0x000000fc             s1 <= 9020f70e
-     399  1.1 0x00000100             s2 <= 0a52d54e
-     400  1.1 0x00000104             s3 <= 72900a4a
-     401  1.1 0x00000108             s5 <= 0000038f
-     402  1.1 0x0000010c             t0 <= 00000000
-     403  1.1 0x00000110             s1 <= 9020fa9d
-     404  1.1 0x00000114             s2 <= 0a52d1bf
-     405  1.1 0x00000118             s3 <= 729009c5
-     406  1.1 0x0000011c             s5 <= 0000038f
-     407  1.1 0x00000120             t0 <= 00000000
-     408  1.1 0x00000124             s1 <= 9020fe2c
-     409  1.1 0x00000128             s2 <= f5ad31d0
-     410  1.1 0x0000012c             s3 <= 72900a4a
-     411  1.1 0x00000130             t1 <= 00000003
-     412  1.1 0x00000134               
-     413  1.1 0x00000048             fp <= 4b30efc0
-     414  1.1 0x0000004c             s1 <= 6d028620
-     415  1.1 0x00000050             s2 <= ae949d56
-     416  1.1 0x00000054             s3 <= 000ca9e1
-     417  1.1 0x00000058             s4 <= 43cfd1a1
-     418  1.1 0x0000005c             s5 <= 69c21c40
-     419  1.1 0x00000060             fp <= b83375e0
-     420  1.1 0x00000064             s2 <= f6612776
-     421  1.1 0x00000068             s3 <= b83fdc01
-     422  1.1 0x0000006c             s4 <= fc034781
-     423  1.1 0x00000070             s5 <= b18ea660
-     424  1.1 0x00000074             fp <= 2535fc00
-     425  1.1 0x00000078             s2 <= 2ed4d48a
-     426  1.1 0x0000007c             s3 <= 9d0a2001
-     427  1.1 0x00000080             s4 <= 21394381
-     428  1.1 0x00000084             s5 <= 73a755a0
-     429  1.1 0x00000088             fp <= 0000038f
-     431  1.1 0x0000008c             s2 <= 2ed4d0fb
-     432  1.1 0x00000090             s3 <= 9d0a238e
-     433  1.1 0x00000094             s4 <= 21394710
-     434  1.1 0x00000098             s5 <= 73a75211
-     435  1.1 0x0000009c             fp <= 0000038f
-     437  1.1 0x000000a0             s2 <= d12b3294
-     438  1.1 0x000000a4             s3 <= 9d0a2001
-     439  1.1 0x000000a8             s4 <= 21394a9f
-     440  1.1 0x000000ac             s5 <= 8c58b17e
-     441  1.1 0x000000b0             fp <= 6d0289af
-     442  1.1 0x000000b4             fp <= 9bd7571b
-     443  1.1 0x000000b8             s3 <= 06dd771a
-     444  1.1 0x000000bc             s6 <= 08d9dd3b
-     445  1.1 0x000000c0             s6 <= 37aeaaa7
-     446  1.1 0x000000c4             s3 <= 3173ddbd
-     447  1.1 0x000000c8             fp <= 08d9dd3b
-     448  1.1 0x000000cc             fp <= 37aeaaa7
-     449  1.1 0x000000d0             fp <= 58e7f546
-     450  1.1 0x000000d4             s3 <= 699428fb
-     451  1.1 0x000000d8             fp <= c5ea7b66
-     452  1.1 0x000000dc             fp <= f4bf48d2
-     453  1.1 0x000000e0             fp <= 15f89371
-     454  1.1 0x000000e4             s3 <= 7c6cbb8a
-     455  1.1 0x000000e8             s4 <= 0000038f
-     457  1.1 0x000000ec             s1 <= 6d0289af
-     458  1.1 0x000000f0             s2 <= d12b2f05
-     459  1.1 0x000000f4             s3 <= 7c6cb805
-     460  1.1 0x000000f8             s4 <= 0000038f
-     462  1.1 0x000000fc             s1 <= 6d028d3e
-     463  1.1 0x00000100             s2 <= 2ed4d48a
-     464  1.1 0x00000104             s3 <= 7c6cbb8a
-     465  1.1 0x00000108             s5 <= 0000038f
-     466  1.1 0x0000010c             t0 <= 00000000
-     467  1.1 0x00000110             s1 <= 6d0290cd
-     468  1.1 0x00000114             s2 <= 2ed4d0fb
-     469  1.1 0x00000118             s3 <= 7c6cb805
-     470  1.1 0x0000011c             s5 <= 0000038f
-     471  1.1 0x00000120             t0 <= 00000000
-     472  1.1 0x00000124             s1 <= 6d02945c
-     473  1.1 0x00000128             s2 <= d12b3294
-     474  1.1 0x0000012c             s3 <= 7c6cbb8a
-     475  1.1 0x00000130             t1 <= 00000004
-     476  1.1 0x00000134               
-     477  1.1 0x00000048             fp <= 8debbd30
-     478  1.1 0x0000004c             s1 <= 55ab5fc8
-     479  1.1 0x00000050             s2 <= c6ef6016
-     480  1.1 0x00000054             s3 <= 000ca9e1
-     481  1.1 0x00000058             s4 <= 26914849
-     482  1.1 0x0000005c             s5 <= 070a4a50
-     483  1.1 0x00000060             fp <= e3971cf8
-     484  1.1 0x00000064             s2 <= e358431e
-     485  1.1 0x00000068             s3 <= e39bb519
-     486  1.1 0x0000006c             s4 <= 0a286541
-     487  1.1 0x00000070             s5 <= 23732d58
-     488  1.1 0x00000074             fp <= 39427cc0
-     489  1.1 0x00000078             s2 <= 55ea39a2
-     490  1.1 0x0000007c             s3 <= dad9c9d9
-     491  1.1 0x00000080             s4 <= 436ae201
-     492  1.1 0x00000084             s5 <= 15cf4f68
-     493  1.1 0x00000088             fp <= 0000038f
-     495  1.1 0x0000008c             s2 <= 55ea3613
-     496  1.1 0x00000090             s3 <= dad9ca56
-     497  1.1 0x00000094             s4 <= 436ae590
-     498  1.1 0x00000098             s5 <= 15cf4bd9
-     499  1.1 0x0000009c             fp <= 0000038f
-     501  1.1 0x000000a0             s2 <= aa15cd7c
-     502  1.1 0x000000a4             s3 <= dad9c9d9
-     503  1.1 0x000000a8             s4 <= 436ae91f
-     504  1.1 0x000000ac             s5 <= ea30b7b6
-     505  1.1 0x000000b0             fp <= 55ab6357
-     506  1.1 0x000000b4             fp <= ab9595db
-     507  1.1 0x000000b8             s3 <= 714c5c02
-     508  1.1 0x000000bc             s6 <= 0140f5a3
-     509  1.1 0x000000c0             s6 <= 572b2827
-     510  1.1 0x000000c4             s3 <= 26677425
-     511  1.1 0x000000c8             fp <= 0140f5a3
-     512  1.1 0x000000cc             fp <= 572b2827
-     513  1.1 0x000000d0             fp <= 9a961146
-     514  1.1 0x000000d4             s3 <= bcf16563
-     515  1.1 0x000000d8             fp <= f041710e
-     516  1.1 0x000000dc             fp <= 462ba392
-     517  1.1 0x000000e0             fp <= 89968cb1
-     518  1.1 0x000000e4             s3 <= 3567e9d2
-     519  1.1 0x000000e8             s4 <= 0000038f
-     521  1.1 0x000000ec             s1 <= 55ab6357
-     522  1.1 0x000000f0             s2 <= aa15c9ed
-     523  1.1 0x000000f4             s3 <= 3567ea5d
-     524  1.1 0x000000f8             s4 <= 0000038f
-     526  1.1 0x000000fc             s1 <= 55ab66e6
-     527  1.1 0x00000100             s2 <= 55ea39a2
-     528  1.1 0x00000104             s3 <= 3567e9d2
-     529  1.1 0x00000108             s5 <= 0000038f
-     530  1.1 0x0000010c             t0 <= 00000000
-     531  1.1 0x00000110             s1 <= 55ab6a75
-     532  1.1 0x00000114             s2 <= 55ea3613
-     533  1.1 0x00000118             s3 <= 3567ea5d
-     534  1.1 0x0000011c             s5 <= 0000038f
-     535  1.1 0x00000120             t0 <= 00000000
-     536  1.1 0x00000124             s1 <= 55ab6e04
-     537  1.1 0x00000128             s2 <= aa15cd7c
-     538  1.1 0x0000012c             s3 <= 3567e9d2
-     539  1.1 0x00000130             t1 <= 00000005
-     540  1.1 0x00000134               
-     541  1.1 0x00000048             fp <= 74767df0
-     542  1.1 0x0000004c             s1 <= b6cc6bb8
-     543  1.1 0x00000050             s2 <= 0cc9124e
-     544  1.1 0x00000054             s3 <= 000ca9e1
-     545  1.1 0x00000058             s4 <= 3293e2c9
-     546  1.1 0x0000005c             s5 <= f90aaf90
-     547  1.1 0x00000060             fp <= 2b42e9a8
-     548  1.1 0x00000064             s2 <= e18628a6
-     549  1.1 0x00000068             s3 <= 2b4e4049
-     550  1.1 0x0000006c             s4 <= 5dd6cc71
-     551  1.1 0x00000070             s5 <= cdc7c5e8
-     552  1.1 0x00000074             fp <= e20f5560
-     553  1.1 0x00000078             s2 <= 00892cba
-     554  1.1 0x0000007c             s3 <= c9411529
-     555  1.1 0x00000080             s4 <= 3fe621d1
-     556  1.1 0x00000084             s5 <= 14478f78
-     557  1.1 0x00000088             fp <= 0000038f
-     559  1.1 0x0000008c             s2 <= 0089292b
-     560  1.1 0x00000090             s3 <= c94116a6
-     561  1.1 0x00000094             s4 <= 3fe62560
-     562  1.1 0x00000098             s5 <= 14478be9
-     563  1.1 0x0000009c             fp <= 0000038f
-     565  1.1 0x000000a0             s2 <= ff76da64
-     566  1.1 0x000000a4             s3 <= c9411529
-     567  1.1 0x000000a8             s4 <= 3fe628ef
-     568  1.1 0x000000ac             s5 <= ebb877a6
-     569  1.1 0x000000b0             fp <= b6cc6f47
-     570  1.1 0x000000b4             fp <= b75594e3
-     571  1.1 0x000000b8             s3 <= 7e1481ca
-     572  1.1 0x000000bc             s6 <= 6e22009b
-     573  1.1 0x000000c0             s6 <= 6eab2637
-     574  1.1 0x000000c4             s3 <= 10bfa7fd
-     575  1.1 0x000000c8             fp <= 6e22009b
-     576  1.1 0x000000cc             fp <= 6eab2637
-     577  1.1 0x000000d0             fp <= ae914f26
-     578  1.1 0x000000d4             s3 <= be2ee8db
-     579  1.1 0x000000d8             fp <= 655dbade
-     580  1.1 0x000000dc             fp <= 65e6e07a
-     581  1.1 0x000000e0             fp <= a5cd0969
-     582  1.1 0x000000e4             s3 <= 1be3e1b2
-     583  1.1 0x000000e8             s4 <= 0000038f
-     585  1.1 0x000000ec             s1 <= b6cc6f47
-     586  1.1 0x000000f0             s2 <= ff76d6d5
-     587  1.1 0x000000f4             s3 <= 1be3e23d
-     588  1.1 0x000000f8             s4 <= 0000038f
-     590  1.1 0x000000fc             s1 <= b6cc72d6
-     591  1.1 0x00000100             s2 <= 00892cba
-     592  1.1 0x00000104             s3 <= 1be3e1b2
-     593  1.1 0x00000108             s5 <= 0000038f
-     594  1.1 0x0000010c             t0 <= 00000000
-     595  1.1 0x00000110             s1 <= b6cc7665
-     596  1.1 0x00000114             s2 <= 0089292b
-     597  1.1 0x00000118             s3 <= 1be3e23d
-     598  1.1 0x0000011c             s5 <= 0000038f
-     599  1.1 0x00000120             t0 <= 00000000
-     600  1.1 0x00000124             s1 <= b6cc79f4
-     601  1.1 0x00000128             s2 <= ff76da64
-     602  1.1 0x0000012c             s3 <= 1be3e1b2
-     603  1.1 0x00000130             t1 <= 00000006
-     604  1.1 0x00000134               
-     605  1.1 0x00000048             fp <= ca316b50
-     606  1.1 0x0000004c             s1 <= 4941bd88
-     607  1.1 0x00000050             s2 <= 3ff0286e
-     608  1.1 0x00000054             s3 <= 000ca9e1
-     609  1.1 0x00000058             s4 <= d30cfdb9
-     610  1.1 0x0000005c             s5 <= d4fbee30
-     611  1.1 0x00000060             fp <= 137328d8
-     612  1.1 0x00000064             s2 <= 2c7cff96
-     613  1.0 0x00000068             s3 <= 137f8139
-     614  1.0 0x0000006c             s4 <= e6802691
-     615  1.0 0x00000070             s5 <= c188c558
-     616  1.0 0x00000074             fp <= 5cb4e660
-     617  1.0 0x00000078             s2 <= 3037e6ca
-     618  1.0 0x0000007c             s3 <= 4fcb6759
-     619  1.0 0x00000080             s4 <= 43350cf1
-     620  1.0 0x00000084             s5 <= 9b2c2108
-     621  1.0 0x00000088             fp <= 0000038f
-     623  1.1 0x0000008c             s2 <= 3037e33b
-     624  1.0 0x00000090             s3 <= 4fcb64d6
-     625  1.0 0x00000094             s4 <= 43351080
-     626  1.0 0x00000098             s5 <= 9b2c1d79
-     627  1.0 0x0000009c             fp <= 0000038f
-     629  1.1 0x000000a0             s2 <= cfc82054
-     630  1.1 0x000000a4             s3 <= 4fcb6759
-     631  1.1 0x000000a8             s4 <= 4335140f
-     632  1.1 0x000000ac             s5 <= 64d3e616
-     633  1.1 0x000000b0             fp <= 4941c117
-     634  1.1 0x000000b4             fp <= 7979a0c3
-     635  1.0 0x000000b8             s3 <= 36b2c79a
-     636  1.0 0x000000bc             s6 <= c2bb5e4b
-     637  1.0 0x000000c0             s6 <= f2f33df7
-     638  1.0 0x000000c4             s3 <= c441fa6d
-     639  1.0 0x000000c8             fp <= c2bb5e4b
-     640  1.0 0x000000cc             fp <= f2f33df7
-     641  1.0 0x000000d0             fp <= 36285206
-     642  1.0 0x000000d4             s3 <= f269a86b
-     643  1.0 0x000000d8             fp <= 7f6a0f8e
-     644  1.0 0x000000dc             fp <= afa1ef3a
-     645  1.0 0x000000e0             fp <= f2d70349
-     646  1.0 0x000000e4             s3 <= 00beab22
-     647  1.0 0x000000e8             s4 <= 0000038f
-     649  1.0 0x000000ec             s1 <= 4941c117
-     650  1.0 0x000000f0             s2 <= cfc81cc5
-     651  1.0 0x000000f4             s3 <= 00bea8ad
-     652  1.0 0x000000f8             s4 <= 0000038f
-     654  1.1 0x000000fc             s1 <= 4941c4a6
-     655  1.1 0x00000100             s2 <= 3037e6ca
-     656  1.1 0x00000104             s3 <= 00beab22
-     657  1.0 0x00000108             s5 <= 0000038f
-     658  1.0 0x0000010c             t0 <= 00000000
-     659  1.0 0x00000110             s1 <= 4941c835
-     660  1.0 0x00000114             s2 <= 3037e33b
-     661  1.0 0x00000118             s3 <= 00bea8ad
-     662  1.0 0x0000011c             s5 <= 0000038f
-     663  1.0 0x00000120             t0 <= 00000000
-     664  1.0 0x00000124             s1 <= 4941cbc4
-     665  1.0 0x00000128             s2 <= cfc82054
-     666  1.0 0x0000012c             s3 <= 00beab22
-     667  1.0 0x00000130             t1 <= 00000007
-     668  1.0 0x00000134               
-     669  1.0 0x00000048             fp <= f02f5c50
-     670  1.0 0x0000004c             s1 <= 44846728
-     671  1.0 0x00000050             s2 <= a682fdfe
-     672  1.0 0x00000054             s3 <= 000ca9e1
-     673  1.0 0x00000058             s4 <= 8f9981f9
-     674  1.0 0x0000005c             s5 <= 46a12130
-     675  1.0 0x00000060             fp <= 34b3c378
-     676  1.0 0x00000064             s2 <= 71cf3a86
-     677  1.0 0x00000068             s3 <= 34bf6a99
-     678  1.0 0x0000006c             s4 <= c44d4571
-     679  1.0 0x00000070             s5 <= 11ed5db8
-     680  1.0 0x00000074             fp <= 79382aa0
-     681  1.0 0x00000078             s2 <= 0768f01a
-     682  1.0 0x0000007c             s3 <= 4d874039
-     683  1.0 0x00000080             s4 <= 3d857011
-     684  1.0 0x00000084             s5 <= 674acce8
-     685  1.0 0x00000088             fp <= 0000038f
-     687  1.0 0x0000008c             s2 <= 0768ec8b
-     688  1.0 0x00000090             s3 <= 4d8743b6
-     689  1.0 0x00000094             s4 <= 3d8573a0
-     690  1.0 0x00000098             s5 <= 674ac959
-     691  1.0 0x0000009c             fp <= 0000038f
-     693  1.0 0x000000a0             s2 <= f8971704
-     694  1.0 0x000000a4             s3 <= 4d874039
-     695  1.0 0x000000a8             s4 <= 3d85772f
-     696  1.0 0x000000ac             s5 <= 98b53a36
-     697  1.0 0x000000b0             fp <= 44846ab7
-     698  1.0 0x000000b4             fp <= 4bed53b3
-     699  1.0 0x000000b8             s3 <= 066a138a
-     700  1.0 0x000000bc             s6 <= 9071badb
-     701  1.0 0x000000c0             s6 <= 97daa3d7
-     702  1.0 0x000000c4             s3 <= 91b0b05d
-     703  1.0 0x000000c8             fp <= 9071badb
-     704  1.0 0x000000cc             fp <= 97daa3d7
-     705  1.0 0x000000d0             fp <= d5601b06
-     706  1.0 0x000000d4             s3 <= 44d0ab5b
-     707  1.0 0x000000d8             fp <= 19e4822e
-     708  1.0 0x000000dc             fp <= 214d6b2a
-     709  1.0 0x000000e0             fp <= 5ed2e259
-     710  1.0 0x000000e4             s3 <= 1a024902
-     711  1.0 0x000000e8             s4 <= 0000038f
-     713  1.0 0x000000ec             s1 <= 44846ab7
-     714  1.0 0x000000f0             s2 <= f8971375
-     715  1.0 0x000000f4             s3 <= 1a024a8d
-     716  1.0 0x000000f8             s4 <= 0000038f
-     718  1.0 0x000000fc             s1 <= 44846e46
-     719  1.0 0x00000100             s2 <= 0768f01a
-     720  1.0 0x00000104             s3 <= 1a024902
-     721  1.0 0x00000108             s5 <= 0000038f
-     722  1.0 0x0000010c             t0 <= 00000000
-     723  1.0 0x00000110             s1 <= 448471d5
-     724  1.0 0x00000114             s2 <= 0768ec8b
-     725  1.0 0x00000118             s3 <= 1a024a8d
-     726  1.0 0x0000011c             s5 <= 0000038f
-     727  1.0 0x00000120             t0 <= 00000000
-     728  1.0 0x00000124             s1 <= 44847564
-     729  1.0 0x00000128             s2 <= f8971704
-     730  1.0 0x0000012c             s3 <= 1a024902
-     731  1.0 0x00000130             t1 <= 00000008
-     732  1.0 0x00000134               
-     733  1.0 0x00000048             fp <= 1699d190
-     734  1.0 0x0000004c             s1 <= 9cc65208
-     735  1.0 0x00000050             s2 <= 8e21ce1e
-     736  1.0 0x00000054             s3 <= 000ca9e1
-     737  1.0 0x00000058             s4 <= 630d0a19
-     738  1.0 0x0000005c             s5 <= 503daff0
-     739  1.0 0x00000060             fp <= b3602398
-     740  1.0 0x00000064             s2 <= dac1aa86
-     741  1.0 0x00000068             s3 <= b36c8a79
-     742  1.0 0x0000006c             s4 <= 166d2db1
-     743  1.0 0x00000070             s5 <= 9cdd8c58
-     744  1.0 0x00000074             fp <= 502675a0
-     745  1.0 0x00000078             s2 <= 7564cb1a
-     746  1.0 0x0000007c             s3 <= e34affd9
-     747  1.0 0x00000080             s4 <= 6693a351
-     748  1.0 0x00000084             s5 <= b348e948
-     749  1.0 0x00000088             fp <= 0000038f
-     751  1.0 0x0000008c             s2 <= 7564c78b
-     752  1.0 0x00000090             s3 <= e34afc56
-     753  1.0 0x00000094             s4 <= 6693a6e0
-     754  1.0 0x00000098             s5 <= b348e5b9
-     755  1.0 0x0000009c             fp <= 0000038f
-     757  1.0 0x000000a0             s2 <= 8a9b3c04
-     758  1.0 0x000000a4             s3 <= e34affd9
-     759  1.0 0x000000a8             s4 <= 6693aa6f
-     760  1.0 0x000000ac             s5 <= 4cb71dd6
-     761  1.0 0x000000b0             fp <= 9cc65597
-     762  1.0 0x000000b4             fp <= 122b1993
-     763  1.0 0x000000b8             s3 <= f161e64a
-     764  1.0 0x000000bc             s6 <= aef16b9b
-     765  1.0 0x000000c0             s6 <= 24562f97
-     766  1.0 0x000000c4             s3 <= d537c9dd
-     767  1.0 0x000000c8             fp <= aef16b9b
-     768  1.0 0x000000cc             fp <= 24562f97
-     769  1.0 0x000000d0             fp <= 8ae9da06
-     770  1.0 0x000000d4             s3 <= 5fde13db
-     771  1.0 0x000000d8             fp <= 27b02c0e
-     772  1.0 0x000000dc             fp <= 9d14f00a
-     773  1.0 0x000000e0             fp <= 03a89a79
-     774  1.0 0x000000e4             s3 <= 5c7689a2
-     775  1.0 0x000000e8             s4 <= 0000038f
-     777  1.0 0x000000ec             s1 <= 9cc65597
-     778  1.0 0x000000f0             s2 <= 8a9b3875
-     779  1.0 0x000000f4             s3 <= 5c768a2d
-     780  1.0 0x000000f8             s4 <= 0000038f
-     782  1.0 0x000000fc             s1 <= 9cc65926
-     783  1.0 0x00000100             s2 <= 7564cb1a
-     784  1.0 0x00000104             s3 <= 5c7689a2
-     785  1.0 0x00000108             s5 <= 0000038f
-     786  1.0 0x0000010c             t0 <= 00000000
-     787  1.0 0x00000110             s1 <= 9cc65cb5
-     788  1.0 0x00000114             s2 <= 7564c78b
-     789  1.0 0x00000118             s3 <= 5c768a2d
-     790  1.0 0x0000011c             s5 <= 0000038f
-     791  1.0 0x00000120             t0 <= 00000000
-     792  1.0 0x00000124             s1 <= 9cc66044
-     793  1.0 0x00000128             s2 <= 8a9b3c04
-     794  1.0 0x0000012c             s3 <= 5c7689a2
-     795  1.0 0x00000130             t1 <= 00000009
-     796  1.0 0x00000134               
-     797  1.0 0x00000048             fp <= e2d57110
-     798  1.0 0x0000004c             s1 <= e3321e88
-     799  1.0 0x00000050             s2 <= 09d3c77e
-     800  1.0 0x00000054             s3 <= 000ca9e1
-     801  1.0 0x00000058             s4 <= 4eb35a59
-     802  1.0 0x0000005c             s5 <= 3707a070
-     803  1.0 0x00000060             fp <= c6078f98
-     804  1.0 0x00000064             s2 <= 43cc37e6
-     805  1.0 0x00000068             s3 <= c60b2679
-     806  1.0 0x0000006c             s4 <= 14bae9f1
-     807  1.0 0x00000070             s5 <= 710010d8
-     808  1.0 0x00000074             fp <= a939ae20
-     809  1.0 0x00000078             s2 <= 656d763a
-     810  1.0 0x0000007c             s3 <= 6f328859
-     811  1.0 0x00000080             s4 <= bdf49811
-     812  1.0 0x00000084             s5 <= 38399d48
-     813  1.0 0x00000088             fp <= 0000038f
-     815  1.0 0x0000008c             s2 <= 656d72ab
-     816  1.0 0x00000090             s3 <= 6f328bd6
-     817  1.0 0x00000094             s4 <= bdf49ba0
-     818  1.0 0x00000098             s5 <= 383999b9
-     819  1.0 0x0000009c             fp <= 0000038f
-     821  1.0 0x000000a0             s2 <= 9a9290e4
-     822  1.0 0x000000a4             s3 <= 6f328859
-     823  1.0 0x000000a8             s4 <= bdf49f2f
-     824  1.0 0x000000ac             s5 <= c7c669d6
-     825  1.0 0x000000b0             fp <= e3322217
-     826  1.0 0x000000b4             fp <= 489f9133
-     827  1.0 0x000000b8             s3 <= 27ad196a
-     828  1.0 0x000000bc             s6 <= 2bd1afbb
-     829  1.0 0x000000c0             s6 <= 913f1ed7
-     830  1.0 0x000000c4             s3 <= b69207bd
-     831  1.0 0x000000c8             fp <= 2bd1afbb
-     832  1.0 0x000000cc             fp <= 913f1ed7
-     833  1.0 0x000000d0             fp <= 4f33be06
-     834  1.0 0x000000d4             s3 <= f9a1b9bb
-     835  1.0 0x000000d8             fp <= 3265dc8e
-     836  1.0 0x000000dc             fp <= 97d34baa
-     837  1.0 0x000000e0             fp <= 55c7ead9
-     838  1.0 0x000000e4             s3 <= ac665362
-     839  1.0 0x000000e8             s4 <= 0000038f
-     841  1.0 0x000000ec             s1 <= e3322217
-     842  1.0 0x000000f0             s2 <= 9a928d55
-     843  1.0 0x000000f4             s3 <= ac6650ed
-     844  1.0 0x000000f8             s4 <= 0000038f
-     846  1.0 0x000000fc             s1 <= e33225a6
-     847  1.0 0x00000100             s2 <= 656d763a
-     848  1.0 0x00000104             s3 <= ac665362
-     849  1.0 0x00000108             s5 <= 0000038f
-     850  1.0 0x0000010c             t0 <= 00000000
-     851  1.0 0x00000110             s1 <= e3322935
-     852  1.0 0x00000114             s2 <= 656d72ab
-     853  1.0 0x00000118             s3 <= ac6650ed
-     854  1.0 0x0000011c             s5 <= 0000038f
-     855  1.0 0x00000120             t0 <= 00000000
-     856  1.0 0x00000124             s1 <= e3322cc4
-     857  1.0 0x00000128             s2 <= 9a9290e4
-     858  1.0 0x0000012c             s3 <= ac665362
-     859  1.0 0x00000130             t1 <= 0000000a
-     860  1.0 0x00000134               
-     865  1.0 0x00000138             sp <= 00002ffc
-     866  1.0 0x0000013c               
-     871  1.1 0x00000010               
-$finish called at time : 16174787 ps : File "/afs/inf.ed.ac.uk/user/s17/s1740055/CArD/prac2/src/sim/tb.v" Line 326
-run: Time (s): cpu = 00:00:02 ; elapsed = 00:00:22 . Memory (MB): peak = 7172.348 ; gain = 0.000 ; free physical = 3204 ; free virtual = 20520
-xsim: Time (s): cpu = 00:00:04 ; elapsed = 00:00:24 . Memory (MB): peak = 7172.348 ; gain = 0.000 ; free physical = 3204 ; free virtual = 20520
+Time: 3758662 ps  Iteration: 2  Process: /tb/dut/u_dvi_display/u_rgb2dvi/U0/\DataEncoders(2)\/DataEncoder/line__154  File: /afs/inf.ed.ac.uk/user/s17/s1740055/CArD/prac2/proj/RV32IM_PYNQ_Z2.ip_user_files/ipstatic/src/TMDS_Encoder.vhd
+     199 x.x 0x00000000             sp <= 00003000
+     200  8.0 0x00000004             sp <= 00003000
+     201  3.3 0x00000008             sp <= 00002ffc
+     202  2.7 0x0000000c             ra <= 00000010
+     207  3.2 0x00000014             sp <= 00002fd4
+     208  2.5 0x00000018             a5 <= 00002fd4
+     209  2.3 0x0000001c             a4 <= 0000038f
+     210  2.2 0x00000020               mem[00000fd4] <= 0000038f
+     211  2.1 0x00000024             a1 <= 0000000a
+     212  2.0 0x00000028             t1 <= 00000000
+     213  1.9 0x0000002c             fp <= 000004d2
+     214  1.8 0x00000030             s1 <= 00000224
+     215  1.7 0x00000034             s2 <= 00001000
+     216  1.7 0x00000038             s2 <= 00000911
+     217  1.6 0x0000003c             s3 <= 000003b4
+     218  1.6 0x00000040             s4 <= 00000306
+     219  1.6 0x00000044             s5 <= 000001b0
+     220  1.5 0x00000048             fp <= 00136864
+     221  1.5 0x0000004c             s1 <= 002192f4
+     222  1.5 0x00000050             s2 <= 000b3238
+     223  1.4 0x00000054             s3 <= 00051a20
+     224  1.4 0x00000058             s4 <= 00000000
+     225  1.4 0x0000005c             s5 <= 00000000
+     226  1.4 0x00000060             fp <= 0034fb58
+     227  1.4 0x00000064             s2 <= ffd636e0
+     228  1.3 0x00000068             s3 <= 0031e178
+     229  1.3 0x0000006c             s4 <= 0034fb58
+     230  1.3 0x00000070             s5 <= ffcb04a8
+     231  1.3 0x00000074             fp <= 00568e4c
+     232  1.3 0x00000078             s2 <= 0080576c
+     233  1.3 0x0000007c             s3 <= 00676f34
+     234  1.3 0x00000080             s4 <= 008b89a4
+     235  1.3 0x00000084             s5 <= 008b89a4
+     236  1.3 0x00000088             fp <= 0000038f
+     238  1.3 0x0000008c             s2 <= 008053dd
+     239  1.3 0x00000090             s3 <= 00676cbb
+     240  1.3 0x00000094             s4 <= 008b8d33
+     241  1.3 0x00000098             s5 <= 008b8615
+     242  1.2 0x0000009c             fp <= 0000038f
+     244  1.3 0x000000a0             s2 <= ff7fafb2
+     245  1.3 0x000000a4             s3 <= 00676f34
+     246  1.2 0x000000a8             s4 <= 008b90c2
+     247  1.2 0x000000ac             s5 <= ff747d7a
+     248  1.2 0x000000b0             fp <= 00219683
+     249  1.2 0x000000b4             fp <= 00a1e6d1
+     250  1.2 0x000000b8             s3 <= 00c689e5
+     251  1.2 0x000000bc             s6 <= 00c379c5
+     252  1.2 0x000000c0             s6 <= 0143ca13
+     253  1.2 0x000000c4             s3 <= 018543f6
+     254  1.2 0x000000c8             fp <= 00c379c5
+     255  1.2 0x000000cc             fp <= 0143ca13
+     256  1.2 0x000000d0             fp <= 01cf5ad5
+     257  1.2 0x000000d4             s3 <= 004a1923
+     258  1.2 0x000000d8             fp <= 01f0edc9
+     259  1.2 0x000000dc             fp <= 02713e17
+     260  1.2 0x000000e0             fp <= 02fcced9
+     261  1.2 0x000000e4             s3 <= 02b6d7fa
+     262  1.2 0x000000e8             s4 <= 0000038f
+     264  1.2 0x000000ec             s1 <= 00219683
+     265  1.2 0x000000f0             s2 <= ff7fac23
+     266  1.2 0x000000f4             s3 <= 02b6d475
+     267  1.2 0x000000f8             s4 <= 0000038f
+     269  1.2 0x000000fc             s1 <= 00219a12
+     270  1.2 0x00000100             s2 <= 0080576c
+     271  1.2 0x00000104             s3 <= 02b6d7fa
+     272  1.2 0x00000108             s5 <= 0000038f
+     273  1.2 0x0000010c             t0 <= 00000000
+     274  1.2 0x00000110             s1 <= 00219da1
+     275  1.2 0x00000114             s2 <= 008053dd
+     276  1.2 0x00000118             s3 <= 02b6d475
+     277  1.2 0x0000011c             s5 <= 0000038f
+     278  1.2 0x00000120             t0 <= 00000000
+     279  1.1 0x00000124             s1 <= 0021a130
+     280  1.1 0x00000128             s2 <= ff7fafb2
+     281  1.1 0x0000012c             s3 <= 02b6d7fa
+     282  1.1 0x00000130             t1 <= 00000001
+     283  1.1 0x00000134               
+     288  1.2 0x00000048             fp <= db61e360
+     289  1.2 0x0000004c             s1 <= 0bcc11d4
+     290  1.2 0x00000050             s2 <= a8aa92a6
+     291  1.2 0x00000054             s3 <= 000ca9e1
+     292  1.2 0x00000058             s4 <= 803c199d
+     293  1.2 0x0000005c             s5 <= 67cda020
+     294  1.2 0x00000060             fp <= e72df534
+     295  1.2 0x00000064             s2 <= c17c9d72
+     296  1.2 0x00000068             s3 <= e7215cd5
+     297  1.2 0x0000006c             s4 <= 676a0ed1
+     298  1.2 0x00000070             s5 <= 809faaec
+     299  1.2 0x00000074             fp <= f2fa0708
+     300  1.2 0x00000078             s2 <= 317d6996
+     301  1.2 0x0000007c             s3 <= 15db5bdd
+     302  1.2 0x00000080             s4 <= 5a6415d9
+     303  1.1 0x00000084             s5 <= 725a5c1c
+     304  1.1 0x00000088             fp <= 0000038f
+     306  1.2 0x0000008c             s2 <= 317d6607
+     307  1.2 0x00000090             s3 <= 15db5852
+     308  1.2 0x00000094             s4 <= 5a641968
+     309  1.1 0x00000098             s5 <= 725a588d
+     310  1.1 0x0000009c             fp <= 0000038f
+     312  1.2 0x000000a0             s2 <= ce829d88
+     313  1.2 0x000000a4             s3 <= 15db5bdd
+     314  1.2 0x000000a8             s4 <= 5a641cf7
+     315  1.1 0x000000ac             s5 <= 8da5ab02
+     316  1.1 0x000000b0             fp <= 0bcc1563
+     317  1.1 0x000000b4             fp <= 3d4977db
+     318  1.1 0x000000b8             s3 <= 28922c06
+     319  1.1 0x000000bc             s6 <= 491589af
+     320  1.1 0x000000c0             s6 <= 7a92ec27
+     321  1.1 0x000000c4             s3 <= 5200c021
+     322  1.1 0x000000c8             fp <= 491589af
+     323  1.1 0x000000cc             fp <= 7a92ec27
+     324  1.1 0x000000d0             fp <= d4f7091e
+     325  1.1 0x000000d4             s3 <= 86f7c93f
+     326  1.1 0x000000d8             fp <= e0c31af2
+     327  1.1 0x000000dc             fp <= 12407d6a
+     328  1.1 0x000000e0             fp <= 6ca49a61
+     329  1.1 0x000000e4             s3 <= ea53535e
+     330  1.1 0x000000e8             s4 <= 0000038f
+     332  1.1 0x000000ec             s1 <= 0bcc1563
+     333  1.1 0x000000f0             s2 <= ce8299f9
+     334  1.1 0x000000f4             s3 <= ea5350d1
+     335  1.1 0x000000f8             s4 <= 0000038f
+     337  1.1 0x000000fc             s1 <= 0bcc18f2
+     338  1.1 0x00000100             s2 <= 317d6996
+     339  1.1 0x00000104             s3 <= ea53535e
+     340  1.1 0x00000108             s5 <= 0000038f
+     341  1.1 0x0000010c             t0 <= 00000000
+     342  1.1 0x00000110             s1 <= 0bcc1c81
+     343  1.1 0x00000114             s2 <= 317d6607
+     344  1.1 0x00000118             s3 <= ea5350d1
+     345  1.1 0x0000011c             s5 <= 0000038f
+     346  1.1 0x00000120             t0 <= 00000000
+     347  1.1 0x00000124             s1 <= 0bcc2010
+     348  1.1 0x00000128             s2 <= ce829d88
+     349  1.1 0x0000012c             s3 <= ea53535e
+     350  1.1 0x00000130             t1 <= 00000002
+     351  1.1 0x00000134               
+     352  1.1 0x00000048             fp <= 9c3ad880
+     353  1.1 0x0000004c             s1 <= 9020eff0
+     354  1.1 0x00000050             s2 <= de85ab82
+     355  1.1 0x00000054             s3 <= 000ca9e1
+     356  1.1 0x00000058             s4 <= 30d65ec9
+     357  1.1 0x0000005c             s5 <= 858cfb80
+     358  1.1 0x00000060             fp <= 2c5bc870
+     359  1.1 0x00000064             s2 <= b229e312
+     360  1.1 0x00000068             s3 <= 2c576191
+     361  1.1 0x0000006c             s4 <= 5d322739
+     362  1.1 0x00000070             s5 <= 59313310
+     363  1.1 0x00000074             fp <= bc7cb860
+     364  1.1 0x00000078             s2 <= 0a52d54e
+     365  1.1 0x0000007c             s3 <= 902bd9f1
+     366  1.1 0x00000080             s4 <= 19aedf99
+     367  1.1 0x00000084             s5 <= 634b8550
+     368  1.1 0x00000088             fp <= 0000038f
+     370  1.1 0x0000008c             s2 <= 0a52d1bf
+     371  1.1 0x00000090             s3 <= 902bda7e
+     372  1.1 0x00000094             s4 <= 19aee328
+     373  1.1 0x00000098             s5 <= 634b81c1
+     374  1.1 0x0000009c             fp <= 0000038f
+     376  1.1 0x000000a0             s2 <= f5ad31d0
+     377  1.1 0x000000a4             s3 <= 902bd9f1
+     378  1.1 0x000000a8             s4 <= 19aee6b7
+     379  1.1 0x000000ac             s5 <= 9cb481ce
+     380  1.1 0x000000b0             fp <= 9020f37f
+     381  1.1 0x000000b4             fp <= 9a73c1af
+     382  1.1 0x000000b8             s3 <= 0a58185e
+     383  1.1 0x000000bc             s6 <= 2a94b19f
+     384  1.1 0x000000c0             s6 <= 34e77fcf
+     385  1.1 0x000000c4             s3 <= 3ebf6791
+     386  1.1 0x000000c8             fp <= 2a94b19f
+     387  1.1 0x000000cc             fp <= 34e77fcf
+     388  1.1 0x000000d0             fp <= 4e966686
+     389  1.1 0x000000d4             s3 <= 70290117
+     390  1.1 0x000000d8             fp <= deb75676
+     391  1.1 0x000000dc             fp <= e90a24a6
+     392  1.1 0x000000e0             fp <= 02b90b5d
+     393  1.1 0x000000e4             s3 <= 72900a4a
+     394  1.1 0x000000e8             s4 <= 0000038f
+     396  1.1 0x000000ec             s1 <= 9020f37f
+     397  1.1 0x000000f0             s2 <= f5ad2e41
+     398  1.1 0x000000f4             s3 <= 729009c5
+     399  1.1 0x000000f8             s4 <= 0000038f
+     401  1.1 0x000000fc             s1 <= 9020f70e
+     402  1.1 0x00000100             s2 <= 0a52d54e
+     403  1.1 0x00000104             s3 <= 72900a4a
+     404  1.1 0x00000108             s5 <= 0000038f
+     405  1.1 0x0000010c             t0 <= 00000000
+     406  1.1 0x00000110             s1 <= 9020fa9d
+     407  1.1 0x00000114             s2 <= 0a52d1bf
+     408  1.1 0x00000118             s3 <= 729009c5
+     409  1.1 0x0000011c             s5 <= 0000038f
+     410  1.1 0x00000120             t0 <= 00000000
+     411  1.1 0x00000124             s1 <= 9020fe2c
+     412  1.1 0x00000128             s2 <= f5ad31d0
+     413  1.1 0x0000012c             s3 <= 72900a4a
+     414  1.1 0x00000130             t1 <= 00000003
+     415  1.1 0x00000134               
+     416  1.1 0x00000048             fp <= 4b30efc0
+     417  1.1 0x0000004c             s1 <= 6d028620
+     418  1.1 0x00000050             s2 <= ae949d56
+     419  1.1 0x00000054             s3 <= 000ca9e1
+     420  1.1 0x00000058             s4 <= 43cfd1a1
+     421  1.1 0x0000005c             s5 <= 69c21c40
+     422  1.1 0x00000060             fp <= b83375e0
+     423  1.1 0x00000064             s2 <= f6612776
+     424  1.1 0x00000068             s3 <= b83fdc01
+     425  1.1 0x0000006c             s4 <= fc034781
+     426  1.1 0x00000070             s5 <= b18ea660
+     427  1.1 0x00000074             fp <= 2535fc00
+     428  1.1 0x00000078             s2 <= 2ed4d48a
+     429  1.1 0x0000007c             s3 <= 9d0a2001
+     430  1.1 0x00000080             s4 <= 21394381
+     431  1.1 0x00000084             s5 <= 73a755a0
+     432  1.1 0x00000088             fp <= 0000038f
+     434  1.1 0x0000008c             s2 <= 2ed4d0fb
+     435  1.1 0x00000090             s3 <= 9d0a238e
+     436  1.1 0x00000094             s4 <= 21394710
+     437  1.1 0x00000098             s5 <= 73a75211
+     438  1.1 0x0000009c             fp <= 0000038f
+     440  1.1 0x000000a0             s2 <= d12b3294
+     441  1.1 0x000000a4             s3 <= 9d0a2001
+     442  1.1 0x000000a8             s4 <= 21394a9f
+     443  1.1 0x000000ac             s5 <= 8c58b17e
+     444  1.1 0x000000b0             fp <= 6d0289af
+     445  1.1 0x000000b4             fp <= 9bd7571b
+     446  1.1 0x000000b8             s3 <= 06dd771a
+     447  1.1 0x000000bc             s6 <= 08d9dd3b
+     448  1.1 0x000000c0             s6 <= 37aeaaa7
+     449  1.1 0x000000c4             s3 <= 3173ddbd
+     450  1.1 0x000000c8             fp <= 08d9dd3b
+     451  1.1 0x000000cc             fp <= 37aeaaa7
+     452  1.1 0x000000d0             fp <= 58e7f546
+     453  1.1 0x000000d4             s3 <= 699428fb
+     454  1.1 0x000000d8             fp <= c5ea7b66
+     455  1.1 0x000000dc             fp <= f4bf48d2
+     456  1.1 0x000000e0             fp <= 15f89371
+     457  1.1 0x000000e4             s3 <= 7c6cbb8a
+     458  1.1 0x000000e8             s4 <= 0000038f
+     460  1.1 0x000000ec             s1 <= 6d0289af
+     461  1.1 0x000000f0             s2 <= d12b2f05
+     462  1.1 0x000000f4             s3 <= 7c6cb805
+     463  1.1 0x000000f8             s4 <= 0000038f
+     465  1.1 0x000000fc             s1 <= 6d028d3e
+     466  1.1 0x00000100             s2 <= 2ed4d48a
+     467  1.1 0x00000104             s3 <= 7c6cbb8a
+     468  1.1 0x00000108             s5 <= 0000038f
+     469  1.1 0x0000010c             t0 <= 00000000
+     470  1.1 0x00000110             s1 <= 6d0290cd
+     471  1.1 0x00000114             s2 <= 2ed4d0fb
+     472  1.1 0x00000118             s3 <= 7c6cb805
+     473  1.1 0x0000011c             s5 <= 0000038f
+     474  1.1 0x00000120             t0 <= 00000000
+     475  1.1 0x00000124             s1 <= 6d02945c
+     476  1.1 0x00000128             s2 <= d12b3294
+     477  1.1 0x0000012c             s3 <= 7c6cbb8a
+     478  1.1 0x00000130             t1 <= 00000004
+     479  1.1 0x00000134               
+     480  1.1 0x00000048             fp <= 8debbd30
+     481  1.1 0x0000004c             s1 <= 55ab5fc8
+     482  1.1 0x00000050             s2 <= c6ef6016
+     483  1.1 0x00000054             s3 <= 000ca9e1
+     484  1.1 0x00000058             s4 <= 26914849
+     485  1.1 0x0000005c             s5 <= 070a4a50
+     486  1.1 0x00000060             fp <= e3971cf8
+     487  1.1 0x00000064             s2 <= e358431e
+     488  1.1 0x00000068             s3 <= e39bb519
+     489  1.1 0x0000006c             s4 <= 0a286541
+     490  1.1 0x00000070             s5 <= 23732d58
+     491  1.1 0x00000074             fp <= 39427cc0
+     492  1.1 0x00000078             s2 <= 55ea39a2
+     493  1.1 0x0000007c             s3 <= dad9c9d9
+     494  1.1 0x00000080             s4 <= 436ae201
+     495  1.1 0x00000084             s5 <= 15cf4f68
+     496  1.1 0x00000088             fp <= 0000038f
+     498  1.1 0x0000008c             s2 <= 55ea3613
+     499  1.1 0x00000090             s3 <= dad9ca56
+     500  1.1 0x00000094             s4 <= 436ae590
+     501  1.1 0x00000098             s5 <= 15cf4bd9
+     502  1.1 0x0000009c             fp <= 0000038f
+     504  1.1 0x000000a0             s2 <= aa15cd7c
+     505  1.1 0x000000a4             s3 <= dad9c9d9
+     506  1.1 0x000000a8             s4 <= 436ae91f
+     507  1.1 0x000000ac             s5 <= ea30b7b6
+     508  1.1 0x000000b0             fp <= 55ab6357
+     509  1.1 0x000000b4             fp <= ab9595db
+     510  1.1 0x000000b8             s3 <= 714c5c02
+     511  1.1 0x000000bc             s6 <= 0140f5a3
+     512  1.1 0x000000c0             s6 <= 572b2827
+     513  1.1 0x000000c4             s3 <= 26677425
+     514  1.1 0x000000c8             fp <= 0140f5a3
+     515  1.1 0x000000cc             fp <= 572b2827
+     516  1.1 0x000000d0             fp <= 9a961146
+     517  1.1 0x000000d4             s3 <= bcf16563
+     518  1.1 0x000000d8             fp <= f041710e
+     519  1.1 0x000000dc             fp <= 462ba392
+     520  1.1 0x000000e0             fp <= 89968cb1
+     521  1.1 0x000000e4             s3 <= 3567e9d2
+     522  1.1 0x000000e8             s4 <= 0000038f
+     524  1.1 0x000000ec             s1 <= 55ab6357
+     525  1.1 0x000000f0             s2 <= aa15c9ed
+     526  1.1 0x000000f4             s3 <= 3567ea5d
+     527  1.1 0x000000f8             s4 <= 0000038f
+     529  1.1 0x000000fc             s1 <= 55ab66e6
+     530  1.1 0x00000100             s2 <= 55ea39a2
+     531  1.1 0x00000104             s3 <= 3567e9d2
+     532  1.1 0x00000108             s5 <= 0000038f
+     533  1.1 0x0000010c             t0 <= 00000000
+     534  1.1 0x00000110             s1 <= 55ab6a75
+     535  1.1 0x00000114             s2 <= 55ea3613
+     536  1.1 0x00000118             s3 <= 3567ea5d
+     537  1.1 0x0000011c             s5 <= 0000038f
+     538  1.1 0x00000120             t0 <= 00000000
+     539  1.1 0x00000124             s1 <= 55ab6e04
+     540  1.1 0x00000128             s2 <= aa15cd7c
+     541  1.1 0x0000012c             s3 <= 3567e9d2
+     542  1.1 0x00000130             t1 <= 00000005
+     543  1.1 0x00000134               
+     544  1.1 0x00000048             fp <= 74767df0
+     545  1.1 0x0000004c             s1 <= b6cc6bb8
+     546  1.1 0x00000050             s2 <= 0cc9124e
+     547  1.1 0x00000054             s3 <= 000ca9e1
+     548  1.1 0x00000058             s4 <= 3293e2c9
+     549  1.1 0x0000005c             s5 <= f90aaf90
+     550  1.1 0x00000060             fp <= 2b42e9a8
+     551  1.1 0x00000064             s2 <= e18628a6
+     552  1.1 0x00000068             s3 <= 2b4e4049
+     553  1.1 0x0000006c             s4 <= 5dd6cc71
+     554  1.1 0x00000070             s5 <= cdc7c5e8
+     555  1.1 0x00000074             fp <= e20f5560
+     556  1.1 0x00000078             s2 <= 00892cba
+     557  1.1 0x0000007c             s3 <= c9411529
+     558  1.1 0x00000080             s4 <= 3fe621d1
+     559  1.1 0x00000084             s5 <= 14478f78
+     560  1.1 0x00000088             fp <= 0000038f
+     562  1.1 0x0000008c             s2 <= 0089292b
+     563  1.1 0x00000090             s3 <= c94116a6
+     564  1.1 0x00000094             s4 <= 3fe62560
+     565  1.1 0x00000098             s5 <= 14478be9
+     566  1.1 0x0000009c             fp <= 0000038f
+     568  1.1 0x000000a0             s2 <= ff76da64
+     569  1.1 0x000000a4             s3 <= c9411529
+     570  1.1 0x000000a8             s4 <= 3fe628ef
+     571  1.1 0x000000ac             s5 <= ebb877a6
+     572  1.1 0x000000b0             fp <= b6cc6f47
+     573  1.1 0x000000b4             fp <= b75594e3
+     574  1.1 0x000000b8             s3 <= 7e1481ca
+     575  1.1 0x000000bc             s6 <= 6e22009b
+     576  1.1 0x000000c0             s6 <= 6eab2637
+     577  1.1 0x000000c4             s3 <= 10bfa7fd
+     578  1.1 0x000000c8             fp <= 6e22009b
+     579  1.1 0x000000cc             fp <= 6eab2637
+     580  1.1 0x000000d0             fp <= ae914f26
+     581  1.1 0x000000d4             s3 <= be2ee8db
+     582  1.1 0x000000d8             fp <= 655dbade
+     583  1.1 0x000000dc             fp <= 65e6e07a
+     584  1.1 0x000000e0             fp <= a5cd0969
+     585  1.1 0x000000e4             s3 <= 1be3e1b2
+     586  1.1 0x000000e8             s4 <= 0000038f
+     588  1.1 0x000000ec             s1 <= b6cc6f47
+     589  1.1 0x000000f0             s2 <= ff76d6d5
+     590  1.1 0x000000f4             s3 <= 1be3e23d
+     591  1.1 0x000000f8             s4 <= 0000038f
+     593  1.1 0x000000fc             s1 <= b6cc72d6
+     594  1.1 0x00000100             s2 <= 00892cba
+     595  1.1 0x00000104             s3 <= 1be3e1b2
+     596  1.1 0x00000108             s5 <= 0000038f
+     597  1.1 0x0000010c             t0 <= 00000000
+     598  1.1 0x00000110             s1 <= b6cc7665
+     599  1.1 0x00000114             s2 <= 0089292b
+     600  1.1 0x00000118             s3 <= 1be3e23d
+     601  1.1 0x0000011c             s5 <= 0000038f
+     602  1.1 0x00000120             t0 <= 00000000
+     603  1.1 0x00000124             s1 <= b6cc79f4
+     604  1.1 0x00000128             s2 <= ff76da64
+     605  1.1 0x0000012c             s3 <= 1be3e1b2
+     606  1.1 0x00000130             t1 <= 00000006
+     607  1.1 0x00000134               
+     608  1.1 0x00000048             fp <= ca316b50
+     609  1.1 0x0000004c             s1 <= 4941bd88
+     610  1.1 0x00000050             s2 <= 3ff0286e
+     611  1.1 0x00000054             s3 <= 000ca9e1
+     612  1.1 0x00000058             s4 <= d30cfdb9
+     613  1.1 0x0000005c             s5 <= d4fbee30
+     614  1.1 0x00000060             fp <= 137328d8
+     615  1.1 0x00000064             s2 <= 2c7cff96
+     616  1.0 0x00000068             s3 <= 137f8139
+     617  1.0 0x0000006c             s4 <= e6802691
+     618  1.0 0x00000070             s5 <= c188c558
+     619  1.0 0x00000074             fp <= 5cb4e660
+     620  1.0 0x00000078             s2 <= 3037e6ca
+     621  1.0 0x0000007c             s3 <= 4fcb6759
+     622  1.0 0x00000080             s4 <= 43350cf1
+     623  1.0 0x00000084             s5 <= 9b2c2108
+     624  1.0 0x00000088             fp <= 0000038f
+     626  1.1 0x0000008c             s2 <= 3037e33b
+     627  1.0 0x00000090             s3 <= 4fcb64d6
+     628  1.0 0x00000094             s4 <= 43351080
+     629  1.0 0x00000098             s5 <= 9b2c1d79
+     630  1.0 0x0000009c             fp <= 0000038f
+     632  1.1 0x000000a0             s2 <= cfc82054
+     633  1.1 0x000000a4             s3 <= 4fcb6759
+     634  1.1 0x000000a8             s4 <= 4335140f
+     635  1.1 0x000000ac             s5 <= 64d3e616
+     636  1.1 0x000000b0             fp <= 4941c117
+     637  1.1 0x000000b4             fp <= 7979a0c3
+     638  1.0 0x000000b8             s3 <= 36b2c79a
+     639  1.0 0x000000bc             s6 <= c2bb5e4b
+     640  1.0 0x000000c0             s6 <= f2f33df7
+     641  1.0 0x000000c4             s3 <= c441fa6d
+     642  1.0 0x000000c8             fp <= c2bb5e4b
+     643  1.0 0x000000cc             fp <= f2f33df7
+     644  1.0 0x000000d0             fp <= 36285206
+     645  1.0 0x000000d4             s3 <= f269a86b
+     646  1.0 0x000000d8             fp <= 7f6a0f8e
+     647  1.0 0x000000dc             fp <= afa1ef3a
+     648  1.0 0x000000e0             fp <= f2d70349
+     649  1.0 0x000000e4             s3 <= 00beab22
+     650  1.0 0x000000e8             s4 <= 0000038f
+     652  1.0 0x000000ec             s1 <= 4941c117
+     653  1.0 0x000000f0             s2 <= cfc81cc5
+     654  1.0 0x000000f4             s3 <= 00bea8ad
+     655  1.0 0x000000f8             s4 <= 0000038f
+     657  1.1 0x000000fc             s1 <= 4941c4a6
+     658  1.1 0x00000100             s2 <= 3037e6ca
+     659  1.1 0x00000104             s3 <= 00beab22
+     660  1.0 0x00000108             s5 <= 0000038f
+     661  1.0 0x0000010c             t0 <= 00000000
+     662  1.0 0x00000110             s1 <= 4941c835
+     663  1.0 0x00000114             s2 <= 3037e33b
+     664  1.0 0x00000118             s3 <= 00bea8ad
+     665  1.0 0x0000011c             s5 <= 0000038f
+     666  1.0 0x00000120             t0 <= 00000000
+     667  1.0 0x00000124             s1 <= 4941cbc4
+     668  1.0 0x00000128             s2 <= cfc82054
+     669  1.0 0x0000012c             s3 <= 00beab22
+     670  1.0 0x00000130             t1 <= 00000007
+     671  1.0 0x00000134               
+     672  1.0 0x00000048             fp <= f02f5c50
+     673  1.0 0x0000004c             s1 <= 44846728
+     674  1.0 0x00000050             s2 <= a682fdfe
+     675  1.0 0x00000054             s3 <= 000ca9e1
+     676  1.0 0x00000058             s4 <= 8f9981f9
+     677  1.0 0x0000005c             s5 <= 46a12130
+     678  1.0 0x00000060             fp <= 34b3c378
+     679  1.0 0x00000064             s2 <= 71cf3a86
+     680  1.0 0x00000068             s3 <= 34bf6a99
+     681  1.0 0x0000006c             s4 <= c44d4571
+     682  1.0 0x00000070             s5 <= 11ed5db8
+     683  1.0 0x00000074             fp <= 79382aa0
+     684  1.0 0x00000078             s2 <= 0768f01a
+     685  1.0 0x0000007c             s3 <= 4d874039
+     686  1.0 0x00000080             s4 <= 3d857011
+     687  1.0 0x00000084             s5 <= 674acce8
+     688  1.0 0x00000088             fp <= 0000038f
+     690  1.0 0x0000008c             s2 <= 0768ec8b
+     691  1.0 0x00000090             s3 <= 4d8743b6
+     692  1.0 0x00000094             s4 <= 3d8573a0
+     693  1.0 0x00000098             s5 <= 674ac959
+     694  1.0 0x0000009c             fp <= 0000038f
+     696  1.0 0x000000a0             s2 <= f8971704
+     697  1.0 0x000000a4             s3 <= 4d874039
+     698  1.0 0x000000a8             s4 <= 3d85772f
+     699  1.0 0x000000ac             s5 <= 98b53a36
+     700  1.0 0x000000b0             fp <= 44846ab7
+     701  1.0 0x000000b4             fp <= 4bed53b3
+     702  1.0 0x000000b8             s3 <= 066a138a
+     703  1.0 0x000000bc             s6 <= 9071badb
+     704  1.0 0x000000c0             s6 <= 97daa3d7
+     705  1.0 0x000000c4             s3 <= 91b0b05d
+     706  1.0 0x000000c8             fp <= 9071badb
+     707  1.0 0x000000cc             fp <= 97daa3d7
+     708  1.0 0x000000d0             fp <= d5601b06
+     709  1.0 0x000000d4             s3 <= 44d0ab5b
+     710  1.0 0x000000d8             fp <= 19e4822e
+     711  1.0 0x000000dc             fp <= 214d6b2a
+     712  1.0 0x000000e0             fp <= 5ed2e259
+     713  1.0 0x000000e4             s3 <= 1a024902
+     714  1.0 0x000000e8             s4 <= 0000038f
+     716  1.0 0x000000ec             s1 <= 44846ab7
+     717  1.0 0x000000f0             s2 <= f8971375
+     718  1.0 0x000000f4             s3 <= 1a024a8d
+     719  1.0 0x000000f8             s4 <= 0000038f
+     721  1.0 0x000000fc             s1 <= 44846e46
+     722  1.0 0x00000100             s2 <= 0768f01a
+     723  1.0 0x00000104             s3 <= 1a024902
+     724  1.0 0x00000108             s5 <= 0000038f
+     725  1.0 0x0000010c             t0 <= 00000000
+     726  1.0 0x00000110             s1 <= 448471d5
+     727  1.0 0x00000114             s2 <= 0768ec8b
+     728  1.0 0x00000118             s3 <= 1a024a8d
+     729  1.0 0x0000011c             s5 <= 0000038f
+     730  1.0 0x00000120             t0 <= 00000000
+     731  1.0 0x00000124             s1 <= 44847564
+     732  1.0 0x00000128             s2 <= f8971704
+     733  1.0 0x0000012c             s3 <= 1a024902
+     734  1.0 0x00000130             t1 <= 00000008
+     735  1.0 0x00000134               
+     736  1.0 0x00000048             fp <= 1699d190
+     737  1.0 0x0000004c             s1 <= 9cc65208
+     738  1.0 0x00000050             s2 <= 8e21ce1e
+     739  1.0 0x00000054             s3 <= 000ca9e1
+     740  1.0 0x00000058             s4 <= 630d0a19
+     741  1.0 0x0000005c             s5 <= 503daff0
+     742  1.0 0x00000060             fp <= b3602398
+     743  1.0 0x00000064             s2 <= dac1aa86
+     744  1.0 0x00000068             s3 <= b36c8a79
+     745  1.0 0x0000006c             s4 <= 166d2db1
+     746  1.0 0x00000070             s5 <= 9cdd8c58
+     747  1.0 0x00000074             fp <= 502675a0
+     748  1.0 0x00000078             s2 <= 7564cb1a
+     749  1.0 0x0000007c             s3 <= e34affd9
+     750  1.0 0x00000080             s4 <= 6693a351
+     751  1.0 0x00000084             s5 <= b348e948
+     752  1.0 0x00000088             fp <= 0000038f
+     754  1.0 0x0000008c             s2 <= 7564c78b
+     755  1.0 0x00000090             s3 <= e34afc56
+     756  1.0 0x00000094             s4 <= 6693a6e0
+     757  1.0 0x00000098             s5 <= b348e5b9
+     758  1.0 0x0000009c             fp <= 0000038f
+     760  1.0 0x000000a0             s2 <= 8a9b3c04
+     761  1.0 0x000000a4             s3 <= e34affd9
+     762  1.0 0x000000a8             s4 <= 6693aa6f
+     763  1.0 0x000000ac             s5 <= 4cb71dd6
+     764  1.0 0x000000b0             fp <= 9cc65597
+     765  1.0 0x000000b4             fp <= 122b1993
+     766  1.0 0x000000b8             s3 <= f161e64a
+     767  1.0 0x000000bc             s6 <= aef16b9b
+     768  1.0 0x000000c0             s6 <= 24562f97
+     769  1.0 0x000000c4             s3 <= d537c9dd
+     770  1.0 0x000000c8             fp <= aef16b9b
+     771  1.0 0x000000cc             fp <= 24562f97
+     772  1.0 0x000000d0             fp <= 8ae9da06
+     773  1.0 0x000000d4             s3 <= 5fde13db
+     774  1.0 0x000000d8             fp <= 27b02c0e
+     775  1.0 0x000000dc             fp <= 9d14f00a
+     776  1.0 0x000000e0             fp <= 03a89a79
+     777  1.0 0x000000e4             s3 <= 5c7689a2
+     778  1.0 0x000000e8             s4 <= 0000038f
+     780  1.0 0x000000ec             s1 <= 9cc65597
+     781  1.0 0x000000f0             s2 <= 8a9b3875
+     782  1.0 0x000000f4             s3 <= 5c768a2d
+     783  1.0 0x000000f8             s4 <= 0000038f
+     785  1.0 0x000000fc             s1 <= 9cc65926
+     786  1.0 0x00000100             s2 <= 7564cb1a
+     787  1.0 0x00000104             s3 <= 5c7689a2
+     788  1.0 0x00000108             s5 <= 0000038f
+     789  1.0 0x0000010c             t0 <= 00000000
+     790  1.0 0x00000110             s1 <= 9cc65cb5
+     791  1.0 0x00000114             s2 <= 7564c78b
+     792  1.0 0x00000118             s3 <= 5c768a2d
+     793  1.0 0x0000011c             s5 <= 0000038f
+     794  1.0 0x00000120             t0 <= 00000000
+     795  1.0 0x00000124             s1 <= 9cc66044
+     796  1.0 0x00000128             s2 <= 8a9b3c04
+     797  1.0 0x0000012c             s3 <= 5c7689a2
+     798  1.0 0x00000130             t1 <= 00000009
+     799  1.0 0x00000134               
+     800  1.0 0x00000048             fp <= e2d57110
+     801  1.0 0x0000004c             s1 <= e3321e88
+     802  1.0 0x00000050             s2 <= 09d3c77e
+     803  1.0 0x00000054             s3 <= 000ca9e1
+     804  1.0 0x00000058             s4 <= 4eb35a59
+     805  1.0 0x0000005c             s5 <= 3707a070
+     806  1.0 0x00000060             fp <= c6078f98
+     807  1.0 0x00000064             s2 <= 43cc37e6
+     808  1.0 0x00000068             s3 <= c60b2679
+     809  1.0 0x0000006c             s4 <= 14bae9f1
+     810  1.0 0x00000070             s5 <= 710010d8
+     811  1.0 0x00000074             fp <= a939ae20
+     812  1.0 0x00000078             s2 <= 656d763a
+     813  1.0 0x0000007c             s3 <= 6f328859
+     814  1.0 0x00000080             s4 <= bdf49811
+     815  1.0 0x00000084             s5 <= 38399d48
+     816  1.0 0x00000088             fp <= 0000038f
+     818  1.0 0x0000008c             s2 <= 656d72ab
+     819  1.0 0x00000090             s3 <= 6f328bd6
+     820  1.0 0x00000094             s4 <= bdf49ba0
+     821  1.0 0x00000098             s5 <= 383999b9
+     822  1.0 0x0000009c             fp <= 0000038f
+     824  1.0 0x000000a0             s2 <= 9a9290e4
+     825  1.0 0x000000a4             s3 <= 6f328859
+     826  1.0 0x000000a8             s4 <= bdf49f2f
+     827  1.0 0x000000ac             s5 <= c7c669d6
+     828  1.0 0x000000b0             fp <= e3322217
+     829  1.0 0x000000b4             fp <= 489f9133
+     830  1.0 0x000000b8             s3 <= 27ad196a
+     831  1.0 0x000000bc             s6 <= 2bd1afbb
+     832  1.0 0x000000c0             s6 <= 913f1ed7
+     833  1.0 0x000000c4             s3 <= b69207bd
+     834  1.0 0x000000c8             fp <= 2bd1afbb
+     835  1.0 0x000000cc             fp <= 913f1ed7
+     836  1.0 0x000000d0             fp <= 4f33be06
+     837  1.0 0x000000d4             s3 <= f9a1b9bb
+     838  1.0 0x000000d8             fp <= 3265dc8e
+     839  1.0 0x000000dc             fp <= 97d34baa
+     840  1.0 0x000000e0             fp <= 55c7ead9
+     841  1.0 0x000000e4             s3 <= ac665362
+     842  1.0 0x000000e8             s4 <= 0000038f
+     844  1.0 0x000000ec             s1 <= e3322217
+     845  1.0 0x000000f0             s2 <= 9a928d55
+     846  1.0 0x000000f4             s3 <= ac6650ed
+     847  1.0 0x000000f8             s4 <= 0000038f
+     849  1.0 0x000000fc             s1 <= e33225a6
+     850  1.0 0x00000100             s2 <= 656d763a
+     851  1.0 0x00000104             s3 <= ac665362
+     852  1.0 0x00000108             s5 <= 0000038f
+     853  1.0 0x0000010c             t0 <= 00000000
+     854  1.0 0x00000110             s1 <= e3322935
+     855  1.0 0x00000114             s2 <= 656d72ab
+     856  1.0 0x00000118             s3 <= ac6650ed
+     857  1.0 0x0000011c             s5 <= 0000038f
+     858  1.0 0x00000120             t0 <= 00000000
+     859  1.0 0x00000124             s1 <= e3322cc4
+     860  1.0 0x00000128             s2 <= 9a9290e4
+     861  1.0 0x0000012c             s3 <= ac665362
+     862  1.0 0x00000130             t1 <= 0000000a
+     863  1.0 0x00000134               
+     868  1.0 0x00000138             sp <= 00002ffc
+     869  1.0 0x0000013c               
+     874  1.1 0x00000010               
+$finish called at time : 20208666 ps : File "/afs/inf.ed.ac.uk/user/s17/s1740055/CArD/prac2/src/sim/tb.v" Line 326
+run: Time (s): cpu = 00:00:02 ; elapsed = 00:00:23 . Memory (MB): peak = 8169.141 ; gain = 0.000 ; free physical = 5127 ; free virtual = 18012
+xsim: Time (s): cpu = 00:00:04 ; elapsed = 00:00:25 . Memory (MB): peak = 8169.141 ; gain = 0.000 ; free physical = 5127 ; free virtual = 18012
 INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_behav' loaded.
 INFO: [USF-XSim-97] XSim simulation ran for 100us
-launch_simulation: Time (s): cpu = 00:00:28 ; elapsed = 00:00:39 . Memory (MB): peak = 7172.348 ; gain = 0.000 ; free physical = 3204 ; free virtual = 20520
-update_compile_order -fileset sources_1
+launch_simulation: Time (s): cpu = 00:00:30 ; elapsed = 00:00:47 . Memory (MB): peak = 8169.141 ; gain = 0.000 ; free physical = 5127 ; free virtual = 18012
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory /afs/inf.ed.ac.uk/user/s17/s1740055/CArD/prac2/proj/RV32IM_PYNQ_Z2.runs/synth_1
+
 launch_runs impl_1 -jobs 2
 INFO: [Vivado 12-4149] The synthesis checkpoint for IP '/afs/inf.ed.ac.uk/user/s17/s1740055/CArD/prac2/src/ip/rgb2dvi_0/rgb2dvi_0.xci' is already up-to-date
 INFO: [Vivado 12-4149] The synthesis checkpoint for IP '/afs/inf.ed.ac.uk/user/s17/s1740055/CArD/prac2/src/ip/rv32im_alu_0/rv32im_alu_0.xci' is already up-to-date
 INFO: [Vivado 12-4149] The synthesis checkpoint for IP '/afs/inf.ed.ac.uk/user/s17/s1740055/CArD/prac2/src/ip/video_clock_gen/video_clock_gen.xci' is already up-to-date
-[Sat Nov  2 15:30:11 2019] Launched synth_1...
+[Sat Nov  2 19:45:59 2019] Launched synth_1...
 Run output will be captured here: /afs/inf.ed.ac.uk/user/s17/s1740055/CArD/prac2/proj/RV32IM_PYNQ_Z2.runs/synth_1/runme.log
-[Sat Nov  2 15:30:11 2019] Launched impl_1...
+[Sat Nov  2 19:45:59 2019] Launched impl_1...
 Run output will be captured here: /afs/inf.ed.ac.uk/user/s17/s1740055/CArD/prac2/proj/RV32IM_PYNQ_Z2.runs/impl_1/runme.log
 open_run impl_1
-INFO: [Netlist 29-17] Analyzing 876 Unisim elements for replacement
+INFO: [Netlist 29-17] Analyzing 518 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-479] Netlist was created with Vivado 2018.3
-INFO: [Device 21-403] Loading part xc7z020clg400-1
 INFO: [Project 1-570] Preparing netlist for logic optimization
 WARNING: [Constraints 18-550] Could not create 'IBUF_LOW_PWR' constraint because net 'u_video_clock_gen/clk_in1' is not directly connected to top level port. Synthesis is ignored for IBUF_LOW_PWR but preserved for implementation.
 INFO: [Timing 38-478] Restoring timing data from binary archive.
@@ -1232,49 +1916,965 @@ INFO: [Project 1-853] Binary constraint restore complete.
 Reading XDEF placement.
 Reading placer database...
 Reading XDEF routing.
-Read XDEF File: Time (s): cpu = 00:00:00.44 ; elapsed = 00:00:00.42 . Memory (MB): peak = 7785.141 ; gain = 13.004 ; free physical = 2404 ; free virtual = 19925
-Restored from archive | CPU: 0.440000 secs | Memory: 9.242157 MB |
-Finished XDEF File Restore: Time (s): cpu = 00:00:00.44 ; elapsed = 00:00:00.42 . Memory (MB): peak = 7785.141 ; gain = 13.004 ; free physical = 2404 ; free virtual = 19925
-Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 7785.141 ; gain = 0.000 ; free physical = 2405 ; free virtual = 19926
+Read XDEF File: Time (s): cpu = 00:00:00.38 ; elapsed = 00:00:00.37 . Memory (MB): peak = 8169.141 ; gain = 0.000 ; free physical = 4939 ; free virtual = 17831
+Restored from archive | CPU: 0.380000 secs | Memory: 7.409302 MB |
+Finished XDEF File Restore: Time (s): cpu = 00:00:00.39 ; elapsed = 00:00:00.37 . Memory (MB): peak = 8169.141 ; gain = 0.000 ; free physical = 4939 ; free virtual = 17831
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 8169.141 ; gain = 0.000 ; free physical = 4940 ; free virtual = 17832
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-open_run: Time (s): cpu = 00:00:17 ; elapsed = 00:00:15 . Memory (MB): peak = 7961.297 ; gain = 753.938 ; free physical = 2287 ; free virtual = 19815
+close_design
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory /afs/inf.ed.ac.uk/user/s17/s1740055/CArD/prac2/proj/RV32IM_PYNQ_Z2.runs/synth_1
+
+launch_runs impl_1 -jobs 2
+INFO: [Vivado 12-4149] The synthesis checkpoint for IP '/afs/inf.ed.ac.uk/user/s17/s1740055/CArD/prac2/src/ip/rgb2dvi_0/rgb2dvi_0.xci' is already up-to-date
+INFO: [Vivado 12-4149] The synthesis checkpoint for IP '/afs/inf.ed.ac.uk/user/s17/s1740055/CArD/prac2/src/ip/rv32im_alu_0/rv32im_alu_0.xci' is already up-to-date
+INFO: [Vivado 12-4149] The synthesis checkpoint for IP '/afs/inf.ed.ac.uk/user/s17/s1740055/CArD/prac2/src/ip/video_clock_gen/video_clock_gen.xci' is already up-to-date
+[Sat Nov  2 20:02:32 2019] Launched synth_1...
+Run output will be captured here: /afs/inf.ed.ac.uk/user/s17/s1740055/CArD/prac2/proj/RV32IM_PYNQ_Z2.runs/synth_1/runme.log
+[Sat Nov  2 20:02:32 2019] Launched impl_1...
+Run output will be captured here: /afs/inf.ed.ac.uk/user/s17/s1740055/CArD/prac2/proj/RV32IM_PYNQ_Z2.runs/impl_1/runme.log
+open_run impl_1
+INFO: [Netlist 29-17] Analyzing 876 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2018.3
+INFO: [Project 1-570] Preparing netlist for logic optimization
+WARNING: [Constraints 18-550] Could not create 'IBUF_LOW_PWR' constraint because net 'u_video_clock_gen/clk_in1' is not directly connected to top level port. Synthesis is ignored for IBUF_LOW_PWR but preserved for implementation.
+INFO: [Timing 38-478] Restoring timing data from binary archive.
+INFO: [Timing 38-479] Binary timing data restore complete.
+INFO: [Project 1-856] Restoring constraints from binary archive.
+INFO: [Project 1-853] Binary constraint restore complete.
+Reading XDEF placement.
+Reading placer database...
+Reading XDEF routing.
+Read XDEF File: Time (s): cpu = 00:00:00.46 ; elapsed = 00:00:00.43 . Memory (MB): peak = 8221.176 ; gain = 0.000 ; free physical = 4814 ; free virtual = 17716
+Restored from archive | CPU: 0.460000 secs | Memory: 9.096985 MB |
+Finished XDEF File Restore: Time (s): cpu = 00:00:00.46 ; elapsed = 00:00:00.43 . Memory (MB): peak = 8221.176 ; gain = 0.000 ; free physical = 4814 ; free virtual = 17716
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 8221.176 ; gain = 0.000 ; free physical = 4815 ; free virtual = 17717
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
 report_timing_summary -delay_type min_max -report_unconstrained -check_timing_verbose -max_paths 10 -input_pins -routable_nets -name timing_1
 INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -1, Delay Type: min_max.
 INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 4 CPUs
 WARNING: [Timing 38-436] There are set_bus_skew constraint(s) in this design. Please run report_bus_skew to ensure that bus skew requirements are met.
-launch_runs impl_1 -to_step write_bitstream -jobs 2
+close_design
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/afs/inf.ed.ac.uk/user/s17/s1740055/CArD/prac2/proj/RV32IM_PYNQ_Z2.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File '/afs/inf.ed.ac.uk/group/teaching/cd/VivadoData/Vivado/2018.3/data/xsim/xsim.ini' copied to run dir:'/afs/inf.ed.ac.uk/user/s17/s1740055/CArD/prac2/proj/RV32IM_PYNQ_Z2.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb' in fileset 'sim_1'...
+INFO: [SIM-utils-43] Exported '/afs/inf.ed.ac.uk/user/s17/s1740055/CArD/prac2/proj/RV32IM_PYNQ_Z2.sim/sim_1/behav/xsim/deps_test.hex'
+INFO: [SIM-utils-43] Exported '/afs/inf.ed.ac.uk/user/s17/s1740055/CArD/prac2/proj/RV32IM_PYNQ_Z2.sim/sim_1/behav/xsim/mbrot.hex'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/afs/inf.ed.ac.uk/user/s17/s1740055/CArD/prac2/proj/RV32IM_PYNQ_Z2.sim/sim_1/behav/xsim'
+xvlog --incr --relax -prj tb_vlog.prj
+INFO: [VRFC 10-2263] Analyzing Verilog file "/afs/inf.ed.ac.uk/user/s17/s1740055/CArD/prac2/src/ip/rv32im_rm_0/rv32im_rm_0_sim_netlist.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module rv32im_rm_0
+INFO: [VRFC 10-311] analyzing module rv32im_rm_0_control_unit
+INFO: [VRFC 10-311] analyzing module rv32im_rm_0_rv32im_ref
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [VRFC 10-2263] Analyzing Verilog file "/afs/inf.ed.ac.uk/user/s17/s1740055/CArD/prac2/src/ip/rv32im_alu_0/rv32im_alu_0_sim_netlist.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module rv32im_alu_0
+INFO: [VRFC 10-311] analyzing module rv32im_alu_0_alu
+INFO: [VRFC 10-2263] Analyzing Verilog file "/afs/inf.ed.ac.uk/user/s17/s1740055/CArD/prac2/src/ip/video_clock_gen/video_clock_gen_clk_wiz.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module video_clock_gen_clk_wiz
+INFO: [VRFC 10-2263] Analyzing Verilog file "/afs/inf.ed.ac.uk/user/s17/s1740055/CArD/prac2/src/ip/video_clock_gen/video_clock_gen.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module video_clock_gen
+INFO: [VRFC 10-2263] Analyzing Verilog file "/afs/inf.ed.ac.uk/user/s17/s1740055/CArD/prac2/src/ip/cpu_clock_gen/cpu_clock_gen_clk_wiz.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module cpu_clock_gen_clk_wiz
+INFO: [VRFC 10-2263] Analyzing Verilog file "/afs/inf.ed.ac.uk/user/s17/s1740055/CArD/prac2/src/ip/cpu_clock_gen/cpu_clock_gen.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module cpu_clock_gen
+INFO: [VRFC 10-2263] Analyzing Verilog file "/afs/inf.ed.ac.uk/user/s17/s1740055/CArD/prac2/src/hdl/branch_cache.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module branch_cache
+INFO: [VRFC 10-2263] Analyzing Verilog file "/afs/inf.ed.ac.uk/user/s17/s1740055/CArD/prac2/src/hdl/branch_predictor.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module branch_predictor
+INFO: [VRFC 10-2263] Analyzing Verilog file "/afs/inf.ed.ac.uk/user/s17/s1740055/CArD/prac2/src/hdl/bypass_or_stall.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module bypass_or_stall
+INFO: [VRFC 10-2263] Analyzing Verilog file "/afs/inf.ed.ac.uk/user/s17/s1740055/CArD/prac2/src/hdl/cpu.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module cpu
+INFO: [VRFC 10-2263] Analyzing Verilog file "/afs/inf.ed.ac.uk/user/s17/s1740055/CArD/prac2/src/hdl/csr_unit.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module control_unit
+INFO: [VRFC 10-2263] Analyzing Verilog file "/afs/inf.ed.ac.uk/user/s17/s1740055/CArD/prac2/src/hdl/dccm_ram.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module dccm_ram
+INFO: [VRFC 10-2263] Analyzing Verilog file "/afs/inf.ed.ac.uk/user/s17/s1740055/CArD/prac2/src/hdl/decoder.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module decoder
+INFO: [VRFC 10-2263] Analyzing Verilog file "/afs/inf.ed.ac.uk/user/s17/s1740055/CArD/prac2/src/hdl/divider.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module divider
+INFO: [VRFC 10-2263] Analyzing Verilog file "/afs/inf.ed.ac.uk/user/s17/s1740055/CArD/prac2/src/hdl/dvi_display.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module dvi_display
+INFO: [VRFC 10-2263] Analyzing Verilog file "/afs/inf.ed.ac.uk/user/s17/s1740055/CArD/prac2/src/hdl/exec_unit.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module exec_unit
+INFO: [VRFC 10-2263] Analyzing Verilog file "/afs/inf.ed.ac.uk/user/s17/s1740055/CArD/prac2/src/hdl/fetch_unit.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module fetch_unit
+INFO: [VRFC 10-2263] Analyzing Verilog file "/afs/inf.ed.ac.uk/user/s17/s1740055/CArD/prac2/src/hdl/frame_buffer.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module frame_buffer
+INFO: [VRFC 10-2263] Analyzing Verilog file "/afs/inf.ed.ac.uk/user/s17/s1740055/CArD/prac2/src/hdl/msec_timer.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module msec_timer
+INFO: [VRFC 10-2263] Analyzing Verilog file "/afs/inf.ed.ac.uk/user/s17/s1740055/CArD/prac2/src/hdl/predictor_state.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module predictor_state
+INFO: [VRFC 10-2263] Analyzing Verilog file "/afs/inf.ed.ac.uk/user/s17/s1740055/CArD/prac2/src/hdl/ras.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ras
+INFO: [VRFC 10-2263] Analyzing Verilog file "/afs/inf.ed.ac.uk/user/s17/s1740055/CArD/prac2/src/hdl/regfile.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module regfile
+INFO: [VRFC 10-2263] Analyzing Verilog file "/afs/inf.ed.ac.uk/user/s17/s1740055/CArD/prac2/src/hdl/resync.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module resync
+INFO: [VRFC 10-2263] Analyzing Verilog file "/afs/inf.ed.ac.uk/user/s17/s1740055/CArD/prac2/src/hdl/ssd_driver.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ssd_driver
+INFO: [VRFC 10-2263] Analyzing Verilog file "/afs/inf.ed.ac.uk/user/s17/s1740055/CArD/prac2/src/hdl/store_queue.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module store_queue
+INFO: [VRFC 10-2263] Analyzing Verilog file "/afs/inf.ed.ac.uk/user/s17/s1740055/CArD/prac2/src/hdl/top.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module top
+INFO: [VRFC 10-2263] Analyzing Verilog file "/afs/inf.ed.ac.uk/user/s17/s1740055/CArD/prac2/src/hdl/vga_control.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module vga_control
+INFO: [VRFC 10-2263] Analyzing Verilog file "/afs/inf.ed.ac.uk/user/s17/s1740055/CArD/prac2/src/sim/tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb
+INFO: [VRFC 10-2263] Analyzing Verilog file "/afs/inf.ed.ac.uk/user/s17/s1740055/CArD/prac2/proj/RV32IM_PYNQ_Z2.sim/sim_1/behav/xsim/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl
+WARNING: [VRFC 10-3609] overwriting previous definition of module 'glbl' [/afs/inf.ed.ac.uk/user/s17/s1740055/CArD/prac2/proj/RV32IM_PYNQ_Z2.sim/sim_1/behav/xsim/glbl.v:6]
+xvhdl --incr --relax -prj tb_vhdl.prj
+INFO: [USF-XSim-69] 'compile' step finished in '3' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/afs/inf.ed.ac.uk/user/s17/s1740055/CArD/prac2/proj/RV32IM_PYNQ_Z2.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.3
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: /disk/scratch/Xilinx/Vivado/2018.3/bin/unwrapped/lnx64.o/xelab -wto 911a8cafdddd4b408040830d4b642778 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_behav xil_defaultlib.tb xil_defaultlib.glbl -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.numeric_std
+Compiling package unisim.vcomponents
+Compiling package ieee.std_logic_arith
+Compiling package ieee.vital_timing
+Compiling package ieee.vital_primitives
+Compiling package unisim.vpkg
+Compiling package xil_defaultlib.dvi_constants
+Compiling module xil_defaultlib.ssd_driver
+Compiling module xil_defaultlib.resync
+Compiling module unisims_ver.IBUF
+Compiling module unisims_ver.MMCME2_ADV(CLKFBOUT_MULT_F=39.0,...
+Compiling module unisims_ver.BUFG
+Compiling module xil_defaultlib.cpu_clock_gen_clk_wiz
+Compiling module xil_defaultlib.cpu_clock_gen
+Compiling module unisims_ver.MMCME2_ADV(CLKFBOUT_MULT_F=40.0,...
+Compiling module xil_defaultlib.video_clock_gen_clk_wiz
+Compiling module xil_defaultlib.video_clock_gen
+Compiling module xil_defaultlib.branch_cache_default
+Compiling module xil_defaultlib.predictor_state_default
+Compiling module xil_defaultlib.ras_default
+Compiling module xil_defaultlib.branch_predictor_default
+Compiling module xil_defaultlib.fetch_unit
+Compiling module xil_defaultlib.decoder
+Compiling module xil_defaultlib.regfile
+Compiling module unisims_ver.OBUF
+Compiling module unisims_ver.LUT6
+Compiling module unisims_ver.CARRY4
+Compiling module unisims_ver.LUT5
+Compiling module unisims_ver.LUT4
+Compiling module unisims_ver.x_lut3_mux8
+Compiling module unisims_ver.LUT3
+Compiling module unisims_ver.x_lut2_mux4
+Compiling module unisims_ver.LUT2
+Compiling module xil_defaultlib.rv32im_alu_0_alu
+Compiling module xil_defaultlib.rv32im_alu_0
+Compiling module xil_defaultlib.divider
+Compiling module xil_defaultlib.bypass_or_stall
+Compiling module xil_defaultlib.store_queue
+Compiling module xil_defaultlib.dccm_ram
+Compiling module xil_defaultlib.exec_unit
+Compiling module xil_defaultlib.control_unit
+Compiling module xil_defaultlib.cpu
+Compiling module xil_defaultlib.vga_control
+Compiling module xil_defaultlib.frame_buffer_default
+Compiling architecture behavioral of entity xil_defaultlib.TMDS_Encoder [tmds_encoder_default]
+Compiling architecture behavioral of entity xil_defaultlib.SyncAsync [\SyncAsync(kresetto='1')\]
+Compiling architecture behavioral of entity xil_defaultlib.ResetBridge [resetbridge_default]
+Compiling architecture obufds_v of entity unisim.OBUFDS [\OBUFDS(iostandard="TMDS_33")(1,...]
+Compiling secureip modules ...
+Compiling architecture oserdese2_v of entity unisim.OSERDESE2 [\OSERDESE2(data_rate_tq="SDR",da...]
+Compiling architecture oserdese2_v of entity unisim.OSERDESE2 [\OSERDESE2(data_rate_tq="SDR",da...]
+Compiling architecture behavioral of entity xil_defaultlib.OutputSERDES [outputserdes_default]
+Compiling architecture behavioral of entity xil_defaultlib.rgb2dvi [\rgb2dvi(kgenerateserialclk=fals...]
+Compiling architecture rgb2dvi_0_arch of entity xil_defaultlib.rgb2dvi_0 [rgb2dvi_0_default]
+Compiling module xil_defaultlib.msec_timer
+Compiling module xil_defaultlib.dvi_display
+Compiling module xil_defaultlib.top
+Compiling module unisims_ver.OBUFT
+Compiling module unisims_ver.x_lut1_mux2
+Compiling module unisims_ver.LUT1
+Compiling module unisims_ver.MUXF7
+Compiling module unisims_ver.FDCE_default
+Compiling module unisims_ver.DSP48E1(ACASCREG=0,ALUMODEREG=0,...
+Compiling module unisims_ver.MUXF8
+Compiling module xil_defaultlib.rv32im_rm_0_control_unit
+Compiling module xil_defaultlib.rv32im_rm_0_rv32im_ref
+Compiling module xil_defaultlib.rv32im_rm_0
+Compiling module xil_defaultlib.tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_behav
+run_program: Time (s): cpu = 00:00:22 ; elapsed = 00:00:14 . Memory (MB): peak = 8235.176 ; gain = 0.000 ; free physical = 5762 ; free virtual = 18584
+INFO: [USF-XSim-69] 'elaborate' step finished in '14' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in '/afs/inf.ed.ac.uk/user/s17/s1740055/CArD/prac2/proj/RV32IM_PYNQ_Z2.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tb_behav -key {Behavioral:sim_1:Functional:tb} -tclbatch {tb.tcl} -view {/afs/inf.ed.ac.uk/user/s17/s1740055/CArD/prac2/src/sim/tb_waves.wcfg} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2018.3
+Time resolution is 1 ps
+open_wave_config /afs/inf.ed.ac.uk/user/s17/s1740055/CArD/prac2/src/sim/tb_waves.wcfg
+source tb.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 100us
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 4 ns  Iteration: 2  Process: /tb/dut/u_dvi_display/u_rgb2dvi/U0/\DataEncoders(0)\/DataEncoder/line__154  File: /afs/inf.ed.ac.uk/user/s17/s1740055/CArD/prac2/proj/RV32IM_PYNQ_Z2.ip_user_files/ipstatic/src/TMDS_Encoder.vhd
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 4 ns  Iteration: 2  Process: /tb/dut/u_dvi_display/u_rgb2dvi/U0/\DataEncoders(1)\/DataEncoder/line__154  File: /afs/inf.ed.ac.uk/user/s17/s1740055/CArD/prac2/proj/RV32IM_PYNQ_Z2.ip_user_files/ipstatic/src/TMDS_Encoder.vhd
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 4 ns  Iteration: 2  Process: /tb/dut/u_dvi_display/u_rgb2dvi/U0/\DataEncoders(2)\/DataEncoder/line__154  File: /afs/inf.ed.ac.uk/user/s17/s1740055/CArD/prac2/proj/RV32IM_PYNQ_Z2.ip_user_files/ipstatic/src/TMDS_Encoder.vhd
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 3758662 ps  Iteration: 2  Process: /tb/dut/u_dvi_display/u_rgb2dvi/U0/\DataEncoders(0)\/DataEncoder/line__154  File: /afs/inf.ed.ac.uk/user/s17/s1740055/CArD/prac2/proj/RV32IM_PYNQ_Z2.ip_user_files/ipstatic/src/TMDS_Encoder.vhd
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 3758662 ps  Iteration: 2  Process: /tb/dut/u_dvi_display/u_rgb2dvi/U0/\DataEncoders(1)\/DataEncoder/line__154  File: /afs/inf.ed.ac.uk/user/s17/s1740055/CArD/prac2/proj/RV32IM_PYNQ_Z2.ip_user_files/ipstatic/src/TMDS_Encoder.vhd
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 3758662 ps  Iteration: 2  Process: /tb/dut/u_dvi_display/u_rgb2dvi/U0/\DataEncoders(2)\/DataEncoder/line__154  File: /afs/inf.ed.ac.uk/user/s17/s1740055/CArD/prac2/proj/RV32IM_PYNQ_Z2.ip_user_files/ipstatic/src/TMDS_Encoder.vhd
+     199 x.x 0x00000000             sp <= 00003000
+     200  8.0 0x00000004             sp <= 00003000
+     201  3.3 0x00000008             sp <= 00002ffc
+     202  2.7 0x0000000c             ra <= 00000010
+     207  3.2 0x00000014             sp <= 00002fd4
+     208  2.5 0x00000018             a5 <= 00002fd4
+     209  2.3 0x0000001c             a4 <= 0000038f
+     210  2.2 0x00000020               mem[00000fd4] <= 0000038f
+     211  2.1 0x00000024             a1 <= 0000000a
+     212  2.0 0x00000028             t1 <= 00000000
+     213  1.9 0x0000002c             fp <= 000004d2
+     214  1.8 0x00000030             s1 <= 00000224
+     215  1.7 0x00000034             s2 <= 00001000
+     216  1.7 0x00000038             s2 <= 00000911
+     217  1.6 0x0000003c             s3 <= 000003b4
+     218  1.6 0x00000040             s4 <= 00000306
+     219  1.6 0x00000044             s5 <= 000001b0
+     220  1.5 0x00000048             fp <= 00136864
+     221  1.5 0x0000004c             s1 <= 002192f4
+     222  1.5 0x00000050             s2 <= 000b3238
+     223  1.4 0x00000054             s3 <= 00051a20
+     224  1.4 0x00000058             s4 <= 00000000
+     225  1.4 0x0000005c             s5 <= 00000000
+     226  1.4 0x00000060             fp <= 0034fb58
+     227  1.4 0x00000064             s2 <= ffd636e0
+     228  1.3 0x00000068             s3 <= 0031e178
+     229  1.3 0x0000006c             s4 <= 0034fb58
+     230  1.3 0x00000070             s5 <= ffcb04a8
+     231  1.3 0x00000074             fp <= 00568e4c
+     232  1.3 0x00000078             s2 <= 0080576c
+     233  1.3 0x0000007c             s3 <= 00676f34
+     234  1.3 0x00000080             s4 <= 008b89a4
+     235  1.3 0x00000084             s5 <= 008b89a4
+     236  1.3 0x00000088             fp <= 0000038f
+     238  1.3 0x0000008c             s2 <= 008053dd
+     239  1.3 0x00000090             s3 <= 00676cbb
+     240  1.3 0x00000094             s4 <= 008b8d33
+     241  1.3 0x00000098             s5 <= 008b8615
+     242  1.2 0x0000009c             fp <= 0000038f
+     244  1.3 0x000000a0             s2 <= ff7fafb2
+     245  1.3 0x000000a4             s3 <= 00676f34
+     246  1.2 0x000000a8             s4 <= 008b90c2
+     247  1.2 0x000000ac             s5 <= ff747d7a
+     248  1.2 0x000000b0             fp <= 00219683
+     249  1.2 0x000000b4             fp <= 00a1e6d1
+     250  1.2 0x000000b8             s3 <= 00c689e5
+     251  1.2 0x000000bc             s6 <= 00c379c5
+     252  1.2 0x000000c0             s6 <= 0143ca13
+     253  1.2 0x000000c4             s3 <= 018543f6
+     254  1.2 0x000000c8             fp <= 00c379c5
+     255  1.2 0x000000cc             fp <= 0143ca13
+     256  1.2 0x000000d0             fp <= 01cf5ad5
+     257  1.2 0x000000d4             s3 <= 004a1923
+     258  1.2 0x000000d8             fp <= 01f0edc9
+     259  1.2 0x000000dc             fp <= 02713e17
+     260  1.2 0x000000e0             fp <= 02fcced9
+     261  1.2 0x000000e4             s3 <= 02b6d7fa
+     262  1.2 0x000000e8             s4 <= 0000038f
+     264  1.2 0x000000ec             s1 <= 00219683
+     265  1.2 0x000000f0             s2 <= ff7fac23
+     266  1.2 0x000000f4             s3 <= 02b6d475
+     267  1.2 0x000000f8             s4 <= 0000038f
+     269  1.2 0x000000fc             s1 <= 00219a12
+     270  1.2 0x00000100             s2 <= 0080576c
+     271  1.2 0x00000104             s3 <= 02b6d7fa
+     272  1.2 0x00000108             s5 <= 0000038f
+     273  1.2 0x0000010c             t0 <= 00000000
+     274  1.2 0x00000110             s1 <= 00219da1
+     275  1.2 0x00000114             s2 <= 008053dd
+     276  1.2 0x00000118             s3 <= 02b6d475
+     277  1.2 0x0000011c             s5 <= 0000038f
+     278  1.2 0x00000120             t0 <= 00000000
+     279  1.1 0x00000124             s1 <= 0021a130
+     280  1.1 0x00000128             s2 <= ff7fafb2
+     281  1.1 0x0000012c             s3 <= 02b6d7fa
+     282  1.1 0x00000130             t1 <= 00000001
+     283  1.1 0x00000134               
+     288  1.2 0x00000048             fp <= db61e360
+     289  1.2 0x0000004c             s1 <= 0bcc11d4
+     290  1.2 0x00000050             s2 <= a8aa92a6
+     291  1.2 0x00000054             s3 <= 000ca9e1
+     292  1.2 0x00000058             s4 <= 803c199d
+     293  1.2 0x0000005c             s5 <= 67cda020
+     294  1.2 0x00000060             fp <= e72df534
+     295  1.2 0x00000064             s2 <= c17c9d72
+     296  1.2 0x00000068             s3 <= e7215cd5
+     297  1.2 0x0000006c             s4 <= 676a0ed1
+     298  1.2 0x00000070             s5 <= 809faaec
+     299  1.2 0x00000074             fp <= f2fa0708
+     300  1.2 0x00000078             s2 <= 317d6996
+     301  1.2 0x0000007c             s3 <= 15db5bdd
+     302  1.2 0x00000080             s4 <= 5a6415d9
+     303  1.1 0x00000084             s5 <= 725a5c1c
+     304  1.1 0x00000088             fp <= 0000038f
+     306  1.2 0x0000008c             s2 <= 317d6607
+     307  1.2 0x00000090             s3 <= 15db5852
+     308  1.2 0x00000094             s4 <= 5a641968
+     309  1.1 0x00000098             s5 <= 725a588d
+     310  1.1 0x0000009c             fp <= 0000038f
+     312  1.2 0x000000a0             s2 <= ce829d88
+     313  1.2 0x000000a4             s3 <= 15db5bdd
+     314  1.2 0x000000a8             s4 <= 5a641cf7
+     315  1.1 0x000000ac             s5 <= 8da5ab02
+     316  1.1 0x000000b0             fp <= 0bcc1563
+     317  1.1 0x000000b4             fp <= 3d4977db
+     318  1.1 0x000000b8             s3 <= 28922c06
+     319  1.1 0x000000bc             s6 <= 491589af
+     320  1.1 0x000000c0             s6 <= 7a92ec27
+     321  1.1 0x000000c4             s3 <= 5200c021
+     322  1.1 0x000000c8             fp <= 491589af
+     323  1.1 0x000000cc             fp <= 7a92ec27
+     324  1.1 0x000000d0             fp <= d4f7091e
+     325  1.1 0x000000d4             s3 <= 86f7c93f
+     326  1.1 0x000000d8             fp <= e0c31af2
+     327  1.1 0x000000dc             fp <= 12407d6a
+     328  1.1 0x000000e0             fp <= 6ca49a61
+     329  1.1 0x000000e4             s3 <= ea53535e
+     330  1.1 0x000000e8             s4 <= 0000038f
+     332  1.1 0x000000ec             s1 <= 0bcc1563
+     333  1.1 0x000000f0             s2 <= ce8299f9
+     334  1.1 0x000000f4             s3 <= ea5350d1
+     335  1.1 0x000000f8             s4 <= 0000038f
+     337  1.1 0x000000fc             s1 <= 0bcc18f2
+     338  1.1 0x00000100             s2 <= 317d6996
+     339  1.1 0x00000104             s3 <= ea53535e
+     340  1.1 0x00000108             s5 <= 0000038f
+     341  1.1 0x0000010c             t0 <= 00000000
+     342  1.1 0x00000110             s1 <= 0bcc1c81
+     343  1.1 0x00000114             s2 <= 317d6607
+     344  1.1 0x00000118             s3 <= ea5350d1
+     345  1.1 0x0000011c             s5 <= 0000038f
+     346  1.1 0x00000120             t0 <= 00000000
+     347  1.1 0x00000124             s1 <= 0bcc2010
+     348  1.1 0x00000128             s2 <= ce829d88
+     349  1.1 0x0000012c             s3 <= ea53535e
+     350  1.1 0x00000130             t1 <= 00000002
+     351  1.1 0x00000134               
+     352  1.1 0x00000048             fp <= 9c3ad880
+     353  1.1 0x0000004c             s1 <= 9020eff0
+     354  1.1 0x00000050             s2 <= de85ab82
+     355  1.1 0x00000054             s3 <= 000ca9e1
+     356  1.1 0x00000058             s4 <= 30d65ec9
+     357  1.1 0x0000005c             s5 <= 858cfb80
+     358  1.1 0x00000060             fp <= 2c5bc870
+     359  1.1 0x00000064             s2 <= b229e312
+     360  1.1 0x00000068             s3 <= 2c576191
+     361  1.1 0x0000006c             s4 <= 5d322739
+     362  1.1 0x00000070             s5 <= 59313310
+     363  1.1 0x00000074             fp <= bc7cb860
+     364  1.1 0x00000078             s2 <= 0a52d54e
+     365  1.1 0x0000007c             s3 <= 902bd9f1
+     366  1.1 0x00000080             s4 <= 19aedf99
+     367  1.1 0x00000084             s5 <= 634b8550
+     368  1.1 0x00000088             fp <= 0000038f
+     370  1.1 0x0000008c             s2 <= 0a52d1bf
+     371  1.1 0x00000090             s3 <= 902bda7e
+     372  1.1 0x00000094             s4 <= 19aee328
+     373  1.1 0x00000098             s5 <= 634b81c1
+     374  1.1 0x0000009c             fp <= 0000038f
+     376  1.1 0x000000a0             s2 <= f5ad31d0
+     377  1.1 0x000000a4             s3 <= 902bd9f1
+     378  1.1 0x000000a8             s4 <= 19aee6b7
+     379  1.1 0x000000ac             s5 <= 9cb481ce
+     380  1.1 0x000000b0             fp <= 9020f37f
+     381  1.1 0x000000b4             fp <= 9a73c1af
+     382  1.1 0x000000b8             s3 <= 0a58185e
+     383  1.1 0x000000bc             s6 <= 2a94b19f
+     384  1.1 0x000000c0             s6 <= 34e77fcf
+     385  1.1 0x000000c4             s3 <= 3ebf6791
+     386  1.1 0x000000c8             fp <= 2a94b19f
+     387  1.1 0x000000cc             fp <= 34e77fcf
+     388  1.1 0x000000d0             fp <= 4e966686
+     389  1.1 0x000000d4             s3 <= 70290117
+     390  1.1 0x000000d8             fp <= deb75676
+     391  1.1 0x000000dc             fp <= e90a24a6
+     392  1.1 0x000000e0             fp <= 02b90b5d
+     393  1.1 0x000000e4             s3 <= 72900a4a
+     394  1.1 0x000000e8             s4 <= 0000038f
+     396  1.1 0x000000ec             s1 <= 9020f37f
+     397  1.1 0x000000f0             s2 <= f5ad2e41
+     398  1.1 0x000000f4             s3 <= 729009c5
+     399  1.1 0x000000f8             s4 <= 0000038f
+     401  1.1 0x000000fc             s1 <= 9020f70e
+     402  1.1 0x00000100             s2 <= 0a52d54e
+     403  1.1 0x00000104             s3 <= 72900a4a
+     404  1.1 0x00000108             s5 <= 0000038f
+     405  1.1 0x0000010c             t0 <= 00000000
+     406  1.1 0x00000110             s1 <= 9020fa9d
+     407  1.1 0x00000114             s2 <= 0a52d1bf
+     408  1.1 0x00000118             s3 <= 729009c5
+     409  1.1 0x0000011c             s5 <= 0000038f
+     410  1.1 0x00000120             t0 <= 00000000
+     411  1.1 0x00000124             s1 <= 9020fe2c
+     412  1.1 0x00000128             s2 <= f5ad31d0
+     413  1.1 0x0000012c             s3 <= 72900a4a
+     414  1.1 0x00000130             t1 <= 00000003
+     415  1.1 0x00000134               
+     416  1.1 0x00000048             fp <= 4b30efc0
+     417  1.1 0x0000004c             s1 <= 6d028620
+     418  1.1 0x00000050             s2 <= ae949d56
+     419  1.1 0x00000054             s3 <= 000ca9e1
+     420  1.1 0x00000058             s4 <= 43cfd1a1
+     421  1.1 0x0000005c             s5 <= 69c21c40
+     422  1.1 0x00000060             fp <= b83375e0
+     423  1.1 0x00000064             s2 <= f6612776
+     424  1.1 0x00000068             s3 <= b83fdc01
+     425  1.1 0x0000006c             s4 <= fc034781
+     426  1.1 0x00000070             s5 <= b18ea660
+     427  1.1 0x00000074             fp <= 2535fc00
+     428  1.1 0x00000078             s2 <= 2ed4d48a
+     429  1.1 0x0000007c             s3 <= 9d0a2001
+     430  1.1 0x00000080             s4 <= 21394381
+     431  1.1 0x00000084             s5 <= 73a755a0
+     432  1.1 0x00000088             fp <= 0000038f
+     434  1.1 0x0000008c             s2 <= 2ed4d0fb
+     435  1.1 0x00000090             s3 <= 9d0a238e
+     436  1.1 0x00000094             s4 <= 21394710
+     437  1.1 0x00000098             s5 <= 73a75211
+     438  1.1 0x0000009c             fp <= 0000038f
+     440  1.1 0x000000a0             s2 <= d12b3294
+     441  1.1 0x000000a4             s3 <= 9d0a2001
+     442  1.1 0x000000a8             s4 <= 21394a9f
+     443  1.1 0x000000ac             s5 <= 8c58b17e
+     444  1.1 0x000000b0             fp <= 6d0289af
+     445  1.1 0x000000b4             fp <= 9bd7571b
+     446  1.1 0x000000b8             s3 <= 06dd771a
+     447  1.1 0x000000bc             s6 <= 08d9dd3b
+     448  1.1 0x000000c0             s6 <= 37aeaaa7
+     449  1.1 0x000000c4             s3 <= 3173ddbd
+     450  1.1 0x000000c8             fp <= 08d9dd3b
+     451  1.1 0x000000cc             fp <= 37aeaaa7
+     452  1.1 0x000000d0             fp <= 58e7f546
+     453  1.1 0x000000d4             s3 <= 699428fb
+     454  1.1 0x000000d8             fp <= c5ea7b66
+     455  1.1 0x000000dc             fp <= f4bf48d2
+     456  1.1 0x000000e0             fp <= 15f89371
+     457  1.1 0x000000e4             s3 <= 7c6cbb8a
+     458  1.1 0x000000e8             s4 <= 0000038f
+     460  1.1 0x000000ec             s1 <= 6d0289af
+     461  1.1 0x000000f0             s2 <= d12b2f05
+     462  1.1 0x000000f4             s3 <= 7c6cb805
+     463  1.1 0x000000f8             s4 <= 0000038f
+     465  1.1 0x000000fc             s1 <= 6d028d3e
+     466  1.1 0x00000100             s2 <= 2ed4d48a
+     467  1.1 0x00000104             s3 <= 7c6cbb8a
+     468  1.1 0x00000108             s5 <= 0000038f
+     469  1.1 0x0000010c             t0 <= 00000000
+     470  1.1 0x00000110             s1 <= 6d0290cd
+     471  1.1 0x00000114             s2 <= 2ed4d0fb
+     472  1.1 0x00000118             s3 <= 7c6cb805
+     473  1.1 0x0000011c             s5 <= 0000038f
+     474  1.1 0x00000120             t0 <= 00000000
+     475  1.1 0x00000124             s1 <= 6d02945c
+     476  1.1 0x00000128             s2 <= d12b3294
+     477  1.1 0x0000012c             s3 <= 7c6cbb8a
+     478  1.1 0x00000130             t1 <= 00000004
+     479  1.1 0x00000134               
+     480  1.1 0x00000048             fp <= 8debbd30
+     481  1.1 0x0000004c             s1 <= 55ab5fc8
+     482  1.1 0x00000050             s2 <= c6ef6016
+     483  1.1 0x00000054             s3 <= 000ca9e1
+     484  1.1 0x00000058             s4 <= 26914849
+     485  1.1 0x0000005c             s5 <= 070a4a50
+     486  1.1 0x00000060             fp <= e3971cf8
+     487  1.1 0x00000064             s2 <= e358431e
+     488  1.1 0x00000068             s3 <= e39bb519
+     489  1.1 0x0000006c             s4 <= 0a286541
+     490  1.1 0x00000070             s5 <= 23732d58
+     491  1.1 0x00000074             fp <= 39427cc0
+     492  1.1 0x00000078             s2 <= 55ea39a2
+     493  1.1 0x0000007c             s3 <= dad9c9d9
+     494  1.1 0x00000080             s4 <= 436ae201
+     495  1.1 0x00000084             s5 <= 15cf4f68
+     496  1.1 0x00000088             fp <= 0000038f
+     498  1.1 0x0000008c             s2 <= 55ea3613
+     499  1.1 0x00000090             s3 <= dad9ca56
+     500  1.1 0x00000094             s4 <= 436ae590
+     501  1.1 0x00000098             s5 <= 15cf4bd9
+     502  1.1 0x0000009c             fp <= 0000038f
+     504  1.1 0x000000a0             s2 <= aa15cd7c
+     505  1.1 0x000000a4             s3 <= dad9c9d9
+     506  1.1 0x000000a8             s4 <= 436ae91f
+     507  1.1 0x000000ac             s5 <= ea30b7b6
+     508  1.1 0x000000b0             fp <= 55ab6357
+     509  1.1 0x000000b4             fp <= ab9595db
+     510  1.1 0x000000b8             s3 <= 714c5c02
+     511  1.1 0x000000bc             s6 <= 0140f5a3
+     512  1.1 0x000000c0             s6 <= 572b2827
+     513  1.1 0x000000c4             s3 <= 26677425
+     514  1.1 0x000000c8             fp <= 0140f5a3
+     515  1.1 0x000000cc             fp <= 572b2827
+     516  1.1 0x000000d0             fp <= 9a961146
+     517  1.1 0x000000d4             s3 <= bcf16563
+     518  1.1 0x000000d8             fp <= f041710e
+     519  1.1 0x000000dc             fp <= 462ba392
+     520  1.1 0x000000e0             fp <= 89968cb1
+     521  1.1 0x000000e4             s3 <= 3567e9d2
+     522  1.1 0x000000e8             s4 <= 0000038f
+     524  1.1 0x000000ec             s1 <= 55ab6357
+     525  1.1 0x000000f0             s2 <= aa15c9ed
+     526  1.1 0x000000f4             s3 <= 3567ea5d
+     527  1.1 0x000000f8             s4 <= 0000038f
+     529  1.1 0x000000fc             s1 <= 55ab66e6
+     530  1.1 0x00000100             s2 <= 55ea39a2
+     531  1.1 0x00000104             s3 <= 3567e9d2
+     532  1.1 0x00000108             s5 <= 0000038f
+     533  1.1 0x0000010c             t0 <= 00000000
+     534  1.1 0x00000110             s1 <= 55ab6a75
+     535  1.1 0x00000114             s2 <= 55ea3613
+     536  1.1 0x00000118             s3 <= 3567ea5d
+     537  1.1 0x0000011c             s5 <= 0000038f
+     538  1.1 0x00000120             t0 <= 00000000
+     539  1.1 0x00000124             s1 <= 55ab6e04
+     540  1.1 0x00000128             s2 <= aa15cd7c
+     541  1.1 0x0000012c             s3 <= 3567e9d2
+     542  1.1 0x00000130             t1 <= 00000005
+     543  1.1 0x00000134               
+     544  1.1 0x00000048             fp <= 74767df0
+     545  1.1 0x0000004c             s1 <= b6cc6bb8
+     546  1.1 0x00000050             s2 <= 0cc9124e
+     547  1.1 0x00000054             s3 <= 000ca9e1
+     548  1.1 0x00000058             s4 <= 3293e2c9
+     549  1.1 0x0000005c             s5 <= f90aaf90
+     550  1.1 0x00000060             fp <= 2b42e9a8
+     551  1.1 0x00000064             s2 <= e18628a6
+     552  1.1 0x00000068             s3 <= 2b4e4049
+     553  1.1 0x0000006c             s4 <= 5dd6cc71
+     554  1.1 0x00000070             s5 <= cdc7c5e8
+     555  1.1 0x00000074             fp <= e20f5560
+     556  1.1 0x00000078             s2 <= 00892cba
+     557  1.1 0x0000007c             s3 <= c9411529
+     558  1.1 0x00000080             s4 <= 3fe621d1
+     559  1.1 0x00000084             s5 <= 14478f78
+     560  1.1 0x00000088             fp <= 0000038f
+     562  1.1 0x0000008c             s2 <= 0089292b
+     563  1.1 0x00000090             s3 <= c94116a6
+     564  1.1 0x00000094             s4 <= 3fe62560
+     565  1.1 0x00000098             s5 <= 14478be9
+     566  1.1 0x0000009c             fp <= 0000038f
+     568  1.1 0x000000a0             s2 <= ff76da64
+     569  1.1 0x000000a4             s3 <= c9411529
+     570  1.1 0x000000a8             s4 <= 3fe628ef
+     571  1.1 0x000000ac             s5 <= ebb877a6
+     572  1.1 0x000000b0             fp <= b6cc6f47
+     573  1.1 0x000000b4             fp <= b75594e3
+     574  1.1 0x000000b8             s3 <= 7e1481ca
+     575  1.1 0x000000bc             s6 <= 6e22009b
+     576  1.1 0x000000c0             s6 <= 6eab2637
+     577  1.1 0x000000c4             s3 <= 10bfa7fd
+     578  1.1 0x000000c8             fp <= 6e22009b
+     579  1.1 0x000000cc             fp <= 6eab2637
+     580  1.1 0x000000d0             fp <= ae914f26
+     581  1.1 0x000000d4             s3 <= be2ee8db
+     582  1.1 0x000000d8             fp <= 655dbade
+     583  1.1 0x000000dc             fp <= 65e6e07a
+     584  1.1 0x000000e0             fp <= a5cd0969
+     585  1.1 0x000000e4             s3 <= 1be3e1b2
+     586  1.1 0x000000e8             s4 <= 0000038f
+     588  1.1 0x000000ec             s1 <= b6cc6f47
+     589  1.1 0x000000f0             s2 <= ff76d6d5
+     590  1.1 0x000000f4             s3 <= 1be3e23d
+     591  1.1 0x000000f8             s4 <= 0000038f
+     593  1.1 0x000000fc             s1 <= b6cc72d6
+     594  1.1 0x00000100             s2 <= 00892cba
+     595  1.1 0x00000104             s3 <= 1be3e1b2
+     596  1.1 0x00000108             s5 <= 0000038f
+     597  1.1 0x0000010c             t0 <= 00000000
+     598  1.1 0x00000110             s1 <= b6cc7665
+     599  1.1 0x00000114             s2 <= 0089292b
+     600  1.1 0x00000118             s3 <= 1be3e23d
+     601  1.1 0x0000011c             s5 <= 0000038f
+     602  1.1 0x00000120             t0 <= 00000000
+     603  1.1 0x00000124             s1 <= b6cc79f4
+     604  1.1 0x00000128             s2 <= ff76da64
+     605  1.1 0x0000012c             s3 <= 1be3e1b2
+     606  1.1 0x00000130             t1 <= 00000006
+     607  1.1 0x00000134               
+     608  1.1 0x00000048             fp <= ca316b50
+     609  1.1 0x0000004c             s1 <= 4941bd88
+     610  1.1 0x00000050             s2 <= 3ff0286e
+     611  1.1 0x00000054             s3 <= 000ca9e1
+     612  1.1 0x00000058             s4 <= d30cfdb9
+     613  1.1 0x0000005c             s5 <= d4fbee30
+     614  1.1 0x00000060             fp <= 137328d8
+     615  1.1 0x00000064             s2 <= 2c7cff96
+     616  1.0 0x00000068             s3 <= 137f8139
+     617  1.0 0x0000006c             s4 <= e6802691
+     618  1.0 0x00000070             s5 <= c188c558
+     619  1.0 0x00000074             fp <= 5cb4e660
+     620  1.0 0x00000078             s2 <= 3037e6ca
+     621  1.0 0x0000007c             s3 <= 4fcb6759
+     622  1.0 0x00000080             s4 <= 43350cf1
+     623  1.0 0x00000084             s5 <= 9b2c2108
+     624  1.0 0x00000088             fp <= 0000038f
+     626  1.1 0x0000008c             s2 <= 3037e33b
+     627  1.0 0x00000090             s3 <= 4fcb64d6
+     628  1.0 0x00000094             s4 <= 43351080
+     629  1.0 0x00000098             s5 <= 9b2c1d79
+     630  1.0 0x0000009c             fp <= 0000038f
+     632  1.1 0x000000a0             s2 <= cfc82054
+     633  1.1 0x000000a4             s3 <= 4fcb6759
+     634  1.1 0x000000a8             s4 <= 4335140f
+     635  1.1 0x000000ac             s5 <= 64d3e616
+     636  1.1 0x000000b0             fp <= 4941c117
+     637  1.1 0x000000b4             fp <= 7979a0c3
+     638  1.0 0x000000b8             s3 <= 36b2c79a
+     639  1.0 0x000000bc             s6 <= c2bb5e4b
+     640  1.0 0x000000c0             s6 <= f2f33df7
+     641  1.0 0x000000c4             s3 <= c441fa6d
+     642  1.0 0x000000c8             fp <= c2bb5e4b
+     643  1.0 0x000000cc             fp <= f2f33df7
+     644  1.0 0x000000d0             fp <= 36285206
+     645  1.0 0x000000d4             s3 <= f269a86b
+     646  1.0 0x000000d8             fp <= 7f6a0f8e
+     647  1.0 0x000000dc             fp <= afa1ef3a
+     648  1.0 0x000000e0             fp <= f2d70349
+     649  1.0 0x000000e4             s3 <= 00beab22
+     650  1.0 0x000000e8             s4 <= 0000038f
+     652  1.0 0x000000ec             s1 <= 4941c117
+     653  1.0 0x000000f0             s2 <= cfc81cc5
+     654  1.0 0x000000f4             s3 <= 00bea8ad
+     655  1.0 0x000000f8             s4 <= 0000038f
+     657  1.1 0x000000fc             s1 <= 4941c4a6
+     658  1.1 0x00000100             s2 <= 3037e6ca
+     659  1.1 0x00000104             s3 <= 00beab22
+     660  1.0 0x00000108             s5 <= 0000038f
+     661  1.0 0x0000010c             t0 <= 00000000
+     662  1.0 0x00000110             s1 <= 4941c835
+     663  1.0 0x00000114             s2 <= 3037e33b
+     664  1.0 0x00000118             s3 <= 00bea8ad
+     665  1.0 0x0000011c             s5 <= 0000038f
+     666  1.0 0x00000120             t0 <= 00000000
+     667  1.0 0x00000124             s1 <= 4941cbc4
+     668  1.0 0x00000128             s2 <= cfc82054
+     669  1.0 0x0000012c             s3 <= 00beab22
+     670  1.0 0x00000130             t1 <= 00000007
+     671  1.0 0x00000134               
+     672  1.0 0x00000048             fp <= f02f5c50
+     673  1.0 0x0000004c             s1 <= 44846728
+     674  1.0 0x00000050             s2 <= a682fdfe
+     675  1.0 0x00000054             s3 <= 000ca9e1
+     676  1.0 0x00000058             s4 <= 8f9981f9
+     677  1.0 0x0000005c             s5 <= 46a12130
+     678  1.0 0x00000060             fp <= 34b3c378
+     679  1.0 0x00000064             s2 <= 71cf3a86
+     680  1.0 0x00000068             s3 <= 34bf6a99
+     681  1.0 0x0000006c             s4 <= c44d4571
+     682  1.0 0x00000070             s5 <= 11ed5db8
+     683  1.0 0x00000074             fp <= 79382aa0
+     684  1.0 0x00000078             s2 <= 0768f01a
+     685  1.0 0x0000007c             s3 <= 4d874039
+     686  1.0 0x00000080             s4 <= 3d857011
+     687  1.0 0x00000084             s5 <= 674acce8
+     688  1.0 0x00000088             fp <= 0000038f
+     690  1.0 0x0000008c             s2 <= 0768ec8b
+     691  1.0 0x00000090             s3 <= 4d8743b6
+     692  1.0 0x00000094             s4 <= 3d8573a0
+     693  1.0 0x00000098             s5 <= 674ac959
+     694  1.0 0x0000009c             fp <= 0000038f
+     696  1.0 0x000000a0             s2 <= f8971704
+     697  1.0 0x000000a4             s3 <= 4d874039
+     698  1.0 0x000000a8             s4 <= 3d85772f
+     699  1.0 0x000000ac             s5 <= 98b53a36
+     700  1.0 0x000000b0             fp <= 44846ab7
+     701  1.0 0x000000b4             fp <= 4bed53b3
+     702  1.0 0x000000b8             s3 <= 066a138a
+     703  1.0 0x000000bc             s6 <= 9071badb
+     704  1.0 0x000000c0             s6 <= 97daa3d7
+     705  1.0 0x000000c4             s3 <= 91b0b05d
+     706  1.0 0x000000c8             fp <= 9071badb
+     707  1.0 0x000000cc             fp <= 97daa3d7
+     708  1.0 0x000000d0             fp <= d5601b06
+     709  1.0 0x000000d4             s3 <= 44d0ab5b
+     710  1.0 0x000000d8             fp <= 19e4822e
+     711  1.0 0x000000dc             fp <= 214d6b2a
+     712  1.0 0x000000e0             fp <= 5ed2e259
+     713  1.0 0x000000e4             s3 <= 1a024902
+     714  1.0 0x000000e8             s4 <= 0000038f
+     716  1.0 0x000000ec             s1 <= 44846ab7
+     717  1.0 0x000000f0             s2 <= f8971375
+     718  1.0 0x000000f4             s3 <= 1a024a8d
+     719  1.0 0x000000f8             s4 <= 0000038f
+     721  1.0 0x000000fc             s1 <= 44846e46
+     722  1.0 0x00000100             s2 <= 0768f01a
+     723  1.0 0x00000104             s3 <= 1a024902
+     724  1.0 0x00000108             s5 <= 0000038f
+     725  1.0 0x0000010c             t0 <= 00000000
+     726  1.0 0x00000110             s1 <= 448471d5
+     727  1.0 0x00000114             s2 <= 0768ec8b
+     728  1.0 0x00000118             s3 <= 1a024a8d
+     729  1.0 0x0000011c             s5 <= 0000038f
+     730  1.0 0x00000120             t0 <= 00000000
+     731  1.0 0x00000124             s1 <= 44847564
+     732  1.0 0x00000128             s2 <= f8971704
+     733  1.0 0x0000012c             s3 <= 1a024902
+     734  1.0 0x00000130             t1 <= 00000008
+     735  1.0 0x00000134               
+     736  1.0 0x00000048             fp <= 1699d190
+     737  1.0 0x0000004c             s1 <= 9cc65208
+     738  1.0 0x00000050             s2 <= 8e21ce1e
+     739  1.0 0x00000054             s3 <= 000ca9e1
+     740  1.0 0x00000058             s4 <= 630d0a19
+     741  1.0 0x0000005c             s5 <= 503daff0
+     742  1.0 0x00000060             fp <= b3602398
+     743  1.0 0x00000064             s2 <= dac1aa86
+     744  1.0 0x00000068             s3 <= b36c8a79
+     745  1.0 0x0000006c             s4 <= 166d2db1
+     746  1.0 0x00000070             s5 <= 9cdd8c58
+     747  1.0 0x00000074             fp <= 502675a0
+     748  1.0 0x00000078             s2 <= 7564cb1a
+     749  1.0 0x0000007c             s3 <= e34affd9
+     750  1.0 0x00000080             s4 <= 6693a351
+     751  1.0 0x00000084             s5 <= b348e948
+     752  1.0 0x00000088             fp <= 0000038f
+     754  1.0 0x0000008c             s2 <= 7564c78b
+     755  1.0 0x00000090             s3 <= e34afc56
+     756  1.0 0x00000094             s4 <= 6693a6e0
+     757  1.0 0x00000098             s5 <= b348e5b9
+     758  1.0 0x0000009c             fp <= 0000038f
+     760  1.0 0x000000a0             s2 <= 8a9b3c04
+     761  1.0 0x000000a4             s3 <= e34affd9
+     762  1.0 0x000000a8             s4 <= 6693aa6f
+     763  1.0 0x000000ac             s5 <= 4cb71dd6
+     764  1.0 0x000000b0             fp <= 9cc65597
+     765  1.0 0x000000b4             fp <= 122b1993
+     766  1.0 0x000000b8             s3 <= f161e64a
+     767  1.0 0x000000bc             s6 <= aef16b9b
+     768  1.0 0x000000c0             s6 <= 24562f97
+     769  1.0 0x000000c4             s3 <= d537c9dd
+     770  1.0 0x000000c8             fp <= aef16b9b
+     771  1.0 0x000000cc             fp <= 24562f97
+     772  1.0 0x000000d0             fp <= 8ae9da06
+     773  1.0 0x000000d4             s3 <= 5fde13db
+     774  1.0 0x000000d8             fp <= 27b02c0e
+     775  1.0 0x000000dc             fp <= 9d14f00a
+     776  1.0 0x000000e0             fp <= 03a89a79
+     777  1.0 0x000000e4             s3 <= 5c7689a2
+     778  1.0 0x000000e8             s4 <= 0000038f
+     780  1.0 0x000000ec             s1 <= 9cc65597
+     781  1.0 0x000000f0             s2 <= 8a9b3875
+     782  1.0 0x000000f4             s3 <= 5c768a2d
+     783  1.0 0x000000f8             s4 <= 0000038f
+     785  1.0 0x000000fc             s1 <= 9cc65926
+     786  1.0 0x00000100             s2 <= 7564cb1a
+     787  1.0 0x00000104             s3 <= 5c7689a2
+     788  1.0 0x00000108             s5 <= 0000038f
+     789  1.0 0x0000010c             t0 <= 00000000
+     790  1.0 0x00000110             s1 <= 9cc65cb5
+     791  1.0 0x00000114             s2 <= 7564c78b
+     792  1.0 0x00000118             s3 <= 5c768a2d
+     793  1.0 0x0000011c             s5 <= 0000038f
+     794  1.0 0x00000120             t0 <= 00000000
+     795  1.0 0x00000124             s1 <= 9cc66044
+     796  1.0 0x00000128             s2 <= 8a9b3c04
+     797  1.0 0x0000012c             s3 <= 5c7689a2
+     798  1.0 0x00000130             t1 <= 00000009
+     799  1.0 0x00000134               
+     800  1.0 0x00000048             fp <= e2d57110
+     801  1.0 0x0000004c             s1 <= e3321e88
+     802  1.0 0x00000050             s2 <= 09d3c77e
+     803  1.0 0x00000054             s3 <= 000ca9e1
+     804  1.0 0x00000058             s4 <= 4eb35a59
+     805  1.0 0x0000005c             s5 <= 3707a070
+     806  1.0 0x00000060             fp <= c6078f98
+     807  1.0 0x00000064             s2 <= 43cc37e6
+     808  1.0 0x00000068             s3 <= c60b2679
+     809  1.0 0x0000006c             s4 <= 14bae9f1
+     810  1.0 0x00000070             s5 <= 710010d8
+     811  1.0 0x00000074             fp <= a939ae20
+     812  1.0 0x00000078             s2 <= 656d763a
+     813  1.0 0x0000007c             s3 <= 6f328859
+     814  1.0 0x00000080             s4 <= bdf49811
+     815  1.0 0x00000084             s5 <= 38399d48
+     816  1.0 0x00000088             fp <= 0000038f
+     818  1.0 0x0000008c             s2 <= 656d72ab
+     819  1.0 0x00000090             s3 <= 6f328bd6
+     820  1.0 0x00000094             s4 <= bdf49ba0
+     821  1.0 0x00000098             s5 <= 383999b9
+     822  1.0 0x0000009c             fp <= 0000038f
+     824  1.0 0x000000a0             s2 <= 9a9290e4
+     825  1.0 0x000000a4             s3 <= 6f328859
+     826  1.0 0x000000a8             s4 <= bdf49f2f
+     827  1.0 0x000000ac             s5 <= c7c669d6
+     828  1.0 0x000000b0             fp <= e3322217
+     829  1.0 0x000000b4             fp <= 489f9133
+     830  1.0 0x000000b8             s3 <= 27ad196a
+     831  1.0 0x000000bc             s6 <= 2bd1afbb
+     832  1.0 0x000000c0             s6 <= 913f1ed7
+     833  1.0 0x000000c4             s3 <= b69207bd
+     834  1.0 0x000000c8             fp <= 2bd1afbb
+     835  1.0 0x000000cc             fp <= 913f1ed7
+     836  1.0 0x000000d0             fp <= 4f33be06
+     837  1.0 0x000000d4             s3 <= f9a1b9bb
+     838  1.0 0x000000d8             fp <= 3265dc8e
+     839  1.0 0x000000dc             fp <= 97d34baa
+     840  1.0 0x000000e0             fp <= 55c7ead9
+     841  1.0 0x000000e4             s3 <= ac665362
+     842  1.0 0x000000e8             s4 <= 0000038f
+     844  1.0 0x000000ec             s1 <= e3322217
+     845  1.0 0x000000f0             s2 <= 9a928d55
+     846  1.0 0x000000f4             s3 <= ac6650ed
+     847  1.0 0x000000f8             s4 <= 0000038f
+     849  1.0 0x000000fc             s1 <= e33225a6
+     850  1.0 0x00000100             s2 <= 656d763a
+     851  1.0 0x00000104             s3 <= ac665362
+     852  1.0 0x00000108             s5 <= 0000038f
+     853  1.0 0x0000010c             t0 <= 00000000
+     854  1.0 0x00000110             s1 <= e3322935
+     855  1.0 0x00000114             s2 <= 656d72ab
+     856  1.0 0x00000118             s3 <= ac6650ed
+     857  1.0 0x0000011c             s5 <= 0000038f
+     858  1.0 0x00000120             t0 <= 00000000
+     859  1.0 0x00000124             s1 <= e3322cc4
+     860  1.0 0x00000128             s2 <= 9a9290e4
+     861  1.0 0x0000012c             s3 <= ac665362
+     862  1.0 0x00000130             t1 <= 0000000a
+     863  1.0 0x00000134               
+     868  1.0 0x00000138             sp <= 00002ffc
+     869  1.0 0x0000013c               
+     874  1.1 0x00000010               
+$finish called at time : 20208666 ps : File "/afs/inf.ed.ac.uk/user/s17/s1740055/CArD/prac2/src/sim/tb.v" Line 326
+run: Time (s): cpu = 00:00:02 ; elapsed = 00:00:23 . Memory (MB): peak = 8235.176 ; gain = 0.000 ; free physical = 5676 ; free virtual = 18510
+xsim: Time (s): cpu = 00:00:03 ; elapsed = 00:00:25 . Memory (MB): peak = 8235.176 ; gain = 0.000 ; free physical = 5676 ; free virtual = 18510
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 100us
+launch_simulation: Time (s): cpu = 00:00:31 ; elapsed = 00:00:45 . Memory (MB): peak = 8235.176 ; gain = 0.000 ; free physical = 5676 ; free virtual = 18510
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory /afs/inf.ed.ac.uk/user/s17/s1740055/CArD/prac2/proj/RV32IM_PYNQ_Z2.runs/synth_1
+
+launch_runs impl_1 -jobs 2
 INFO: [Vivado 12-4149] The synthesis checkpoint for IP '/afs/inf.ed.ac.uk/user/s17/s1740055/CArD/prac2/src/ip/rgb2dvi_0/rgb2dvi_0.xci' is already up-to-date
 INFO: [Vivado 12-4149] The synthesis checkpoint for IP '/afs/inf.ed.ac.uk/user/s17/s1740055/CArD/prac2/src/ip/rv32im_alu_0/rv32im_alu_0.xci' is already up-to-date
 INFO: [Vivado 12-4149] The synthesis checkpoint for IP '/afs/inf.ed.ac.uk/user/s17/s1740055/CArD/prac2/src/ip/video_clock_gen/video_clock_gen.xci' is already up-to-date
-[Sat Nov  2 15:33:59 2019] Launched impl_1...
+[Sat Nov  2 20:24:34 2019] Launched synth_1...
+Run output will be captured here: /afs/inf.ed.ac.uk/user/s17/s1740055/CArD/prac2/proj/RV32IM_PYNQ_Z2.runs/synth_1/runme.log
+[Sat Nov  2 20:24:34 2019] Launched impl_1...
 Run output will be captured here: /afs/inf.ed.ac.uk/user/s17/s1740055/CArD/prac2/proj/RV32IM_PYNQ_Z2.runs/impl_1/runme.log
-open_hw
-connect_hw_server
-INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
-INFO: [Labtools 27-2222] Launching hw_server...
-INFO: [Labtools 27-2221] Launch Output:
+open_run impl_1
+INFO: [Netlist 29-17] Analyzing 518 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2018.3
+INFO: [Project 1-570] Preparing netlist for logic optimization
+WARNING: [Constraints 18-550] Could not create 'IBUF_LOW_PWR' constraint because net 'u_video_clock_gen/clk_in1' is not directly connected to top level port. Synthesis is ignored for IBUF_LOW_PWR but preserved for implementation.
+INFO: [Timing 38-478] Restoring timing data from binary archive.
+INFO: [Timing 38-479] Binary timing data restore complete.
+INFO: [Project 1-856] Restoring constraints from binary archive.
+INFO: [Project 1-853] Binary constraint restore complete.
+Reading XDEF placement.
+Reading placer database...
+Reading XDEF routing.
+Read XDEF File: Time (s): cpu = 00:00:00.38 ; elapsed = 00:00:00.37 . Memory (MB): peak = 8235.176 ; gain = 0.000 ; free physical = 5346 ; free virtual = 18131
+Restored from archive | CPU: 0.380000 secs | Memory: 8.016068 MB |
+Finished XDEF File Restore: Time (s): cpu = 00:00:00.38 ; elapsed = 00:00:00.37 . Memory (MB): peak = 8235.176 ; gain = 0.000 ; free physical = 5346 ; free virtual = 18131
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 8235.176 ; gain = 0.000 ; free physical = 5347 ; free virtual = 18132
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
 
-****** Xilinx hw_server v2018.3
-  **** Build date : Dec  6 2018-23:53:53
-    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+report_timing_summary -delay_type min_max -report_unconstrained -check_timing_verbose -max_paths 10 -input_pins -routable_nets -name timing_1
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -1, Delay Type: min_max.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 4 CPUs
+WARNING: [Timing 38-436] There are set_bus_skew constraint(s) in this design. Please run report_bus_skew to ensure that bus skew requirements are met.
+set_property -dict [list CONFIG.CLKOUT1_REQUESTED_OUT_FREQ {82.000} CONFIG.MMCM_DIVCLK_DIVIDE {4} CONFIG.MMCM_CLKFBOUT_MULT_F {38.375} CONFIG.MMCM_CLKOUT0_DIVIDE_F {14.625} CONFIG.MMCM_CLKOUT1_DIVIDE {16} CONFIG.CLKOUT1_JITTER {166.534} CONFIG.CLKOUT1_PHASE_ERROR {182.328} CONFIG.CLKOUT2_JITTER {168.851} CONFIG.CLKOUT2_PHASE_ERROR {182.328}] [get_ips cpu_clock_gen]
+generate_target all [get_files  /afs/inf.ed.ac.uk/user/s17/s1740055/CArD/prac2/src/ip/cpu_clock_gen/cpu_clock_gen.xci]
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'cpu_clock_gen'...
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'cpu_clock_gen'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'cpu_clock_gen'...
+INFO: [IP_Flow 19-1686] Generating 'Implementation' target for IP 'cpu_clock_gen'...
+INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'cpu_clock_gen'...
+catch { config_ip_cache -export [get_ips -all cpu_clock_gen] }
+export_ip_user_files -of_objects [get_files /afs/inf.ed.ac.uk/user/s17/s1740055/CArD/prac2/src/ip/cpu_clock_gen/cpu_clock_gen.xci] -no_script -sync -force -quiet
+reset_run cpu_clock_gen_synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory /afs/inf.ed.ac.uk/user/s17/s1740055/CArD/prac2/proj/RV32IM_PYNQ_Z2.runs/cpu_clock_gen_synth_1
 
+launch_runs -jobs 2 cpu_clock_gen_synth_1
+[Sat Nov  2 20:35:27 2019] Launched cpu_clock_gen_synth_1...
+Run output will be captured here: /afs/inf.ed.ac.uk/user/s17/s1740055/CArD/prac2/proj/RV32IM_PYNQ_Z2.runs/cpu_clock_gen_synth_1/runme.log
+export_simulation -of_objects [get_files /afs/inf.ed.ac.uk/user/s17/s1740055/CArD/prac2/src/ip/cpu_clock_gen/cpu_clock_gen.xci] -directory /afs/inf.ed.ac.uk/user/s17/s1740055/CArD/prac2/proj/RV32IM_PYNQ_Z2.ip_user_files/sim_scripts -ip_user_files_dir /afs/inf.ed.ac.uk/user/s17/s1740055/CArD/prac2/proj/RV32IM_PYNQ_Z2.ip_user_files -ipstatic_source_dir /afs/inf.ed.ac.uk/user/s17/s1740055/CArD/prac2/proj/RV32IM_PYNQ_Z2.ip_user_files/ipstatic -lib_map_path [list {modelsim=/afs/inf.ed.ac.uk/user/s17/s1740055/CArD/prac2/proj/RV32IM_PYNQ_Z2.cache/compile_simlib/modelsim} {questa=/afs/inf.ed.ac.uk/user/s17/s1740055/CArD/prac2/proj/RV32IM_PYNQ_Z2.cache/compile_simlib/questa} {ies=/afs/inf.ed.ac.uk/user/s17/s1740055/CArD/prac2/proj/RV32IM_PYNQ_Z2.cache/compile_simlib/ies} {xcelium=/afs/inf.ed.ac.uk/user/s17/s1740055/CArD/prac2/proj/RV32IM_PYNQ_Z2.cache/compile_simlib/xcelium} {vcs=/afs/inf.ed.ac.uk/user/s17/s1740055/CArD/prac2/proj/RV32IM_PYNQ_Z2.cache/compile_simlib/vcs} {riviera=/afs/inf.ed.ac.uk/user/s17/s1740055/CArD/prac2/proj/RV32IM_PYNQ_Z2.cache/compile_simlib/riviera}] -use_ip_compiled_libs -force -quiet
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory /afs/inf.ed.ac.uk/user/s17/s1740055/CArD/prac2/proj/RV32IM_PYNQ_Z2.runs/synth_1
 
-open_hw_target
-INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Xilinx/1234-tulA
-set_property PROGRAM.FILE {/afs/inf.ed.ac.uk/user/s17/s1740055/CArD/prac2/proj/RV32IM_PYNQ_Z2.runs/impl_1/top.bit} [get_hw_devices xc7z020_1]
-current_hw_device [get_hw_devices xc7z020_1]
-refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7z020_1] 0]
-INFO: [Labtools 27-1435] Device xc7z020 (JTAG device index = 1) is not programmed (DONE status = 0).
-set_property PROBES.FILE {} [get_hw_devices xc7z020_1]
-set_property FULL_PROBES.FILE {} [get_hw_devices xc7z020_1]
-set_property PROGRAM.FILE {/afs/inf.ed.ac.uk/user/s17/s1740055/CArD/prac2/proj/RV32IM_PYNQ_Z2.runs/impl_1/top.bit} [get_hw_devices xc7z020_1]
-program_hw_devices [get_hw_devices xc7z020_1]
-INFO: [Labtools 27-3164] End of startup status: HIGH
-refresh_hw_device [lindex [get_hw_devices xc7z020_1] 0]
-INFO: [Labtools 27-1434] Device xc7z020 (JTAG device index = 1) is programmed with a design that has no supported debug core(s) in it.
+launch_runs impl_1 -jobs 2
+INFO: [Vivado 12-4149] The synthesis checkpoint for IP '/afs/inf.ed.ac.uk/user/s17/s1740055/CArD/prac2/src/ip/rgb2dvi_0/rgb2dvi_0.xci' is already up-to-date
+INFO: [Vivado 12-4149] The synthesis checkpoint for IP '/afs/inf.ed.ac.uk/user/s17/s1740055/CArD/prac2/src/ip/rv32im_alu_0/rv32im_alu_0.xci' is already up-to-date
+INFO: [Vivado 12-4149] The synthesis checkpoint for IP '/afs/inf.ed.ac.uk/user/s17/s1740055/CArD/prac2/src/ip/video_clock_gen/video_clock_gen.xci' is already up-to-date
+[Sat Nov  2 20:35:40 2019] Launched cpu_clock_gen_synth_1, synth_1...
+Run output will be captured here:
+cpu_clock_gen_synth_1: /afs/inf.ed.ac.uk/user/s17/s1740055/CArD/prac2/proj/RV32IM_PYNQ_Z2.runs/cpu_clock_gen_synth_1/runme.log
+synth_1: /afs/inf.ed.ac.uk/user/s17/s1740055/CArD/prac2/proj/RV32IM_PYNQ_Z2.runs/synth_1/runme.log
+[Sat Nov  2 20:35:40 2019] Launched impl_1...
+Run output will be captured here: /afs/inf.ed.ac.uk/user/s17/s1740055/CArD/prac2/proj/RV32IM_PYNQ_Z2.runs/impl_1/runme.log
+refresh_design
+INFO: [Netlist 29-17] Analyzing 876 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2018.3
+INFO: [Project 1-570] Preparing netlist for logic optimization
+WARNING: [Constraints 18-550] Could not create 'IBUF_LOW_PWR' constraint because net 'u_video_clock_gen/clk_in1' is not directly connected to top level port. Synthesis is ignored for IBUF_LOW_PWR but preserved for implementation.
+INFO: [Timing 38-478] Restoring timing data from binary archive.
+INFO: [Timing 38-479] Binary timing data restore complete.
+INFO: [Project 1-856] Restoring constraints from binary archive.
+INFO: [Project 1-853] Binary constraint restore complete.
+Reading XDEF placement.
+Reading placer database...
+Reading XDEF routing.
+Read XDEF File: Time (s): cpu = 00:00:00.47 ; elapsed = 00:00:00.44 . Memory (MB): peak = 8296.203 ; gain = 0.000 ; free physical = 5192 ; free virtual = 18103
+Restored from archive | CPU: 0.470000 secs | Memory: 9.239838 MB |
+Finished XDEF File Restore: Time (s): cpu = 00:00:00.47 ; elapsed = 00:00:00.44 . Memory (MB): peak = 8296.203 ; gain = 0.000 ; free physical = 5192 ; free virtual = 18103
+refresh_design: Time (s): cpu = 00:00:11 ; elapsed = 00:00:08 . Memory (MB): peak = 8303.215 ; gain = 7.012 ; free physical = 4962 ; free virtual = 17967
+report_timing_summary -delay_type min_max -report_unconstrained -check_timing_verbose -max_paths 10 -input_pins -routable_nets -name timing_1
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -1, Delay Type: min_max.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 4 CPUs
+WARNING: [Timing 38-436] There are set_bus_skew constraint(s) in this design. Please run report_bus_skew to ensure that bus skew requirements are met.
 close_sim
 INFO: [Simtcl 6-16] Simulation closed
 exit
-INFO: [Common 17-206] Exiting Vivado at Sat Nov  2 15:38:27 2019...
+INFO: [Common 17-206] Exiting Vivado at Sat Nov  2 21:02:55 2019...

@@ -61,24 +61,89 @@ proc step_failed { step } {
 }
 
 
-start_step write_bitstream
-set ACTIVE_STEP write_bitstream
+start_step init_design
+set ACTIVE_STEP init_design
 set rc [catch {
-  create_msg_db write_bitstream.pb
-  open_checkpoint top_routed.dcp
+  create_msg_db init_design.pb
+  create_project -in_memory -part xc7z020clg400-1
+  set_property board_part_repo_paths {/afs/inf.ed.ac.uk/user/s17/s1740055/CArD/prac2/repo/board_files} [current_project]
+  set_property board_part tul.com.tw:pynq-z2:part0:1.0 [current_project]
+  set_property design_mode GateLvl [current_fileset]
+  set_param project.singleFileAddWarning.threshold 0
   set_property webtalk.parent_dir /afs/inf.ed.ac.uk/user/s17/s1740055/CArD/prac2/proj/RV32IM_PYNQ_Z2.cache/wt [current_project]
+  set_property parent.project_path /afs/inf.ed.ac.uk/user/s17/s1740055/CArD/prac2/proj/RV32IM_PYNQ_Z2.xpr [current_project]
+  set_property ip_repo_paths /afs/inf.ed.ac.uk/user/s17/s1740055/CArD/prac2/repo [current_project]
+  update_ip_catalog
+  set_property ip_output_repo /afs/inf.ed.ac.uk/user/s17/s1740055/CArD/prac2/proj/RV32IM_PYNQ_Z2.cache/ip [current_project]
+  set_property ip_cache_permissions {read write} [current_project]
   set_property XPM_LIBRARIES XPM_CDC [current_project]
-  catch { write_mem_info -force top.mmi }
-  write_bitstream -force top.bit 
-  catch {write_debug_probes -quiet -force top}
-  catch {file copy -force top.ltx debug_nets.ltx}
-  close_msg_db -file write_bitstream.pb
+  add_files -quiet /afs/inf.ed.ac.uk/user/s17/s1740055/CArD/prac2/proj/RV32IM_PYNQ_Z2.runs/synth_1/top.dcp
+  read_ip -quiet /afs/inf.ed.ac.uk/user/s17/s1740055/CArD/prac2/src/ip/rgb2dvi_0/rgb2dvi_0.xci
+  read_ip -quiet /afs/inf.ed.ac.uk/user/s17/s1740055/CArD/prac2/src/ip/rv32im_alu_0/rv32im_alu_0.xci
+  read_ip -quiet /afs/inf.ed.ac.uk/user/s17/s1740055/CArD/prac2/src/ip/video_clock_gen/video_clock_gen.xci
+  read_ip -quiet /afs/inf.ed.ac.uk/user/s17/s1740055/CArD/prac2/src/ip/cpu_clock_gen/cpu_clock_gen.xci
+  read_xdc /afs/inf.ed.ac.uk/user/s17/s1740055/CArD/prac2/src/constraints/top.xdc
+  read_xdc /afs/inf.ed.ac.uk/user/s17/s1740055/CArD/prac2/src/constraints/timing.xdc
+  link_design -top top -part xc7z020clg400-1
+  close_msg_db -file init_design.pb
 } RESULT]
 if {$rc} {
-  step_failed write_bitstream
+  step_failed init_design
   return -code error $RESULT
 } else {
-  end_step write_bitstream
+  end_step init_design
+  unset ACTIVE_STEP 
+}
+
+start_step opt_design
+set ACTIVE_STEP opt_design
+set rc [catch {
+  create_msg_db opt_design.pb
+  opt_design -directive RuntimeOptimized
+  write_checkpoint -force top_opt.dcp
+  close_msg_db -file opt_design.pb
+} RESULT]
+if {$rc} {
+  step_failed opt_design
+  return -code error $RESULT
+} else {
+  end_step opt_design
+  unset ACTIVE_STEP 
+}
+
+start_step place_design
+set ACTIVE_STEP place_design
+set rc [catch {
+  create_msg_db place_design.pb
+  if { [llength [get_debug_cores -quiet] ] > 0 }  { 
+    implement_debug_core 
+  } 
+  place_design -directive RuntimeOptimized
+  write_checkpoint -force top_placed.dcp
+  close_msg_db -file place_design.pb
+} RESULT]
+if {$rc} {
+  step_failed place_design
+  return -code error $RESULT
+} else {
+  end_step place_design
+  unset ACTIVE_STEP 
+}
+
+start_step route_design
+set ACTIVE_STEP route_design
+set rc [catch {
+  create_msg_db route_design.pb
+  route_design -directive RuntimeOptimized
+  write_checkpoint -force top_routed.dcp
+  close_msg_db -file route_design.pb
+} RESULT]
+if {$rc} {
+  write_checkpoint -force top_routed_error.dcp
+  step_failed route_design
+  return -code error $RESULT
+} else {
+  end_step route_design
   unset ACTIVE_STEP 
 }
 

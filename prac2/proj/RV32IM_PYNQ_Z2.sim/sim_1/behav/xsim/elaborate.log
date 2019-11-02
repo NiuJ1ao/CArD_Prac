@@ -1,6 +1,6 @@
 Vivado Simulator 2018.3
 Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
-Running: /disk/scratch/Xilinx/Vivado/2018.3/bin/unwrapped/lnx64.o/xelab -wto 4ad58ba7a2d14a2087030b8179f96922 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_behav xil_defaultlib.tb xil_defaultlib.glbl -log elaborate.log 
+Running: /disk/scratch/Xilinx/Vivado/2018.3/bin/unwrapped/lnx64.o/xelab -wto 911a8cafdddd4b408040830d4b642778 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_behav xil_defaultlib.tb xil_defaultlib.glbl -log elaborate.log 
 Using 8 slave threads.
 Starting static elaboration
 Completed static elaboration
@@ -20,7 +20,7 @@ Compiling package xil_defaultlib.dvi_constants
 Compiling module xil_defaultlib.ssd_driver
 Compiling module xil_defaultlib.resync
 Compiling module unisims_ver.IBUF
-Compiling module unisims_ver.MMCME2_ADV(CLKFBOUT_MULT_F=38.37...
+Compiling module unisims_ver.MMCME2_ADV(CLKFBOUT_MULT_F=39.0,...
 Compiling module unisims_ver.BUFG
 Compiling module xil_defaultlib.cpu_clock_gen_clk_wiz
 Compiling module xil_defaultlib.cpu_clock_gen
@@ -34,7 +34,17 @@ Compiling module xil_defaultlib.branch_predictor_default
 Compiling module xil_defaultlib.fetch_unit
 Compiling module xil_defaultlib.decoder
 Compiling module xil_defaultlib.regfile
-Compiling module xil_defaultlib.alu
+Compiling module unisims_ver.OBUF
+Compiling module unisims_ver.LUT6
+Compiling module unisims_ver.CARRY4
+Compiling module unisims_ver.LUT5
+Compiling module unisims_ver.LUT4
+Compiling module unisims_ver.x_lut3_mux8
+Compiling module unisims_ver.LUT3
+Compiling module unisims_ver.x_lut2_mux4
+Compiling module unisims_ver.LUT2
+Compiling module xil_defaultlib.rv32im_alu_0_alu
+Compiling module xil_defaultlib.rv32im_alu_0
 Compiling module xil_defaultlib.divider
 Compiling module xil_defaultlib.bypass_or_stall
 Compiling module xil_defaultlib.store_queue
@@ -58,17 +68,8 @@ Compiling module xil_defaultlib.msec_timer
 Compiling module xil_defaultlib.dvi_display
 Compiling module xil_defaultlib.top
 Compiling module unisims_ver.OBUFT
-Compiling module unisims_ver.OBUF
-Compiling module unisims_ver.x_lut3_mux8
-Compiling module unisims_ver.LUT3
-Compiling module unisims_ver.CARRY4
-Compiling module unisims_ver.x_lut2_mux4
-Compiling module unisims_ver.LUT2
-Compiling module unisims_ver.LUT6
 Compiling module unisims_ver.x_lut1_mux2
 Compiling module unisims_ver.LUT1
-Compiling module unisims_ver.LUT4
-Compiling module unisims_ver.LUT5
 Compiling module unisims_ver.MUXF7
 Compiling module unisims_ver.FDCE_default
 Compiling module unisims_ver.DSP48E1(ACASCREG=0,ALUMODEREG=0,...
