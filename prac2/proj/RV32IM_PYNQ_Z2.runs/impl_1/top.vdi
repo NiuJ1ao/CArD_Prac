@@ -2,8 +2,8 @@
 # Vivado v2018.3 (64-bit)
 # SW Build 2405991 on Thu Dec  6 23:36:41 MST 2018
 # IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
-# Start of session at: Wed Oct 30 17:47:59 2019
-# Process ID: 21353
+# Start of session at: Sat Nov  2 15:31:30 2019
+# Process ID: 15566
 # Current directory: /afs/inf.ed.ac.uk/user/s17/s1740055/CArD/prac2/proj/RV32IM_PYNQ_Z2.runs/impl_1
 # Command line: vivado -log top.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source top.tcl -notrace
 # Log file: /afs/inf.ed.ac.uk/user/s17/s1740055/CArD/prac2/proj/RV32IM_PYNQ_Z2.runs/impl_1/top.vdi
@@ -18,14 +18,278 @@ Design is defaulting to srcset: sources_1
 Design is defaulting to constrset: constrs_1
 INFO: [Project 1-454] Reading design checkpoint '/afs/inf.ed.ac.uk/user/s17/s1740055/CArD/prac2/src/ip/cpu_clock_gen/cpu_clock_gen.dcp' for cell 'u_cpu_clock_gen'
 INFO: [Project 1-454] Reading design checkpoint '/afs/inf.ed.ac.uk/user/s17/s1740055/CArD/prac2/src/ip/video_clock_gen/video_clock_gen.dcp' for cell 'u_video_clock_gen'
+INFO: [Project 1-454] Reading design checkpoint '/afs/inf.ed.ac.uk/user/s17/s1740055/CArD/prac2/src/ip/rv32im_alu_0/rv32im_alu_0.dcp' for cell 'u_cpu/u_exec_unit/u_alu'
 INFO: [Project 1-454] Reading design checkpoint '/afs/inf.ed.ac.uk/user/s17/s1740055/CArD/prac2/src/ip/rgb2dvi_0/rgb2dvi_0.dcp' for cell 'u_dvi_display/u_rgb2dvi'
-INFO: [Netlist 29-17] Analyzing 909 Unisim elements for replacement
+INFO: [Netlist 29-17] Analyzing 876 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-479] Netlist was created with Vivado 2018.3
 INFO: [Device 21-403] Loading part xc7z020clg400-1
 INFO: [Project 1-570] Preparing netlist for logic optimization
-WARNING: [Opt 31-32] Removing redundant IBUF since it is not being driven by a top-level port. u_video_clock_gen/inst/clkin1_ibufg 
+WARNING: [Opt 31-32] Removing redundant IBUF since it is not being driven by a top-level port. u_cpu/u_exec_unit/u_alu/inst/exe_alu_opc_r_IBUF[0]_inst 
 Resolution: The tool has removed redundant IBUF. To resolve this warning, check for redundant IBUF in the input design.
+WARNING: [Opt 31-32] Removing redundant IBUF since it is not being driven by a top-level port. u_cpu/u_exec_unit/u_alu/inst/exe_alu_opc_r_IBUF[1]_inst 
+Resolution: The tool has removed redundant IBUF. To resolve this warning, check for redundant IBUF in the input design.
+WARNING: [Opt 31-32] Removing redundant IBUF since it is not being driven by a top-level port. u_cpu/u_exec_unit/u_alu/inst/exe_alu_opc_r_IBUF[2]_inst 
+Resolution: The tool has removed redundant IBUF. To resolve this warning, check for redundant IBUF in the input design.
+WARNING: [Opt 31-32] Removing redundant IBUF since it is not being driven by a top-level port. u_cpu/u_exec_unit/u_alu/inst/exe_alu_opc_r_IBUF[3]_inst 
+Resolution: The tool has removed redundant IBUF. To resolve this warning, check for redundant IBUF in the input design.
+WARNING: [Opt 31-32] Removing redundant IBUF since it is not being driven by a top-level port. u_cpu/u_exec_unit/u_alu/inst/exe_pc_r_IBUF[0]_inst 
+Resolution: The tool has removed redundant IBUF. To resolve this warning, check for redundant IBUF in the input design.
+WARNING: [Opt 31-32] Removing redundant IBUF since it is not being driven by a top-level port. u_cpu/u_exec_unit/u_alu/inst/exe_pc_r_IBUF[10]_inst 
+Resolution: The tool has removed redundant IBUF. To resolve this warning, check for redundant IBUF in the input design.
+WARNING: [Opt 31-32] Removing redundant IBUF since it is not being driven by a top-level port. u_cpu/u_exec_unit/u_alu/inst/exe_pc_r_IBUF[11]_inst 
+Resolution: The tool has removed redundant IBUF. To resolve this warning, check for redundant IBUF in the input design.
+WARNING: [Opt 31-32] Removing redundant IBUF since it is not being driven by a top-level port. u_cpu/u_exec_unit/u_alu/inst/exe_pc_r_IBUF[12]_inst 
+Resolution: The tool has removed redundant IBUF. To resolve this warning, check for redundant IBUF in the input design.
+WARNING: [Opt 31-32] Removing redundant IBUF since it is not being driven by a top-level port. u_cpu/u_exec_unit/u_alu/inst/exe_pc_r_IBUF[13]_inst 
+Resolution: The tool has removed redundant IBUF. To resolve this warning, check for redundant IBUF in the input design.
+WARNING: [Opt 31-32] Removing redundant IBUF since it is not being driven by a top-level port. u_cpu/u_exec_unit/u_alu/inst/exe_pc_r_IBUF[14]_inst 
+Resolution: The tool has removed redundant IBUF. To resolve this warning, check for redundant IBUF in the input design.
+WARNING: [Opt 31-32] Removing redundant IBUF since it is not being driven by a top-level port. u_cpu/u_exec_unit/u_alu/inst/exe_pc_r_IBUF[15]_inst 
+Resolution: The tool has removed redundant IBUF. To resolve this warning, check for redundant IBUF in the input design.
+WARNING: [Opt 31-32] Removing redundant IBUF since it is not being driven by a top-level port. u_cpu/u_exec_unit/u_alu/inst/exe_pc_r_IBUF[16]_inst 
+Resolution: The tool has removed redundant IBUF. To resolve this warning, check for redundant IBUF in the input design.
+WARNING: [Opt 31-32] Removing redundant IBUF since it is not being driven by a top-level port. u_cpu/u_exec_unit/u_alu/inst/exe_pc_r_IBUF[17]_inst 
+Resolution: The tool has removed redundant IBUF. To resolve this warning, check for redundant IBUF in the input design.
+WARNING: [Opt 31-32] Removing redundant IBUF since it is not being driven by a top-level port. u_cpu/u_exec_unit/u_alu/inst/exe_pc_r_IBUF[18]_inst 
+Resolution: The tool has removed redundant IBUF. To resolve this warning, check for redundant IBUF in the input design.
+WARNING: [Opt 31-32] Removing redundant IBUF since it is not being driven by a top-level port. u_cpu/u_exec_unit/u_alu/inst/exe_pc_r_IBUF[19]_inst 
+Resolution: The tool has removed redundant IBUF. To resolve this warning, check for redundant IBUF in the input design.
+WARNING: [Opt 31-32] Removing redundant IBUF since it is not being driven by a top-level port. u_cpu/u_exec_unit/u_alu/inst/exe_pc_r_IBUF[1]_inst 
+Resolution: The tool has removed redundant IBUF. To resolve this warning, check for redundant IBUF in the input design.
+WARNING: [Opt 31-32] Removing redundant IBUF since it is not being driven by a top-level port. u_cpu/u_exec_unit/u_alu/inst/exe_pc_r_IBUF[20]_inst 
+Resolution: The tool has removed redundant IBUF. To resolve this warning, check for redundant IBUF in the input design.
+WARNING: [Opt 31-32] Removing redundant IBUF since it is not being driven by a top-level port. u_cpu/u_exec_unit/u_alu/inst/exe_pc_r_IBUF[21]_inst 
+Resolution: The tool has removed redundant IBUF. To resolve this warning, check for redundant IBUF in the input design.
+WARNING: [Opt 31-32] Removing redundant IBUF since it is not being driven by a top-level port. u_cpu/u_exec_unit/u_alu/inst/exe_pc_r_IBUF[22]_inst 
+Resolution: The tool has removed redundant IBUF. To resolve this warning, check for redundant IBUF in the input design.
+WARNING: [Opt 31-32] Removing redundant IBUF since it is not being driven by a top-level port. u_cpu/u_exec_unit/u_alu/inst/exe_pc_r_IBUF[23]_inst 
+Resolution: The tool has removed redundant IBUF. To resolve this warning, check for redundant IBUF in the input design.
+WARNING: [Opt 31-32] Removing redundant IBUF since it is not being driven by a top-level port. u_cpu/u_exec_unit/u_alu/inst/exe_pc_r_IBUF[24]_inst 
+Resolution: The tool has removed redundant IBUF. To resolve this warning, check for redundant IBUF in the input design.
+WARNING: [Opt 31-32] Removing redundant IBUF since it is not being driven by a top-level port. u_cpu/u_exec_unit/u_alu/inst/exe_pc_r_IBUF[25]_inst 
+Resolution: The tool has removed redundant IBUF. To resolve this warning, check for redundant IBUF in the input design.
+WARNING: [Opt 31-32] Removing redundant IBUF since it is not being driven by a top-level port. u_cpu/u_exec_unit/u_alu/inst/exe_pc_r_IBUF[26]_inst 
+Resolution: The tool has removed redundant IBUF. To resolve this warning, check for redundant IBUF in the input design.
+WARNING: [Opt 31-32] Removing redundant IBUF since it is not being driven by a top-level port. u_cpu/u_exec_unit/u_alu/inst/exe_pc_r_IBUF[27]_inst 
+Resolution: The tool has removed redundant IBUF. To resolve this warning, check for redundant IBUF in the input design.
+WARNING: [Opt 31-32] Removing redundant IBUF since it is not being driven by a top-level port. u_cpu/u_exec_unit/u_alu/inst/exe_pc_r_IBUF[28]_inst 
+Resolution: The tool has removed redundant IBUF. To resolve this warning, check for redundant IBUF in the input design.
+WARNING: [Opt 31-32] Removing redundant IBUF since it is not being driven by a top-level port. u_cpu/u_exec_unit/u_alu/inst/exe_pc_r_IBUF[29]_inst 
+Resolution: The tool has removed redundant IBUF. To resolve this warning, check for redundant IBUF in the input design.
+WARNING: [Opt 31-32] Removing redundant IBUF since it is not being driven by a top-level port. u_cpu/u_exec_unit/u_alu/inst/exe_pc_r_IBUF[2]_inst 
+Resolution: The tool has removed redundant IBUF. To resolve this warning, check for redundant IBUF in the input design.
+WARNING: [Opt 31-32] Removing redundant IBUF since it is not being driven by a top-level port. u_cpu/u_exec_unit/u_alu/inst/exe_pc_r_IBUF[30]_inst 
+Resolution: The tool has removed redundant IBUF. To resolve this warning, check for redundant IBUF in the input design.
+WARNING: [Opt 31-32] Removing redundant IBUF since it is not being driven by a top-level port. u_cpu/u_exec_unit/u_alu/inst/exe_pc_r_IBUF[31]_inst 
+Resolution: The tool has removed redundant IBUF. To resolve this warning, check for redundant IBUF in the input design.
+WARNING: [Opt 31-32] Removing redundant IBUF since it is not being driven by a top-level port. u_cpu/u_exec_unit/u_alu/inst/exe_pc_r_IBUF[3]_inst 
+Resolution: The tool has removed redundant IBUF. To resolve this warning, check for redundant IBUF in the input design.
+WARNING: [Opt 31-32] Removing redundant IBUF since it is not being driven by a top-level port. u_cpu/u_exec_unit/u_alu/inst/exe_pc_r_IBUF[4]_inst 
+Resolution: The tool has removed redundant IBUF. To resolve this warning, check for redundant IBUF in the input design.
+WARNING: [Opt 31-32] Removing redundant IBUF since it is not being driven by a top-level port. u_cpu/u_exec_unit/u_alu/inst/exe_pc_r_IBUF[5]_inst 
+Resolution: The tool has removed redundant IBUF. To resolve this warning, check for redundant IBUF in the input design.
+WARNING: [Opt 31-32] Removing redundant IBUF since it is not being driven by a top-level port. u_cpu/u_exec_unit/u_alu/inst/exe_pc_r_IBUF[6]_inst 
+Resolution: The tool has removed redundant IBUF. To resolve this warning, check for redundant IBUF in the input design.
+WARNING: [Opt 31-32] Removing redundant IBUF since it is not being driven by a top-level port. u_cpu/u_exec_unit/u_alu/inst/exe_pc_r_IBUF[7]_inst 
+Resolution: The tool has removed redundant IBUF. To resolve this warning, check for redundant IBUF in the input design.
+WARNING: [Opt 31-32] Removing redundant IBUF since it is not being driven by a top-level port. u_cpu/u_exec_unit/u_alu/inst/exe_pc_r_IBUF[8]_inst 
+Resolution: The tool has removed redundant IBUF. To resolve this warning, check for redundant IBUF in the input design.
+WARNING: [Opt 31-32] Removing redundant IBUF since it is not being driven by a top-level port. u_cpu/u_exec_unit/u_alu/inst/exe_pc_r_IBUF[9]_inst 
+Resolution: The tool has removed redundant IBUF. To resolve this warning, check for redundant IBUF in the input design.
+WARNING: [Opt 31-32] Removing redundant IBUF since it is not being driven by a top-level port. u_cpu/u_exec_unit/u_alu/inst/exe_reg1_r_IBUF[0]_inst 
+Resolution: The tool has removed redundant IBUF. To resolve this warning, check for redundant IBUF in the input design.
+WARNING: [Opt 31-32] Removing redundant IBUF since it is not being driven by a top-level port. u_cpu/u_exec_unit/u_alu/inst/exe_reg1_r_IBUF[10]_inst 
+Resolution: The tool has removed redundant IBUF. To resolve this warning, check for redundant IBUF in the input design.
+WARNING: [Opt 31-32] Removing redundant IBUF since it is not being driven by a top-level port. u_cpu/u_exec_unit/u_alu/inst/exe_reg1_r_IBUF[11]_inst 
+Resolution: The tool has removed redundant IBUF. To resolve this warning, check for redundant IBUF in the input design.
+WARNING: [Opt 31-32] Removing redundant IBUF since it is not being driven by a top-level port. u_cpu/u_exec_unit/u_alu/inst/exe_reg1_r_IBUF[12]_inst 
+Resolution: The tool has removed redundant IBUF. To resolve this warning, check for redundant IBUF in the input design.
+WARNING: [Opt 31-32] Removing redundant IBUF since it is not being driven by a top-level port. u_cpu/u_exec_unit/u_alu/inst/exe_reg1_r_IBUF[13]_inst 
+Resolution: The tool has removed redundant IBUF. To resolve this warning, check for redundant IBUF in the input design.
+WARNING: [Opt 31-32] Removing redundant IBUF since it is not being driven by a top-level port. u_cpu/u_exec_unit/u_alu/inst/exe_reg1_r_IBUF[14]_inst 
+Resolution: The tool has removed redundant IBUF. To resolve this warning, check for redundant IBUF in the input design.
+WARNING: [Opt 31-32] Removing redundant IBUF since it is not being driven by a top-level port. u_cpu/u_exec_unit/u_alu/inst/exe_reg1_r_IBUF[15]_inst 
+Resolution: The tool has removed redundant IBUF. To resolve this warning, check for redundant IBUF in the input design.
+WARNING: [Opt 31-32] Removing redundant IBUF since it is not being driven by a top-level port. u_cpu/u_exec_unit/u_alu/inst/exe_reg1_r_IBUF[16]_inst 
+Resolution: The tool has removed redundant IBUF. To resolve this warning, check for redundant IBUF in the input design.
+WARNING: [Opt 31-32] Removing redundant IBUF since it is not being driven by a top-level port. u_cpu/u_exec_unit/u_alu/inst/exe_reg1_r_IBUF[17]_inst 
+Resolution: The tool has removed redundant IBUF. To resolve this warning, check for redundant IBUF in the input design.
+WARNING: [Opt 31-32] Removing redundant IBUF since it is not being driven by a top-level port. u_cpu/u_exec_unit/u_alu/inst/exe_reg1_r_IBUF[18]_inst 
+Resolution: The tool has removed redundant IBUF. To resolve this warning, check for redundant IBUF in the input design.
+WARNING: [Opt 31-32] Removing redundant IBUF since it is not being driven by a top-level port. u_cpu/u_exec_unit/u_alu/inst/exe_reg1_r_IBUF[19]_inst 
+Resolution: The tool has removed redundant IBUF. To resolve this warning, check for redundant IBUF in the input design.
+WARNING: [Opt 31-32] Removing redundant IBUF since it is not being driven by a top-level port. u_cpu/u_exec_unit/u_alu/inst/exe_reg1_r_IBUF[1]_inst 
+Resolution: The tool has removed redundant IBUF. To resolve this warning, check for redundant IBUF in the input design.
+WARNING: [Opt 31-32] Removing redundant IBUF since it is not being driven by a top-level port. u_cpu/u_exec_unit/u_alu/inst/exe_reg1_r_IBUF[20]_inst 
+Resolution: The tool has removed redundant IBUF. To resolve this warning, check for redundant IBUF in the input design.
+WARNING: [Opt 31-32] Removing redundant IBUF since it is not being driven by a top-level port. u_cpu/u_exec_unit/u_alu/inst/exe_reg1_r_IBUF[21]_inst 
+Resolution: The tool has removed redundant IBUF. To resolve this warning, check for redundant IBUF in the input design.
+WARNING: [Opt 31-32] Removing redundant IBUF since it is not being driven by a top-level port. u_cpu/u_exec_unit/u_alu/inst/exe_reg1_r_IBUF[22]_inst 
+Resolution: The tool has removed redundant IBUF. To resolve this warning, check for redundant IBUF in the input design.
+WARNING: [Opt 31-32] Removing redundant IBUF since it is not being driven by a top-level port. u_cpu/u_exec_unit/u_alu/inst/exe_reg1_r_IBUF[23]_inst 
+Resolution: The tool has removed redundant IBUF. To resolve this warning, check for redundant IBUF in the input design.
+WARNING: [Opt 31-32] Removing redundant IBUF since it is not being driven by a top-level port. u_cpu/u_exec_unit/u_alu/inst/exe_reg1_r_IBUF[24]_inst 
+Resolution: The tool has removed redundant IBUF. To resolve this warning, check for redundant IBUF in the input design.
+WARNING: [Opt 31-32] Removing redundant IBUF since it is not being driven by a top-level port. u_cpu/u_exec_unit/u_alu/inst/exe_reg1_r_IBUF[25]_inst 
+Resolution: The tool has removed redundant IBUF. To resolve this warning, check for redundant IBUF in the input design.
+WARNING: [Opt 31-32] Removing redundant IBUF since it is not being driven by a top-level port. u_cpu/u_exec_unit/u_alu/inst/exe_reg1_r_IBUF[26]_inst 
+Resolution: The tool has removed redundant IBUF. To resolve this warning, check for redundant IBUF in the input design.
+WARNING: [Opt 31-32] Removing redundant IBUF since it is not being driven by a top-level port. u_cpu/u_exec_unit/u_alu/inst/exe_reg1_r_IBUF[27]_inst 
+Resolution: The tool has removed redundant IBUF. To resolve this warning, check for redundant IBUF in the input design.
+WARNING: [Opt 31-32] Removing redundant IBUF since it is not being driven by a top-level port. u_cpu/u_exec_unit/u_alu/inst/exe_reg1_r_IBUF[28]_inst 
+Resolution: The tool has removed redundant IBUF. To resolve this warning, check for redundant IBUF in the input design.
+WARNING: [Opt 31-32] Removing redundant IBUF since it is not being driven by a top-level port. u_cpu/u_exec_unit/u_alu/inst/exe_reg1_r_IBUF[29]_inst 
+Resolution: The tool has removed redundant IBUF. To resolve this warning, check for redundant IBUF in the input design.
+WARNING: [Opt 31-32] Removing redundant IBUF since it is not being driven by a top-level port. u_cpu/u_exec_unit/u_alu/inst/exe_reg1_r_IBUF[2]_inst 
+Resolution: The tool has removed redundant IBUF. To resolve this warning, check for redundant IBUF in the input design.
+WARNING: [Opt 31-32] Removing redundant IBUF since it is not being driven by a top-level port. u_cpu/u_exec_unit/u_alu/inst/exe_reg1_r_IBUF[30]_inst 
+Resolution: The tool has removed redundant IBUF. To resolve this warning, check for redundant IBUF in the input design.
+WARNING: [Opt 31-32] Removing redundant IBUF since it is not being driven by a top-level port. u_cpu/u_exec_unit/u_alu/inst/exe_reg1_r_IBUF[31]_inst 
+Resolution: The tool has removed redundant IBUF. To resolve this warning, check for redundant IBUF in the input design.
+WARNING: [Opt 31-32] Removing redundant IBUF since it is not being driven by a top-level port. u_cpu/u_exec_unit/u_alu/inst/exe_reg1_r_IBUF[3]_inst 
+Resolution: The tool has removed redundant IBUF. To resolve this warning, check for redundant IBUF in the input design.
+WARNING: [Opt 31-32] Removing redundant IBUF since it is not being driven by a top-level port. u_cpu/u_exec_unit/u_alu/inst/exe_reg1_r_IBUF[4]_inst 
+Resolution: The tool has removed redundant IBUF. To resolve this warning, check for redundant IBUF in the input design.
+WARNING: [Opt 31-32] Removing redundant IBUF since it is not being driven by a top-level port. u_cpu/u_exec_unit/u_alu/inst/exe_reg1_r_IBUF[5]_inst 
+Resolution: The tool has removed redundant IBUF. To resolve this warning, check for redundant IBUF in the input design.
+WARNING: [Opt 31-32] Removing redundant IBUF since it is not being driven by a top-level port. u_cpu/u_exec_unit/u_alu/inst/exe_reg1_r_IBUF[6]_inst 
+Resolution: The tool has removed redundant IBUF. To resolve this warning, check for redundant IBUF in the input design.
+WARNING: [Opt 31-32] Removing redundant IBUF since it is not being driven by a top-level port. u_cpu/u_exec_unit/u_alu/inst/exe_reg1_r_IBUF[7]_inst 
+Resolution: The tool has removed redundant IBUF. To resolve this warning, check for redundant IBUF in the input design.
+WARNING: [Opt 31-32] Removing redundant IBUF since it is not being driven by a top-level port. u_cpu/u_exec_unit/u_alu/inst/exe_reg1_r_IBUF[8]_inst 
+Resolution: The tool has removed redundant IBUF. To resolve this warning, check for redundant IBUF in the input design.
+WARNING: [Opt 31-32] Removing redundant IBUF since it is not being driven by a top-level port. u_cpu/u_exec_unit/u_alu/inst/exe_reg1_r_IBUF[9]_inst 
+Resolution: The tool has removed redundant IBUF. To resolve this warning, check for redundant IBUF in the input design.
+WARNING: [Opt 31-32] Removing redundant IBUF since it is not being driven by a top-level port. u_cpu/u_exec_unit/u_alu/inst/exe_sel_pc_r_IBUF_inst 
+Resolution: The tool has removed redundant IBUF. To resolve this warning, check for redundant IBUF in the input design.
+WARNING: [Opt 31-32] Removing redundant IBUF since it is not being driven by a top-level port. u_cpu/u_exec_unit/u_alu/inst/exe_src2_r_IBUF[0]_inst 
+Resolution: The tool has removed redundant IBUF. To resolve this warning, check for redundant IBUF in the input design.
+WARNING: [Opt 31-32] Removing redundant IBUF since it is not being driven by a top-level port. u_cpu/u_exec_unit/u_alu/inst/exe_src2_r_IBUF[10]_inst 
+Resolution: The tool has removed redundant IBUF. To resolve this warning, check for redundant IBUF in the input design.
+WARNING: [Opt 31-32] Removing redundant IBUF since it is not being driven by a top-level port. u_cpu/u_exec_unit/u_alu/inst/exe_src2_r_IBUF[11]_inst 
+Resolution: The tool has removed redundant IBUF. To resolve this warning, check for redundant IBUF in the input design.
+WARNING: [Opt 31-32] Removing redundant IBUF since it is not being driven by a top-level port. u_cpu/u_exec_unit/u_alu/inst/exe_src2_r_IBUF[12]_inst 
+Resolution: The tool has removed redundant IBUF. To resolve this warning, check for redundant IBUF in the input design.
+WARNING: [Opt 31-32] Removing redundant IBUF since it is not being driven by a top-level port. u_cpu/u_exec_unit/u_alu/inst/exe_src2_r_IBUF[13]_inst 
+Resolution: The tool has removed redundant IBUF. To resolve this warning, check for redundant IBUF in the input design.
+WARNING: [Opt 31-32] Removing redundant IBUF since it is not being driven by a top-level port. u_cpu/u_exec_unit/u_alu/inst/exe_src2_r_IBUF[14]_inst 
+Resolution: The tool has removed redundant IBUF. To resolve this warning, check for redundant IBUF in the input design.
+WARNING: [Opt 31-32] Removing redundant IBUF since it is not being driven by a top-level port. u_cpu/u_exec_unit/u_alu/inst/exe_src2_r_IBUF[15]_inst 
+Resolution: The tool has removed redundant IBUF. To resolve this warning, check for redundant IBUF in the input design.
+WARNING: [Opt 31-32] Removing redundant IBUF since it is not being driven by a top-level port. u_cpu/u_exec_unit/u_alu/inst/exe_src2_r_IBUF[16]_inst 
+Resolution: The tool has removed redundant IBUF. To resolve this warning, check for redundant IBUF in the input design.
+WARNING: [Opt 31-32] Removing redundant IBUF since it is not being driven by a top-level port. u_cpu/u_exec_unit/u_alu/inst/exe_src2_r_IBUF[17]_inst 
+Resolution: The tool has removed redundant IBUF. To resolve this warning, check for redundant IBUF in the input design.
+WARNING: [Opt 31-32] Removing redundant IBUF since it is not being driven by a top-level port. u_cpu/u_exec_unit/u_alu/inst/exe_src2_r_IBUF[18]_inst 
+Resolution: The tool has removed redundant IBUF. To resolve this warning, check for redundant IBUF in the input design.
+WARNING: [Opt 31-32] Removing redundant IBUF since it is not being driven by a top-level port. u_cpu/u_exec_unit/u_alu/inst/exe_src2_r_IBUF[19]_inst 
+Resolution: The tool has removed redundant IBUF. To resolve this warning, check for redundant IBUF in the input design.
+WARNING: [Opt 31-32] Removing redundant IBUF since it is not being driven by a top-level port. u_cpu/u_exec_unit/u_alu/inst/exe_src2_r_IBUF[1]_inst 
+Resolution: The tool has removed redundant IBUF. To resolve this warning, check for redundant IBUF in the input design.
+WARNING: [Opt 31-32] Removing redundant IBUF since it is not being driven by a top-level port. u_cpu/u_exec_unit/u_alu/inst/exe_src2_r_IBUF[20]_inst 
+Resolution: The tool has removed redundant IBUF. To resolve this warning, check for redundant IBUF in the input design.
+WARNING: [Opt 31-32] Removing redundant IBUF since it is not being driven by a top-level port. u_cpu/u_exec_unit/u_alu/inst/exe_src2_r_IBUF[21]_inst 
+Resolution: The tool has removed redundant IBUF. To resolve this warning, check for redundant IBUF in the input design.
+WARNING: [Opt 31-32] Removing redundant IBUF since it is not being driven by a top-level port. u_cpu/u_exec_unit/u_alu/inst/exe_src2_r_IBUF[22]_inst 
+Resolution: The tool has removed redundant IBUF. To resolve this warning, check for redundant IBUF in the input design.
+WARNING: [Opt 31-32] Removing redundant IBUF since it is not being driven by a top-level port. u_cpu/u_exec_unit/u_alu/inst/exe_src2_r_IBUF[23]_inst 
+Resolution: The tool has removed redundant IBUF. To resolve this warning, check for redundant IBUF in the input design.
+WARNING: [Opt 31-32] Removing redundant IBUF since it is not being driven by a top-level port. u_cpu/u_exec_unit/u_alu/inst/exe_src2_r_IBUF[24]_inst 
+Resolution: The tool has removed redundant IBUF. To resolve this warning, check for redundant IBUF in the input design.
+WARNING: [Opt 31-32] Removing redundant IBUF since it is not being driven by a top-level port. u_cpu/u_exec_unit/u_alu/inst/exe_src2_r_IBUF[25]_inst 
+Resolution: The tool has removed redundant IBUF. To resolve this warning, check for redundant IBUF in the input design.
+WARNING: [Opt 31-32] Removing redundant IBUF since it is not being driven by a top-level port. u_cpu/u_exec_unit/u_alu/inst/exe_src2_r_IBUF[26]_inst 
+Resolution: The tool has removed redundant IBUF. To resolve this warning, check for redundant IBUF in the input design.
+WARNING: [Opt 31-32] Removing redundant IBUF since it is not being driven by a top-level port. u_cpu/u_exec_unit/u_alu/inst/exe_src2_r_IBUF[27]_inst 
+Resolution: The tool has removed redundant IBUF. To resolve this warning, check for redundant IBUF in the input design.
+WARNING: [Opt 31-32] Removing redundant IBUF since it is not being driven by a top-level port. u_cpu/u_exec_unit/u_alu/inst/exe_src2_r_IBUF[28]_inst 
+Resolution: The tool has removed redundant IBUF. To resolve this warning, check for redundant IBUF in the input design.
+WARNING: [Opt 31-32] Removing redundant IBUF since it is not being driven by a top-level port. u_cpu/u_exec_unit/u_alu/inst/exe_src2_r_IBUF[29]_inst 
+Resolution: The tool has removed redundant IBUF. To resolve this warning, check for redundant IBUF in the input design.
+WARNING: [Opt 31-32] Removing redundant IBUF since it is not being driven by a top-level port. u_cpu/u_exec_unit/u_alu/inst/exe_src2_r_IBUF[2]_inst 
+Resolution: The tool has removed redundant IBUF. To resolve this warning, check for redundant IBUF in the input design.
+WARNING: [Opt 31-32] Removing redundant IBUF since it is not being driven by a top-level port. u_cpu/u_exec_unit/u_alu/inst/exe_src2_r_IBUF[30]_inst 
+Resolution: The tool has removed redundant IBUF. To resolve this warning, check for redundant IBUF in the input design.
+WARNING: [Opt 31-32] Removing redundant IBUF since it is not being driven by a top-level port. u_cpu/u_exec_unit/u_alu/inst/exe_src2_r_IBUF[31]_inst 
+Resolution: The tool has removed redundant IBUF. To resolve this warning, check for redundant IBUF in the input design.
+WARNING: [Opt 31-32] Removing redundant IBUF since it is not being driven by a top-level port. u_cpu/u_exec_unit/u_alu/inst/exe_src2_r_IBUF[3]_inst 
+Resolution: The tool has removed redundant IBUF. To resolve this warning, check for redundant IBUF in the input design.
+WARNING: [Opt 31-32] Removing redundant IBUF since it is not being driven by a top-level port. u_cpu/u_exec_unit/u_alu/inst/exe_src2_r_IBUF[4]_inst 
+Resolution: The tool has removed redundant IBUF. To resolve this warning, check for redundant IBUF in the input design.
+WARNING: [Opt 31-32] Removing redundant IBUF since it is not being driven by a top-level port. u_cpu/u_exec_unit/u_alu/inst/exe_src2_r_IBUF[5]_inst 
+Resolution: The tool has removed redundant IBUF. To resolve this warning, check for redundant IBUF in the input design.
+WARNING: [Opt 31-32] Removing redundant IBUF since it is not being driven by a top-level port. u_cpu/u_exec_unit/u_alu/inst/exe_src2_r_IBUF[6]_inst 
+Resolution: The tool has removed redundant IBUF. To resolve this warning, check for redundant IBUF in the input design.
+WARNING: [Opt 31-32] Removing redundant IBUF since it is not being driven by a top-level port. u_cpu/u_exec_unit/u_alu/inst/exe_src2_r_IBUF[7]_inst 
+Resolution: The tool has removed redundant IBUF. To resolve this warning, check for redundant IBUF in the input design.
+WARNING: [Opt 31-32] Removing redundant IBUF since it is not being driven by a top-level port. u_cpu/u_exec_unit/u_alu/inst/exe_src2_r_IBUF[8]_inst 
+Resolution: The tool has removed redundant IBUF. To resolve this warning, check for redundant IBUF in the input design.
+INFO: [Common 17-14] Message 'Opt 31-32' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+WARNING: [Opt 31-33] Removing redundant OBUF since it is not driving a top-level port. u_cpu/u_exec_unit/u_alu/inst/alu_result_OBUF[0]_inst 
+Resolution: The tool has removed redundant OBUF. To resolve this warning, check for redundant OBUF in the input design.
+WARNING: [Opt 31-33] Removing redundant OBUF since it is not driving a top-level port. u_cpu/u_exec_unit/u_alu/inst/alu_result_OBUF[10]_inst 
+Resolution: The tool has removed redundant OBUF. To resolve this warning, check for redundant OBUF in the input design.
+WARNING: [Opt 31-33] Removing redundant OBUF since it is not driving a top-level port. u_cpu/u_exec_unit/u_alu/inst/alu_result_OBUF[11]_inst 
+Resolution: The tool has removed redundant OBUF. To resolve this warning, check for redundant OBUF in the input design.
+WARNING: [Opt 31-33] Removing redundant OBUF since it is not driving a top-level port. u_cpu/u_exec_unit/u_alu/inst/alu_result_OBUF[12]_inst 
+Resolution: The tool has removed redundant OBUF. To resolve this warning, check for redundant OBUF in the input design.
+WARNING: [Opt 31-33] Removing redundant OBUF since it is not driving a top-level port. u_cpu/u_exec_unit/u_alu/inst/alu_result_OBUF[13]_inst 
+Resolution: The tool has removed redundant OBUF. To resolve this warning, check for redundant OBUF in the input design.
+WARNING: [Opt 31-33] Removing redundant OBUF since it is not driving a top-level port. u_cpu/u_exec_unit/u_alu/inst/alu_result_OBUF[14]_inst 
+Resolution: The tool has removed redundant OBUF. To resolve this warning, check for redundant OBUF in the input design.
+WARNING: [Opt 31-33] Removing redundant OBUF since it is not driving a top-level port. u_cpu/u_exec_unit/u_alu/inst/alu_result_OBUF[15]_inst 
+Resolution: The tool has removed redundant OBUF. To resolve this warning, check for redundant OBUF in the input design.
+WARNING: [Opt 31-33] Removing redundant OBUF since it is not driving a top-level port. u_cpu/u_exec_unit/u_alu/inst/alu_result_OBUF[16]_inst 
+Resolution: The tool has removed redundant OBUF. To resolve this warning, check for redundant OBUF in the input design.
+WARNING: [Opt 31-33] Removing redundant OBUF since it is not driving a top-level port. u_cpu/u_exec_unit/u_alu/inst/alu_result_OBUF[17]_inst 
+Resolution: The tool has removed redundant OBUF. To resolve this warning, check for redundant OBUF in the input design.
+WARNING: [Opt 31-33] Removing redundant OBUF since it is not driving a top-level port. u_cpu/u_exec_unit/u_alu/inst/alu_result_OBUF[18]_inst 
+Resolution: The tool has removed redundant OBUF. To resolve this warning, check for redundant OBUF in the input design.
+WARNING: [Opt 31-33] Removing redundant OBUF since it is not driving a top-level port. u_cpu/u_exec_unit/u_alu/inst/alu_result_OBUF[19]_inst 
+Resolution: The tool has removed redundant OBUF. To resolve this warning, check for redundant OBUF in the input design.
+WARNING: [Opt 31-33] Removing redundant OBUF since it is not driving a top-level port. u_cpu/u_exec_unit/u_alu/inst/alu_result_OBUF[1]_inst 
+Resolution: The tool has removed redundant OBUF. To resolve this warning, check for redundant OBUF in the input design.
+WARNING: [Opt 31-33] Removing redundant OBUF since it is not driving a top-level port. u_cpu/u_exec_unit/u_alu/inst/alu_result_OBUF[20]_inst 
+Resolution: The tool has removed redundant OBUF. To resolve this warning, check for redundant OBUF in the input design.
+WARNING: [Opt 31-33] Removing redundant OBUF since it is not driving a top-level port. u_cpu/u_exec_unit/u_alu/inst/alu_result_OBUF[21]_inst 
+Resolution: The tool has removed redundant OBUF. To resolve this warning, check for redundant OBUF in the input design.
+WARNING: [Opt 31-33] Removing redundant OBUF since it is not driving a top-level port. u_cpu/u_exec_unit/u_alu/inst/alu_result_OBUF[22]_inst 
+Resolution: The tool has removed redundant OBUF. To resolve this warning, check for redundant OBUF in the input design.
+WARNING: [Opt 31-33] Removing redundant OBUF since it is not driving a top-level port. u_cpu/u_exec_unit/u_alu/inst/alu_result_OBUF[23]_inst 
+Resolution: The tool has removed redundant OBUF. To resolve this warning, check for redundant OBUF in the input design.
+WARNING: [Opt 31-33] Removing redundant OBUF since it is not driving a top-level port. u_cpu/u_exec_unit/u_alu/inst/alu_result_OBUF[24]_inst 
+Resolution: The tool has removed redundant OBUF. To resolve this warning, check for redundant OBUF in the input design.
+WARNING: [Opt 31-33] Removing redundant OBUF since it is not driving a top-level port. u_cpu/u_exec_unit/u_alu/inst/alu_result_OBUF[25]_inst 
+Resolution: The tool has removed redundant OBUF. To resolve this warning, check for redundant OBUF in the input design.
+WARNING: [Opt 31-33] Removing redundant OBUF since it is not driving a top-level port. u_cpu/u_exec_unit/u_alu/inst/alu_result_OBUF[26]_inst 
+Resolution: The tool has removed redundant OBUF. To resolve this warning, check for redundant OBUF in the input design.
+WARNING: [Opt 31-33] Removing redundant OBUF since it is not driving a top-level port. u_cpu/u_exec_unit/u_alu/inst/alu_result_OBUF[27]_inst 
+Resolution: The tool has removed redundant OBUF. To resolve this warning, check for redundant OBUF in the input design.
+WARNING: [Opt 31-33] Removing redundant OBUF since it is not driving a top-level port. u_cpu/u_exec_unit/u_alu/inst/alu_result_OBUF[28]_inst 
+Resolution: The tool has removed redundant OBUF. To resolve this warning, check for redundant OBUF in the input design.
+WARNING: [Opt 31-33] Removing redundant OBUF since it is not driving a top-level port. u_cpu/u_exec_unit/u_alu/inst/alu_result_OBUF[29]_inst 
+Resolution: The tool has removed redundant OBUF. To resolve this warning, check for redundant OBUF in the input design.
+WARNING: [Opt 31-33] Removing redundant OBUF since it is not driving a top-level port. u_cpu/u_exec_unit/u_alu/inst/alu_result_OBUF[2]_inst 
+Resolution: The tool has removed redundant OBUF. To resolve this warning, check for redundant OBUF in the input design.
+WARNING: [Opt 31-33] Removing redundant OBUF since it is not driving a top-level port. u_cpu/u_exec_unit/u_alu/inst/alu_result_OBUF[30]_inst 
+Resolution: The tool has removed redundant OBUF. To resolve this warning, check for redundant OBUF in the input design.
+WARNING: [Opt 31-33] Removing redundant OBUF since it is not driving a top-level port. u_cpu/u_exec_unit/u_alu/inst/alu_result_OBUF[31]_inst 
+Resolution: The tool has removed redundant OBUF. To resolve this warning, check for redundant OBUF in the input design.
+WARNING: [Opt 31-33] Removing redundant OBUF since it is not driving a top-level port. u_cpu/u_exec_unit/u_alu/inst/alu_result_OBUF[3]_inst 
+Resolution: The tool has removed redundant OBUF. To resolve this warning, check for redundant OBUF in the input design.
+WARNING: [Opt 31-33] Removing redundant OBUF since it is not driving a top-level port. u_cpu/u_exec_unit/u_alu/inst/alu_result_OBUF[4]_inst 
+Resolution: The tool has removed redundant OBUF. To resolve this warning, check for redundant OBUF in the input design.
+WARNING: [Opt 31-33] Removing redundant OBUF since it is not driving a top-level port. u_cpu/u_exec_unit/u_alu/inst/alu_result_OBUF[5]_inst 
+Resolution: The tool has removed redundant OBUF. To resolve this warning, check for redundant OBUF in the input design.
+WARNING: [Opt 31-33] Removing redundant OBUF since it is not driving a top-level port. u_cpu/u_exec_unit/u_alu/inst/alu_result_OBUF[6]_inst 
+Resolution: The tool has removed redundant OBUF. To resolve this warning, check for redundant OBUF in the input design.
+WARNING: [Opt 31-33] Removing redundant OBUF since it is not driving a top-level port. u_cpu/u_exec_unit/u_alu/inst/alu_result_OBUF[7]_inst 
+Resolution: The tool has removed redundant OBUF. To resolve this warning, check for redundant OBUF in the input design.
+WARNING: [Opt 31-33] Removing redundant OBUF since it is not driving a top-level port. u_cpu/u_exec_unit/u_alu/inst/alu_result_OBUF[8]_inst 
+Resolution: The tool has removed redundant OBUF. To resolve this warning, check for redundant OBUF in the input design.
+WARNING: [Opt 31-33] Removing redundant OBUF since it is not driving a top-level port. u_cpu/u_exec_unit/u_alu/inst/alu_result_OBUF[9]_inst 
+Resolution: The tool has removed redundant OBUF. To resolve this warning, check for redundant OBUF in the input design.
 WARNING: [Constraints 18-550] Could not create 'IBUF_LOW_PWR' constraint because net 'u_video_clock_gen/clk_in1' is not directly connected to top level port. Synthesis is ignored for IBUF_LOW_PWR but preserved for implementation.
 Parsing XDC File [/afs/inf.ed.ac.uk/user/s17/s1740055/CArD/prac2/src/ip/rgb2dvi_0/src/rgb2dvi.xdc] for cell 'u_dvi_display/u_rgb2dvi/U0'
 Finished Parsing XDC File [/afs/inf.ed.ac.uk/user/s17/s1740055/CArD/prac2/src/ip/rgb2dvi_0/src/rgb2dvi.xdc] for cell 'u_dvi_display/u_rgb2dvi/U0'
@@ -34,7 +298,7 @@ Finished Parsing XDC File [/afs/inf.ed.ac.uk/user/s17/s1740055/CArD/prac2/src/ip
 Parsing XDC File [/afs/inf.ed.ac.uk/user/s17/s1740055/CArD/prac2/src/ip/video_clock_gen/video_clock_gen.xdc] for cell 'u_video_clock_gen/inst'
 INFO: [Timing 38-35] Done setting XDC timing constraints. [/afs/inf.ed.ac.uk/user/s17/s1740055/CArD/prac2/src/ip/video_clock_gen/video_clock_gen.xdc:57]
 INFO: [Timing 38-2] Deriving generated clocks [/afs/inf.ed.ac.uk/user/s17/s1740055/CArD/prac2/src/ip/video_clock_gen/video_clock_gen.xdc:57]
-get_clocks: Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 2263.281 ; gain = 476.582 ; free physical = 718 ; free virtual = 16563
+get_clocks: Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 2264.277 ; gain = 476.582 ; free physical = 2094 ; free virtual = 19596
 WARNING: [Vivado 12-2489] -input_jitter contains time 0.133330 which will be rounded to 0.133 to ensure it is an integer multiple of 1 picosecond [/afs/inf.ed.ac.uk/user/s17/s1740055/CArD/prac2/src/ip/video_clock_gen/video_clock_gen.xdc:57]
 Finished Parsing XDC File [/afs/inf.ed.ac.uk/user/s17/s1740055/CArD/prac2/src/ip/video_clock_gen/video_clock_gen.xdc] for cell 'u_video_clock_gen/inst'
 Parsing XDC File [/afs/inf.ed.ac.uk/user/s17/s1740055/CArD/prac2/src/ip/cpu_clock_gen/cpu_clock_gen_board.xdc] for cell 'u_cpu_clock_gen/inst'
@@ -451,13 +715,13 @@ Finished Parsing XDC File [/afs/inf.ed.ac.uk/user/s17/s1740055/CArD/prac2/src/co
 Parsing XDC File [/afs/inf.ed.ac.uk/user/s17/s1740055/CArD/prac2/src/ip/rgb2dvi_0/src/rgb2dvi_clocks.xdc] for cell 'u_dvi_display/u_rgb2dvi/U0'
 Finished Parsing XDC File [/afs/inf.ed.ac.uk/user/s17/s1740055/CArD/prac2/src/ip/rgb2dvi_0/src/rgb2dvi_clocks.xdc] for cell 'u_dvi_display/u_rgb2dvi/U0'
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2274.281 ; gain = 0.000 ; free physical = 720 ; free virtual = 16566
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2275.277 ; gain = 0.000 ; free physical = 2096 ; free virtual = 19598
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-18 Infos, 203 Warnings, 0 Critical Warnings and 0 Errors encountered.
+20 Infos, 334 Warnings, 0 Critical Warnings and 0 Errors encountered.
 link_design completed successfully
-link_design: Time (s): cpu = 00:00:12 ; elapsed = 00:00:16 . Memory (MB): peak = 2274.281 ; gain = 803.934 ; free physical = 720 ; free virtual = 16566
+link_design: Time (s): cpu = 00:00:12 ; elapsed = 00:00:15 . Memory (MB): peak = 2275.277 ; gain = 804.934 ; free physical = 2096 ; free virtual = 19598
 Command: opt_design -directive RuntimeOptimized
 INFO: [Vivado_Tcl 4-136] Directive used for opt_design is: RuntimeOptimized
 Attempting to get a license for feature 'Implementation' and/or device 'xc7z020'
@@ -469,7 +733,7 @@ INFO: [DRC 23-27] Running DRC with 4 threads
 INFO: [Project 1-461] DRC finished with 0 Errors
 INFO: [Project 1-462] Please refer to the DRC report (report_drc) for more information.
 
-Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 2306.297 ; gain = 32.016 ; free physical = 715 ; free virtual = 16560
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 2307.293 ; gain = 32.016 ; free physical = 2090 ; free virtual = 19592
 
 Starting Logic Optimization Task
 WARNING: [Constraints 18-401] set_max_delay: 'u_dvi_display/u_frame_buffer/fb_memory_reg_0_16_i_1' is not a valid endpoint. [/afs/inf.ed.ac.uk/user/s17/s1740055/CArD/prac2/src/constraints/timing.xdc:47]
@@ -879,23 +1143,23 @@ INFO: [Timing 38-35] Done setting XDC timing constraints.
 Phase 1 Retarget
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
 INFO: [Opt 31-49] Retargeted 0 cell(s).
-Phase 1 Retarget | Checksum: 1eec15523
+Phase 1 Retarget | Checksum: 9f520b74
 
-Time (s): cpu = 00:00:00.83 ; elapsed = 00:00:00.49 . Memory (MB): peak = 2375.297 ; gain = 69.000 ; free physical = 650 ; free virtual = 16496
-INFO: [Opt 31-389] Phase Retarget created 0 cells and removed 3 cells
+Time (s): cpu = 00:00:00.84 ; elapsed = 00:00:00.48 . Memory (MB): peak = 2376.293 ; gain = 69.000 ; free physical = 2025 ; free virtual = 19528
+INFO: [Opt 31-389] Phase Retarget created 2 cells and removed 5 cells
 INFO: [Opt 31-1021] In phase Retarget, 482 netlist objects are constrained preventing optimization. Please run opt_design with -debug_log to get more detail. 
 
 Phase 2 Constant propagation
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Phase 2 Constant propagation | Checksum: 1383be0b8
+Phase 2 Constant propagation | Checksum: 1630d3ff5
 
-Time (s): cpu = 00:00:00.92 ; elapsed = 00:00:00.58 . Memory (MB): peak = 2375.297 ; gain = 69.000 ; free physical = 650 ; free virtual = 16496
+Time (s): cpu = 00:00:00.92 ; elapsed = 00:00:00.57 . Memory (MB): peak = 2376.293 ; gain = 69.000 ; free physical = 2025 ; free virtual = 19528
 INFO: [Opt 31-389] Phase Constant propagation created 0 cells and removed 0 cells
 
 Phase 3 Sweep
-Phase 3 Sweep | Checksum: 1303c5e37
+Phase 3 Sweep | Checksum: 109440be9
 
-Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.68 . Memory (MB): peak = 2375.297 ; gain = 69.000 ; free physical = 650 ; free virtual = 16496
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.67 . Memory (MB): peak = 2376.293 ; gain = 69.000 ; free physical = 2024 ; free virtual = 19527
 INFO: [Opt 31-389] Phase Sweep created 0 cells and removed 0 cells
 
 Phase 4 BUFG optimization
@@ -904,21 +1168,21 @@ INFO: [Opt 31-194] Inserted BUFG u_cpu_clock_gen/inst/clk_75MHz_cpu_clock_gen_BU
 INFO: [Opt 31-194] Inserted BUFG u_video_clock_gen/inst/pixel_clk_video_clock_gen_BUFG_inst to drive 0 load(s) on clock net u_video_clock_gen/inst/pixel_clk_video_clock_gen_BUFG
 INFO: [Opt 31-194] Inserted BUFG u_video_clock_gen/inst/serial_clk_video_clock_gen_BUFG_inst to drive 0 load(s) on clock net u_video_clock_gen/inst/serial_clk_video_clock_gen_BUFG
 INFO: [Opt 31-193] Inserted 4 BUFG(s) on clock nets
-Phase 4 BUFG optimization | Checksum: 1d5ab753d
+Phase 4 BUFG optimization | Checksum: 158b679da
 
-Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.76 . Memory (MB): peak = 2375.297 ; gain = 69.000 ; free physical = 650 ; free virtual = 16496
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.75 . Memory (MB): peak = 2376.293 ; gain = 69.000 ; free physical = 2024 ; free virtual = 19527
 INFO: [Opt 31-662] Phase BUFG optimization created 0 cells of which 0 are BUFGs and removed 0 cells.
 
 Phase 5 Shift Register Optimization
-Phase 5 Shift Register Optimization | Checksum: 1407a403d
+Phase 5 Shift Register Optimization | Checksum: c88e6af7
 
-Time (s): cpu = 00:00:01 ; elapsed = 00:00:01 . Memory (MB): peak = 2375.297 ; gain = 69.000 ; free physical = 649 ; free virtual = 16495
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.97 . Memory (MB): peak = 2376.293 ; gain = 69.000 ; free physical = 2024 ; free virtual = 19527
 INFO: [Opt 31-389] Phase Shift Register Optimization created 0 cells and removed 0 cells
 
 Phase 6 Post Processing Netlist
-Phase 6 Post Processing Netlist | Checksum: 13fc89ec4
+Phase 6 Post Processing Netlist | Checksum: b683ab36
 
-Time (s): cpu = 00:00:01 ; elapsed = 00:00:01 . Memory (MB): peak = 2375.297 ; gain = 69.000 ; free physical = 649 ; free virtual = 16495
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:01 . Memory (MB): peak = 2376.293 ; gain = 69.000 ; free physical = 2024 ; free virtual = 19527
 INFO: [Opt 31-389] Phase Post Processing Netlist created 0 cells and removed 0 cells
 Opt_design Change Summary
 =========================
@@ -927,7 +1191,7 @@ Opt_design Change Summary
 -------------------------------------------------------------------------------------------------------------------------
 |  Phase                        |  #Cells created  |  #Cells Removed  |  #Constrained objects preventing optimizations  |
 -------------------------------------------------------------------------------------------------------------------------
-|  Retarget                     |               0  |               3  |                                            482  |
+|  Retarget                     |               2  |               5  |                                            482  |
 |  Constant propagation         |               0  |               0  |                                              0  |
 |  Sweep                        |               0  |               0  |                                              0  |
 |  BUFG optimization            |               0  |               0  |                                              0  |
@@ -939,27 +1203,27 @@ Opt_design Change Summary
 
 Starting Connectivity Check Task
 
-Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2375.297 ; gain = 0.000 ; free physical = 649 ; free virtual = 16495
-Ending Logic Optimization Task | Checksum: 17660a0dd
+Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2376.293 ; gain = 0.000 ; free physical = 2024 ; free virtual = 19527
+Ending Logic Optimization Task | Checksum: bf9da517
 
-Time (s): cpu = 00:00:01 ; elapsed = 00:00:01 . Memory (MB): peak = 2375.297 ; gain = 69.000 ; free physical = 649 ; free virtual = 16495
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:01 . Memory (MB): peak = 2376.293 ; gain = 69.000 ; free physical = 2024 ; free virtual = 19527
 
 Starting Netlist Obfuscation Task
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2375.297 ; gain = 0.000 ; free physical = 649 ; free virtual = 16495
-Ending Netlist Obfuscation Task | Checksum: 17660a0dd
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2376.293 ; gain = 0.000 ; free physical = 2024 ; free virtual = 19527
+Ending Netlist Obfuscation Task | Checksum: bf9da517
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2375.297 ; gain = 0.000 ; free physical = 649 ; free virtual = 16495
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2376.293 ; gain = 0.000 ; free physical = 2024 ; free virtual = 19527
 INFO: [Common 17-83] Releasing license: Implementation
-42 Infos, 403 Warnings, 0 Critical Warnings and 0 Errors encountered.
+44 Infos, 534 Warnings, 0 Critical Warnings and 0 Errors encountered.
 opt_design completed successfully
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2375.297 ; gain = 0.000 ; free physical = 650 ; free virtual = 16496
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2376.293 ; gain = 0.000 ; free physical = 2024 ; free virtual = 19528
 INFO: [Timing 38-480] Writing timing data to binary archive.
 Writing placer database...
 Writing XDEF routing.
 Writing XDEF routing logical nets.
 Writing XDEF routing special nets.
-Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 2375.297 ; gain = 0.000 ; free physical = 641 ; free virtual = 16491
-Write XDEF Complete: Time (s): cpu = 00:00:00.29 ; elapsed = 00:00:00.16 . Memory (MB): peak = 2375.297 ; gain = 0.000 ; free physical = 639 ; free virtual = 16489
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2376.293 ; gain = 0.000 ; free physical = 2016 ; free virtual = 19524
+Write XDEF Complete: Time (s): cpu = 00:00:00.28 ; elapsed = 00:00:00.13 . Memory (MB): peak = 2376.293 ; gain = 0.000 ; free physical = 2016 ; free virtual = 19523
 INFO: [Common 17-1381] The checkpoint '/afs/inf.ed.ac.uk/user/s17/s1740055/CArD/prac2/proj/RV32IM_PYNQ_Z2.runs/impl_1/top_opt.dcp' has been generated.
 Command: place_design -directive RuntimeOptimized
 Attempting to get a license for feature 'Implementation' and/or device 'xc7z020'
@@ -1021,11 +1285,11 @@ INFO: [Place 30-611] Multithreading enabled for place_design using a maximum of 
 Phase 1 Placer Initialization
 
 Phase 1.1 Placer Initialization Netlist Sorting
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2375.301 ; gain = 0.000 ; free physical = 640 ; free virtual = 16489
-Phase 1.1 Placer Initialization Netlist Sorting | Checksum: 9ad9a085
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2376.297 ; gain = 0.000 ; free physical = 2014 ; free virtual = 19521
+Phase 1.1 Placer Initialization Netlist Sorting | Checksum: 7ad5a763
 
-Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.03 . Memory (MB): peak = 2375.301 ; gain = 0.000 ; free physical = 640 ; free virtual = 16489
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2375.301 ; gain = 0.000 ; free physical = 640 ; free virtual = 16489
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.02 . Memory (MB): peak = 2376.297 ; gain = 0.000 ; free physical = 2014 ; free virtual = 19521
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2376.297 ; gain = 0.000 ; free physical = 2014 ; free virtual = 19521
 
 Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device
 WARNING: [Constraints 18-401] set_max_delay: 'u_dvi_display/u_frame_buffer/fb_memory_reg_0_16_i_1' is not a valid endpoint. [/afs/inf.ed.ac.uk/user/s17/s1740055/CArD/prac2/src/constraints/timing.xdc:47]
@@ -1431,77 +1695,77 @@ WARNING: [Constraints 18-402] set_bus_skew: 'u_dvi_display/u_frame_buffer/fb_mem
 Resolution: A valid start point is a main or generated clock pin or port, a clock pin of a sequential cell, or a primary input or inout port. Please validate that all the objects returned by your query belong to this list.
 INFO: [Common 17-14] Message 'Constraints 18-402' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 INFO: [Timing 38-35] Done setting XDC timing constraints.
-Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device | Checksum: 164b08a76
+Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device | Checksum: 19d0fd08b
 
-Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.78 . Memory (MB): peak = 2375.301 ; gain = 0.000 ; free physical = 621 ; free virtual = 16470
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.78 . Memory (MB): peak = 2376.297 ; gain = 0.000 ; free physical = 1990 ; free virtual = 19500
 
 Phase 1.3 Build Placer Netlist Model
-Phase 1.3 Build Placer Netlist Model | Checksum: 1cc8e3fbe
+Phase 1.3 Build Placer Netlist Model | Checksum: 2687c6dcd
 
-Time (s): cpu = 00:00:03 ; elapsed = 00:00:02 . Memory (MB): peak = 2385.309 ; gain = 10.008 ; free physical = 611 ; free virtual = 16460
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:02 . Memory (MB): peak = 2386.938 ; gain = 10.641 ; free physical = 1977 ; free virtual = 19491
 
 Phase 1.4 Constrain Clocks/Macros
-Phase 1.4 Constrain Clocks/Macros | Checksum: 1cc8e3fbe
+Phase 1.4 Constrain Clocks/Macros | Checksum: 2687c6dcd
 
-Time (s): cpu = 00:00:03 ; elapsed = 00:00:02 . Memory (MB): peak = 2385.309 ; gain = 10.008 ; free physical = 611 ; free virtual = 16460
-Phase 1 Placer Initialization | Checksum: 1cc8e3fbe
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:02 . Memory (MB): peak = 2386.938 ; gain = 10.641 ; free physical = 1977 ; free virtual = 19491
+Phase 1 Placer Initialization | Checksum: 2687c6dcd
 
-Time (s): cpu = 00:00:03 ; elapsed = 00:00:02 . Memory (MB): peak = 2385.309 ; gain = 10.008 ; free physical = 611 ; free virtual = 16460
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:02 . Memory (MB): peak = 2386.938 ; gain = 10.641 ; free physical = 1977 ; free virtual = 19491
 
 Phase 2 Global Placement
 
 Phase 2.1 Floorplanning
-Phase 2.1 Floorplanning | Checksum: 1dfd40147
+Phase 2.1 Floorplanning | Checksum: 2712d9f51
 
-Time (s): cpu = 00:00:04 ; elapsed = 00:00:02 . Memory (MB): peak = 2390.309 ; gain = 15.008 ; free physical = 605 ; free virtual = 16454
-Phase 2 Global Placement | Checksum: 16d76eb4b
+Time (s): cpu = 00:00:04 ; elapsed = 00:00:02 . Memory (MB): peak = 2393.938 ; gain = 17.641 ; free physical = 1971 ; free virtual = 19486
+Phase 2 Global Placement | Checksum: 1ef185ab7
 
-Time (s): cpu = 00:00:14 ; elapsed = 00:00:08 . Memory (MB): peak = 2390.309 ; gain = 15.008 ; free physical = 591 ; free virtual = 16440
+Time (s): cpu = 00:00:15 ; elapsed = 00:00:08 . Memory (MB): peak = 2393.938 ; gain = 17.641 ; free physical = 1959 ; free virtual = 19475
 
 Phase 3 Detail Placement
 
 Phase 3.1 Commit Multi Column Macros
-Phase 3.1 Commit Multi Column Macros | Checksum: 16d76eb4b
+Phase 3.1 Commit Multi Column Macros | Checksum: 1ef185ab7
 
-Time (s): cpu = 00:00:14 ; elapsed = 00:00:08 . Memory (MB): peak = 2390.309 ; gain = 15.008 ; free physical = 592 ; free virtual = 16441
+Time (s): cpu = 00:00:15 ; elapsed = 00:00:08 . Memory (MB): peak = 2393.938 ; gain = 17.641 ; free physical = 1959 ; free virtual = 19475
 
 Phase 3.2 Commit Most Macros & LUTRAMs
-Phase 3.2 Commit Most Macros & LUTRAMs | Checksum: 2542d8be7
+Phase 3.2 Commit Most Macros & LUTRAMs | Checksum: 2291fa75c
 
-Time (s): cpu = 00:00:15 ; elapsed = 00:00:08 . Memory (MB): peak = 2390.309 ; gain = 15.008 ; free physical = 590 ; free virtual = 16439
+Time (s): cpu = 00:00:17 ; elapsed = 00:00:09 . Memory (MB): peak = 2393.938 ; gain = 17.641 ; free physical = 1958 ; free virtual = 19474
 
 Phase 3.3 Area Swap Optimization
-Phase 3.3 Area Swap Optimization | Checksum: 220cab4c1
+Phase 3.3 Area Swap Optimization | Checksum: 2d6ac9447
 
-Time (s): cpu = 00:00:16 ; elapsed = 00:00:09 . Memory (MB): peak = 2390.309 ; gain = 15.008 ; free physical = 590 ; free virtual = 16439
+Time (s): cpu = 00:00:17 ; elapsed = 00:00:09 . Memory (MB): peak = 2393.938 ; gain = 17.641 ; free physical = 1958 ; free virtual = 19474
 
 Phase 3.4 Pipeline Register Optimization
-Phase 3.4 Pipeline Register Optimization | Checksum: 213cb4769
+Phase 3.4 Pipeline Register Optimization | Checksum: 1f98545fb
 
-Time (s): cpu = 00:00:16 ; elapsed = 00:00:09 . Memory (MB): peak = 2390.309 ; gain = 15.008 ; free physical = 590 ; free virtual = 16439
+Time (s): cpu = 00:00:17 ; elapsed = 00:00:09 . Memory (MB): peak = 2393.938 ; gain = 17.641 ; free physical = 1958 ; free virtual = 19474
 
 Phase 3.5 Fast Optimization
-Phase 3.5 Fast Optimization | Checksum: 20f1b5035
+Phase 3.5 Fast Optimization | Checksum: 21fda56c5
 
-Time (s): cpu = 00:00:17 ; elapsed = 00:00:09 . Memory (MB): peak = 2390.309 ; gain = 15.008 ; free physical = 592 ; free virtual = 16441
+Time (s): cpu = 00:00:18 ; elapsed = 00:00:10 . Memory (MB): peak = 2393.938 ; gain = 17.641 ; free physical = 1960 ; free virtual = 19476
 
 Phase 3.6 Small Shape Detail Placement
-Phase 3.6 Small Shape Detail Placement | Checksum: 21aa07c59
+Phase 3.6 Small Shape Detail Placement | Checksum: 2a49dfaab
 
-Time (s): cpu = 00:00:20 ; elapsed = 00:00:12 . Memory (MB): peak = 2398.309 ; gain = 23.008 ; free physical = 586 ; free virtual = 16435
+Time (s): cpu = 00:00:21 ; elapsed = 00:00:12 . Memory (MB): peak = 2401.938 ; gain = 25.641 ; free physical = 1953 ; free virtual = 19470
 
 Phase 3.7 Re-assign LUT pins
-Phase 3.7 Re-assign LUT pins | Checksum: 23136e2d6
+Phase 3.7 Re-assign LUT pins | Checksum: 2949c808a
 
-Time (s): cpu = 00:00:20 ; elapsed = 00:00:12 . Memory (MB): peak = 2398.309 ; gain = 23.008 ; free physical = 586 ; free virtual = 16435
+Time (s): cpu = 00:00:21 ; elapsed = 00:00:12 . Memory (MB): peak = 2401.938 ; gain = 25.641 ; free physical = 1953 ; free virtual = 19470
 
 Phase 3.8 Pipeline Register Optimization
-Phase 3.8 Pipeline Register Optimization | Checksum: 23136e2d6
+Phase 3.8 Pipeline Register Optimization | Checksum: 2949c808a
 
-Time (s): cpu = 00:00:20 ; elapsed = 00:00:12 . Memory (MB): peak = 2398.309 ; gain = 23.008 ; free physical = 586 ; free virtual = 16435
-Phase 3 Detail Placement | Checksum: 23136e2d6
+Time (s): cpu = 00:00:21 ; elapsed = 00:00:13 . Memory (MB): peak = 2401.938 ; gain = 25.641 ; free physical = 1953 ; free virtual = 19470
+Phase 3 Detail Placement | Checksum: 2949c808a
 
-Time (s): cpu = 00:00:20 ; elapsed = 00:00:12 . Memory (MB): peak = 2398.309 ; gain = 23.008 ; free physical = 586 ; free virtual = 16436
+Time (s): cpu = 00:00:21 ; elapsed = 00:00:13 . Memory (MB): peak = 2401.938 ; gain = 25.641 ; free physical = 1953 ; free virtual = 19470
 
 Phase 4 Post Placement Optimization and Clean-Up
 
@@ -1509,55 +1773,55 @@ Phase 4.1 Post Commit Optimization
 INFO: [Timing 38-35] Done setting XDC timing constraints.
 
 Phase 4.1.1 Post Placement Optimization
-Post Placement Optimization Initialization | Checksum: 19569c939
+Post Placement Optimization Initialization | Checksum: 1fa97ecaf
 
 Phase 4.1.1.1 BUFG Insertion
 INFO: [Place 46-33] Processed net u_resync/reset, BUFG insertion was skipped due to placement/routing conflicts.
 INFO: [Place 46-46] BUFG insertion identified 1 candidate nets, 0 success, 0 bufg driver replicated, 1 skipped for placement/routing, 0 skipped for timing, 0 skipped for netlist change reason
-Phase 4.1.1.1 BUFG Insertion | Checksum: 19569c939
+Phase 4.1.1.1 BUFG Insertion | Checksum: 1fa97ecaf
 
-Time (s): cpu = 00:00:22 ; elapsed = 00:00:13 . Memory (MB): peak = 2410.312 ; gain = 35.012 ; free physical = 587 ; free virtual = 16436
-INFO: [Place 30-746] Post Placement Timing Summary WNS=0.530. For the most accurate timing information please run report_timing.
-Phase 4.1.1 Post Placement Optimization | Checksum: 146a8a8a0
+Time (s): cpu = 00:00:23 ; elapsed = 00:00:14 . Memory (MB): peak = 2411.941 ; gain = 35.645 ; free physical = 1953 ; free virtual = 19470
+INFO: [Place 30-746] Post Placement Timing Summary WNS=0.073. For the most accurate timing information please run report_timing.
+Phase 4.1.1 Post Placement Optimization | Checksum: 18a4d47be
 
-Time (s): cpu = 00:00:24 ; elapsed = 00:00:14 . Memory (MB): peak = 2410.312 ; gain = 35.012 ; free physical = 587 ; free virtual = 16436
-Phase 4.1 Post Commit Optimization | Checksum: 146a8a8a0
+Time (s): cpu = 00:00:26 ; elapsed = 00:00:16 . Memory (MB): peak = 2411.941 ; gain = 35.645 ; free physical = 1952 ; free virtual = 19469
+Phase 4.1 Post Commit Optimization | Checksum: 18a4d47be
 
-Time (s): cpu = 00:00:24 ; elapsed = 00:00:15 . Memory (MB): peak = 2410.312 ; gain = 35.012 ; free physical = 587 ; free virtual = 16436
+Time (s): cpu = 00:00:26 ; elapsed = 00:00:16 . Memory (MB): peak = 2411.941 ; gain = 35.645 ; free physical = 1952 ; free virtual = 19469
 
 Phase 4.2 Post Placement Cleanup
-Phase 4.2 Post Placement Cleanup | Checksum: 146a8a8a0
+Phase 4.2 Post Placement Cleanup | Checksum: 18a4d47be
 
-Time (s): cpu = 00:00:24 ; elapsed = 00:00:15 . Memory (MB): peak = 2410.312 ; gain = 35.012 ; free physical = 587 ; free virtual = 16436
+Time (s): cpu = 00:00:26 ; elapsed = 00:00:16 . Memory (MB): peak = 2411.941 ; gain = 35.645 ; free physical = 1953 ; free virtual = 19470
 
 Phase 4.3 Placer Reporting
-Phase 4.3 Placer Reporting | Checksum: 146a8a8a0
+Phase 4.3 Placer Reporting | Checksum: 18a4d47be
 
-Time (s): cpu = 00:00:24 ; elapsed = 00:00:15 . Memory (MB): peak = 2410.312 ; gain = 35.012 ; free physical = 588 ; free virtual = 16437
+Time (s): cpu = 00:00:26 ; elapsed = 00:00:16 . Memory (MB): peak = 2411.941 ; gain = 35.645 ; free physical = 1953 ; free virtual = 19470
 
 Phase 4.4 Final Placement Cleanup
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2410.312 ; gain = 0.000 ; free physical = 588 ; free virtual = 16437
-Phase 4.4 Final Placement Cleanup | Checksum: 1350164c3
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2411.941 ; gain = 0.000 ; free physical = 1953 ; free virtual = 19470
+Phase 4.4 Final Placement Cleanup | Checksum: 1452147ff
 
-Time (s): cpu = 00:00:24 ; elapsed = 00:00:15 . Memory (MB): peak = 2410.312 ; gain = 35.012 ; free physical = 588 ; free virtual = 16437
-Phase 4 Post Placement Optimization and Clean-Up | Checksum: 1350164c3
+Time (s): cpu = 00:00:26 ; elapsed = 00:00:16 . Memory (MB): peak = 2411.941 ; gain = 35.645 ; free physical = 1953 ; free virtual = 19470
+Phase 4 Post Placement Optimization and Clean-Up | Checksum: 1452147ff
 
-Time (s): cpu = 00:00:24 ; elapsed = 00:00:15 . Memory (MB): peak = 2410.312 ; gain = 35.012 ; free physical = 588 ; free virtual = 16437
-Ending Placer Task | Checksum: a4066197
+Time (s): cpu = 00:00:26 ; elapsed = 00:00:16 . Memory (MB): peak = 2411.941 ; gain = 35.645 ; free physical = 1953 ; free virtual = 19470
+Ending Placer Task | Checksum: 11e833226
 
-Time (s): cpu = 00:00:24 ; elapsed = 00:00:15 . Memory (MB): peak = 2410.312 ; gain = 35.012 ; free physical = 600 ; free virtual = 16449
+Time (s): cpu = 00:00:26 ; elapsed = 00:00:16 . Memory (MB): peak = 2411.941 ; gain = 35.645 ; free physical = 1964 ; free virtual = 19481
 INFO: [Common 17-83] Releasing license: Implementation
-61 Infos, 645 Warnings, 0 Critical Warnings and 0 Errors encountered.
+63 Infos, 776 Warnings, 0 Critical Warnings and 0 Errors encountered.
 place_design completed successfully
-place_design: Time (s): cpu = 00:00:26 ; elapsed = 00:00:18 . Memory (MB): peak = 2410.312 ; gain = 35.012 ; free physical = 600 ; free virtual = 16449
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2410.312 ; gain = 0.000 ; free physical = 600 ; free virtual = 16449
+place_design: Time (s): cpu = 00:00:28 ; elapsed = 00:00:19 . Memory (MB): peak = 2411.941 ; gain = 35.645 ; free physical = 1964 ; free virtual = 19481
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2411.941 ; gain = 0.000 ; free physical = 1964 ; free virtual = 19481
 INFO: [Timing 38-480] Writing timing data to binary archive.
 Writing placer database...
-Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 2412.273 ; gain = 0.000 ; free physical = 581 ; free virtual = 16447
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2413.902 ; gain = 0.000 ; free physical = 1954 ; free virtual = 19481
 Writing XDEF routing.
 Writing XDEF routing logical nets.
 Writing XDEF routing special nets.
-Write XDEF Complete: Time (s): cpu = 00:00:02 ; elapsed = 00:00:01 . Memory (MB): peak = 2412.273 ; gain = 1.961 ; free physical = 575 ; free virtual = 16446
+Write XDEF Complete: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.85 . Memory (MB): peak = 2413.902 ; gain = 1.961 ; free physical = 1940 ; free virtual = 19479
 INFO: [Common 17-1381] The checkpoint '/afs/inf.ed.ac.uk/user/s17/s1740055/CArD/prac2/proj/RV32IM_PYNQ_Z2.runs/impl_1/top_placed.dcp' has been generated.
 Command: route_design -directive RuntimeOptimized
 Attempting to get a license for feature 'Implementation' and/or device 'xc7z020'
@@ -1571,127 +1835,125 @@ INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more in
 Starting Routing Task
 INFO: [Route 35-270] Using Router directive 'RuntimeOptimized'.
 INFO: [Route 35-254] Multithreading enabled for route_design using a maximum of 4 CPUs
-Checksum: PlaceDB: a38e4ed1 ConstDB: 0 ShapeSum: 7812c6 RouteDB: 0
+Checksum: PlaceDB: ddef8661 ConstDB: 0 ShapeSum: 4093abc5 RouteDB: 0
 
 Phase 1 Build RT Design
-Phase 1 Build RT Design | Checksum: 10edfc7e3
+Phase 1 Build RT Design | Checksum: 117d15e70
 
-Time (s): cpu = 00:00:19 ; elapsed = 00:00:15 . Memory (MB): peak = 2538.414 ; gain = 126.137 ; free physical = 454 ; free virtual = 16308
-Post Restoration Checksum: NetGraph: 1fb38033 NumContArr: ef2c47b0 Constraints: 0 Timing: 0
+Time (s): cpu = 00:00:18 ; elapsed = 00:00:15 . Memory (MB): peak = 2539.574 ; gain = 125.668 ; free physical = 1803 ; free virtual = 19331
+Post Restoration Checksum: NetGraph: 6d9d1687 NumContArr: aa3447e9 Constraints: 0 Timing: 0
 
 Phase 2 Router Initialization
 
 Phase 2.1 Create Timer
-Phase 2.1 Create Timer | Checksum: 10edfc7e3
+Phase 2.1 Create Timer | Checksum: 117d15e70
 
-Time (s): cpu = 00:00:19 ; elapsed = 00:00:15 . Memory (MB): peak = 2554.414 ; gain = 142.137 ; free physical = 433 ; free virtual = 16287
+Time (s): cpu = 00:00:18 ; elapsed = 00:00:15 . Memory (MB): peak = 2555.574 ; gain = 141.668 ; free physical = 1782 ; free virtual = 19310
 
 Phase 2.2 Fix Topology Constraints
-Phase 2.2 Fix Topology Constraints | Checksum: 10edfc7e3
+Phase 2.2 Fix Topology Constraints | Checksum: 117d15e70
 
-Time (s): cpu = 00:00:19 ; elapsed = 00:00:15 . Memory (MB): peak = 2568.414 ; gain = 156.137 ; free physical = 417 ; free virtual = 16271
+Time (s): cpu = 00:00:18 ; elapsed = 00:00:15 . Memory (MB): peak = 2570.574 ; gain = 156.668 ; free physical = 1766 ; free virtual = 19294
 
 Phase 2.3 Pre Route Cleanup
-Phase 2.3 Pre Route Cleanup | Checksum: 10edfc7e3
+Phase 2.3 Pre Route Cleanup | Checksum: 117d15e70
 
-Time (s): cpu = 00:00:19 ; elapsed = 00:00:15 . Memory (MB): peak = 2568.414 ; gain = 156.137 ; free physical = 417 ; free virtual = 16271
+Time (s): cpu = 00:00:18 ; elapsed = 00:00:15 . Memory (MB): peak = 2570.574 ; gain = 156.668 ; free physical = 1766 ; free virtual = 19294
  Number of Nodes with overlaps = 0
 
 Phase 2.4 Update Timing
-Phase 2.4 Update Timing | Checksum: 1a02dc7a5
+Phase 2.4 Update Timing | Checksum: 1b3cc07de
 
-Time (s): cpu = 00:00:22 ; elapsed = 00:00:17 . Memory (MB): peak = 2594.469 ; gain = 182.191 ; free physical = 404 ; free virtual = 16258
-INFO: [Route 35-416] Intermediate Timing Summary | WNS=0.514  | TNS=0.000  | WHS=-0.196 | THS=-27.807|
+Time (s): cpu = 00:00:21 ; elapsed = 00:00:17 . Memory (MB): peak = 2595.629 ; gain = 181.723 ; free physical = 1741 ; free virtual = 19281
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=0.069  | TNS=0.000  | WHS=-0.219 | THS=-28.636|
 
 
 Phase 2.5 Update Timing for Bus Skew
 
 Phase 2.5.1 Update Timing
-Phase 2.5.1 Update Timing | Checksum: 167472f38
+Phase 2.5.1 Update Timing | Checksum: 274631cb2
 
-Time (s): cpu = 00:00:23 ; elapsed = 00:00:18 . Memory (MB): peak = 2594.469 ; gain = 182.191 ; free physical = 401 ; free virtual = 16255
-INFO: [Route 35-416] Intermediate Timing Summary | WNS=0.514  | TNS=0.000  | WHS=N/A    | THS=N/A    |
+Time (s): cpu = 00:00:23 ; elapsed = 00:00:18 . Memory (MB): peak = 2595.629 ; gain = 181.723 ; free physical = 1740 ; free virtual = 19279
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=0.069  | TNS=0.000  | WHS=N/A    | THS=N/A    |
 
-WARNING: [Route 35-462] Failed to populate 851 paths in bus skew group (internal name : grp_0). These paths are:
-	u_dvi_display/u_frame_buffer/fb_memory_reg_1_0/ADDRARDADDR[0]
-	u_dvi_display/u_frame_buffer/fb_memory_reg_0_15/ADDRARDADDR[0]
-	u_dvi_display/u_frame_buffer/fb_memory_reg_0_17/ADDRARDADDR[0]
-	u_dvi_display/u_frame_buffer/fb_memory_reg_0_6/ADDRARDADDR[0]
-	u_dvi_display/u_frame_buffer/fb_memory_reg_0_1/ADDRARDADDR[0]
-	.. and 846 more.
+WARNING: [Route 35-462] Failed to populate 861 paths in bus skew group (internal name : grp_0). These paths are:
+	u_dvi_display/u_frame_buffer/fb_memory_reg_1_7/ADDRARDADDR[0]
+	u_dvi_display/u_frame_buffer/fb_memory_reg_0_8/ADDRARDADDR[0]
+	u_dvi_display/u_frame_buffer/fb_memory_reg_1_3/ADDRARDADDR[0]
+	u_dvi_display/u_frame_buffer/fb_memory_reg_1_2/ADDRARDADDR[0]
+	u_dvi_display/u_frame_buffer/fb_memory_reg_1_9/ADDRARDADDR[0]
+	.. and 856 more.
 
-Phase 2.5 Update Timing for Bus Skew | Checksum: 1cbe237e6
+Phase 2.5 Update Timing for Bus Skew | Checksum: 2349b37f5
 
-Time (s): cpu = 00:00:33 ; elapsed = 00:00:27 . Memory (MB): peak = 2636.586 ; gain = 224.309 ; free physical = 384 ; free virtual = 16236
-Phase 2 Router Initialization | Checksum: 21b8b24a6
+Time (s): cpu = 00:00:32 ; elapsed = 00:00:27 . Memory (MB): peak = 2637.496 ; gain = 223.590 ; free physical = 1733 ; free virtual = 19256
+Phase 2 Router Initialization | Checksum: 1b0f6277c
 
-Time (s): cpu = 00:00:33 ; elapsed = 00:00:27 . Memory (MB): peak = 2636.586 ; gain = 224.309 ; free physical = 384 ; free virtual = 16236
+Time (s): cpu = 00:00:32 ; elapsed = 00:00:27 . Memory (MB): peak = 2637.496 ; gain = 223.590 ; free physical = 1733 ; free virtual = 19256
 
 Phase 3 Initial Routing
-Phase 3 Initial Routing | Checksum: 1a610ffa1
+Phase 3 Initial Routing | Checksum: 2418521bf
 
-Time (s): cpu = 00:00:36 ; elapsed = 00:00:29 . Memory (MB): peak = 2636.586 ; gain = 224.309 ; free physical = 381 ; free virtual = 16232
+Time (s): cpu = 00:00:36 ; elapsed = 00:00:28 . Memory (MB): peak = 2637.496 ; gain = 223.590 ; free physical = 1730 ; free virtual = 19254
 
 Phase 4 Rip-up And Reroute
 
 Phase 4.1 Global Iteration 0
- Number of Nodes with overlaps = 2971
- Number of Nodes with overlaps = 1431
- Number of Nodes with overlaps = 690
- Number of Nodes with overlaps = 363
- Number of Nodes with overlaps = 111
- Number of Nodes with overlaps = 85
- Number of Nodes with overlaps = 21
- Number of Nodes with overlaps = 24
- Number of Nodes with overlaps = 6
+ Number of Nodes with overlaps = 2978
+ Number of Nodes with overlaps = 1378
+ Number of Nodes with overlaps = 754
+ Number of Nodes with overlaps = 351
+ Number of Nodes with overlaps = 119
+ Number of Nodes with overlaps = 45
+ Number of Nodes with overlaps = 8
  Number of Nodes with overlaps = 0
-INFO: [Route 35-416] Intermediate Timing Summary | WNS=-0.438 | TNS=-1.637 | WHS=N/A    | THS=N/A    |
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=-0.124 | TNS=-0.172 | WHS=N/A    | THS=N/A    |
 
-Phase 4.1 Global Iteration 0 | Checksum: 168339a48
+Phase 4.1 Global Iteration 0 | Checksum: d99636af
 
-Time (s): cpu = 00:01:05 ; elapsed = 00:00:44 . Memory (MB): peak = 2636.586 ; gain = 224.309 ; free physical = 379 ; free virtual = 16230
-Phase 4 Rip-up And Reroute | Checksum: 168339a48
+Time (s): cpu = 00:01:04 ; elapsed = 00:00:41 . Memory (MB): peak = 2637.496 ; gain = 223.590 ; free physical = 1726 ; free virtual = 19249
+Phase 4 Rip-up And Reroute | Checksum: d99636af
 
-Time (s): cpu = 00:01:05 ; elapsed = 00:00:44 . Memory (MB): peak = 2636.586 ; gain = 224.309 ; free physical = 379 ; free virtual = 16230
+Time (s): cpu = 00:01:04 ; elapsed = 00:00:41 . Memory (MB): peak = 2637.496 ; gain = 223.590 ; free physical = 1726 ; free virtual = 19249
 
 Phase 5 Delay and Skew Optimization
 
 Phase 5.1 Delay CleanUp
  Number of Nodes with overlaps = 0
-Phase 5.1 Delay CleanUp | Checksum: 1a9b0d19b
+Phase 5.1 Delay CleanUp | Checksum: 261245f0a
 
-Time (s): cpu = 00:01:05 ; elapsed = 00:00:44 . Memory (MB): peak = 2636.586 ; gain = 224.309 ; free physical = 377 ; free virtual = 16228
+Time (s): cpu = 00:01:04 ; elapsed = 00:00:42 . Memory (MB): peak = 2637.496 ; gain = 223.590 ; free physical = 1722 ; free virtual = 19245
 
 Phase 5.2 Clock Skew Optimization
-Phase 5.2 Clock Skew Optimization | Checksum: 1a9b0d19b
+Phase 5.2 Clock Skew Optimization | Checksum: 261245f0a
 
-Time (s): cpu = 00:01:06 ; elapsed = 00:00:44 . Memory (MB): peak = 2636.586 ; gain = 224.309 ; free physical = 377 ; free virtual = 16228
-Phase 5 Delay and Skew Optimization | Checksum: 1a9b0d19b
+Time (s): cpu = 00:01:04 ; elapsed = 00:00:42 . Memory (MB): peak = 2637.496 ; gain = 223.590 ; free physical = 1722 ; free virtual = 19245
+Phase 5 Delay and Skew Optimization | Checksum: 261245f0a
 
-Time (s): cpu = 00:01:06 ; elapsed = 00:00:44 . Memory (MB): peak = 2636.586 ; gain = 224.309 ; free physical = 377 ; free virtual = 16228
+Time (s): cpu = 00:01:04 ; elapsed = 00:00:42 . Memory (MB): peak = 2637.496 ; gain = 223.590 ; free physical = 1722 ; free virtual = 19245
 
 Phase 6 Post Hold Fix
 
 Phase 6.1 Hold Fix Iter
 
 Phase 6.1.1 Update Timing
-Phase 6.1.1 Update Timing | Checksum: 2440f7d6f
+Phase 6.1.1 Update Timing | Checksum: 1f707d5ba
 
-Time (s): cpu = 00:01:06 ; elapsed = 00:00:44 . Memory (MB): peak = 2636.586 ; gain = 224.309 ; free physical = 377 ; free virtual = 16228
-INFO: [Route 35-416] Intermediate Timing Summary | WNS=-0.294 | TNS=-0.335 | WHS=0.053  | THS=0.000  |
+Time (s): cpu = 00:01:05 ; elapsed = 00:00:42 . Memory (MB): peak = 2637.496 ; gain = 223.590 ; free physical = 1722 ; free virtual = 19245
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=0.045  | TNS=0.000  | WHS=0.033  | THS=0.000  |
 
-Phase 6.1 Hold Fix Iter | Checksum: 1e60a132c
+Phase 6.1 Hold Fix Iter | Checksum: 29d9e9a6a
 
-Time (s): cpu = 00:01:06 ; elapsed = 00:00:44 . Memory (MB): peak = 2636.586 ; gain = 224.309 ; free physical = 377 ; free virtual = 16228
-Phase 6 Post Hold Fix | Checksum: 1e60a132c
+Time (s): cpu = 00:01:05 ; elapsed = 00:00:42 . Memory (MB): peak = 2637.496 ; gain = 223.590 ; free physical = 1722 ; free virtual = 19245
+Phase 6 Post Hold Fix | Checksum: 29d9e9a6a
 
-Time (s): cpu = 00:01:06 ; elapsed = 00:00:44 . Memory (MB): peak = 2636.586 ; gain = 224.309 ; free physical = 377 ; free virtual = 16228
+Time (s): cpu = 00:01:05 ; elapsed = 00:00:42 . Memory (MB): peak = 2637.496 ; gain = 223.590 ; free physical = 1722 ; free virtual = 19245
 
 Phase 7 Route finalize
 
 Router Utilization Summary
-  Global Vertical Routing Utilization    = 2.16434 %
-  Global Horizontal Routing Utilization  = 2.48631 %
+  Global Vertical Routing Utilization    = 2.18883 %
+  Global Horizontal Routing Utilization  = 2.40475 %
   Routable Net Status*
   *Does not include unroutable nets such as driverless and loadless.
   Run report_route_status for detailed report.
@@ -1700,81 +1962,54 @@ Router Utilization Summary
   Number of Partially Routed Nets     = 0
   Number of Node Overlaps             = 0
 
-Congestion Report
-North Dir 1x1 Area, Max Cong = 63.0631%, No Congested Regions.
-South Dir 1x1 Area, Max Cong = 68.4685%, No Congested Regions.
-East Dir 1x1 Area, Max Cong = 76.4706%, No Congested Regions.
-West Dir 1x1 Area, Max Cong = 82.3529%, No Congested Regions.
+Phase 7 Route finalize | Checksum: 224886318
 
-------------------------------
-Reporting congestion hotspots
-------------------------------
-Direction: North
-----------------
-Congested clusters found at Level 0
-Effective congestion level: 0 Aspect Ratio: 1 Sparse Ratio: 0
-Direction: South
-----------------
-Congested clusters found at Level 0
-Effective congestion level: 0 Aspect Ratio: 1 Sparse Ratio: 0
-Direction: East
-----------------
-Congested clusters found at Level 0
-Effective congestion level: 0 Aspect Ratio: 1 Sparse Ratio: 0
-Direction: West
-----------------
-Congested clusters found at Level 0
-Effective congestion level: 0 Aspect Ratio: 1 Sparse Ratio: 0
-
-Phase 7 Route finalize | Checksum: 2016a8099
-
-Time (s): cpu = 00:01:06 ; elapsed = 00:00:44 . Memory (MB): peak = 2636.586 ; gain = 224.309 ; free physical = 377 ; free virtual = 16228
+Time (s): cpu = 00:01:05 ; elapsed = 00:00:42 . Memory (MB): peak = 2637.496 ; gain = 223.590 ; free physical = 1722 ; free virtual = 19245
 
 Phase 8 Verifying routed nets
 
  Verification completed successfully
-Phase 8 Verifying routed nets | Checksum: 2016a8099
+Phase 8 Verifying routed nets | Checksum: 224886318
 
-Time (s): cpu = 00:01:06 ; elapsed = 00:00:44 . Memory (MB): peak = 2636.586 ; gain = 224.309 ; free physical = 376 ; free virtual = 16227
+Time (s): cpu = 00:01:05 ; elapsed = 00:00:42 . Memory (MB): peak = 2637.496 ; gain = 223.590 ; free physical = 1721 ; free virtual = 19244
 
 Phase 9 Depositing Routes
-Phase 9 Depositing Routes | Checksum: 207fa5744
+Phase 9 Depositing Routes | Checksum: 1b13d2af5
 
-Time (s): cpu = 00:01:07 ; elapsed = 00:00:45 . Memory (MB): peak = 2636.586 ; gain = 224.309 ; free physical = 375 ; free virtual = 16227
+Time (s): cpu = 00:01:05 ; elapsed = 00:00:42 . Memory (MB): peak = 2637.496 ; gain = 223.590 ; free physical = 1721 ; free virtual = 19244
 
 Phase 10 Post Router Timing
-INFO: [Route 35-57] Estimated Timing Summary | WNS=-0.294 | TNS=-0.335 | WHS=0.053  | THS=0.000  |
+INFO: [Route 35-57] Estimated Timing Summary | WNS=0.045  | TNS=0.000  | WHS=0.033  | THS=0.000  |
 
-WARNING: [Route 35-328] Router estimated timing not met.
-Resolution: For a complete and accurate timing signoff, report_timing_summary must be run after route_design. Alternatively, route_design can be run with the -timing_summary option to enable a complete timing signoff at the end of route_design.
-Phase 10 Post Router Timing | Checksum: 207fa5744
+INFO: [Route 35-327] The final timing numbers are based on the router estimated timing analysis. For a complete and accurate timing signoff, please run report_timing_summary.
+Phase 10 Post Router Timing | Checksum: 1b13d2af5
 
-Time (s): cpu = 00:01:07 ; elapsed = 00:00:45 . Memory (MB): peak = 2636.586 ; gain = 224.309 ; free physical = 376 ; free virtual = 16228
+Time (s): cpu = 00:01:05 ; elapsed = 00:00:43 . Memory (MB): peak = 2637.496 ; gain = 223.590 ; free physical = 1721 ; free virtual = 19244
 INFO: [Route 35-16] Router Completed Successfully
 
-Time (s): cpu = 00:01:07 ; elapsed = 00:00:45 . Memory (MB): peak = 2636.586 ; gain = 224.309 ; free physical = 401 ; free virtual = 16252
+Time (s): cpu = 00:01:05 ; elapsed = 00:00:43 . Memory (MB): peak = 2637.496 ; gain = 223.590 ; free physical = 1751 ; free virtual = 19274
 
 Routing Is Done.
 INFO: [Common 17-83] Releasing license: Implementation
-76 Infos, 647 Warnings, 0 Critical Warnings and 0 Errors encountered.
+79 Infos, 777 Warnings, 0 Critical Warnings and 0 Errors encountered.
 route_design completed successfully
-route_design: Time (s): cpu = 00:01:09 ; elapsed = 00:00:48 . Memory (MB): peak = 2636.586 ; gain = 224.309 ; free physical = 401 ; free virtual = 16252
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2636.586 ; gain = 0.000 ; free physical = 401 ; free virtual = 16252
+route_design: Time (s): cpu = 00:01:08 ; elapsed = 00:00:46 . Memory (MB): peak = 2637.496 ; gain = 223.590 ; free physical = 1751 ; free virtual = 19274
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2637.496 ; gain = 0.000 ; free physical = 1751 ; free virtual = 19274
 INFO: [Timing 38-480] Writing timing data to binary archive.
 Writing placer database...
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2636.586 ; gain = 0.000 ; free physical = 389 ; free virtual = 16250
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2637.496 ; gain = 0.000 ; free physical = 1738 ; free virtual = 19271
 Writing XDEF routing.
 Writing XDEF routing logical nets.
 Writing XDEF routing special nets.
-Write XDEF Complete: Time (s): cpu = 00:00:01 ; elapsed = 00:00:01 . Memory (MB): peak = 2636.586 ; gain = 0.000 ; free physical = 372 ; free virtual = 16249
+Write XDEF Complete: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.95 . Memory (MB): peak = 2637.496 ; gain = 0.000 ; free physical = 1719 ; free virtual = 19269
 INFO: [Common 17-1381] The checkpoint '/afs/inf.ed.ac.uk/user/s17/s1740055/CArD/prac2/proj/RV32IM_PYNQ_Z2.runs/impl_1/top_routed.dcp' has been generated.
-INFO: [Common 17-206] Exiting Vivado at Wed Oct 30 17:49:47 2019...
+INFO: [Common 17-206] Exiting Vivado at Sat Nov  2 15:33:15 2019...
 #-----------------------------------------------------------
 # Vivado v2018.3 (64-bit)
 # SW Build 2405991 on Thu Dec  6 23:36:41 MST 2018
 # IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
-# Start of session at: Wed Oct 30 17:49:56 2019
-# Process ID: 22875
+# Start of session at: Sat Nov  2 15:34:01 2019
+# Process ID: 17287
 # Current directory: /afs/inf.ed.ac.uk/user/s17/s1740055/CArD/prac2/proj/RV32IM_PYNQ_Z2.runs/impl_1
 # Command line: vivado -log top.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source top.tcl -notrace
 # Log file: /afs/inf.ed.ac.uk/user/s17/s1740055/CArD/prac2/proj/RV32IM_PYNQ_Z2.runs/impl_1/top.vdi
@@ -1785,8 +2020,8 @@ Command: open_checkpoint top_routed.dcp
 
 Starting open_checkpoint Task
 
-Time (s): cpu = 00:00:00.07 ; elapsed = 00:00:00.19 . Memory (MB): peak = 1441.062 ; gain = 0.000 ; free physical = 1274 ; free virtual = 17135
-INFO: [Netlist 29-17] Analyzing 909 Unisim elements for replacement
+Time (s): cpu = 00:00:00.04 ; elapsed = 00:00:00.16 . Memory (MB): peak = 1441.062 ; gain = 0.000 ; free physical = 2004 ; free virtual = 19537
+INFO: [Netlist 29-17] Analyzing 876 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-479] Netlist was created with Vivado 2018.3
 INFO: [Device 21-403] Loading part xc7z020clg400-1
@@ -1799,15 +2034,15 @@ INFO: [Project 1-853] Binary constraint restore complete.
 Reading XDEF placement.
 Reading placer database...
 Reading XDEF routing.
-Read XDEF File: Time (s): cpu = 00:00:00.53 ; elapsed = 00:00:00.73 . Memory (MB): peak = 2203.883 ; gain = 9.000 ; free physical = 538 ; free virtual = 16397
-Restored from archive | CPU: 0.720000 secs | Memory: 10.147453 MB |
-Finished XDEF File Restore: Time (s): cpu = 00:00:00.53 ; elapsed = 00:00:00.73 . Memory (MB): peak = 2203.883 ; gain = 9.000 ; free physical = 538 ; free virtual = 16397
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2203.883 ; gain = 0.000 ; free physical = 539 ; free virtual = 16398
+Read XDEF File: Time (s): cpu = 00:00:00.49 ; elapsed = 00:00:00.69 . Memory (MB): peak = 2203.922 ; gain = 9.000 ; free physical = 1187 ; free virtual = 18720
+Restored from archive | CPU: 0.690000 secs | Memory: 10.214699 MB |
+Finished XDEF File Restore: Time (s): cpu = 00:00:00.49 ; elapsed = 00:00:00.69 . Memory (MB): peak = 2203.922 ; gain = 9.000 ; free physical = 1187 ; free virtual = 18720
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2203.922 ; gain = 0.000 ; free physical = 1188 ; free virtual = 18720
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
 INFO: [Project 1-604] Checkpoint was created with Vivado v2018.3 (64-bit) build 2405991
-open_checkpoint: Time (s): cpu = 00:00:13 ; elapsed = 00:00:18 . Memory (MB): peak = 2203.883 ; gain = 762.824 ; free physical = 538 ; free virtual = 16397
+open_checkpoint: Time (s): cpu = 00:00:12 ; elapsed = 00:00:16 . Memory (MB): peak = 2203.922 ; gain = 762.863 ; free physical = 1187 ; free virtual = 18720
 Command: write_bitstream -force top.bit
 Attempting to get a license for feature 'Implementation' and/or device 'xc7z020'
 INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7z020'
@@ -1885,9 +2120,9 @@ Creating bitstream...
 Writing bitstream ./top.bit...
 INFO: [Vivado 12-1842] Bitgen Completed Successfully.
 INFO: [Project 1-120] WebTalk data collection is mandatory when using a WebPACK part without a full Vivado license. To see the specific WebTalk data collected for your design, open the usage_statistics_webtalk.html or usage_statistics_webtalk.xml file in the implementation directory.
-INFO: [Common 17-186] '/afs/inf.ed.ac.uk/user/s17/s1740055/CArD/prac2/proj/RV32IM_PYNQ_Z2.runs/impl_1/usage_statistics_webtalk.xml' has been successfully sent to Xilinx on Wed Oct 30 17:50:48 2019. For additional details about this file, please refer to the WebTalk help file at /disk/scratch/Xilinx/Vivado/2018.3/doc/webtalk_introduction.html.
+INFO: [Common 17-186] '/afs/inf.ed.ac.uk/user/s17/s1740055/CArD/prac2/proj/RV32IM_PYNQ_Z2.runs/impl_1/usage_statistics_webtalk.xml' has been successfully sent to Xilinx on Sat Nov  2 15:34:48 2019. For additional details about this file, please refer to the WebTalk help file at /disk/scratch/Xilinx/Vivado/2018.3/doc/webtalk_introduction.html.
 INFO: [Common 17-83] Releasing license: Implementation
 23 Infos, 58 Warnings, 0 Critical Warnings and 0 Errors encountered.
 write_bitstream completed successfully
-write_bitstream: Time (s): cpu = 00:00:20 ; elapsed = 00:00:25 . Memory (MB): peak = 2688.641 ; gain = 484.758 ; free physical = 516 ; free virtual = 16309
-INFO: [Common 17-206] Exiting Vivado at Wed Oct 30 17:50:48 2019...
+write_bitstream: Time (s): cpu = 00:00:19 ; elapsed = 00:00:23 . Memory (MB): peak = 2688.680 ; gain = 484.758 ; free physical = 1092 ; free virtual = 18638
+INFO: [Common 17-206] Exiting Vivado at Sat Nov  2 15:34:48 2019...

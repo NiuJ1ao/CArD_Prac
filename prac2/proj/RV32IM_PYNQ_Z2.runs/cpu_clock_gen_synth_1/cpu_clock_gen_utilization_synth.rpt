@@ -1,8 +1,8 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.3 (lin64) Build 2405991 Thu Dec  6 23:36:41 MST 2018
-| Date         : Wed Oct 30 17:34:35 2019
-| Host         : romoren.inf.ed.ac.uk running 64-bit Scientific Linux release 7.6 (Nitrogen)
+| Date         : Sat Nov  2 15:25:53 2019
+| Host         : casals.inf.ed.ac.uk running 64-bit Scientific Linux release 7.6 (Nitrogen)
 | Command      : report_utilization -file cpu_clock_gen_utilization_synth.rpt -pb cpu_clock_gen_utilization_synth.pb
 | Design       : cpu_clock_gen
 | Device       : 7z020clg400-1

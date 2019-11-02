@@ -8,5 +8,8 @@
 # IP: /afs/inf.ed.ac.uk/user/s17/s1740055/CArD/prac2/src/ip/rgb2dvi_0/rgb2dvi_0.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==rgb2dvi_0 || ORIG_REF_NAME==rgb2dvi_0} -quiet] -quiet
 
+# IP: /afs/inf.ed.ac.uk/user/s17/s1740055/CArD/prac2/src/ip/rv32im_alu_0/rv32im_alu_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==rv32im_alu_0 || ORIG_REF_NAME==rv32im_alu_0} -quiet] -quiet
+
 # IP: /afs/inf.ed.ac.uk/user/s17/s1740055/CArD/prac2/src/ip/video_clock_gen/video_clock_gen.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==video_clock_gen || ORIG_REF_NAME==video_clock_gen} -quiet] -quiet

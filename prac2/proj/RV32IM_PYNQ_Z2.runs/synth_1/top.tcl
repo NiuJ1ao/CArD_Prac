@@ -17,10 +17,6 @@ proc create_report { reportName command } {
     send_msg_id runtcl-5 warning "$msg"
   }
 }
-set_param xicom.use_bs_reader 1
-set_msg_config -id {Common 17-41} -limit 10000000
-set_msg_config -id {Synth 8-256} -limit 10000
-set_msg_config -id {Synth 8-638} -limit 10000
 create_project -in_memory -part xc7z020clg400-1
 
 set_param project.singleFileAddWarning.threshold 0
@@ -45,7 +41,6 @@ read_mem {
   /afs/inf.ed.ac.uk/user/s17/s1740055/CArD/prac2/src/others/mbrot.hex
 }
 read_verilog -library xil_defaultlib {
-  /afs/inf.ed.ac.uk/user/s17/s1740055/CArD/prac2/src/hdl/alu.v
   /afs/inf.ed.ac.uk/user/s17/s1740055/CArD/prac2/src/hdl/branch_cache.v
   /afs/inf.ed.ac.uk/user/s17/s1740055/CArD/prac2/src/hdl/branch_predictor.v
   /afs/inf.ed.ac.uk/user/s17/s1740055/CArD/prac2/src/hdl/bypass_or_stall.v
@@ -72,6 +67,8 @@ read_ip -quiet /afs/inf.ed.ac.uk/user/s17/s1740055/CArD/prac2/src/ip/rgb2dvi_0/r
 set_property used_in_implementation false [get_files -all /afs/inf.ed.ac.uk/user/s17/s1740055/CArD/prac2/src/ip/rgb2dvi_0/src/rgb2dvi.xdc]
 set_property used_in_implementation false [get_files -all /afs/inf.ed.ac.uk/user/s17/s1740055/CArD/prac2/src/ip/rgb2dvi_0/src/rgb2dvi_ooc.xdc]
 set_property used_in_implementation false [get_files -all /afs/inf.ed.ac.uk/user/s17/s1740055/CArD/prac2/src/ip/rgb2dvi_0/src/rgb2dvi_clocks.xdc]
+
+read_ip -quiet /afs/inf.ed.ac.uk/user/s17/s1740055/CArD/prac2/src/ip/rv32im_alu_0/rv32im_alu_0.xci
 
 read_ip -quiet /afs/inf.ed.ac.uk/user/s17/s1740055/CArD/prac2/src/ip/video_clock_gen/video_clock_gen.xci
 set_property used_in_implementation false [get_files -all /afs/inf.ed.ac.uk/user/s17/s1740055/CArD/prac2/src/ip/video_clock_gen/video_clock_gen_board.xdc]
