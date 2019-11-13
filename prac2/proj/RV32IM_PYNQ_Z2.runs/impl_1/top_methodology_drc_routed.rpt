@@ -1,0 +1,168 @@
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+-----------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.3 (lin64) Build 2405991 Thu Dec  6 23:36:41 MST 2018
+| Date         : Mon Nov  4 11:33:37 2019
+| Host         : nastase.inf.ed.ac.uk running 64-bit Scientific Linux release 7.6 (Nitrogen)
+| Command      : report_methodology -file top_methodology_drc_routed.rpt -pb top_methodology_drc_routed.pb -rpx top_methodology_drc_routed.rpx
+| Design       : top
+| Device       : xc7z020clg400-1
+| Speed File   : -1
+| Design State : Fully Routed
+-----------------------------------------------------------------------------------------------------------------------------------------------
+
+Report Methodology
+
+Table of Contents
+-----------------
+1. REPORT SUMMARY
+2. REPORT DETAILS
+
+1. REPORT SUMMARY
+-----------------
+            Netlist: netlist
+          Floorplan: design_1
+      Design limits: <entire design considered>
+             Max violations: <unlimited>
+             Violations found: 24
++-----------+----------+-------------------------------------------------------------------------+------------+
+| Rule      | Severity | Description                                                             | Violations |
++-----------+----------+-------------------------------------------------------------------------+------------+
+| SYNTH-4   | Warning  | Shallow depth for a dedicated block RAM                                 | 1          |
+| SYNTH-6   | Warning  | Timing of a block RAM might be sub-optimal                              | 4          |
+| SYNTH-10  | Warning  | Wide multiplier                                                         | 4          |
+| SYNTH-16  | Warning  | Address collision                                                       | 2          |
+| TIMING-2  | Warning  | Invalid primary clock source pin                                        | 1          |
+| TIMING-4  | Warning  | Invalid primary clock redefinition on a clock tree                      | 1          |
+| TIMING-9  | Warning  | Unknown CDC Logic                                                       | 1          |
+| TIMING-10 | Warning  | Missing property on synchronizer                                        | 1          |
+| TIMING-24 | Warning  | Overridden Max delay datapath only                                      | 5          |
+| TIMING-39 | Warning  | Invalid bus skew constraint on paths that have too many levels of logic | 1          |
+| XDCB-5    | Warning  | Runtime inefficient way to find pin objects                             | 3          |
++-----------+----------+-------------------------------------------------------------------------+------------+
+
+2. REPORT DETAILS
+-----------------
+SYNTH-4#1 Warning
+Shallow depth for a dedicated block RAM  
+The instance u_cpu/u_fetch_unit/u_branch_predictor/u_predictor_state/ps_ram_reg is implemented as block RAM but is better mapped onto distributed LUT RAM for the following reason: The depth (8 address bits) is shallow. Please use attribute (* ram_style = "distributed" *)  to instruct Vivado to infer distributed LUT RAM.
+Related violations: <none>
+
+SYNTH-6#1 Warning
+Timing of a block RAM might be sub-optimal  
+The timing for the instance u_cpu/u_exec_unit/u_dccm_ram/dccm_b1_reg, implemented as a block RAM, might be sub-optimal as no output register was merged into the block
+Related violations: <none>
+
+SYNTH-6#2 Warning
+Timing of a block RAM might be sub-optimal  
+The timing for the instance u_cpu/u_exec_unit/u_dccm_ram/dccm_b3_reg, implemented as a block RAM, might be sub-optimal as no output register was merged into the block
+Related violations: <none>
+
+SYNTH-6#3 Warning
+Timing of a block RAM might be sub-optimal  
+The timing for the instance u_cpu/u_fetch_unit/u_branch_predictor/u_branch_cache/bc_ram_reg, implemented as a block RAM, might be sub-optimal as no output register was merged into the block
+Related violations: <none>
+
+SYNTH-6#4 Warning
+Timing of a block RAM might be sub-optimal  
+The timing for the instance u_cpu/u_fetch_unit/u_branch_predictor/u_predictor_state/ps_ram_reg, implemented as a block RAM, might be sub-optimal as no output register was merged into the block
+Related violations: <none>
+
+SYNTH-10#1 Warning
+Wide multiplier  
+Detected multiplier at u_cpu/u_exec_unit/m32_result0 of size 17x18, it is decomposed from a wide multipler into 4 DSP blocks.
+Related violations: <none>
+
+SYNTH-10#2 Warning
+Wide multiplier  
+Detected multiplier at u_cpu/u_exec_unit/m32_result0__0 of size 17x17, it is decomposed from a wide multipler into 4 DSP blocks.
+Related violations: <none>
+
+SYNTH-10#3 Warning
+Wide multiplier  
+Detected multiplier at u_cpu/u_exec_unit/m32_result0__1 of size 18x18, it is decomposed from a wide multipler into 4 DSP blocks.
+Related violations: <none>
+
+SYNTH-10#4 Warning
+Wide multiplier  
+Detected multiplier at u_cpu/u_exec_unit/m32_result0__2 of size 18x17, it is decomposed from a wide multipler into 4 DSP blocks.
+Related violations: <none>
+
+SYNTH-16#1 Warning
+Address collision  
+Block RAM u_cpu/u_fetch_unit/u_branch_predictor/u_branch_cache/bc_ram_reg may get memory collision error if read and write address collide. Use of address collision resolution circuitry is recommended.
+Related violations: <none>
+
+SYNTH-16#2 Warning
+Address collision  
+Block RAM u_cpu/u_fetch_unit/u_branch_predictor/u_predictor_state/ps_ram_reg may get memory collision error if read and write address collide. Use of address collision resolution circuitry is recommended.
+Related violations: <none>
+
+TIMING-2#1 Warning
+Invalid primary clock source pin  
+A primary clock u_video_clock_gen/inst/clk_in1 is created on an inappropriate pin u_video_clock_gen/inst/clk_in1. It is recommended to create a primary clock only on a proper clock source (input port or primitive output pin with no timing arc)
+Related violations: <none>
+
+TIMING-4#1 Warning
+Invalid primary clock redefinition on a clock tree  
+Invalid clock redefinition on a clock tree. The primary clock u_video_clock_gen/inst/clk_in1 is defined downstream of clock clk_75MHz_cpu_clock_gen and overrides its insertion delay and/or waveform definition
+Related violations: <none>
+
+TIMING-9#1 Warning
+Unknown CDC Logic  
+One or more asynchronous Clock Domain Crossing has been detected between 2 clock domains through a set_false_path or a set_clock_groups or set_max_delay -datapath_only constraint but no double-registers logic synchronizer has been found on the side of the capture clock. It is recommended to run report_cdc for a complete and detailed CDC coverage. Please consider using XPM_CDC to avoid Critical severities
+Related violations: <none>
+
+TIMING-10#1 Warning
+Missing property on synchronizer  
+One or more logic synchronizer has been detected between 2 clock domains but the synchronizer does not have the property ASYNC_REG defined on one or both registers. It is recommended to run report_cdc for a complete and detailed CDC coverage
+Related violations: <none>
+
+TIMING-24#1 Warning
+Overridden Max delay datapath only  
+A set_clock_groups or a set_false path (see constraint position 13 in the Timing Constraints window in Vivado IDE) between clocks pixel_clk and cpu_clk overrides a set_max_delay -datapath_only (position 30). It is not recommended to override a set_max_delay -datapath_only constraint. Replace the set_clock_groups or set_false_path between clocks with point-to-point set_false_path constraints
+Related violations: <none>
+
+TIMING-24#2 Warning
+Overridden Max delay datapath only  
+A set_clock_groups or a set_false path (see constraint position 15 in the Timing Constraints window in Vivado IDE) between clocks cpu_clk and pixel_clk overrides a set_max_delay -datapath_only (position 25). It is not recommended to override a set_max_delay -datapath_only constraint. Replace the set_clock_groups or set_false_path between clocks with point-to-point set_false_path constraints
+Related violations: <none>
+
+TIMING-24#3 Warning
+Overridden Max delay datapath only  
+A set_clock_groups or a set_false path (see constraint position 15 in the Timing Constraints window in Vivado IDE) between clocks cpu_clk and pixel_clk overrides a set_max_delay -datapath_only (position 26). It is not recommended to override a set_max_delay -datapath_only constraint. Replace the set_clock_groups or set_false_path between clocks with point-to-point set_false_path constraints
+Related violations: <none>
+
+TIMING-24#4 Warning
+Overridden Max delay datapath only  
+A set_clock_groups or a set_false path (see constraint position 15 in the Timing Constraints window in Vivado IDE) between clocks cpu_clk and pixel_clk overrides a set_max_delay -datapath_only (position 27). It is not recommended to override a set_max_delay -datapath_only constraint. Replace the set_clock_groups or set_false_path between clocks with point-to-point set_false_path constraints
+Related violations: <none>
+
+TIMING-24#5 Warning
+Overridden Max delay datapath only  
+A set_clock_groups or a set_false path (see constraint position 15 in the Timing Constraints window in Vivado IDE) between clocks cpu_clk and pixel_clk overrides a set_max_delay -datapath_only (position 28). It is not recommended to override a set_max_delay -datapath_only constraint. Replace the set_clock_groups or set_false_path between clocks with point-to-point set_false_path constraints
+Related violations: <none>
+
+TIMING-39#1 Warning
+Invalid bus skew constraint on paths that have too many levels of logic  
+Bus skew constraint has been applied to paths with more than 1 logic level (see constraint position 31 in the Timing Constraint window in Vivado IDE). First endpoint covered by the constraint: u_cpu/u_control_unit/px_read_data_r_reg[0]/D
+Related violations: <none>
+
+XDCB-5#1 Warning
+Runtime inefficient way to find pin objects  
+The option '-through : [get_pins -filter {NAME =~ *SyncAsync*/oSyncStages_reg[*]/C} -hier]' of constraint 'set_false_path' uses inefficient query to find pin objects (see constraint position '12' in the Timing Constraint window in Vivado IDE). To reduce runtime, it is recommended to get the pins through the cell objects. Please refer to Using Constraints Guide (Constraints Efficiency). An example of optimal query is: get_pins -filter {REF_PIN_NAME=~yy*} -of_objects [get_cells -hierarchical xx*].
+Current XDC: /afs/inf.ed.ac.uk/user/s17/s1740055/CArD/prac2/src/constraints/timing.xdc (Line: 23)
+Related violations: <none>
+
+XDCB-5#2 Warning
+Runtime inefficient way to find pin objects  
+The option '-through : [get_pins -filter {NAME =~ *SyncAsync*/oSyncStages_reg[*]/D} -hier]' of constraint 'set_false_path' uses inefficient query to find pin objects (see constraint position '11' in the Timing Constraint window in Vivado IDE). To reduce runtime, it is recommended to get the pins through the cell objects. Please refer to Using Constraints Guide (Constraints Efficiency). An example of optimal query is: get_pins -filter {REF_PIN_NAME=~yy*} -of_objects [get_cells -hierarchical xx*].
+Current XDC: /afs/inf.ed.ac.uk/user/s17/s1740055/CArD/prac2/src/constraints/timing.xdc (Line: 22)
+Related violations: <none>
+
+XDCB-5#3 Warning
+Runtime inefficient way to find pin objects  
+The option '-through : [get_pins -filter {NAME =~ *SyncAsync*/oSyncStages_reg[0]/D} -hier]' of constraint 'set_false_path' uses inefficient query to find pin objects (see constraint position '2' in the Timing Constraint window in Vivado IDE). To reduce runtime, it is recommended to get the pins through the cell objects. Please refer to Using Constraints Guide (Constraints Efficiency). An example of optimal query is: get_pins -filter {REF_PIN_NAME=~yy*} -of_objects [get_cells -hierarchical xx*].
+Current XDC: /afs/inf.ed.ac.uk/user/s17/s1740055/CArD/prac2/src/ip/rgb2dvi_0/src/rgb2dvi.xdc (Line: 5)
+Related violations: <none>
+
+
