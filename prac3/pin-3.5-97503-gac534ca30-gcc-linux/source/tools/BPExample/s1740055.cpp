@@ -56,6 +56,7 @@ public:
 //##############################################
 //---------------------------------------------------------------------
 #include <math.h> 
+#include <bitset>
 class LocalBranchPredictor : public BranchPredictorInterface {
   // put private members for Local branch predictor here
   uint16_t *localHistoryRegisters;
@@ -70,6 +71,7 @@ public:
         uint8_t numOfShift = 16-log2(numberOfEntries);
         phtIndexMask = 0xFFFF >> numOfShift;
 
+        // std::cerr << "initiating" << endl;
         for (uint i=0; i<128; i++) {
             localHistoryRegisters[i] = 0;
         }
@@ -77,14 +79,21 @@ public:
         for (uint i=0; i<numberOfEntries; i++) {
             patternHistroyTable[i] = 3;
         }
+        // std::cerr << "initiate finish" << endl;
+        // std::cerr << "saturatingCounter = " << bitset<3>(patternHistroyTable[0]) << endl;
     };
 
 	virtual bool getPrediction(ADDRINT branchIP) {
 		// put your implementation here
+        // std::cerr << "======================================================================" << endl;
+        // std::cerr << "branchIP = " << bitset<32>(branchIP) << endl;
         uint8_t indexToLHR = (uint8_t) branchIP & 0x7F;
+        // std::cerr << "indexToLHR = " << bitset<8>(indexToLHR) << endl;
         uint16_t indexToPHT = localHistoryRegisters[indexToLHR];
-
+        // std::cerr << "indexToPHT = " << bitset<8>(indexToPHT) << endl;
+        // std::cerr << "saturatingCounter = " << bitset<3>(patternHistroyTable[indexToPHT]) << endl;
         prediction = patternHistroyTable[indexToPHT] >= 2;
+        // std::cerr << "prediction = " << prediction << endl;
         return prediction;
 	}
 
@@ -92,17 +101,26 @@ public:
         // put your implementation here
         uint8_t indexToLHR = (uint8_t) branchIP & 0x7F;
         uint16_t indexToPHT = localHistoryRegisters[indexToLHR];
-
+        // std::cerr << "======================================================================" << endl;
+        // std::cerr << "correctBranchPrediction = " << (correctBranchDirection == prediction) << endl;
         // update LHR
+        // std::cerr << "indexToPHT before = " << bitset<11>(localHistoryRegisters[indexToLHR]) << endl;
         localHistoryRegisters[indexToLHR] = ((localHistoryRegisters[indexToLHR] << 1) + correctBranchDirection) & phtIndexMask;
+        // std::cerr << "indexToPHT after = " << bitset<11>(localHistoryRegisters[indexToLHR]) << endl;
+
 
         // update bimodal
         uint8_t saturatingCounter = patternHistroyTable[indexToPHT];
-        if (correctBranchDirection) { // Actual taken;
-            patternHistroyTable[indexToPHT] = saturatingCounter++ % 4;
-        } else { // Actual not taken
-            patternHistroyTable[indexToPHT] = saturatingCounter-- % 4;
+
+        // std::cerr << "saturatingCounter before = " << bitset<3>(patternHistroyTable[indexToPHT]) << endl;
+        if (correctBranchDirection && saturatingCounter < 3) { // Actual taken;
+            // std::cerr << "increment" << endl;
+            patternHistroyTable[indexToPHT]++;
+        } else if (!correctBranchDirection && saturatingCounter > 0) { // Actual not taken
+            // std::cerr << "decrement" << endl;
+            patternHistroyTable[indexToPHT]--;
         }
+        // std::cerr << "saturatingCounter after = " << bitset<3>(patternHistroyTable[indexToPHT]) << endl;
     }
 };
 
@@ -134,19 +152,31 @@ public:
 
 	virtual void train(ADDRINT branchIP, bool correctBranchDirection) {
         // put your implementation here
-        uint8_t lsbs = (uint16_t) branchIP & bitMask;
-        uint16_t indexToPHT = lsbs ^ globalHistoryRegister;
 
+        // std::cerr << "======================================================================" << endl;
+        uint16_t lsbs = (uint16_t) branchIP & bitMask;
+        uint16_t indexToPHT = lsbs ^ globalHistoryRegister;
+        // std::cerr << "branchIP = " << bitset<32>(branchIP) << endl;
+        // std::cerr << "lsbs = " << bitset<8>(lsbs) << endl;
+        // std::cerr << "indexToPHT = " << bitset<8>(indexToPHT) << endl;
+
+        // std::cerr << "correctBranchPrediction = " << (correctBranchDirection) << endl;
+        // std::cerr << "indexToPHT before = " << bitset<8>(globalHistoryRegister) << endl;
         // update GHR
         globalHistoryRegister = ((globalHistoryRegister << 1) + correctBranchDirection) & bitMask;
+        // std::cerr << "indexToPHT after = " << bitset<8>(globalHistoryRegister) << endl;
 
         // update bimodal
         uint8_t saturatingCounter = patternHistroyTable[indexToPHT];
-        if (correctBranchDirection) { // Actual taken;
-            patternHistroyTable[indexToPHT] = saturatingCounter++ % 4;
-        } else { // Actual not taken
-            patternHistroyTable[indexToPHT] = saturatingCounter-- % 4;
+        // std::cerr << "saturatingCounter before = " << bitset<3>(patternHistroyTable[indexToPHT]) << endl;
+        if (correctBranchDirection && saturatingCounter < 3) { // Actual taken;
+            // std::cerr << "increment" << endl;
+            patternHistroyTable[indexToPHT]++;
+        } else if (!correctBranchDirection && saturatingCounter > 0) { // Actual not taken
+            // std::cerr << "decrement" << endl;
+            patternHistroyTable[indexToPHT]--;
         }
+        // std::cerr << "saturatingCounter after = " << bitset<3>(patternHistroyTable[indexToPHT]) << endl;
     }
 };
 
@@ -171,6 +201,7 @@ public:
             patternHistroyTableOfMetaPredictor[i] = 3;
         }
     };
+
 	virtual bool getPrediction(ADDRINT branchIP) {
 		// put your implementation here
         uint16_t indexToPHT = (uint16_t) branchIP & phtIndexMask;
@@ -183,41 +214,53 @@ public:
 
         return prediction;
 	}
+
 	virtual void train(ADDRINT branchIP, bool correctBranchDirection) {
         // put your implementation here
         // train both local and gshare
+        // std::cerr << "======================================================================" << endl;
         local->train(branchIP, correctBranchDirection);
         gshare->train(branchIP, correctBranchDirection);
 
         uint16_t indexToPHT = (uint16_t) branchIP & phtIndexMask;
         
+        // std::cerr << "correctBranchPrediction = " << (correctBranchDirection == prediction) << endl;
+        // std::cerr << "saturatingCounter before = " << bitset<8>(patternHistroyTableOfMetaPredictor[indexToPHT]) << endl;
         uint8_t saturatingCounter = patternHistroyTableOfMetaPredictor[indexToPHT];
         if (correctBranchDirection == prediction) {
             // Strengthen saturating counter
-            if (saturatingCounter >= 2) {
-                saturatingCounter = (saturatingCounter+1) % 4;
-            } else {
-                saturatingCounter = (saturatingCounter-1) % 4;
+            // std::cerr << "strengthen" << endl;
+            if (saturatingCounter == 2) {
+                patternHistroyTableOfMetaPredictor[indexToPHT]++;
+            } else if (saturatingCounter == 1) {
+                patternHistroyTableOfMetaPredictor[indexToPHT]--;
             }
         } else {
             if (gShareUsed) {
                 if (correctBranchDirection == local->getPrediction(branchIP)) {
                     // Weaken saturating counter
+                    // std::cerr << "local is correct" << endl;
                     if (saturatingCounter < 2) {
-                        saturatingCounter = (saturatingCounter+1) % 4;
+                        // std::cerr << "weaken" << endl;
+                        patternHistroyTableOfMetaPredictor[indexToPHT]++;
                     } else {
-                        saturatingCounter = (saturatingCounter-1) % 4;
+                        // std::cerr << "weaken" << endl;
+                        patternHistroyTableOfMetaPredictor[indexToPHT]--;
                     }
                 } else if (correctBranchDirection == gshare->getPrediction(branchIP)) {
                     // Weaken saturating counter
+                    // std::cerr << "gshare is correct" << endl;
                     if (saturatingCounter < 2) {
-                        saturatingCounter = (saturatingCounter+1) % 4;
+                        // std::cerr << "weaken" << endl;
+                        patternHistroyTableOfMetaPredictor[indexToPHT]++;
                     } else {
-                        saturatingCounter = (saturatingCounter-1) % 4;
+                        // std::cerr << "weaken" << endl;
+                        patternHistroyTableOfMetaPredictor[indexToPHT]--;
                     }
                 }
             }
         }
+        // std::cerr << "saturatingCounter after = " << bitset<8>(patternHistroyTableOfMetaPredictor[indexToPHT]) << endl;
     }
 };
 
