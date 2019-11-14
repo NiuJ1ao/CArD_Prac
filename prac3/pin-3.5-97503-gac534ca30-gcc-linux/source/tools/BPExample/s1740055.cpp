@@ -57,98 +57,174 @@ public:
 //---------------------------------------------------------------------
 #include <math.h> 
 class LocalBranchPredictor : public BranchPredictorInterface {
-
   // put private members for Local branch predictor here
   uint16_t *localHistoryRegisters;
   uint8_t *patternHistroyTable;
-  bool prediction;
   uint16_t phtIndexMask = 0xFFFF;
 
 public:
-  LocalBranchPredictor(UINT64 numberOfEntries) {
-    patternHistroyTable = new uint8_t [numberOfEntries];
-    localHistoryRegisters = new uint16_t [128];
-    uint8_t numOfShift = 16-log2(numberOfEntries);
-    phtIndexMask = phtIndexMask >> numOfShift;
+    LocalBranchPredictor(UINT64 numberOfEntries) {
+        patternHistroyTable = new uint8_t [numberOfEntries];
+        localHistoryRegisters = new uint16_t [128];
+        uint8_t numOfShift = 16-log2(numberOfEntries);
+        phtIndexMask = phtIndexMask >> numOfShift;
 
-    for (uint i=0; i<128; i++) {
-      localHistoryRegisters[i] = 0;
-    }
+        for (uint i=0; i<128; i++) {
+            localHistoryRegisters[i] = 0;
+        }
 
-    for (uint i=0; i<numberOfEntries; i++) {
-      patternHistroyTable[i] = 3;
-    }
-  };
+        for (uint i=0; i<numberOfEntries; i++) {
+            patternHistroyTable[i] = 3;
+        }
+    };
 
 	virtual bool getPrediction(ADDRINT branchIP) {
 		// put your implementation here
-    uint8_t indexToLHR = (uint8_t) branchIP & 0x7F;
-    uint16_t indexToPHT = localHistoryRegisters[indexToLHR];
+        uint8_t indexToLHR = (uint8_t) branchIP & 0x7F;
+        uint16_t indexToPHT = localHistoryRegisters[indexToLHR];
 
-    prediction = patternHistroyTable[indexToPHT] >= 2;
-
-    return prediction;
+        return patternHistroyTable[indexToPHT] >= 2;
 	}
 
 	virtual void train(ADDRINT branchIP, bool correctBranchDirection) {
-    // put your implementation here
-    uint8_t indexToLHR = (uint8_t) branchIP & 0x7F;
-    uint16_t indexToPHT = localHistoryRegisters[indexToLHR];
+        // put your implementation here
+        uint8_t indexToLHR = (uint8_t) branchIP & 0x7F;
+        uint16_t indexToPHT = localHistoryRegisters[indexToLHR];
 
-    // update LHR
-    localHistoryRegisters[indexToLHR] = ((localHistoryRegisters[indexToLHR] << 1) + correctBranchDirection) & phtIndexMask;
+        // update LHR
+        localHistoryRegisters[indexToLHR] = ((localHistoryRegisters[indexToLHR] << 1) + correctBranchDirection) & phtIndexMask;
 
-    // update bimodal
-    if (correctBranchDirection && prediction || !correctBranchDirection && !prediction) {
-      patternHistroyTable[indexToPHT] = (patternHistroyTable[indexToPHT]+1) % 4;
-    } else if (correctBranchDirection && !prediction || !correctBranchDirection && prediction) {
-      patternHistroyTable[indexToPHT] = (patternHistroyTable[indexToPHT]-1) % 4;
+        // update bimodal
+        uint8_t saturatingCounter = patternHistroyTable[indexToPHT];
+        if (correctBranchDirection == prediction) { // Correct predicted
+            if (saturatingCounter>=2) { // Predict taken; actual taken
+                saturatingCounter = (saturatingCounter+1) % 4;
+            } else { // Predict not taken; actual not taken
+                saturatingCounter = (saturatingCounter-1) % 4;
+            }
+        } else { // Mispredicted
+            if (saturatingCounter<2) { // Predict not taken; actual taken
+                saturatingCounter = (saturatingCounter+1) % 4;
+            } else { // Predict taken; actual not taken
+                saturatingCounter = (saturatingCounter-1) % 4;
+            }
+        }
     }
-  }
 };
 
 class GshareBranchPredictor : public BranchPredictorInterface {
-
   // put private members for Gshare Branch Predictor here
-  uint16_t globalHistoryRegisters = 0;
+  uint16_t globalHistoryRegister = 0;
   uint8_t *patternHistroyTable;
-  bool prediction;
-  uint16_t phtIndexMask = 0xFFFF;
+  uint16_t bitMask = 0xFFFF;
 
 public:
-  GshareBranchPredictor(UINT64 numberOfEntries) {
-    patternHistroyTable = new uint8_t [numberOfEntries];
-    uint8_t numOfShift = 16-log2(numberOfEntries);
-    phtIndexMask = phtIndexMask >> numOfShift;
+    GshareBranchPredictor(UINT64 numberOfEntries) {
+        patternHistroyTable = new uint8_t [numberOfEntries];
+        uint8_t numOfShift = 16-log2(numberOfEntries);
+        bitMask = bitMask >> numOfShift;
 
-    for (uint i=0; i<numberOfEntries; i++) {
-      patternHistroyTable[i] = 3;
-    }
-  };
+        for (uint i=0; i<numberOfEntries; i++) {
+            patternHistroyTable[i] = 3;
+        }
+    };
 
-	virtual bool getPrediction(ADDRINT branchIP) {
+    virtual bool getPrediction(ADDRINT branchIP) {
 		// put your implementation here
+        uint16_t lsbs = (uint16_t) branchIP & bitMask;
+        uint16_t indexToPHT = lsbs ^ globalHistoryRegister;
 
+        return patternHistroyTable[indexToPHT] >= 2;
 	}
 
 	virtual void train(ADDRINT branchIP, bool correctBranchDirection) {
-    // put your implementation here
-  }
+        // put your implementation here
+        uint8_t lsbs = (uint16_t) branchIP & bitMask;
+        uint16_t indexToPHT = lsbs ^ globalHistoryRegister;
+
+        // update GHR
+        globalHistoryRegister = ((globalHistoryRegister << 1) + correctBranchDirection) & bitMask;
+
+        // update bimodal
+        if (correctBranchDirection) { // Actual taken;
+            saturatingCounter = (saturatingCounter+1) % 4;
+        } else { // Actual not taken
+            saturatingCounter = (saturatingCounter-1) % 4;
+        }
+    }
 };
 
 class TournamentBranchPredictor : public BranchPredictorInterface {
-
-  // put private members for Tournament Branch Predictor here
+    // put private members for Tournament Branch Predictor here
+    uint8_t *patternHistroyTableOfMetaPredictor;
+    bool gShareUsed; // True if Gshare predictor is chosen, false if local predictor is chosen.
+    uint16_t phtIndexMask = 0xFFFF;
+    GshareBranchPredictor gshare;
+    LocalBranchPredictor local;
 
 public:
-  TournamentBranchPredictor(UINT64 numberOfEntries) {};
+    TournamentBranchPredictor(UINT64 numberOfEntries) {
+        patternHistroyTableOfMetaPredictor = new uint8_t [numberOfEntries];
+        local = new LocalBranchPredictor(numberOfEntries);
+        gshare = new GshareBranchPredictor(numberOfEntries);
+        uint8_t numOfShift = 16-log2(numberOfEntries);
+        phtIndexMask = phtIndexMask >> numOfShift;
+
+        for (uint i=0; i<numberOfEntries; i++) {
+            patternHistroyTableOfMetaPredictor[i] = 3;
+        }
+    };
 	virtual bool getPrediction(ADDRINT branchIP) {
 		// put your implementation here
+        uint16_t indexToPHT = (uint16_t) branchIP & phtIndexMask;
+        bool prediction;
 
+        predictorUsed = patternHistroyTableOfMetaPredictor[indexToPHT] >= 2;
+        if (predictorUsed) {
+            prediction = gshare.getPrediction(branchIP);
+        } else {
+            prediction = local.getPrediction(branchIP);
+        }
+
+        return prediction;
 	}
 	virtual void train(ADDRINT branchIP, bool correctBranchDirection) {
-    // put your implementation here
-  }
+        // put your implementation here
+        // train both local and gshare
+        local.train(branchIP, correctBranchDirection);
+        gshare.train(branchIP, correctBranchDirection);
+
+        uint16_t indexToPHT = (uint16_t) branchIP & phtIndexMask;
+        
+        uint8_t saturatingCounter = patternHistroyTableOfMetaPredictor[indexToPHT];
+        if (correctBranchDirection == prediction) {
+            // Strengthen saturating counter
+            if (saturatingCounter >= 2) {
+                saturatingCounter = (saturatingCounter+1) % 4;
+            } else {
+                saturatingCounter = (saturatingCounter-1) % 4;
+            }
+        } else {
+            bool prediction;
+            if (gShareUsed) {
+                if (correctBranchDirection == local.getPrediction(branchIP)) {
+                    // Weaken saturating counter
+                    if (saturatingCounter < 2) {
+                        saturatingCounter = (saturatingCounter+1) % 4;
+                    } else {
+                        saturatingCounter = (saturatingCounter-1) % 4;
+                    }
+                } else if (correctBranchDirection == gshare.getPrediction(branchIP)) {
+                    // Weaken saturating counter
+                    if (saturatingCounter < 2) {
+                        saturatingCounter = (saturatingCounter+1) % 4;
+                    } else {
+                        saturatingCounter = (saturatingCounter-1) % 4;
+                    }
+                }
+            }
+        }
+    }
 };
 
 ofstream OutFile;
