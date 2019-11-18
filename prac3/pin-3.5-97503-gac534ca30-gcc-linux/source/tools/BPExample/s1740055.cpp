@@ -62,7 +62,6 @@ class LocalBranchPredictor : public BranchPredictorInterface {
   uint16_t *localHistoryRegisters;
   uint8_t *patternHistroyTable;
   uint16_t phtIndexMask;
-  bool prediction;
 
 public:
     LocalBranchPredictor(UINT64 numberOfEntries) {
@@ -92,9 +91,7 @@ public:
         uint16_t indexToPHT = localHistoryRegisters[indexToLHR];
         // std::cerr << "indexToPHT = " << bitset<8>(indexToPHT) << endl;
         // std::cerr << "saturatingCounter = " << bitset<3>(patternHistroyTable[indexToPHT]) << endl;
-        prediction = patternHistroyTable[indexToPHT] >= 2;
-        // std::cerr << "prediction = " << prediction << endl;
-        return prediction;
+        return patternHistroyTable[indexToPHT] >= 2;
 	}
 
 	virtual void train(ADDRINT branchIP, bool correctBranchDirection) {
@@ -122,6 +119,11 @@ public:
         }
         // std::cerr << "saturatingCounter after = " << bitset<3>(patternHistroyTable[indexToPHT]) << endl;
     }
+
+    ~LocalBranchPredictor() {
+        delete[] localHistoryRegisters;
+        delete[] patternHistroyTable;
+    };
 };
 
 class GshareBranchPredictor : public BranchPredictorInterface {
@@ -178,13 +180,16 @@ public:
         }
         // std::cerr << "saturatingCounter after = " << bitset<3>(patternHistroyTable[indexToPHT]) << endl;
     }
+
+    ~GshareBranchPredictor() {
+        delete[] patternHistroyTable;
+    };
 };
 
 class TournamentBranchPredictor : public BranchPredictorInterface {
     // put private members for Tournament Branch Predictor here
     uint8_t *patternHistroyTableOfMetaPredictor;
     bool prediction;
-    bool gShareUsed; // True if Gshare predictor is chosen, false if local predictor is chosen.
     uint16_t phtIndexMask;
     BranchPredictorInterface *gshare;
     BranchPredictorInterface *local;
@@ -204,9 +209,12 @@ public:
 
 	virtual bool getPrediction(ADDRINT branchIP) {
 		// put your implementation here
+        // std::cerr << "=====================getPrediction==================================" << endl;
         uint16_t indexToPHT = (uint16_t) branchIP & phtIndexMask;
-        gShareUsed = patternHistroyTableOfMetaPredictor[indexToPHT] >= 2;
-        if (gShareUsed) {
+        // std::cerr << "branchIP = " << bitset<64>(branchIP) << endl;
+        // std::cerr << "indexToPHT = " << bitset<16>(indexToPHT) << endl;
+        // std::cerr << "saturatingCounter = " << bitset<3>(patternHistroyTableOfMetaPredictor[indexToPHT]) << endl;
+        if (patternHistroyTableOfMetaPredictor[indexToPHT] >= 2) {
             prediction = gshare->getPrediction(branchIP);
         } else {
             prediction = local->getPrediction(branchIP);
@@ -218,15 +226,15 @@ public:
 	virtual void train(ADDRINT branchIP, bool correctBranchDirection) {
         // put your implementation here
         // train both local and gshare
-        // std::cerr << "======================================================================" << endl;
-        local->train(branchIP, correctBranchDirection);
-        gshare->train(branchIP, correctBranchDirection);
-
+        // std::cerr << "============================train==================================" << endl;
+        // std::cerr << "branchIP = " << bitset<64>(branchIP) << endl;
         uint16_t indexToPHT = (uint16_t) branchIP & phtIndexMask;
         
-        // std::cerr << "correctBranchPrediction = " << (correctBranchDirection == prediction) << endl;
+        // std::cerr << "correctBranchDirection = " << (correctBranchDirection) << endl;
+        // std::cerr << "Prediction = " << (prediction) << endl;
         // std::cerr << "saturatingCounter before = " << bitset<8>(patternHistroyTableOfMetaPredictor[indexToPHT]) << endl;
         uint8_t saturatingCounter = patternHistroyTableOfMetaPredictor[indexToPHT];
+        // bool prediction = getPrediction(branchIP);
         if (correctBranchDirection == prediction) {
             // Strengthen saturating counter
             // std::cerr << "strengthen" << endl;
@@ -236,32 +244,27 @@ public:
                 patternHistroyTableOfMetaPredictor[indexToPHT]--;
             }
         } else {
-            if (gShareUsed) {
-                if (correctBranchDirection == local->getPrediction(branchIP)) {
-                    // Weaken saturating counter
-                    // std::cerr << "local is correct" << endl;
-                    if (saturatingCounter < 2) {
-                        // std::cerr << "weaken" << endl;
-                        patternHistroyTableOfMetaPredictor[indexToPHT]++;
-                    } else {
-                        // std::cerr << "weaken" << endl;
-                        patternHistroyTableOfMetaPredictor[indexToPHT]--;
-                    }
-                } else if (correctBranchDirection == gshare->getPrediction(branchIP)) {
-                    // Weaken saturating counter
-                    // std::cerr << "gshare is correct" << endl;
-                    if (saturatingCounter < 2) {
-                        // std::cerr << "weaken" << endl;
-                        patternHistroyTableOfMetaPredictor[indexToPHT]++;
-                    } else {
-                        // std::cerr << "weaken" << endl;
-                        patternHistroyTableOfMetaPredictor[indexToPHT]--;
-                    }
-                }
+            if (saturatingCounter >= 2 && correctBranchDirection == local->getPrediction(branchIP)) {
+                // Weaken saturating counter if gshare is used and local is correct.
+                // std::cerr << "local is correct" << endl;
+                // std::cerr << "weaken" << endl;
+                patternHistroyTableOfMetaPredictor[indexToPHT]--;
+            } else if (saturatingCounter < 2 && correctBranchDirection == gshare->getPrediction(branchIP)) {
+                // Weaken saturating counter if local is used and gshare is correct.
+                // std::cerr << "gshare is correct" << endl;
+                // std::cerr << "weaken" << endl;
+                patternHistroyTableOfMetaPredictor[indexToPHT]++;
             }
         }
+
+        local->train(branchIP, correctBranchDirection);
+        gshare->train(branchIP, correctBranchDirection);
         // std::cerr << "saturatingCounter after = " << bitset<8>(patternHistroyTableOfMetaPredictor[indexToPHT]) << endl;
     }
+
+    ~TournamentBranchPredictor() {
+        delete[] patternHistroyTableOfMetaPredictor;
+    };
 };
 
 ofstream OutFile;
